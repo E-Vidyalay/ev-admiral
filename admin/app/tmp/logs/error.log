@@ -1,0 +1,91 @@
+2015-05-07 06:59:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/css/bootstrap-them.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 06:59:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/css/bootstrap-them.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 06:59:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:01:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/css/bootstrap-them.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:17:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/img/logo
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:17:46 Error: [MissingControllerException] Controller class EvController could not be found.
+Exception Attributes: array (
+  'class' => 'EvController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin//ev/admin/img/logo
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:17:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/img/logo
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:18:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/img/logo
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 07:18:44 Error: Fatal Error (4): syntax error, unexpected '/' in [/Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/View/Layouts/ev_admin.ctp, line 31]
+2015-05-07 07:18:44 Error: [FatalErrorException] syntax error, unexpected '/'
+Request URL: /ev/admin/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 31, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 31, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-07 07:18:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/img/logo
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
