@@ -231,7 +231,9 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . "  Logout",array('controller'=>'users','action'=>'logout'),array('escape' => false))?></li>
+                        <li><?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'users', 'action' => 'logout'),array('escape' => false));?>
+                        </li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -356,11 +358,23 @@
         <!-- /#page-wrapper -->
 
     </div>
+    <div class="alert-popup">
+            <?php
+                echo $this->Session->flash('error');
+                echo $this->Session->flash('success');
+                echo $this->Session->flash('auth');
+
+            ?>
+        </div>
+        
 		<?php
 			echo $this->Html->script('jquery');
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
 		?>
+        <script>
+            $(document).foundation();
+        </script>
 	</body>
 </html>

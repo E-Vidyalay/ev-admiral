@@ -39,6 +39,7 @@
 		}
 
 		public function logout(){
+			$this->layout='ev_admin';
 			if($this->Auth->logout()){
 				$this->Session->setFlash('Logged out successfully','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('controller'=>'users','action'=>'login'));
