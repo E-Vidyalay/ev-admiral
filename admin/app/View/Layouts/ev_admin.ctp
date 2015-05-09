@@ -231,8 +231,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
+                        <li><?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . "  Logout",array('controller'=>'users','action'=>'logout'),array('escape' => false))?></li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
