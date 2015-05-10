@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2015 at 08:27 PM
--- Server version: 5.6.20
--- PHP Version: 5.5.15
+-- Generation Time: May 10, 2015 at 01:30 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -148,14 +148,6 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
   `updated_by` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `axi_subjects`
---
-
-INSERT INTO `axi_subjects` (`id`, `name`, `standard_id`, `display_name`, `updated_at`, `updated_by`) VALUES
-('33431397-f742-11e4-a5c2-0c8bfd8ce5dc', 'math', '554f3af9-6d0c-47f2-97fe-0490125f2f23', 'Mathematics', '2015-05-10 18:27:22', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
-('3ea7c93b-f73c-11e4-a5c2-0c8bfd8ce5dc', 'sci', '554f3a57-bb00-45d8-8fcd-0490125f2f23', 'Science', '2015-05-10 17:44:44', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
-
 -- --------------------------------------------------------
 
 --
@@ -295,7 +287,7 @@ ALTER TABLE `axi_student_subject_mappings`
 -- Indexes for table `axi_subjects`
 --
 ALTER TABLE `axi_subjects`
- ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `standard_id` (`standard_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`);
 
 --
 -- Indexes for table `axi_tests`
@@ -362,8 +354,7 @@ ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`subject_id`) 
 -- Constraints for table `axi_subjects`
 --
 ALTER TABLE `axi_subjects`
-ADD CONSTRAINT `axi_subjects_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_subjects_ibfk_2` FOREIGN KEY (`standard_id`) REFERENCES `axi_standards` (`id`);
+ADD CONSTRAINT `axi_subjects_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_tests`
