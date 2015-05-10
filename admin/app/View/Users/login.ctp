@@ -40,16 +40,13 @@
                                 ?>
                             </fieldset>
                         </form>
-                        <div class='auth-alert'>
-        <?php 
-            echo "<div style='color:red'>".$this->Session->flash('auth'); 
-            echo $this->Session->flash('success');
-            echo $this->Session->flash('error');
-        ?>
-        </div>
                     </div>
                 </div>
+                <?php 
+                    echo $this->Session->flash('success');
+                    echo $this->Session->flash('error');
+                    echo $this->Session->flash('auth', array('params'=>array('class'=>'alert alert-danger')));
+                ?>
             </div>
-
         </div>
     </div>

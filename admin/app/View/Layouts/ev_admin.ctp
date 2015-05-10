@@ -9,6 +9,7 @@
 			echo $this->Html->css('sb-admin-2');
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
+            echo $this->Html->css('app');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
@@ -348,9 +349,14 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
+        <div class="ev-alert">
+             <?php
+                echo $this->Session->flash('success');
+                echo $this->Session->flash('error');
+             ?>
+        </div>
         <div id="page-wrapper" style="min-height: 327px;">
-            
+
             <?php
                 echo $content_for_layout;
             ?>
@@ -358,17 +364,9 @@
         <!-- /#page-wrapper -->
 
     </div>
-    <div class="alert-popup">
-            <?php
-                echo $this->Session->flash('error');
-                echo $this->Session->flash('success');
-                echo $this->Session->flash('auth');
-
-            ?>
-        </div>
-        
 		<?php
 			echo $this->Html->script('jquery');
+            echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
