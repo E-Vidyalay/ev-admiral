@@ -1,8 +1,9 @@
 <br/>
-<h1>Inserts standard</h1>
+<h1>Update standard</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Standard',array('standard'=>'insert'));
+	echo $this->Form->create('Standard',array('standard'=>'update'));
+    echo $this->Form->input('id',array('type'=>'hidden'));
 	echo $this->Form->input('standard',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'standard',
@@ -25,7 +26,7 @@
 
     echo "<br/>";
 
-    echo $this->Form->input('Add standard',array(
+    echo $this->Form->input('Update standard',array(
      'type'=>'submit',
      'div'=>false,
      'label'=>false,

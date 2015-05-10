@@ -19,6 +19,7 @@
 	</div>
 		<?php
 			echo $this->Html->script('jquery');
+			echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');

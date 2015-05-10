@@ -9,6 +9,7 @@
 			echo $this->Html->css('sb-admin-2');
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
+            echo $this->Html->css('app');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
@@ -231,7 +232,8 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'users', 'action' => 'logout'),array('escape' => false));?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -347,9 +349,14 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
+        <div class="ev-alert">
+             <?php
+                echo $this->Session->flash('success');
+                echo $this->Session->flash('error');
+             ?>
+        </div>
         <div id="page-wrapper" style="min-height: 327px;">
-            
+
             <?php
                 echo $content_for_layout;
             ?>
@@ -359,9 +366,13 @@
     </div>
 		<?php
 			echo $this->Html->script('jquery');
+            echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
 		?>
+        <script>
+            $(document).foundation();
+        </script>
 	</body>
 </html>

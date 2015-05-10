@@ -1,35 +1,46 @@
 <?php 
+
 	class StandardsController extends AppController{
 
-		function insert(){
+		public function index()
+		{
+			$this->set('standards',$this->Standard->find('all'));
 			$this->layout='ev_admin';
-			$a=array();
-			$a=$this->Standard->find('all');
-			//pr($a);
-			$this->set('data',$a);
+		}
+
+		public function insert()
+		{
+			$this->layout='ev_admin';
+			if($this->request->is('post'))
+			{
+				pr($this->data);
+				if($this->Standard->save($this->data))
+				{
+					$this->Session->setFlash('Standard added successfully','default',array('class'=>'alert alert-success'),'success');
+					$this->redirect(array('controller'=>'standards','action'=>'index'));
+				}
+			}
 		}
 
 		function delete($id = NULL){
 			$this->Standard->delete($id);
-			$this->Session->setFlash('Standard has been deleted successfully');
-			$this->redirect(array('action' => 'index', $data['Standard']['id'], NULL, 'Are you sure you want to delete this standard?'));
+			$this->Session->setFlash('Standard has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
+			$this->redirect(array('action' => 'index'));
 		}
 
 		function update($id = NULL){
+			$this->layout='ev_admin';
 			if(empty($this->data)){
-				$this->data= $this->Standard->read(NULL, $id);
+				$this->data= $this->Standard->findById($id);
 			}
 			else{
 				if($this->Standard->save($this->data)){
-					$this->Session->setFlash('Standard has been successfully edited',);
+					$this->Session->setFlash('Standard has been successfully edited','default',array('class'=>'alert alert-success'),'success');
 					$this->redirect(array('action'=>'index'));
 				}
 			}
 
 		}
 
-		function index(){
-
-		}
 	}
 ?>
