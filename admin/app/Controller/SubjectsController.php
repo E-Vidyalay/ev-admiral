@@ -4,13 +4,17 @@
 
 		public function index()
 		{
-                    pr($this->set('subjects',$this->Subject->find('all')));
                     $this->layout='ev_admin';
+                    pr($this->set('subjects',$this->Subject->find('all')));
 		}
 
 		public function insert()
 		{
 			$this->layout='ev_admin';
+			$data = $this->Subject->Standard->find('list', array('fields' => array('standard')));
+			$this->set('stand', $data);
+			$userId = $this->Auth->user('id');
+			$this->set('user',$userId);
 			if($this->request->is('post'))
 			{
 				pr($this->data);
