@@ -2,39 +2,27 @@
 <h1>Update subject</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Subject',array('subject'=>'update'));
+    echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-	echo $this->Form->input('name',array(
-	 'class'=>'form-control',
-	 'placeholder'=>'name',
-	 'type'=>'text',
+    echo $this->Form->input('standard_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $stand,
+        'label' => 'Standard'
+    ));
+    echo "<br/>";
+    echo $this->Form->input('name',array(
+     'class'=>'form-control',
+     'placeholder'=>'Name',
+     'type'=>'text',
      'required',
      'autofocus',
      'label'=>'Subject'
       ));
-
+    echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
+    echo "<br/>";
     
-    echo "<br/>";
-
-	echo $this->Form->input('display_name',array(
-     'class'=>'form-control',
-     'placeholder'=>'display name',
-     'type'=>'text',
-     'required',
-     'autofocus',
-     'label'=>'Subject display name'
-      ));
-    echo "<br/>";
-    echo $this->Form->input('Standard.standard',array(
-     'class'=>'form-control',
-     'placeholder'=>'display name',
-     'type'=>'disable',
-     'required',
-     'autofocus',
-     'label'=>'Subject display name'
-      ));
-    echo "<br/>";
-    echo $this->Form->input('Update subject',array(
+    echo $this->Form->input('update subject',array(
      'type'=>'submit',
      'div'=>false,
      'label'=>false,

@@ -7,7 +7,7 @@
 	</tr>
 	<?php foreach ($subjects as $subject){ ?>
 	<tr>
-		<td> <?php  echo $subject['Subject']['display_name']; ?> </td>
+		<td> <?php  echo $subject['Subject']['name']; ?> </td>
 		<td><?php echo $subject['Standard']['standard']; ?></td>			
 		<td> <?php echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-primary'));
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";

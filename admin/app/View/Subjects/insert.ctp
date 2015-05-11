@@ -1,8 +1,15 @@
 <br/>
-<h1>Inserts subject</h1>
+<h1>Add new subject</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Subject',array('subject'=>'insert'));
+	echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'insert'));
+    echo $this->Form->input('standard_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $stand,
+        'label' => 'Standard'
+    ));
+    echo "<br/>";
 	echo $this->Form->input('name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',
@@ -11,24 +18,7 @@
      'autofocus',
      'label'=>'Subject'
       ));
-
-    echo "<br/>";
-    
-    echo $this->Form->input('display_name',array(
-     'class'=>'form-control',
-     'placeholder'=>'Subject',
-     'type'=>'text',
-     'required',
-     'autofocus',
-     'label'=>'Display name'
-      ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
-    echo "<br/>";
-	echo $this->Form->input('standard_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $stand,
-        'label' => 'Standard' ));
     echo "<br/>";
     
     echo $this->Form->input('Add subject',array(
