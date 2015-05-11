@@ -161,3 +161,12 @@ Stack Trace:
 #3 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-05-10 08:56:39 Error: [MissingControllerException] Controller class Forms.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Forms.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /ev/admin/forms.html
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
