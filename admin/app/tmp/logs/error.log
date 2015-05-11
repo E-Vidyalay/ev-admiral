@@ -1,0 +1,349 @@
+2015-05-10 16:00:02 Error: [MissingControllerException] Controller class StandardController could not be found.
+Exception Attributes: array (
+  'class' => 'StandardController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/standard
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 16:00:05 Error: [MissingControllerException] Controller class StandardController could not be found.
+Exception Attributes: array (
+  'class' => 'StandardController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/standard
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 16:00:21 Error: [MissingTableException] Table axi_standards for model Standard was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'axi_standards',
+  'class' => 'Standard',
+  'ds' => 'default',
+)
+Request URL: /ev-admiral/admin/standards
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3644): Model->setSource('standards')
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/app/Controller/StandardsController.php(7): Model->find('all')
+#4 [internal function]: StandardsController->index()
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StandardsController), Array)
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(StandardsController), Object(CakeRequest))
+#8 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-05-10 16:03:35 Error: [MissingActionException] Action StandardsController::index.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'StandardsController',
+  'action' => 'index.php',
+)
+Request URL: /ev-admiral/admin/standards/index.php
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(StandardsController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-10 17:35:46 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:35:46 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:43:32 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:43:32 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:44:21 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:44:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:44:28 Error: [MissingControllerException] Controller class MarkingschemeController could not be found.
+Exception Attributes: array (
+  'class' => 'MarkingschemeController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/Markingscheme
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 17:44:31 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:44:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:49:13 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:49:13 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:58:22 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:58:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:58:36 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:58:36 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes/index
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 17:59:54 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 17:59:54 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes/index
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 18:00:01 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 18:00:01 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 18:00:05 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 18:00:05 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 18:03:17 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 18:03:17 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 18:05:47 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 18:05:47 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 18:05:58 Error: [MissingControllerException] Controller class MarkingSchemesController could not be found.
+Exception Attributes: array (
+  'class' => 'MarkingSchemesController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/MarkingSchemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 18:06:06 Error: [MissingControllerException] Controller class MarkingSchemeController could not be found.
+Exception Attributes: array (
+  'class' => 'MarkingSchemeController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/MarkingScheme
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 18:06:16 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 18:06:16 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 21:19:04 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-10 21:22:49 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-10 21:22:53 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-10 21:23:02 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-10 21:27:46 Error: Fatal Error (1): Call to a member function find() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 5]
+2015-05-10 21:27:46 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-10 21:32:15 Error: [MissingTableException] Table axi_marking_schemes for model MarkingScheme was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'axi_marking_schemes',
+  'class' => 'MarkingScheme',
+  'ds' => 'default',
+)
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3644): Model->setSource('marking_schemes')
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php(5): Model->find('all')
+#4 [internal function]: MarkingSchemesController->index()
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(MarkingSchemesController), Array)
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingSchemesController), Object(CakeRequest))
+#8 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-05-10 21:40:48 Error: [MissingActionException] Action MarkingschemesController::add_marks() could not be found.
+Exception Attributes: array (
+  'controller' => 'MarkingschemesController',
+  'action' => 'add_marks',
+)
+Request URL: /ev-admiral/admin/Markingschemes/add_marks
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-10 21:43:19 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ev`.`axi_markingschemes`, CONSTRAINT `axi_markingschemes_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+Request URL: /ev-admiral/admin/markingschemes/add_marks
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ev...', Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `ev...')
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Markingscheme), Array, Array)
+#4 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php(13): Model->save(Array)
+#6 [internal function]: MarkingschemesController->add_marks()
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(MarkingschemesController), Array)
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#10 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-05-11 07:48:27 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev-admiral/admin/Markingschemes
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-11 08:00:04 Error: [MissingActionException] Action MarkingschemesController::delete_scheme() could not be found.
+Exception Attributes: array (
+  'controller' => 'MarkingschemesController',
+  'action' => 'delete_scheme',
+)
+Request URL: /ev-admiral/admin/Markingschemes/delete_scheme/55504515-24c4-4bf1-bbbf-0d21125f2f23
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#2 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-11 08:02:45 Error: Fatal Error (1): Call to a member function delete() on null in [/opt/lampp/htdocs/ev-admiral/admin/app/Controller/MarkingschemesController.php, line 33]
+2015-05-11 08:02:45 Error: [FatalErrorException] Call to a member function delete() on null
+Request URL: /ev-admiral/admin/Markingschemes/delete_marks/55504515-24c4-4bf1-bbbf-0d21125f2f23
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#2 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
