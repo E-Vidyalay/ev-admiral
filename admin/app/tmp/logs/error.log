@@ -347,3 +347,17 @@ Stack Trace:
 #3 /opt/lampp/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-05-11 08:49:00 Error: [CakeException] Authentication adapter "User" was not found.
+Request URL: /ev/admin/markingschemes
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Controller/Component/AuthComponent.php(685): AuthComponent->constructAuthenticate()
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_getUser()
+#2 [internal function]: AuthComponent->startup(Object(MarkingschemesController))
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Controller/Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#8 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
