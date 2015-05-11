@@ -1,4 +1,5 @@
 <br/>
+<<<<<<< HEAD
 <div class="row">
 	<div class="col-lg-5">
 		<h2>Questions</h2>
@@ -28,3 +29,38 @@
 	</tr> 	
 	<?php } ?>
 </table>
+=======
+<h1>Question Bank</h1>
+<hr>
+<?php
+
+echo $questions['option1'];
+    /*echo $this->Form->create('QuestionBank',array('controller'=>'questionbanks','action'=>'update'));
+    echo $this->Form->input('id',array('type'=>'hidden'));
+    echo $this->Form->input('standard_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $stand,
+        'label' => 'Standard'
+    ));
+    echo "<br/>";
+    echo $this->Form->input('name',array(
+     'class'=>'form-control',
+     'placeholder'=>'Name',
+     'type'=>'text',
+     'required',
+     'autofocus',
+     'label'=>'Subject'
+      ));
+    echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
+    echo "<br/>";
+    
+    echo $this->Form->input('update subject',array(
+     'type'=>'submit',
+     'div'=>false,
+     'label'=>false,
+     'class'=>'btn btn-lg btn-success btn-block'
+     ));   */                            
+
+?>
+>>>>>>> 0f494a323a48db352cb85473d485d00c55721da7
