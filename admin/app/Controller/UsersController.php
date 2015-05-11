@@ -1,23 +1,5 @@
 <?php
 	class UsersController extends AppController{
-		//Model that controller needs
-		//$uses=array('User');
-
-		public function beforeFilter(){
-			parent::beforeFilter();
-			$this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'index');
-			$this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'index');
-			$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
-			
-			// Basic setup
-			$this->Auth->authenticate = array('Form');
-	
-			// Pass settings in
-			$this->Auth->authenticate = array(
-				'Form' => array('userModel' => 'User')
-			);
-			$this->Auth->allow('login','forgot_password','update_password');
-		}
 		public function index(){
 			$this->layout='ev_admin';
 		}

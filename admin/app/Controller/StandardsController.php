@@ -1,7 +1,6 @@
 <?php 
 
 	class StandardsController extends AppController{
-
 		public function index()
 		{
 			$this->set('standards',$this->Standard->find('all'));

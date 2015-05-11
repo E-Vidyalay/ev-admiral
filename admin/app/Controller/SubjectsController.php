@@ -1,7 +1,6 @@
 <?php 
 
 	class SubjectsController extends AppController{
-
 		public $uses=array('User','Standard','Subject');
 		public function index()
 		{
