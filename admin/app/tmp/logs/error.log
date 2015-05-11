@@ -361,3 +361,12 @@ Stack Trace:
 #8 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
 #9 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2015-05-11 09:14:48 Error: [MissingControllerException] Controller class StandardController could not be found.
+Exception Attributes: array (
+  'class' => 'StandardController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/standard/insert
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

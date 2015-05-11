@@ -11,7 +11,7 @@
 		<td> <?php  echo $standard['Standard']['section']; ?> </td>
 		<td> <?php echo $this->Html->link('Update Standard',array('controller'=>'standards','action'=>'update',$standard['Standard']['id']),array('class'=>'btn btn-primary'));
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Delete Subject',array('controller'=>'standards','action'=>'delete',$standard['Standard']['id']),array('class'=>'btn btn-primary'));
+			echo $this->Html->link('Delete Standard',array('controller'=>'standards','action'=>'delete',$standard['Standard']['id']),array('class'=>'btn btn-primary'));
 		?>
 		</td> 
 	</tr> 	
