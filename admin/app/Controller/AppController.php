@@ -59,7 +59,16 @@ class AppController extends Controller {
         //Logged In user variables
         $this->set('isLoggedIn',$this->Auth->loggedIn());
         $this->set('activeUser',$this->Session->read('Auth'));
-
+        $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'index');
+        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'index');
+        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
+        // Basic setup
+        $this->Auth->authenticate = array('Form');
+        // Pass settings in
+        $this->Auth->authenticate = array(
+            'Form' => array('userModel' => 'User')
+        );
+        $this->Auth->allow('login','forgot_password','update_password');
         $this->activeUser = $this->Session->read('Auth');
         $this->isLoggedIn = $this->Auth->loggedIn();
     }
