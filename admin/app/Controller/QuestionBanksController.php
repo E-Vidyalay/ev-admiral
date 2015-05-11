@@ -1,13 +1,13 @@
 <?php
-class QuestionbanksController extends Appcontroller{
+class QuestionBanksController extends AppController{
 
 	public function index(){
 		$a=array();
-		$a=$this->Questionbank->find("all");
-		this->set('questions',$a);
-		this->layout='ev-admin';
+		$a=$this->QuestionBank->find("all");
+		pr($a);
+		$this->set('questions', $a);
+		$this->layout='ev_admin';
 	}
-
-	public function 
+	
 }
 ?>

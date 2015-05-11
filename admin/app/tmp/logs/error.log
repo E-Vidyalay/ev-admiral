@@ -410,3 +410,456 @@ Stack Trace:
 #0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> c0b788098a3e6a4364558db1a35e7e8bae486268
+2015-05-11 09:40:01 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 7]
+2015-05-11 09:40:01 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:40:33 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:40:33 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:40:34 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:40:34 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:40:34 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:40:34 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:41:14 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:41:14 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:41:17 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:41:17 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:42:42 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:42:42 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:42:43 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:42:43 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:42:43 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 12]
+2015-05-11 09:42:43 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING)
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:42:55 Error: Fatal Error (1): Class 'Appcontroller' not found in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 2]
+2015-05-11 09:42:55 Error: [FatalErrorException] Class 'Appcontroller' not found
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Appcontr...', 'C:\\xampp\\htdocs...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Appcontr...', 'C:\\xampp\\htdocs...', 2, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Appcontr...', 'C:\\xampp\\htdocs...', 2, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:43:06 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 09:43:06 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 09:43:07 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 09:43:07 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/questionbanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:49:17 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:49:18 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:19 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:19 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:20 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:20 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:20 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:20 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:20 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:50:21 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:50:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:52:22 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:52:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:52:23 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:52:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:52:23 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:52:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:52:24 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:52:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:52:24 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:52:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:29 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:29 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:30 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:30 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:30 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:31 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:31 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:31 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:31 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:31 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:31 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:32 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:32 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:32 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:32 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:32 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:32 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:33 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:33 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:34 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:34 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:34 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:34 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:34 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:34 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:54:35 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:54:35 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:55:04 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:55:04 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:55:04 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 6]
+2015-05-11 11:55:04 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 11:58:11 Error: [MissingLayoutException] Layout file "Layouts\ev-admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts\\ev-admin.ctp',
+)
+Request URL: /ev-admiral/admin/QuestionBanks/index
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\View\View.php(514): View->_getLayoutFileName('ev-admin')
+#1 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\View\View.php(481): View->renderLayout('', 'ev-admin')
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QuestionBanksController), Object(CakeRequest))
+#5 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

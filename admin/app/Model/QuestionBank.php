@@ -1,5 +1,5 @@
 <?php 
-	class Questionbank extends AppModel{
+	class QuestionBank extends AppModel{
 		
 	}
 ?>
