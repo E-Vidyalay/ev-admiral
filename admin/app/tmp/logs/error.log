@@ -361,6 +361,7 @@ Stack Trace:
 #8 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MarkingschemesController), Object(CakeRequest))
 #9 /Applications/XAMPP/xamppfiles/htdocs/ev/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+<<<<<<< HEAD
 2015-05-11 08:57:35 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
 Exception Attributes: array (
   'class' => 'Mysql',
@@ -398,3 +399,14 @@ Stack Trace:
 #1 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SubjectsController), Object(CakeRequest))
 #2 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+=======
+2015-05-11 09:14:48 Error: [MissingControllerException] Controller class StandardController could not be found.
+Exception Attributes: array (
+  'class' => 'StandardController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/standard/insert
+Stack Trace:
+#0 /opt/lampp/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>>>>>>> c0b788098a3e6a4364558db1a35e7e8bae486268
