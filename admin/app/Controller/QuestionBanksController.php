@@ -33,6 +33,14 @@ public $uses=array('QuestionBank','Standard','Subject');
 		}
 		
 	}
+
+	public function delete($id=null){
+				$this->layout='ev_admin';
+				$this->QuestionBank->delete($id);      
+				$this->Session->setFlash("Question Deleted successfully.",'default',array('class'=>'alert alert-success'),'success');     				
+	            $this->redirect(array('controller'=>'QuestionBanks','action'=>'index'));
+	}
+	
 	
 }
 ?>
