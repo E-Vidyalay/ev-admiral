@@ -1,5 +1,12 @@
 <br/>
-<h1>Subjects</h1>
+<div class="row">
+	<div class="col-lg-5">
+		<h2>Subjects</h2>
+	</div>
+	<div class="col-lg-7" style="text-align: right">
+			<p style="margin-top: 20px"><?php echo $this->Html->link('Add New Subject',array('controller'=>'Subjects','action'=>'insert'),array('class'=>'btn btn-primary'));?></p>
+	</div>
+</div>
 <hr/>
 <table width="100%" class="table table-striped table-bordered">
 	<tr>

@@ -1,5 +1,6 @@
 <?php
 class QuestionBanksController extends AppController{
+
 	public $uses=array('QuestionBank','Subject');
 	public function index(){
 		$a=array();
@@ -47,6 +48,7 @@ class QuestionBanksController extends AppController{
 				$this->layout='ev_admin';
 
 	}*/
+
 
 }
 ?>
