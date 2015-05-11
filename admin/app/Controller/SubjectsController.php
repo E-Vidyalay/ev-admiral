@@ -17,7 +17,10 @@
 			$this->set('user',$userId);
 			if($this->request->is('post'))
 			{
-				if($this->Subject->save($this->data))
+				$data=$this->data;
+				$standard=$this->Standard->findById($data['Subject']['standard_id']);
+				$data['Subject']['display_name']=$standard['Standard']['standard']."th ".$data['Subject']['name'];
+				if($this->Subject->save($data))
 				{
 					$this->Session->setFlash('Subject added successfully','default',array('class'=>'alert alert-success'),'success');
 					$this->redirect(array('controller'=>'subjects','action'=>'index'));
@@ -41,7 +44,10 @@
 				$this->data= $this->Subject->findById($id);
 			}
 			else{
-				if($this->Subject->save($this->data)){
+				$data=$this->data;
+				$standard=$this->Standard->findById($data['Subject']['standard_id']);
+				$data['Subject']['display_name']=$standard['Standard']['standard']."th ".$data['Subject']['name'];
+				if($this->Subject->save($data)){
 					$this->Session->setFlash('Subject has been successfully edited','default',array('class'=>'alert alert-success'),'success');
 					$this->redirect(array('action'=>'index'));
 				}
