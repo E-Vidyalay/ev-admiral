@@ -2,10 +2,10 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 11, 2015 at 07:01 AM
+-- Host: 127.0.0.1
+-- Generation Time: May 10, 2015 at 01:30 PM
 -- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -82,8 +82,8 @@ CREATE TABLE IF NOT EXISTS `axi_standards` (
 --
 
 INSERT INTO `axi_standards` (`id`, `section`, `standard`) VALUES
-('55503091-9644-44a9-a6d6-0430125f2f23', 'secondary', 10),
-('55503600-fa98-428e-8fc4-0488125f2f23', 'primary', 1);
+('554f3a57-bb00-45d8-8fcd-0490125f2f23', 'secondary', 12),
+('554f3af9-6d0c-47f2-97fe-0490125f2f23', 'primary', 5);
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
   `id` char(36) NOT NULL,
   `name` varchar(100) NOT NULL,
   `standard_id` char(36) NOT NULL,
-  `display_name` varchar(100) DEFAULT NULL,
+  `display_name` varchar(100) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_by` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -287,7 +287,7 @@ ALTER TABLE `axi_student_subject_mappings`
 -- Indexes for table `axi_subjects`
 --
 ALTER TABLE `axi_subjects`
- ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `standard` (`standard_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`);
 
 --
 -- Indexes for table `axi_tests`
@@ -354,8 +354,7 @@ ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`subject_id`) 
 -- Constraints for table `axi_subjects`
 --
 ALTER TABLE `axi_subjects`
-ADD CONSTRAINT `axi_subjects_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_subjects_ibfk_2` FOREIGN KEY (`standard_id`) REFERENCES `axi_standards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_subjects_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_tests`

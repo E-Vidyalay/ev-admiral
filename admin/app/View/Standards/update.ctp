@@ -2,7 +2,7 @@
 <h1>Update standard</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Standard',array('standard'=>'update'));
+	echo $this->Form->create('Standard',array('controller'=>'standards','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
 	echo $this->Form->input('standard',array(
 	 'class'=>'form-control',

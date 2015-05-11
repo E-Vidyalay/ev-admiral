@@ -2,7 +2,7 @@
 <h1>Inserts standard</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Standard',array('standard'=>'insert'));
+	echo $this->Form->create('Standard',array('controller'=>'standards','action'=>'insert'));
 	echo $this->Form->input('standard',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'standard',
