@@ -19,7 +19,7 @@ public $uses=array('QuestionBank','Standard','Subject');
 				$correct_ans[$i]=$data['QuestionBank']['ans'][$i];	
 			}
 			$ans_string=implode(",", $correct_ans);
-			$data['QuestionBank']['corrent_ans']=$ans_string;
+			$data['QuestionBank']['correct_ans']=$ans_string;
 			if($this->QuestionBank->save($data)){
 				$this->Session->setFlash('Question added Successfully.!','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('controller'=>'question_banks','action'=>'index'));
