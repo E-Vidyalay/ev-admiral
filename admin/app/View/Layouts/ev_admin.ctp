@@ -121,8 +121,5 @@
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
 		?>
-        <script>
-            $(document).foundation();
-        </script>
 	</body>
 </html>

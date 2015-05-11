@@ -863,3 +863,45 @@ Stack Trace:
 #4 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QuestionBanksController), Object(CakeRequest))
 #5 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2015-05-11 12:16:15 Error: [MissingActionException] Action QuestionBanksController::insert() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionBanksController',
+  'action' => 'insert',
+)
+Request URL: /ev-admiral/admin/questionbanks/insert
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QuestionBanksController), Object(CakeRequest))
+#2 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-11 12:48:08 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 14]
+2015-05-11 12:48:08 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/insert
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 12:53:26 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\ev-admiral\admin\app\Controller\QuestionBanksController.php, line 14]
+2015-05-11 12:53:26 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /ev-admiral/admin/QuestionBanks/insert
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-11 13:11:09 Error: [MissingActionException] Action QuestionBanksController::add_question() could not be found.
+Exception Attributes: array (
+  'controller' => 'QuestionBanksController',
+  'action' => 'add_question',
+)
+Request URL: /ev-admiral/admin/question_banks/add_question
+Stack Trace:
+#0 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ev-admiral\admin\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QuestionBanksController), Object(CakeRequest))
+#2 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
