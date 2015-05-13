@@ -1,5 +1,6 @@
 <?php
 class QuestionBanksController extends AppController{
+
 public $uses=array('QuestionBank','Standard','Subject');
 	public function index(){
 		$a=$this->QuestionBank->find('all');
@@ -39,6 +40,8 @@ public $uses=array('QuestionBank','Standard','Subject');
 				$this->Session->setFlash("Question Deleted successfully.",'default',array('class'=>'alert alert-success'),'success');     				
 	            $this->redirect(array('controller'=>'QuestionBanks','action'=>'index'));
 	}
+
+
 	public function update($id=null){
 				$this->layout='ev_question';
 				$subjects=$this->Subject->find('list',array('fields' => array('id','display_name')));
@@ -85,5 +88,6 @@ public $uses=array('QuestionBank','Standard','Subject');
 	                }
 	            }
 	        }
+
 }
 ?>
