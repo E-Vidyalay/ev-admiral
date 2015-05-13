@@ -1,7 +1,26 @@
-.DS_Store
-*.DS_Store
-admin/app/tmp/*
-/admin/app/tmp/*
-admin/app/tmp/cache/*
-admin/app/tmp/logs/*
+# User specific & automatically generated files #
+#################################################
+/admin/app/tmp
+/admin/lib/Cake/Console/Templates/skel/tmp/
+/admin/plugins
+/admin/vendors
+/admin/build
+/admin/dist
+/admin/tags
+*.mo
 
+# IDE and editor specific files #
+#################################
+/nbproject
+.idea
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
