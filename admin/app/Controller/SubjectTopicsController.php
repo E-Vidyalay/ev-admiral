@@ -4,6 +4,7 @@
 
 		function index(){
 			$this->layout="ev_admin";
+			 $this->set('subjects',$this->Subject->find('all'));
 		}
 
 		function insert(){
