@@ -4,18 +4,8 @@
 
 		function index(){
 			$this->layout="ev_admin";
-
-			//$this->set('subjects',$this->Subject->find('list',array('fields'=>array('id','display_name'))));
-
-			$a=$this->Subject->find('all');
-			$this->set('subjects', $a);
-
 			$topic=$this->SubjectTopic->find('all');
 			$this->set('topics',$topic);
-
-			//pr($a);
-			pr($topic);
-
 		}
 
 		function insert(){
@@ -25,7 +15,6 @@
 			$this->set('subjects', $a);
 			
 			if($this->request->is('post')){
-				//pr($this->data);
 				if($this->SubjectTopic->save($this->data))
 				{
 					$this->Session->setFlash('Topic added successfully','default',array('class'=>'alert alert-success'),'success');
@@ -40,8 +29,28 @@
 			$this->redirect(array('action' => 'index'));
 		}
 
-		function update($id = NULL){
+		function update($id = NULL, $display_name = NULL){
+			$this->layout="ev_admin";
+			$a=$this->Subject->findById($id);
+			$this->set('subjects', $a);
+			$this->set('dName',$display_name);
 
+			if(empty($this->data)){
+				$this->data= $this->SubjectTopic->findById($id);
+			}
+			else{
+				$data=$this->data;
+				//pr($data);
+				if($this->SubjectTopic->save($data))
+				{
+					$this->Session->setFlash('Topic has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+					$this->redirect(array('action'=>'index'));
+				}
+				else{
+					$this->Session->setFlash('Topic has not been edited','default',array('class'=>'alert alert-error'),'error');
+					$this->redirect(array('action'=>'update'));
+				}
+			}
 		}
 }
 ?>

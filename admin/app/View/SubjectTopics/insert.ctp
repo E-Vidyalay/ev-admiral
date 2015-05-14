@@ -3,12 +3,7 @@
 <hr>
 <?php 
 	echo $this->Form->create('SubjectTopic',array('controller'=>'SubjectTopics','action'=>'insert'));
-  /*  echo $this->Form->input('subject_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $stand,
-        'label' => 'Subject'
-    ));*/
+    
     echo $this->Form->input('subject_id',array('options'=>$subjects,'class'=>'form-control','empty'=>'Select subject','required'));
     echo "<br/>";
 
@@ -20,8 +15,8 @@
      'autofocus',
      'label'=>'Name'
       ));
-    /*echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $userId));
-    echo "<br/>";*/
+    
+    echo "<br/>";
     
     echo $this->Form->input('Add Topic',array(
      'type'=>'submit',
