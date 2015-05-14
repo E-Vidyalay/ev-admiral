@@ -1029,3 +1029,222 @@ Stack Trace:
 #5 C:\xampp\htdocs\ev-admiral\admin\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
 >>>>>>> 0f494a323a48db352cb85473d485d00c55721da7
+2015-05-14 19:55:17 Error: [MissingViewException] View file "Pages/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/add.ctp',
+)
+Request URL: /ev-admiral/admin/pages/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName('add')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render('add', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/PagesController.php(68): Controller->render('add')
+#3 [internal function]: PagesController->display('add')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-05-14 19:55:28 Error: [MissingViewException] View file "Pages/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/add.ctp',
+)
+Request URL: /ev-admiral/admin/pages/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName('add')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render('add', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/PagesController.php(68): Controller->render('add')
+#3 [internal function]: PagesController->display('add')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-05-14 19:56:16 Error: [MissingTableException] Table axi_articles for model Article was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'axi_articles',
+  'class' => 'Article',
+  'ds' => 'default',
+)
+Request URL: /ev-admiral/admin/articles/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3644): Model->setSource('articles')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('Article', 'fields')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/View/Articles/add.ctp(3): FormHelper->create('Article', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(961): include('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(923): View->_evaluate('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#11 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-14 19:56:26 Error: [MissingHelperException] Helper class createHelper could not be found.
+Exception Attributes: array (
+  'class' => 'createHelper',
+  'plugin' => false,
+)
+Request URL: /ev-admiral/admin/articles/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('create')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(848): HelperCollection->__isset('create')
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/View/Articles/add.ctp(3): View->__get('create')
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(961): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(923): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-14 19:56:50 Error: [MissingTableException] Table axi_articles for model Article was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'axi_articles',
+  'class' => 'Article',
+  'ds' => 'default',
+)
+Request URL: /ev-admiral/admin/articles/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(3644): Model->setSource('articles')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('Article', 'fields')
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/View/Articles/add.ctp(3): FormHelper->create('Article', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(961): include('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(923): View->_evaluate('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#9 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#11 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-14 20:00:34 Error: Fatal Error (4): syntax error, unexpected '/' in [/Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/View/Articles/add.ctp, line 17]
+2015-05-14 20:00:34 Error: [FatalErrorException] syntax error, unexpected '/'
+Request URL: /ev-admiral/admin/articles/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 17, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 17, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-14 21:01:24 Error: [MissingViewException] View file "Articles/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Articles/delete.ctp',
+)
+Request URL: /ev-admiral/admin/articles/delete/5554efec-95b8-4514-b45c-5971125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-14 21:01:27 Error: [MissingViewException] View file "Articles/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Articles/delete.ctp',
+)
+Request URL: /ev-admiral/admin/articles/delete/5554efec-95b8-4514-b45c-5971125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-14 21:02:21 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/ArticlesController.php, line 33]
+2015-05-14 21:02:21 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /ev-admiral/admin/articles/delete/5554efec-95b8-4514-b45c-5971125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 33, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 33, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-14 21:02:41 Error: [MissingViewException] View file "Articles/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Articles/delete.ctp',
+)
+Request URL: /ev-admiral/admin/articles/delete/index
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-14 21:02:53 Error: [MissingViewException] View file "Articles/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Articles/delete.ctp',
+)
+Request URL: /ev-admiral/admin/articles/delete/5554efec-95b8-4514-b45c-5971125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-14 21:04:58 Error: [MissingActionException] Action ArticlesController::update() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'update',
+)
+Request URL: /ev-admiral/admin/articles/update/5554f1ca-e204-4151-867d-5999125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-14 21:06:15 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/ArticlesController.php, line 26]
+2015-05-14 21:06:15 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /ev-admiral/admin/articles/delete/index
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 26, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 26, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-14 21:06:53 Error: Fatal Error (4): syntax error, unexpected '!' in [/Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/ArticlesController.php, line 24]
+2015-05-14 21:06:53 Error: [FatalErrorException] syntax error, unexpected '!'
+Request URL: /ev-admiral/admin/articles/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 24, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 24, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-14 21:25:29 Error: [MissingActionException] Action ArticlesController::update() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'update',
+)
+Request URL: /ev-admiral/admin/articles/update/5554f5c6-16bc-41e9-9af5-5995125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-14 21:27:16 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/Controller/ArticlesController.php, line 34]
+2015-05-14 21:27:16 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /ev-admiral/admin/articles/update/5554f5c6-16bc-41e9-9af5-5995125f2f23
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 34, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 34, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-14 22:10:07 Error: [MissingControllerException] Controller class NController could not be found.
+Exception Attributes: array (
+  'class' => 'NController',
+  'plugin' => NULL,
+)
+Request URL: /ev-admiral/admin/n/articles/update/%3Ciframe%20width=%22477%22%20height=%22271%22%20src=%22https://www.youtube.com/embed/VlD0S6Zssm0?list=PLCAJk1c6Alh44ukopYEiIi0cJgMg7Sini%22+frameborder%3D%220%22+allowfullscreen%3E%3C%2Fiframe%3E
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ev-admiral/admin/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

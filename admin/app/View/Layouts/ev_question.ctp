@@ -31,7 +31,7 @@
                 theme_advanced_statusbar_location : "bottom",
                 theme_advanced_resizing: true,
                 theme_advanced_resizing_use_cookie : false,
-                content_css : "/SantMegh/css/ptparea.css",
+                content_css : "/ev-admiral/admin/css/ptparea.css",
                 pramukhime_language: [
                     {
 jsfile:'pramukhindic.js',
@@ -172,6 +172,18 @@ languagelist:[
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Questions",array('controller'=>'QuestionBanks','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View pages",array('controller'=>'articles','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Page",array('controller'=>'articles','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
