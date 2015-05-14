@@ -4,6 +4,12 @@
 
 		function index(){
 			$this->layout="ev_admin";
+			$a=$this->Subject->find('list',array('fields'=>array('id','display_name')));
+			$this->set('subjects', $a);
+
+			$topic=$this->SubjectTopic->find('list', array('fields'=>array('id','topic_name')));
+			$this->set('topics',$topic);
+
 		}
 
 		function insert(){
@@ -20,6 +26,10 @@
 					$this->redirect(array('controller'=>'SubjectTopics','action'=>'index'));
 				}
 			}
+		}
+
+		function delete(){
+			
 		}
 }
 ?>
