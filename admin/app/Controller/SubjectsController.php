@@ -55,5 +55,16 @@
 
 		}
 
+		function insert_topic(){
+			$this->layout="ev_admin";
+			$data=$this->data->Standard->find('list',array('fields' => array('id','sttandard')));
+			$this->set('stand',$data);
+			$userId=$this->Auth->user('id');
+			$this->set('user',$userId);
+			if($this->request->is('post')){
+				$data=$this->data;
+			}
+		}
+
 	}
 ?>
