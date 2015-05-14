@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 13, 2015 at 12:23 PM
+-- Generation Time: May 14, 2015 at 02:25 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -46,24 +46,6 @@ INSERT INTO `axi_markingschemes` (`id`, `positive_marks`, `negative_marks`, `dis
 -- --------------------------------------------------------
 
 --
--- Table structure for table `axi_parents`
---
-
-CREATE TABLE IF NOT EXISTS `axi_parents` (
-  `id` char(36) NOT NULL,
-  `first_name` varchar(60) NOT NULL,
-  `last_name` varchar(60) NOT NULL,
-  `username` varchar(200) NOT NULL,
-  `password` varchar(80) NOT NULL,
-  `address` text NOT NULL,
-  `mobile` bigint(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `axi_question_banks`
 --
 
@@ -81,6 +63,24 @@ CREATE TABLE IF NOT EXISTS `axi_question_banks` (
   `subject_id` char(36) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_by` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_sparents`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_sparents` (
+  `id` char(36) NOT NULL,
+  `first_name` varchar(60) NOT NULL,
+  `last_name` varchar(60) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  `address` text NOT NULL,
+  `mobile` bigint(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -165,6 +165,14 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
   `updated_by` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `axi_subjects`
+--
+
+INSERT INTO `axi_subjects` (`id`, `name`, `standard_id`, `display_name`, `updated_at`, `updated_by`) VALUES
+('555369e4-9700-4781-8a78-07e8125f2f23', 'english', '55503091-9644-44a9-a6d6-0430125f2f23', '11th english', '2015-05-13 15:12:36', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('555369eb-2cf8-4d3c-8603-07e8125f2f23', 'maths', '55503091-9644-44a9-a6d6-0430125f2f23', '11th maths', '2015-05-13 15:12:43', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
 -- --------------------------------------------------------
 
 --
@@ -172,10 +180,18 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
 --
 
 CREATE TABLE IF NOT EXISTS `axi_subject_topics` (
-  `subject_topic_id` char(36) NOT NULL,
+  `id` char(36) NOT NULL,
   `subject_id` char(36) NOT NULL,
   `topic_name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_subject_topics`
+--
+
+INSERT INTO `axi_subject_topics` (`id`, `subject_id`, `topic_name`) VALUES
+('555475e1-8c7c-4ca0-ab33-00c0125f2f23', '555369e4-9700-4781-8a78-07e8125f2f23', 'grammar'),
+('55547622-fa70-4b33-92d4-00c0125f2f23', '555369eb-2cf8-4d3c-8603-07e8125f2f23', 'derivation');
 
 -- --------------------------------------------------------
 
@@ -186,7 +202,8 @@ CREATE TABLE IF NOT EXISTS `axi_subject_topics` (
 CREATE TABLE IF NOT EXISTS `axi_subtopiclink_mappings` (
   `link_id` char(36) NOT NULL,
   `subtopic_id` char(36) NOT NULL,
-  `link_name` char(255) NOT NULL
+  `link_name` char(255) NOT NULL,
+  `link_url` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -332,16 +349,16 @@ ALTER TABLE `axi_markingschemes`
  ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`);
 
 --
--- Indexes for table `axi_parents`
---
-ALTER TABLE `axi_parents`
- ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `axi_question_banks`
 --
 ALTER TABLE `axi_question_banks`
  ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `subject_id` (`subject_id`);
+
+--
+-- Indexes for table `axi_sparents`
+--
+ALTER TABLE `axi_sparents`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_standards`
@@ -371,7 +388,7 @@ ALTER TABLE `axi_subjects`
 -- Indexes for table `axi_subject_topics`
 --
 ALTER TABLE `axi_subject_topics`
- ADD PRIMARY KEY (`subject_topic_id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_subtopiclink_mappings`
