@@ -12,13 +12,13 @@
 	<tr>
 		<th>Subject</th><th>Topic</th><th>Action</th>
 	</tr>
-	<?php foreach($subjects as $sub){ ?>
+	<?php foreach($topics as $sub){ ?>
 	<tr>
-		<td> <?php  echo $sub['Subject']['name']; ?> </td>
+		<td> <?php  echo $sub['Subject']['display_name']; ?> </td>
 		<td><?php echo $sub['SubjectTopic']['topic_name']; ?></td>			
-		<td> <?php echo $this->Html->link('Update Topic',array('controller'=>'SubjectTopics','action'=>'update',$sub['SubjectTopic']['subject_topic_id']),array('class'=>'btn btn-primary'));
+		<td> <?php echo $this->Html->link('Update Topic',array('controller'=>'SubjectTopics','action'=>'update',$sub['SubjectTopic']['id']),array('class'=>'btn btn-primary'));
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Delete Topic',array('controller'=>'SubjectTopics','action'=>'delete',$sub['SubjectTopic']['subject_topic_id']),array('class'=>'btn btn-primary'));
+			echo $this->Html->link('Delete Topic',array('controller'=>'SubjectTopics','action'=>'delete',$sub['SubjectTopic']['id']),array('class'=>'btn btn-primary'));
 		?>
 		</td> 
 	</tr> 	
