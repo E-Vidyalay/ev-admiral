@@ -10,7 +10,7 @@
 			$a=$this->Subject->find('list',array('fields'=>array('id','display_name')));
 			$this->set('subjects', $a);
 
-			$topic=$this->SubjectTopic->find('list', array('fields'=>array('id','topic_name')));
+			$topic=$this->SubjectTopic->find('list', array('fields'=>array('subject_topic_id','topic_name')));
 			$this->set('topics',$topic);
 
 
