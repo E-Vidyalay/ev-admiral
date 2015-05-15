@@ -1,6 +1,6 @@
 <?php 
 	class SubjectTopicsController extends AppController{
-		public $uses=array('SubjectTopic','Standard','Subject');
+		public $uses=array('SubjectTopic','Subject');
 
 		function index(){
 			$this->layout="ev_admin";
