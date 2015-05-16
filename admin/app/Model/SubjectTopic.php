@@ -2,9 +2,9 @@
 
 class SubjectTopic extends AppModel{
 	public $belongsTo=array(
-			'SubjectTopic'=>array(
-				'className'=>'SubjectTopic',
-				'foreignKey'=>'id',
+			'Subject'=>array(
+				'className'=>'Subject',
+				'foreignKey'=>'subject_id',
 				'dependent'=>true
 			));	
 }
