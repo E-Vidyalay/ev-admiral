@@ -1,5 +1,5 @@
 <?php 
-
+App::uses('SetSubject','View/Helper');
 	class SubjectsController extends AppController{
 		public $uses=array('User','Standard','Subject');
 		public function index()
@@ -28,13 +28,13 @@
 			}
 		}
 
-		function delete($id = NULL){
+		public function delete($id = NULL){
 			$this->Subject->delete($id);
 			$this->Session->setFlash('Subject has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
 			$this->redirect(array('action' => 'index'));
 		}
 
-		function update($id = NULL){
+		public function update($id = NULL){
 			$this->layout='ev_admin';
 			$data = $this->Standard->find('list', array('fields' => array('id','standard')));
 			$this->set('stand', $data);
@@ -55,7 +55,7 @@
 
 		}
 
-		function insert_topic(){
+		public function insert_topic(){
 			$this->layout="ev_admin";
 			$data=$this->data->Standard->find('list',array('fields' => array('id','sttandard')));
 			$this->set('stand',$data);
