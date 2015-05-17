@@ -10,9 +10,14 @@ class LinksController extends AppController{
 			
 		$t=$this->SubjectTopic->find('all');
 		$this->set('topics',$t);
-		$l=$this->SubTopic->find('list',array('fields'=>array('id','subtopic_name'),'conditions'=>array('SubTopic.id'=>$id)));
-		
-			$this->set('subtopic',$l);
+		$l=$this->SubTopic->findById($id);
+		//pr($l);
+		//pr($l['SubTopic']['id']);
+		//pr($l['SubTopic']['subtopic_name']);
+		$subtopicId=$l['SubTopic']['id'];
+		$subtopicName=$l['SubTopic']['subtopic_name'];
+			$this->set('subtopicId',$subtopicId);
+			$this->set('subtopicname',$subtopicName);
 			$this->set('dName',$display_name);
 			$this->set('topicnames',$topic_name);
 			

@@ -12,7 +12,7 @@
         'disabled'
     ));
     echo "<br/>";
-    echo $this->Form->input('SubjectTopic.id',array(
+    echo $this->Form->input('subtopic_id',array(
      'class'=>'form-control',
      //'placeholder'=>'Name',
      'type'=>'text',
@@ -26,9 +26,15 @@
      echo $this->Form->input('subtopic_name',array(
      'class'=>'form-control',
      //'placeholder'=>'Sub Topic Name',
-     'value' => $subtopic,
+     'value' => $subtopicname,
      'label'=>'Sub Topic',
      'disabled'
+      ));
+     echo $this->Form->input('subtopic_id',array(
+     'class'=>'form-control',
+     //'placeholder'=>'Sub Topic Name',
+     'value' => $subtopicId,
+     'type'=>'hidden'
       ));
     
      echo "<br/>";

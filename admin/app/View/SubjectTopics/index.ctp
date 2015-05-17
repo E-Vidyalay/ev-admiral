@@ -19,6 +19,8 @@
 		<td> <?php echo $this->Html->link('Update Topic',array('controller'=>'SubjectTopics','action'=>'update',$sub['SubjectTopic']['id'],$sub['Subject']['display_name']),array('class'=>'btn btn-primary'));
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 			echo $this->Html->link('Delete Topic',array('controller'=>'SubjectTopics','action'=>'delete',$sub['SubjectTopic']['id']),array('class'=>'btn btn-primary'));
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+			echo $this->Html->link('View Sub Topic',array('controller'=>'SubTopics','action'=>'index',$sub['SubjectTopic']['id']),array('class'=>'btn btn-primary'));
 		?>
 		</td> 
 	</tr> 	
