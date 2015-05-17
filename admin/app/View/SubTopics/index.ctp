@@ -26,7 +26,7 @@
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 			echo $this->Html->link('Delete Sub Topic',array('controller'=>'SubTopics','action'=>'delete',$sub['SubTopic']['id']),array('class'=>'btn btn-primary'));
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Add link',array('controller'=>'Links','action'=>'add',$sub['SubTopic']['id']),array('class'=>'btn btn-primary'));
+			echo $this->Html->link('Add link',array('controller'=>'Links','action'=>'add',$sub['SubTopic']['id'],$sub['SubjectTopic']['topic_name'],$s['Subject']['display_name']),array('class'=>'btn btn-primary'));
 		?>
 		</td>
 		<?php } ?>
