@@ -6,8 +6,9 @@ App::uses('SetSubject','View/Helper');
 		var $helpers=array('SetSubject');
 		var $uses = array('SubTopic','Subject','SubjectTopic','Standard');
 
-		function index(){
+		function index($id=NULL){
 			$this->layout="ev_admin";
+			//$this=$this->SubjectTopic->find()
 			$sub=$this->SubTopic->find('all');
 			$this->set('subtopics',$sub);
 			//pr($sub['SubjectTopic']['subject_id']);
@@ -28,7 +29,7 @@ App::uses('SetSubject','View/Helper');
         		if($this->SubTopic->save($this->data)){
         			
         		$this->Session->setFlash('Sub Topic added successfully','default',array('class'=>'alert alert-success'),'success');
-        		$this->redirect(array('action'=>'index'));
+        		$this->redirect(array('controller'=>'SubjectTopics','action'=>'index'));
         	}
         	else
         	{

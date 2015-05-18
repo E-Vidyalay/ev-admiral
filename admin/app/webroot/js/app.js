@@ -5,16 +5,18 @@ $(document).ready(function(){
 });
 $('.std').on('click',function(){
 	var v=$(this).attr('id');
-	var url="http://localhost/ev-admiral/admin/SubTopics/list_subject/"+v;
+	var baseurl=location.origin;
+	var url=baseurl+"/ev-admiral/admin/SubTopics/list_subject/"+v;
 	console.log(url);
-	var c=$(this).attr('class');
-	$(this).attr('class',c+" active");
+	$('.std').removeClass("active");
+	$(this).addClass("active");
 	$.ajax({
 	  url: url,
 	  success:function(data) {
 			//alert(data)
 	 		$("#subject-list").html(data);
 	 		$("#subject-list-topic").html("");
+	 		$('#subtopic').html("");
 		},
 		error:function(data){
 			alert("Error")
@@ -26,7 +28,8 @@ $('.std').on('click',function(){
  $(document).on('change','.subject-ls',function(event){
 
     var v=$(this).val();
-	var url="http://localhost/ev-admiral/admin/SubTopics/list_subject_topic/"+v;
+    var baseurl=location.origin;
+	var url=baseurl+"/ev-admiral/admin/SubTopics/list_subject_topic/"+v;
 	console.log(url);
 	$.ajax({
 	  url: url,
@@ -43,7 +46,8 @@ $('.std').on('click',function(){
  $(document).on('change','.topic-ls',function(event){
 
     var v=$(this).val();
-	var url="http://localhost/ev-admiral/admin/SubTopics/insert_subtopic/"+v;
+    var baseurl=location.origin;
+	var url=baseurl+"/ev-admiral/admin/SubTopics/insert_subtopic/"+v;
 	console.log(url);
 	$.ajax({
 	  url: url,
