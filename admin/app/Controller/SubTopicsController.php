@@ -9,7 +9,7 @@ App::uses('SetSubject','View/Helper');
 		function index($id=NULL){
 			$this->layout="ev_admin";
 			//$this=$this->SubjectTopic->find()
-			$sub=$this->SubTopic->find('all',array('conditions'=>array('SubTopic.subject_topic_id'=>$id)));
+			$sub=$this->SubTopic->find('all');
 			$this->set('subtopics',$sub);
 			//pr($sub['SubjectTopic']['subject_id']);
 			//pr($sub);

@@ -18,7 +18,7 @@
      'type'=>'text',
      'value' => $topicnames,
      'label'=>'Topic',
-     'disabled'
+     'readonly'
       ));
     //echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
@@ -28,7 +28,7 @@
      //'placeholder'=>'Sub Topic Name',
      'value' => $subtopic,
      'label'=>'Sub Topic',
-     'disabled'
+     'readonly'
       ));
     
      echo "<br/>";

@@ -7,18 +7,19 @@
     echo $this->Form->input('display_name',array(
         'class'=>'form-control',
         'type'=> 'text',
-        'value' => $dName,
+        'value' => $sub_name,
         'label' => 'Subject',
-        'disabled'
+        'readonly'
     ));
     echo "<br/>";
-    echo $this->Form->input('SubjectTopic.id',array(
+
+    echo $this->Form->input('topic_name',array(
      'class'=>'form-control',
      //'placeholder'=>'Name',
      'type'=>'text',
-     'value' => $topicnames,
+     'value' => $topic_name,
      'label'=>'Topic',
-     'disabled'
+     'readonly'
       ));
     //echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
@@ -26,9 +27,15 @@
      echo $this->Form->input('subtopic_name',array(
      'class'=>'form-control',
      //'placeholder'=>'Sub Topic Name',
-     'value' => $subtopic,
+     'value' => $sub_topic['SubTopic']['subtopic_name'],
      'label'=>'Sub Topic',
-     'disabled'
+     'readonly'
+      ));
+     echo $this->Form->input('subtopic_id',array(
+     'class'=>'form-control',
+     //'placeholder'=>'Sub Topic Name',
+     'value' => $sub_topic['SubTopic']['id'],
+     'type'=>'hidden'
       ));
     
      echo "<br/>";

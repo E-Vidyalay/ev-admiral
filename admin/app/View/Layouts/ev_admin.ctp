@@ -127,6 +127,7 @@
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Page",array('controller'=>'articles','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
+                            
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
