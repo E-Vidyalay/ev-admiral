@@ -19,7 +19,7 @@
 		{?>
 
 	
-		<td> <?php  echo $s['Subject']['display_name']; ?> </td>
+		<td> <?php echo $s['Subject']['display_name']; ?> </td>
 		<td><?php echo $sub['SubjectTopic']['topic_name']; ?></td>
 		<td><?php echo $sub['SubTopic']['subtopic_name']; ?></td>	
 				
@@ -30,6 +30,8 @@
 			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 
 			echo $this->Html->link('Add link',array('controller'=>'Links','action'=>'add',$sub['SubTopic']['id'],$sub['SubjectTopic']['topic_name'],$s['Subject']['display_name']),array('class'=>'btn btn-primary'));
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+			echo $this->Html->link('Add Files',array('controller'=>'Files','action'=>'add',$sub['SubTopic']['id'],$sub['SubjectTopic']['topic_name'],$s['Subject']['display_name']),array('class'=>'btn btn-primary'));
 
 			
 		?>
