@@ -1,16 +1,16 @@
 <br/>
-<h1>Add link</h1>
+<h1>View all link</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'add'));
+    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'view'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    echo $this->Form->input('display_name',array(
+    /*echo $this->Form->input('display_name',array(
         'class'=>'form-control',
         'type'=> 'text',
         'value' => $dName,
         'label' => 'Subject',
         'disabled'
-    ));
+    ));*/
     echo "<br/>";
     echo $this->Form->input('SubjectTopic.id',array(
      'class'=>'form-control',
@@ -33,7 +33,9 @@
     
      echo "<br/>";
 
-     echo $this->Form->input('link_url',array(
+     
+
+     /*echo $this->Form->input('link_url',array(
      'class'=>'form-control',
      'placeholder'=>'Enter url',
      'type'=>'text',
@@ -42,7 +44,7 @@
      'label'=>'Link'
       ));
 
-    echo "<br/>";
+    echo "<br/>";*/
     
     echo $this->Form->input('Add link',array(
      'type'=>'submit',

@@ -33,7 +33,7 @@ App::uses('SetSubject','View/Helper');
         	}
         	else
         	{
-        		$this->Session->setFlash('Sub Topic added successfully','default',array('class'=>'alert alert-danger'),'error');	
+        		$this->Session->setFlash('Sub Topic has not been added successfully','default',array('class'=>'alert alert-danger'),'error');	
         	}
         }
 		}

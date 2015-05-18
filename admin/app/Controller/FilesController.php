@@ -28,10 +28,8 @@ class LinksController extends AppController{
 				
 				if($this->Link->save($this->data))
 				{	
-					pr($id);
 					$this->Session->setFlash('Link has been successfully added','default',array('class'=>'alert alert-success'),'success');
-					$this->redirect(array('controller'=>'SubTopics','action'=>'index'));
-
+					$this->redirect(array('controller'=>'SubTopics','action'=>'index',$id));
 
 				}
 				else{
