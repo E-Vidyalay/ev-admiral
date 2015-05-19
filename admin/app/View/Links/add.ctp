@@ -14,25 +14,24 @@
     echo "<br/>";
     echo $this->Form->input('topic_name',array(
      'class'=>'form-control',
-     //'placeholder'=>'Name',
      'type'=>'text',
      'value' => $topic_name,
      'label'=>'Topic',
      'readonly'
       ));
-    //echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
+    
     echo "<br/>";
 
      echo $this->Form->input('subtopic_name',array(
      'class'=>'form-control',
-     //'placeholder'=>'Sub Topic Name',
+    
      'value' => $sub_topic['SubTopic']['subtopic_name'],
      'label'=>'Sub Topic',
      'readonly'
       ));
      echo $this->Form->input('subtopic_id',array(
      'class'=>'form-control',
-     //'placeholder'=>'Sub Topic Name',
+     
      'value' => $sub_topic['SubTopic']['id'],
      'type'=>'hidden'
       ));
