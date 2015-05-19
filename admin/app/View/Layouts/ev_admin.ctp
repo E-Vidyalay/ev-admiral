@@ -13,6 +13,9 @@
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
+        <style type="text/css">
+            body, * {font-family:verdana, arial, helvetica, sans-serif; font-size:12px;}
+            </style>
 	</head>
 	<body>
 		<div id="wrapper">
