@@ -1,45 +1,41 @@
 <br/>
-<h1>Add link</h1>
+<h1>View all Files</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'add'));
+    echo $this->Form->create('File',array('controller'=>'files','action'=>'view'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    echo $this->Form->input('display_name',array(
+    /*echo $this->Form->input('display_name',array(
         'class'=>'form-control',
         'type'=> 'text',
-        'value' => $sub_name,
+        'value' => $dName,
         'label' => 'Subject',
-        'readonly'
-    ));
+        'disabled'
+    ));*/
     echo "<br/>";
-
-    echo $this->Form->input('topic_name',array(
+    echo $this->Form->input('SubjectTopic.id',array(
      'class'=>'form-control',
+     //'placeholder'=>'Name',
      'type'=>'text',
-     'value' => $topic_name,
+     'value' => $topicnames,
      'label'=>'Topic',
      'readonly'
       ));
-    
+    //echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
 
      echo $this->Form->input('subtopic_name',array(
      'class'=>'form-control',
-    
-     'value' => $sub_topic['SubTopic']['subtopic_name'],
+     //'placeholder'=>'Sub Topic Name',
+     'value' => $subtopic,
      'label'=>'Sub Topic',
      'readonly'
-      ));
-     echo $this->Form->input('subtopic_id',array(
-     'class'=>'form-control',
-     
-     'value' => $sub_topic['SubTopic']['id'],
-     'type'=>'hidden'
       ));
     
      echo "<br/>";
 
-     echo $this->Form->input('link_url',array(
+     
+
+     /*echo $this->Form->input('link_url',array(
      'class'=>'form-control',
      'placeholder'=>'Enter url',
      'type'=>'text',
@@ -48,7 +44,7 @@
      'label'=>'Link'
       ));
 
-    echo "<br/>";
+    echo "<br/>";*/
     
     echo $this->Form->input('Add link',array(
      'type'=>'submit',

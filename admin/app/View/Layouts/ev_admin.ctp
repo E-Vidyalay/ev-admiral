@@ -157,6 +157,8 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('bootstrap-filestyle');
+
 		?>
 	</body>
 </html>

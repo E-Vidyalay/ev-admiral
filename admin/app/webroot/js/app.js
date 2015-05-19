@@ -3,6 +3,10 @@ $(document).ready(function(){
 		$('.alert').fadeOut(800);
 	},2000);
 });
+$(':file').filestyle({
+	buttonName: "btn-primary"
+});
+
 $('.std').on('click',function(){
 	var v=$(this).attr('id');
 	var baseurl=location.origin;
@@ -25,7 +29,7 @@ $('.std').on('click',function(){
 	});
 });
 
- $(document).on('change','.subject-ls',function(event){
+$(document).on('change','.subject-ls',function(event){
 
     var v=$(this).val();
     var baseurl=location.origin;
@@ -43,7 +47,8 @@ $('.std').on('click',function(){
 
 	});
   });
- $(document).on('change','.topic-ls',function(event){
+
+$(document).on('change','.topic-ls',function(event){
 
     var v=$(this).val();
     var baseurl=location.origin;
@@ -61,3 +66,34 @@ $('.std').on('click',function(){
 
 	});
   });
+// (function()
+// {
+// $('form').submit(function()
+//       {
+//         $.post('/View/Helper/FileHelper.php', function(data1)
+//         {
+//           console.log(data1);
+//           alert(data1);
+//           	$('.progress').addClass('active');
+//             $('.progress').addClass('progress-striped');
+//             $('.progress-bar').text('Complete');
+//         });
+
+//         var refreshId = setInterval(function()
+//         {
+//           $.get('datafile.dat', function(data2)
+//           {
+//             $('.progress-bar').css('width',data2+'%');
+//             if(data2 >= 100)
+//             {
+//               console.log('finished');
+//               $('.progress').removeClass('active');
+//               $('.progress').removeClass('progress-striped');
+//               $('.progress-bar').text('Complete');
+//               clearInterval(refreshId);
+//             }
+//           });
+//         }, 100);
+//         return false;
+//       });
+// })();
