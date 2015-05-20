@@ -3,9 +3,6 @@ $(document).ready(function(){
 		$('.alert').fadeOut(800);
 	},2000);
 });
-$(':file').filestyle({
-	buttonName: "btn-primary"
-});
 
 $('.std').on('click',function(){
 	var v=$(this).attr('id');
