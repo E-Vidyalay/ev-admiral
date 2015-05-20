@@ -3,42 +3,60 @@
 class LinksController extends AppController{
 
 	var $uses = array('Link','SubTopic','Subject','SubjectTopic','Standard');
-	function add($id = NULL,$topic_name=NULL,$display_name=NULL){
+
+	public function index(){
+		$this->layout="ev_admin";
+		//$t=$this->SubTopic->find('all');
+		//$this->set('subtopics',$t);
+		$l=$this->Link->find('all');
+		$this->set('linkID',$l);
+		//pr($l);
+		
+		}
+
+	public function insert($id=NULL,$subtopic_name=NULL){
 		$this->layout="ev_admin";
 		$sb=$this->SubTopic->findById($id);
 		$this->set('sub_topic',$sb);
-		$this->set('topic_name',$topic_name);
-		$this->set('sub_name',$display_name);
+		$this->set('sname',$subtopic_name);
 		if($this->request->is('post')){
 			$data=$this->data;
-			$data['Link']['tags']=$data['Link']['display_name']." -> ".$data['Link']['topic_name']." -> ".$data['Link']['subtopic_name'];
+			//$data['Link']['tags']=$data['Link']['display_name']." -> ".$data['Link']['topic_name']." -> ".$data['Link']['subtopic_name'];
 			if($this->Link->save($data))
 			{	
 				$this->Session->setFlash('Link has been successfully added','default',array('class'=>'alert alert-success'),'success');
-				$this->redirect(array('controller'=>'SubTopics','action'=>'index'));
+				$this->redirect(array('controller'=>'Links','action'=>'index'));
 
 			}
 			else{
 				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-error'),'error');
-				$this->redirect(array('action'=>'add'));
+				$this->redirect(array('action'=>'index'));
 			}
 		}
 
 	}
 
-	function view($id = NULL,$topic_name=NULL){
+	public function delete($id = NULL){
+			pr($id);
+			$this->Link->delete($id);
+			$this->Session->setFlash('Link has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
+			$this->redirect(array('action' => 'index'));
+		}
+
+	public function update($id=NULL){
 		$this->layout="ev_admin";
-		$t=$this->SubjectTopic->find('all');
-		$this->set('topics',$t);
-		$l=$this->SubTopic->find('list',array('fields'=>array('id','subtopic_name'),'conditions'=>array('SubTopic.id'=>$id)));
 		
-			$this->set('subtopic',$l);
-			//$this->set('dName',$display_name);
-			$this->set('topicnames',$topic_name);
-
-
-			
-
+		//$this->set('sname',$subtopic_name);
+		$data=$this->data;
+		//pr($data);
+		if($this->Link->save($data))
+				{
+					$this->Session->setFlash('Link has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+					$this->redirect(array('action'=>'index'));
+				}
+				else{
+					$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
+					$this->redirect(array('action'=>'update'));
+				}
 	}
-
 }

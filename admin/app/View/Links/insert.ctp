@@ -2,31 +2,13 @@
 <h1>Add link</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'add'));
+    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    echo $this->Form->input('display_name',array(
-        'class'=>'form-control',
-        'type'=> 'text',
-        'value' => $sub_name,
-        'label' => 'Subject',
-        'readonly'
-    ));
-    echo "<br/>";
-
-    echo $this->Form->input('topic_name',array(
-     'class'=>'form-control',
-     'type'=>'text',
-     'value' => $topic_name,
-     'label'=>'Topic',
-     'readonly'
-      ));
-    
-    echo "<br/>";
 
      echo $this->Form->input('subtopic_name',array(
      'class'=>'form-control',
-    
-     'value' => $sub_topic['SubTopic']['subtopic_name'],
+    'type'=>'text',
+     'value' => $sname,
      'label'=>'Sub Topic',
      'readonly'
       ));
@@ -38,7 +20,6 @@
       ));
     
      echo "<br/>";
-
      echo $this->Form->input('link_url',array(
      'class'=>'form-control',
      'placeholder'=>'Enter url',
