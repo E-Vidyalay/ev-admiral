@@ -6,7 +6,7 @@
 		public function login(){
 			$this->layout='login';
 			if($this->Session->check('Auth.User')){
-				$this->redirect(array('controller'=>'users','action'=>'index'));
+				$this->redirect(array('controller'=>'admins','action'=>'index'));
 			}
 
 			if($this->request->is('post')){
