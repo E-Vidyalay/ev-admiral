@@ -8,21 +8,42 @@
 	</div>
 	</div>
 	<hr/>
-<table width="100%" class="table table-striped table-bordered">
-	<tr>
-		<th>Question</th>
-		<th>Subject</th>
-		<th>Actions</th>
-	</tr>
-	<?php foreach ($questions as $question){ ?>
-	<tr>
-		<td> <?php  echo $question['QuestionBank']['question']; ?> </td>
-		<td> <?php  echo $question['Subject']['display_name']; ?> </td>
-		<td> <?php echo $this->Html->link('Update Question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-primary'));
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Delete Standard',array('controller'=>'QuestionBanks','action'=>'delete',$question['QuestionBank']['id']),array('class'=>'btn btn-primary'));
-		?>
-		</td> 
-	</tr> 	
-	<?php } ?>
-</table>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Question bank
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Question</th>
+								<th>Subject</th>
+								<th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<?php foreach ($questions as $question){ ?>
+                           	<tr>
+								<td> <?php  echo $question['QuestionBank']['question']; ?> </td>
+								<td> <?php  echo $question['Subject']['display_name']; ?> </td>
+								<td> <?php echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary'));
+									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+									echo $this->Html->link('Delete question',array('controller'=>'QuestionBanks','action'=>'delete',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary'));
+								?>
+								</td> 
+							</tr> 	
+							<?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+	</div>

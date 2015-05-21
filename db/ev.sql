@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 20, 2015 at 08:37 PM
+-- Generation Time: May 21, 2015 at 12:53 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -74,17 +74,17 @@ INSERT INTO `axi_articles` (`id`, `title`, `alias`, `keywords`, `meta_descriptio
 
 CREATE TABLE IF NOT EXISTS `axi_links` (
   `id` char(36) NOT NULL,
-  `subtopic_id` char(36) NOT NULL,
+  `subject_id` char(36) NOT NULL,
   `link_url` varchar(500) NOT NULL,
-  `tags` varchar(100) NOT NULL
+  `tags` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `axi_links`
 --
 
-INSERT INTO `axi_links` (`id`, `subtopic_id`, `link_url`, `tags`) VALUES
-('555cce56-a044-43c3-b8f7-10fc125f2f23', '555cc920-06a4-41bd-8f40-112c125f2f23', 'https://www.youtube.com/watch?v=284gIBVH080&list=PLHQZVq9cFWp6MSCu7WExsGuHNWUkP-xYh', 'Basics');
+INSERT INTO `axi_links` (`id`, `subject_id`, `link_url`, `tags`) VALUES
+('555daef6-6d8c-4289-9d69-058b125f2f23', '5550643a-e908-4862-88cb-0551125f2f23', 'sadfasd', 'sfasdfa');
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,8 @@ CREATE TABLE IF NOT EXISTS `axi_question_banks` (
 --
 
 INSERT INTO `axi_question_banks` (`id`, `question`, `option1`, `option2`, `option3`, `option4`, `option5`, `correct_ans`, `path`, `path_dir`, `subject_id`, `updated_at`, `updated_by`) VALUES
-('5550b0a2-10cc-4fb2-a806-07e3125f2f23', '<p><span style="font-size: xx-large;">àª•à«‡àª®&nbsp;</span></p>', '<p>àª«àª¸à«àª¦</p>', '<p>àª«àª¸à«àª¦</p>', '', '', '', 'option1,option2,0,0,0', NULL, NULL, '5550643a-e908-4862-88cb-0551125f2f23', '2015-05-11 13:37:38', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+('555daf20-2f74-49b4-a59e-06e8125f2f23', '<p>asdfasd</p>', '<p>asdfasd</p>', '<p>sadfasd</p>', '<p>dsfasd</p>', '<p>sadfasd</p>', '<p>sadfasdf</p>', 'option1,option2,0,0,option5', NULL, NULL, '5550643a-e908-4862-88cb-0551125f2f23', '2015-05-21 10:10:40', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('555db49d-7754-49b9-b869-0785125f2f23', '<p>badsfas</p>', '<p>dfgsd</p>', '<p>dsfgsd</p>', '<p>oiuoiu</p>', '<p>jlj</p>', '<p>rtye</p>', '0,0,0,option4,0', NULL, NULL, '5550643a-e908-4862-88cb-0551125f2f23', '2015-05-21 10:34:05', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
 
 -- --------------------------------------------------------
 
@@ -227,46 +228,6 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
 
 INSERT INTO `axi_subjects` (`id`, `name`, `standard_id`, `display_name`, `updated_at`, `updated_by`) VALUES
 ('5550643a-e908-4862-88cb-0551125f2f23', 'English', '55503091-9644-44a9-a6d6-0430125f2f23', '10th English', '2015-05-11 08:11:38', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `axi_subject_topics`
---
-
-CREATE TABLE IF NOT EXISTS `axi_subject_topics` (
-  `id` char(36) NOT NULL,
-  `subject_id` char(36) NOT NULL,
-  `topic_name` varchar(100) NOT NULL,
-  `tags` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `axi_subject_topics`
---
-
-INSERT INTO `axi_subject_topics` (`id`, `subject_id`, `topic_name`, `tags`) VALUES
-('555cbee9-d568-45a6-80a7-0f3c125f2f23', '5550643a-e908-4862-88cb-0551125f2f23', 'Grammer', '10th English , Grammer');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `axi_sub_topics`
---
-
-CREATE TABLE IF NOT EXISTS `axi_sub_topics` (
-  `id` char(36) NOT NULL,
-  `subject_topic_id` char(36) NOT NULL,
-  `subtopic_name` varchar(100) NOT NULL,
-  `tags` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `axi_sub_topics`
---
-
-INSERT INTO `axi_sub_topics` (`id`, `subject_topic_id`, `subtopic_name`, `tags`) VALUES
-('555cc920-06a4-41bd-8f40-112c125f2f23', '555cbee9-d568-45a6-80a7-0f3c125f2f23', 'Nouns', '10th English , Grammer , Nouns');
 
 -- --------------------------------------------------------
 
@@ -404,7 +365,7 @@ ALTER TABLE `axi_articles`
 -- Indexes for table `axi_links`
 --
 ALTER TABLE `axi_links`
- ADD PRIMARY KEY (`id`), ADD KEY `subtopic_id` (`subtopic_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `subtopic_id` (`subject_id`);
 
 --
 -- Indexes for table `axi_markingschemes`
@@ -441,18 +402,6 @@ ALTER TABLE `axi_student_subject_mappings`
 --
 ALTER TABLE `axi_subjects`
  ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `standard` (`standard_id`);
-
---
--- Indexes for table `axi_subject_topics`
---
-ALTER TABLE `axi_subject_topics`
- ADD PRIMARY KEY (`id`), ADD KEY `subject_id` (`subject_id`);
-
---
--- Indexes for table `axi_sub_topics`
---
-ALTER TABLE `axi_sub_topics`
- ADD PRIMARY KEY (`id`), ADD KEY `subject_topic_id` (`subject_topic_id`);
 
 --
 -- Indexes for table `axi_tests`
@@ -504,7 +453,7 @@ ALTER TABLE `axi_user_types`
 -- Constraints for table `axi_links`
 --
 ALTER TABLE `axi_links`
-ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`subtopic_id`) REFERENCES `axi_sub_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_markingschemes`
@@ -533,12 +482,6 @@ ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`subject_id`) 
 ALTER TABLE `axi_subjects`
 ADD CONSTRAINT `axi_subjects_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `axi_subjects_ibfk_2` FOREIGN KEY (`standard_id`) REFERENCES `axi_standards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `axi_subject_topics`
---
-ALTER TABLE `axi_subject_topics`
-ADD CONSTRAINT `axi_subject_topics_ibfk_1` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_tests`

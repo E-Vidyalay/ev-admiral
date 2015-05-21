@@ -10,11 +10,13 @@
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
             echo $this->Html->css('app');
+            echo $this->Html->css('dataTables.bootstrap.css');
+            echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->script('pramukhime-common');
             echo $this->Html->script('tiny_mce/tiny_mce.js');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
-		?>
+        ?>
         <script type="text/javascript">
             //piresourcebase = 'tiny_mce/plugins/pramukhime/';
             tinyMCE.init({
@@ -165,30 +167,6 @@ languagelist:[
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-hdd-o fa-fw"></i> Manage Subject Topics<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View topics",array('controller'=>'SubjectTopics','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Topic",array('controller'=>'SubjectTopics','action'=>'insert'),array('escape' => false)); ?>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-folder-o fa-fw"></i> Manage Sub Topics<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub topics",array('controller'=>'SubTopics','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub Topics",array('controller'=>'SubTopics','action'=>'insert'),array('escape' => false)); ?>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage external links<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
@@ -251,6 +229,8 @@ languagelist:[
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('jquery.dataTables.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>
         <script language="javascript" type="text/javascript">
             var ul = document.getElementById('pi_tips');
@@ -270,6 +250,12 @@ languagelist:[
             showNextTip(); // call for first time
             setTimeout('turnOffTip()', 90000); // show tips for 1.5 minutes
         </script>
-
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-example').DataTable({
+                        responsive: true
+                });
+            });
+        </script>
 	</body>
 </html>

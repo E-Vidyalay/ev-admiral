@@ -2,7 +2,7 @@
 
 class LinksController extends AppController{
 
-	var $uses = array('Link','SubTopic','Subject','SubjectTopic','Standard');
+	var $uses = array('Link','Subject','Standard');
 
 	public function index(){
 		$this->layout="ev_admin";
@@ -12,7 +12,7 @@ class LinksController extends AppController{
 
 	public function insert(){
 		$this->layout="ev_admin";
-		$sb=$this->SubTopic->find('list',array('fields'=>array('id','tags')));
+		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
 		$this->set('sb',$sb);
 		if($this->request->is('post')){
 			$data=$this->data;
@@ -39,7 +39,7 @@ class LinksController extends AppController{
 
 	public function update($id=NULL){
 		$this->layout="ev_admin";
-		$sb=$this->SubTopic->find('list',array('fields'=>array('id','tags')));
+		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
 		$this->set('sb',$sb);
 		if(empty($this->data)){
 			$this->data=$this->Link->findById($id);

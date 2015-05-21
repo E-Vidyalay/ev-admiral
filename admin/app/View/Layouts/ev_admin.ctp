@@ -9,6 +9,8 @@
 			echo $this->Html->css('sb-admin-2');
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
+            echo $this->Html->css('dataTables.bootstrap.css');
+            echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->css('app');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
@@ -94,30 +96,6 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-hdd-o fa-fw"></i> Manage Subject Topics<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View topics",array('controller'=>'SubjectTopics','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Topics",array('controller'=>'SubjectTopics','action'=>'insert'),array('escape' => false)); ?>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-folder-o fa-fw"></i> Manage Sub Topics<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub topics",array('controller'=>'SubTopics','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub Topics",array('controller'=>'SubTopics','action'=>'insert'),array('escape' => false)); ?>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage external links<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
@@ -180,6 +158,15 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('jquery.dataTables.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-example').DataTable({
+                        responsive: true
+                });
+            });
+        </script>
 	</body>
 </html>

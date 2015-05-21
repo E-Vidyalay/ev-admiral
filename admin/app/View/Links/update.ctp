@@ -5,12 +5,12 @@
     echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
     echo $this->Form->input('id',array('type'=>'hidden'));
 
-    echo $this->Form->input('subtopic_id',array(
+    echo $this->Form->input('subject_id',array(
             'class'=>'form-control',
             'options'=>$sb,
             'required',
-            'empty'=>'Select sub topic',
-            'label'=>'Sub topic'
+            'empty'=>'Select Subject',
+            'label'=>'Subject'
         ));
     
      echo "<br/>";
@@ -24,10 +24,10 @@
       ));
 
     echo "<br/>";
-         echo $this->Form->input('tags',array(
+    echo $this->Form->input('tags',array(
      'class'=>'form-control',
-     'placeholder'=>'descriptions',
-     'type'=>'text',
+     'placeholder'=>'description',
+     'type'=>'textarea',
      'required',
      'autofocus',
      'label'=>'Meta description about link'
