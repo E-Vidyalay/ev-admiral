@@ -9,5 +9,12 @@ class Link extends AppModel{
 			)
 			
 			);	
+          public $validate = array(
+              'link_url'=>array(
+                  'rule'=>array('url',true),
+                  'message'=>'Please enter a valid website address'
+              )
+              
+              );
 }
 ?>

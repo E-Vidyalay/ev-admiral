@@ -4,7 +4,7 @@
 <?php 
     echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-
+//echo $form->input("name", array( "error" => array( "class" => "error-message" ), "div" => false, "label" => "Name", "size" => "40" ) ); 
     echo $this->Form->input('subject_id',array(
             'class'=>'form-control',
             'options'=>$sb,
@@ -15,6 +15,9 @@
     
      echo "<br/>";
      echo $this->Form->input('link_url',array(
+    'class'=>'form-error',
+'error'=>array('attributes'=>array('wrap'=>'small','class'=>'error')),
+         'errorMessage'=>true,
      'class'=>'form-control',
      'placeholder'=>'Enter url',
      'type'=>'text',

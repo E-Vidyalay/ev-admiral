@@ -9,7 +9,11 @@
 
 		public function insert()
 		{
+                        
+                        
 			$this->layout='ev_admin';
+                        /*$sections=array('primary','secondary');
+                        $this->set('section_values',$sections*/
 			if($this->request->is('post'))
 			{
 				pr($this->data);

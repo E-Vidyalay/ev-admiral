@@ -7,12 +7,15 @@
 	 'class'=>'form-control',
 	 'placeholder'=>'standard',
 	 'type'=>'number',
+           'min'=>'1', 
+            'max'=>'12',
      'required',
      'autofocus',
      'label'=>'Standard'
       ));
 
     echo "<br/>";
+    
 
 	echo $this->Form->input('section',array(
      'class'=>'form-control',
