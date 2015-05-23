@@ -12,7 +12,6 @@
 			$this->layout='ev_admin';
 			if($this->request->is('post'))
 			{
-				pr($this->data);
 				if($this->Standard->save($this->data))
 				{
 					$this->Session->setFlash('Standard added successfully','default',array('class'=>'alert alert-success'),'success');

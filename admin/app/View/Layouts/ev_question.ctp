@@ -118,7 +118,7 @@ languagelist:[
                         </li>
                         <li class="divider"></li>
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'users', 'action' => 'logout'),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
