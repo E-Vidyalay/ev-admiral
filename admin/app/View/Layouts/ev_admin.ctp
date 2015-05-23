@@ -160,6 +160,7 @@
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
+            echo $this->Html->script('bootstrap-filestyle');
 		?>
         <script>
             $(document).ready(function() {

@@ -11,3 +11,25 @@
             'empty'=>'Select sub topic',
             'label'=>'Sub topic'
         ));
+    echo "<br/>";
+    echo $this->Form->input('files.', array('type' => 'file','multiple','class'=>'filestyle','data-buttonName'=>'btn-primary'));
+    echo "<br/>";
+      echo $this->Form->input('tags',array(
+     'class'=>'form-control',
+     'placeholder'=>'description',
+     'type'=>'textarea',
+     'required',
+     'autofocus',
+     'label'=>'Meta description about link'
+      ));
+    echo "<br/>";
+    echo $this->Form->input('file_dir', array('type' => 'hidden'));
+    echo "<br/>";
+    
+    echo $this->Form->input('Add file',array(
+     'type'=>'submit',
+     'div'=>false,
+     'label'=>false,
+     'class'=>'btn btn-lg btn-success btn-block'
+     ));
+?>

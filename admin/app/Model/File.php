@@ -1,5 +1,4 @@
 <?php
-
 class File extends AppModel{
 	public $actsAs = array(
 			'Upload.Upload'=>array(
