@@ -5,6 +5,7 @@
     echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
     echo $this->Form->input('id',array('type'=>'hidden'));
 
+
     echo $this->Form->input('subject_id',array(
             'class'=>'form-control',
             'options'=>$sb,
@@ -12,6 +13,21 @@
             'empty'=>'Select sub topic',
             'label'=>'Sub topic'
         ));
+=
+     echo $this->Form->input('subtopic_name',array(
+     'class'=>'form-control',
+    'type'=>'text',
+     'value' => $sname,
+     'label'=>'Sub Topic',
+     'readonly'
+      ));
+     echo $this->Form->input('subtopic_id',array(
+     'class'=>'form-control',
+     
+     'value' => $sub_topic['SubTopic']['id'],
+     'type'=>'hidden'
+      ));
+
     
      echo "<br/>";
      echo $this->Form->input('link_url',array(
@@ -24,6 +40,7 @@
       ));
 
     echo "<br/>";
+
       echo $this->Form->input('tags',array(
      'class'=>'form-control',
      'placeholder'=>'description',
@@ -33,6 +50,8 @@
      'label'=>'Meta description about link'
       ));
     echo "<br/>";
+
+    
     echo $this->Form->input('Add link',array(
      'type'=>'submit',
      'div'=>false,

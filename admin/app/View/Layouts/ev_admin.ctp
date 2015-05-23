@@ -15,6 +15,9 @@
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
+        <style type="text/css">
+            body, * {font-family:verdana, arial, helvetica, sans-serif; font-size:12px;}
+            </style>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -47,7 +50,7 @@
                         </li>
                         <li class="divider"></li>
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'users', 'action' => 'logout'),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -75,23 +78,35 @@
                             <a href="#"><i class="fa fa-graduation-cap fa-fw"></i> Manage Standards<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View standards",array('controller'=>'standards','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Standards",array('controller'=>'standards','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add standard",array('controller'=>'standards','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Standard",array('controller'=>'standards','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Subjects<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-book fa-fw active"></i> Manage Subjects<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View subjects",array('controller'=>'subjects','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Subjects",array('controller'=>'subjects','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add subject",array('controller'=>'subjects','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Subject",array('controller'=>'subjects','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
+                                <li>
+                                <a href="#"><i class="fa fa-list-ol fa-fw"></i> Manage Topics<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level collapse">
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Topics",array('controller'=>'SubjectTopics','action'=>'index'),array('escape' => false)); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Topic",array('controller'=>'SubjectTopics','action'=>'insert'),array('escape' => false)); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -129,6 +144,7 @@
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Page",array('controller'=>'articles','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
+                            
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -158,8 +174,13 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+<<<<<<< HEAD
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
+=======
+            echo $this->Html->script('bootstrap-filestyle');
+
+>>>>>>> 95ede35f6dbe8791673062c1bfb9dc33dd22cc38
 		?>
         <script>
             $(document).ready(function() {
