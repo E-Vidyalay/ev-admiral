@@ -20,13 +20,16 @@
 				{
 					$this->Session->setFlash('News added successfully','default',array('class'=>'alert alert-success'),'success');
 					/*
-					//retreiving the subscribed users
-					$this->Email->from    = 'kirangi.shah@yahoo.com';
-					$this->Email->to      = $name;
-					$this->Email->subject = 'Ev NewsLetter';
-					$this->Email->send($this->data);	
-					 $this->Email->send(); 
+					var $name=$this->User->find('all',array('conditions'=>array('User.subscribe'=>1)));
+					for ($name as $name)
+					{
 
+						$Email = new CakeEmail('gmail');
+						$Email->from(array('lakhan.samani@actonate.com' => 'ev-admiral'))
+						    ->to($name)
+						    ->subject('EV Newsletter')
+						    ->send($this->data);
+					}
 					 */
 					$this->redirect(array('controller'=>'news','action'=>'index'));
 				}
