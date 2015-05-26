@@ -8,6 +8,7 @@
 	</div>
 </div>
 <hr/>
+<div class="row">
 <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -39,4 +40,5 @@
             <!-- /.table-responsive -->
         </div>
     </div>
+</div>
 </div>
