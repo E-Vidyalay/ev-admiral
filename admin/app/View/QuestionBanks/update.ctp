@@ -6,7 +6,7 @@
 echo $this->Form->create('QuestionBank',array('type'=>'file','controller'=>'question_banks','action'=>'update'));
 echo $this->Form->input('updated_by',array('type'=>'hidden','value'=>$user_id));
 echo $this->Form->input('id',array('type'=>'hidden'));
-echo $this->Form->input('subject_id',array('options'=>$subjects,'class'=>'form-control','empty'=>'Select subject'));
+echo $this->Form->input('subject_id',array('options'=>$subjects,'class'=>'form-control','empty'=>'Select subject','required'));
 echo "<br/>";
 echo $this->Form->input('question',array(
     'type'=>'textarea',

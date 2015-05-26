@@ -35,20 +35,13 @@ class AppController extends Controller {
         'Session',
         'Auth' => array(
             'authenticate' => array(
-                'User' => array(
-                    'userModel' => 'User',
+                'Admin' => array(
+                    'userModel' => 'Admin',
                     'fields' => array(
                         'username' => 'username',
                         'password' => 'password'
                     )
-                ),
-                'Student'=>array(
-					'userModel'=>'Student',
-					'fields'=>array(
-						'username'=>'username',
-						'password'=>'password'
-					)
-				)
+                )
             )
         )
     );
@@ -59,14 +52,14 @@ class AppController extends Controller {
         //Logged In user variables
         $this->set('isLoggedIn',$this->Auth->loggedIn());
         $this->set('activeUser',$this->Session->read('Auth'));
-        $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'index');
-        $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'index');
-        $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
+        $this->Auth->loginRedirect = array('controller' => 'admins', 'action' => 'index');
+        $this->Auth->logoutRedirect = array('controller' => 'admins', 'action' => 'index');
+        $this->Auth->loginAction = array('controller' => 'admins', 'action' => 'login');
         // Basic setup
         $this->Auth->authenticate = array('Form');
         // Pass settings in
         $this->Auth->authenticate = array(
-            'Form' => array('userModel' => 'User')
+            'Form' => array('userModel' => 'Admin')
         );
         $this->Auth->allow('login','forgot_password','update_password');
         $this->activeUser = $this->Session->read('Auth');

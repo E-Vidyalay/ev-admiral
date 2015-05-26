@@ -10,11 +10,13 @@
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
             echo $this->Html->css('app');
+            echo $this->Html->css('dataTables.bootstrap.css');
+            echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->script('pramukhime-common');
             echo $this->Html->script('tiny_mce/tiny_mce.js');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
-		?>
+        ?>
         <script type="text/javascript">
             //piresourcebase = 'tiny_mce/plugins/pramukhime/';
             tinyMCE.init({
@@ -31,7 +33,7 @@
                 theme_advanced_statusbar_location : "bottom",
                 theme_advanced_resizing: true,
                 theme_advanced_resizing_use_cookie : false,
-                content_css : "/SantMegh/css/ptparea.css",
+                content_css : "/ev-admiral/admin/css/ptparea.css",
                 pramukhime_language: [
                     {
 jsfile:'pramukhindic.js',
@@ -116,7 +118,7 @@ languagelist:[
                         </li>
                         <li class="divider"></li>
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'users', 'action' => 'logout'),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -164,6 +166,18 @@ languagelist:[
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage external links<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View links",array('controller'=>'Links','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add links",array('controller'=>'Links','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                          <li>
                             <a href="#"><i class="fa fa-pencil fa-fw"></i> Manage Question Bank<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
@@ -172,6 +186,30 @@ languagelist:[
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Questions",array('controller'=>'QuestionBanks','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View pages",array('controller'=>'articles','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Page",array('controller'=>'articles','action'=>'add'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Manage News letters<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View news",array('controller'=>'NewsLetters','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Post news",array('controller'=>'NewsLetters','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -203,6 +241,8 @@ languagelist:[
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('jquery.dataTables.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>
         <script language="javascript" type="text/javascript">
             var ul = document.getElementById('pi_tips');
@@ -222,6 +262,12 @@ languagelist:[
             showNextTip(); // call for first time
             setTimeout('turnOffTip()', 90000); // show tips for 1.5 minutes
         </script>
-
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-example').DataTable({
+                        responsive: true
+                });
+            });
+        </script>
 	</body>
 </html>
