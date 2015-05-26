@@ -1,6 +1,6 @@
 <?php
 	class NewsLettersController extends AppController{
-		public $uses=array('User','NewsLetter');
+		public $uses=array('User','NewsLetter','Admin');
 		public function index(){
 			$this->layout='ev_admin';
 			$this->set('news',$this->NewsLetter->find('all'));
