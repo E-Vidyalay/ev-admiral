@@ -5,18 +5,19 @@
 	echo $this->Form->create('Standard',array('controller'=>'standards','action'=>'insert'));
 	echo $this->Form->input('standard',array(
 	 'class'=>'form-control',
-	 'placeholder'=>'standard',
+	 'placeholder'=>'Standard',
 	 'type'=>'number',
      'required',
      'autofocus',
-     'label'=>'Standard'
+     'label'=>'Standard',
+     'min'=>'0'
       ));
 
     echo "<br/>";
 
 	echo $this->Form->input('section',array(
      'class'=>'form-control',
-     'placeholder'=>'section',
+     'placeholder'=>'Section',
      'type'=>'text',
      'required',
      'autofocus',

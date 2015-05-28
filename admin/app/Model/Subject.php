@@ -6,6 +6,5 @@ class Subject extends AppModel{
 				'className'=>'Standard',
 				'foreignKey'=>'standard_id',
 				'dependent'=>true
-			));	
-	}
+			));
 ?>

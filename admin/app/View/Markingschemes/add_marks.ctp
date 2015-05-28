@@ -5,18 +5,20 @@
 	<?php
 		echo $this->Form->create('Markingscheme',array('action'=>'add_marks'));
 		echo $this->Form->input('positive_marks',array(
-			'type'=>'text',
+			'type'=>'number',
 			'label'=>'Positve Marks',
 			'placeholder'=>'Enter postive marks',
 			'class'=>'form-control',
+			'min'=>'0',
 			'required'
 		));
 		echo "<br/>";
 		echo $this->Form->input('negative_marks',array(
-			'type'=>'text',
+			'type'=>'number',
 			'label'=>'Negative Marks',
 			'placeholder'=>'Enter negative marks',
 			'class'=>'form-control',
+			'min'=>'0',
 			'required'
 		));
 		echo "<br/>";
