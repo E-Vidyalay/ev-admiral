@@ -4,7 +4,7 @@
 		<h2>Levels</h2>
 	</div>
 	<div class="col-lg-7" style="text-align: right">
-			<p style="margin-top: 20px"><?php echo $this->Html->link('Add New Subject',array('controller'=>'Subjects','action'=>'insert'),array('class'=>'btn btn-primary'));?></p>
+			<p style="margin-top: 20px"><?php echo $this->Html->link('Add New Level',array('controller'=>'levels','action'=>'insert'),array('class'=>'btn btn-primary'));?></p>
 	</div>
 </div>
 <hr/>
