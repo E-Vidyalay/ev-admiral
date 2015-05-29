@@ -1,7 +1,7 @@
 <?php 
 
 	class SubjectsController extends AppController{
-		public $uses=array('User','Standard','Subject');
+		public $uses=array('User','Subject');
 		public function index()
 		{
                     $this->layout='ev_admin';
@@ -11,15 +11,11 @@
 		public function insert()
 		{
 			$this->layout='ev_admin';
-			$data = $this->Standard->find('list', array('fields' => array('id','standard')));
-			$this->set('stand', $data);
 			$userId = $this->Auth->user('id');
 			$this->set('user',$userId);
 			if($this->request->is('post'))
 			{
 				$data=$this->data;
-				$standard=$this->Standard->findById($data['Subject']['standard_id']);
-				$data['Subject']['display_name']=$standard['Standard']['standard']."th ".$data['Subject']['name'];
 				if($this->Subject->save($data))
 				{
 					$this->Session->setFlash('Subject added successfully','default',array('class'=>'alert alert-success'),'success');
@@ -36,8 +32,6 @@
 
 		function update($id = NULL){
 			$this->layout='ev_admin';
-			$data = $this->Standard->find('list', array('fields' => array('id','standard')));
-			$this->set('stand', $data);
 			$userId = $this->Auth->user('id');
 			$this->set('user',$userId);
 			if(empty($this->data)){
@@ -45,8 +39,6 @@
 			}
 			else{
 				$data=$this->data;
-				$standard=$this->Standard->findById($data['Subject']['standard_id']);
-				$data['Subject']['display_name']=$standard['Standard']['standard']."th ".$data['Subject']['name'];
 				if($this->Subject->save($data)){
 					$this->Session->setFlash('Subject has been successfully edited','default',array('class'=>'alert alert-success'),'success');
 					$this->redirect(array('action'=>'index'));
