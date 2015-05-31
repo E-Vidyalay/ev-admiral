@@ -1,5 +1,6 @@
 <?php
 class Subject extends AppModel{
+<<<<<<< HEAD
 				
         public $validate = array(
         'name' => array(
@@ -16,4 +17,8 @@ class Subject extends AppModel{
        
 	}
         
+=======
+	
+}
+>>>>>>> aa4bb3a671a3edcec539b5eab4e746a3f3521052
 ?>

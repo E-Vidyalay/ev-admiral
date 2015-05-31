@@ -72,13 +72,13 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-graduation-cap fa-fw"></i> Manage Standards<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-signal fa-fw"></i> Manage Levels<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View standards",array('controller'=>'standards','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Levels",array('controller'=>'levels','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add standard",array('controller'=>'standards','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Level",array('controller'=>'levels','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
