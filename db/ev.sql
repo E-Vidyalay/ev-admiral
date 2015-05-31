@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: May 28, 2015 at 10:46 AM
--- Server version: 5.6.20
--- PHP Version: 5.5.15
+-- Host: localhost
+-- Generation Time: May 31, 2015 at 08:30 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -77,6 +77,13 @@ CREATE TABLE IF NOT EXISTS `axi_levels` (
   `level_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `axi_levels`
+--
+
+INSERT INTO `axi_levels` (`id`, `level_name`) VALUES
+('5568340b-2a04-474b-9568-326f125f2f23', 'Primary');
+
 -- --------------------------------------------------------
 
 --
@@ -86,9 +93,17 @@ CREATE TABLE IF NOT EXISTS `axi_levels` (
 CREATE TABLE IF NOT EXISTS `axi_links` (
   `id` char(36) NOT NULL,
   `topic_id` char(36) NOT NULL,
+  `link_title` varchar(100) NOT NULL,
   `link_url` varchar(500) NOT NULL,
   `tags` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_links`
+--
+
+INSERT INTO `axi_links` (`id`, `topic_id`, `link_title`, `link_url`, `tags`) VALUES
+('556aa850-7de0-46e5-a066-101d125f2f23', '556aa68d-0198-462b-9ddb-101e125f2f23', 'Circle', 'geometry.com', 'asfsdfds');
 
 -- --------------------------------------------------------
 
@@ -184,7 +199,8 @@ CREATE TABLE IF NOT EXISTS `axi_students` (
 
 INSERT INTO `axi_students` (`id`, `school`, `user_id`) VALUES
 ('5561c76e-ee1c-44bf-af4e-01bf125f2f23', NULL, '5561c5af-8890-4d1d-b708-01be125f2f23'),
-('556348ba-c124-4fb2-b7c8-01f6125f2f23', NULL, '556348ba-76c4-488b-a3e8-01f6125f2f23');
+('556348ba-c124-4fb2-b7c8-01f6125f2f23', NULL, '556348ba-76c4-488b-a3e8-01f6125f2f23'),
+('5568802f-2e80-4ebb-a026-326d125f2f23', NULL, '5568802f-cd70-4325-b47a-326d125f2f23');
 
 -- --------------------------------------------------------
 
@@ -212,6 +228,14 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_subjects`
+--
+
+INSERT INTO `axi_subjects` (`id`, `name`, `updated_at`, `updated_by`) VALUES
+('55682636-b5d4-4804-adc4-326d125f2f23', 'Mathematics', '2015-05-31 06:29:24', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('556aaa3b-8de4-4597-9181-0f2a125f2f23', 'English', '2015-05-31 06:29:15', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
 
 -- --------------------------------------------------------
 
@@ -265,6 +289,13 @@ CREATE TABLE IF NOT EXISTS `axi_topics` (
   `level_id` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `axi_topics`
+--
+
+INSERT INTO `axi_topics` (`id`, `name`, `updated_at`, `updated_by`, `subject_id`, `level_id`) VALUES
+('556aa68d-0198-462b-9ddb-101e125f2f23', 'Geometry', '2015-05-31 06:13:33', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '55682636-b5d4-4804-adc4-326d125f2f23', '5568340b-2a04-474b-9568-326f125f2f23');
+
 -- --------------------------------------------------------
 
 --
@@ -290,7 +321,8 @@ CREATE TABLE IF NOT EXISTS `axi_users` (
 
 INSERT INTO `axi_users` (`id`, `name`, `username`, `password`, `fb_token`, `google_token`, `created`, `user_type`, `path`, `path_dir`) VALUES
 ('5561c5af-8890-4d1d-b708-01be125f2f23', 'Lakhan Samani', 'lakhan.m.samani@gmail.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-24 07:05:59', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', 'p_2.jpg', '5561c5af-8890-4d1d-b708-01be125f2f23'),
-('556348ba-76c4-488b-a3e8-01f6125f2f23', 'Lakhan Samani', 'lakhan.samani@actonate.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-25 10:37:22', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', NULL, NULL);
+('556348ba-76c4-488b-a3e8-01f6125f2f23', 'Lakhan Samani', 'lakhan.samani@actonate.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-25 10:37:22', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', NULL, NULL),
+('5568802f-cd70-4325-b47a-326d125f2f23', 'Kashyap', 'kashyap@gmail.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-29 09:35:19', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', NULL, NULL);
 
 -- --------------------------------------------------------
 
