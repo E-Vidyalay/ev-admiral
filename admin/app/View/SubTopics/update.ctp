@@ -22,7 +22,7 @@
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
     
-    echo $this->Form->input('update SubTopic',array(
+    echo $this->Form->input('Update SubTopic',array(
      'type'=>'submit',
      'div'=>false,
      'label'=>false,

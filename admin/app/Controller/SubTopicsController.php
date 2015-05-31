@@ -21,7 +21,7 @@ class SubTopicsController extends AppController{
             if($this->SubTopic->save($data))
             {
                 $this->Session->setFlash('SubTopic added successfully','default',array('class'=>'alert alert-success'),'success');
-		$this->redirect(array('controller'=>'subtopics','action'=>'index'));
+		        $this->redirect(array('controller'=>'SubTopics','action'=>'index'));
             }
         }
     }
