@@ -3,13 +3,7 @@
 <hr>
 <?php 
 	echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'insert'));
-    echo $this->Form->input('standard_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $stand,
-        'label' => 'Standard'
-    ));
-    echo "<br/>";
+   
 	echo $this->Form->input('name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',

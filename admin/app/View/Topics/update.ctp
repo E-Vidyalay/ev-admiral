@@ -1,17 +1,30 @@
 <br/>
-<h1>Update subject</h1>
+<h1>Update topic</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'update'));
+    echo $this->Form->create('Topic',array('controller'=>'topics','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    
+    echo $this->Form->input('level_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $level,
+        'label' => 'Level'
+    ));
+    echo "<br/>";
+    echo $this->Form->input('subject_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $subject,
+        'label' => 'Subject'
+    ));
+    echo "<br/>";
     echo $this->Form->input('name',array(
      'class'=>'form-control',
      'placeholder'=>'Name',
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Subject'
+     'label'=>'Topic'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
