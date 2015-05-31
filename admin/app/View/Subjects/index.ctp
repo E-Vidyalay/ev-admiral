@@ -25,12 +25,7 @@
                     <tbody>
                     <?php foreach ($subjects as $subject){ ?>
 						<tr>
-<<<<<<< HEAD
-							<td> <?php  echo $subject['Subject']['name']; ?> </td>
-									
-=======
 							<td> <?php  echo $subject['Subject']['name']; ?> </td>			
->>>>>>> aa4bb3a671a3edcec539b5eab4e746a3f3521052
 							<td> <?php echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 								echo $this->Html->link('Delete Subject',array('controller'=>'subjects','action'=>'delete',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary'));

@@ -8,7 +8,7 @@ class Topic extends AppModel{
 				'dependent'=>true
 
 			),
-                        'Subject'=>array(
+            'Subject'=>array(
 				'className'=>'Subject',
 				'foreignKey'=>'subject_id',
 				'dependent'=>true

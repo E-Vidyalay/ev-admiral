@@ -10,7 +10,7 @@ class TopicsController extends AppController{
     public function insert()
     {
         $this->layout='ev_admin';
-        $data = $this->Level->find('list',  array('fields'=>array('id','name')));
+        $data = $this->Level->find('list',  array('fields'=>array('id','level_name')));
         $this->set('level', $data);
         $data = $this->Subject->find('list',  array('fields'=>array('id','name')));
         $this->set('subject', $data);
@@ -37,7 +37,7 @@ class TopicsController extends AppController{
     }
     function update($id=NULL){
         $this->layout='ev_admin';
-        $data = $this->Level->find('list',array('fields'=>array('id','name')));
+        $data = $this->Level->find('list',array('fields'=>array('id','level_name')));
         $this->set('level',$data);
         $data = $this->Subject->find('list',array('fields'=>array('id','name')));
         $this->set('subject',$data);

@@ -3,10 +3,6 @@
 <hr>
 <?php 
 	echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'insert'));
-<<<<<<< HEAD
-   
-=======
->>>>>>> aa4bb3a671a3edcec539b5eab4e746a3f3521052
 	echo $this->Form->input('name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',

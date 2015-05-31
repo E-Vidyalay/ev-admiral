@@ -27,7 +27,7 @@
 						<tr>
 							<td> <?php  echo $topic['Topic']['name']; ?> </td>
 							<td><?php echo $topic['Subject']['name']; ?></td>
-                                                        <td><?php echo $topic['Level']['name']; ?></td>
+                            <td><?php echo $topic['Level']['level_name']; ?></td>
 							<td> <?php echo $this->Html->link('Update Topic',array('controller'=>'topics','action'=>'update',$topic['Topic']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 								echo $this->Html->link('Delete Topic',array('controller'=>'Topics','action'=>'delete',$topic['Topic']['id']),array('class'=>'btn btn-sm btn-primary'));

@@ -2,15 +2,24 @@
 <h1>Update link</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
+    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
 
-    echo $this->Form->input('subject_id',array(
+    echo $this->Form->input('topic_id',array(
             'class'=>'form-control',
-            'options'=>$sb,
+            'options'=>$topic,
             'required',
             'empty'=>'Select Subject',
             'label'=>'Subject'
+        ));
+    
+     echo "<br/>";
+     echo $this->Form->input('link_title',array(
+            'class'=>'form-control',
+            'type'=>'text',
+            'required',
+            'placeholder'=>'Title',
+            'label'=>'Link Title'
         ));
     
      echo "<br/>";

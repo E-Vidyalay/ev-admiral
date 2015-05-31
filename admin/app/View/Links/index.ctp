@@ -28,7 +28,7 @@
                     <tbody>
                     	<?php foreach ($linkID as $l){ ?>
 							<tr>
-								<td> <?php  echo $l['Subject']['display_name']; ?> </td>
+								<td> <?php  echo $l['Link']['link_title']; ?> </td>
 								<td> <?php  echo $l['Link']['tags']; ?> </td>		
 								<td> <?php 
 									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));

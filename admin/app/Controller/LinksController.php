@@ -2,7 +2,7 @@
 
 class LinksController extends AppController{
 
-	var $uses = array('Link','Subject','Standard');
+	var $uses = array('Link','Topic');
 
 	public function index(){
 		$this->layout="ev_admin";
@@ -12,8 +12,8 @@ class LinksController extends AppController{
 
 	public function insert(){
 		$this->layout="ev_admin";
-		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
-		$this->set('sb',$sb);
+		$sb=$this->Topic->find('list',array('fields'=>array('id','name')));
+		$this->set('topic',$sb);
 		if($this->request->is('post')){
 			$data=$this->data;
 			if($this->Link->save($data))
@@ -23,7 +23,7 @@ class LinksController extends AppController{
 
 			}
 			else{
-				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-error'),'error');
+				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-danger'),'error');
 				$this->redirect(array('action'=>'index'));
 			}
 		}
@@ -39,20 +39,20 @@ class LinksController extends AppController{
 
 	public function update($id=NULL){
 		$this->layout="ev_admin";
-		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
-		$this->set('sb',$sb);
+		$sb=$this->Topic->find('list',array('fields'=>array('id','name')));
+		$this->set('topic',$sb);
 		if(empty($this->data)){
 			$this->data=$this->Link->findById($id);
 		}
 		else{
-			if($this->Link->save($data))
+			if($this->Link->save($this->data))
 			{
-				$this->Session->setFlash('Link has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+				$this->Session->setFlash('Link has been successfully updated','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('action'=>'index'));
 			}
 			else{
-				$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
-				$this->redirect(array('action'=>'update'));
+				$this->Session->setFlash('Link has not been updated','default',array('class'=>'alert alert-danger'),'error');
+				$this->redirect(array('action'=>'index'));
 			}
 		}
 		
