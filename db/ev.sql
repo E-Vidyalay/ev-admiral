@@ -2,8 +2,8 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 31, 2015 at 08:30 AM
+-- Host: 127.0.0.1
+-- Generation Time: May 31, 2015 at 04:48 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -236,6 +236,30 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
 INSERT INTO `axi_subjects` (`id`, `name`, `updated_at`, `updated_by`) VALUES
 ('55682636-b5d4-4804-adc4-326d125f2f23', 'Mathematics', '2015-05-31 06:29:24', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
 ('556aaa3b-8de4-4597-9181-0f2a125f2f23', 'English', '2015-05-31 06:29:15', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_sub_topics`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_sub_topics` (
+  `id` char(36) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `topic_id` char(36) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_sub_topics`
+--
+
+INSERT INTO `axi_sub_topics` (`id`, `name`, `topic_id`, `updated_at`, `updated_by`) VALUES
+('556b124c-652c-4a5d-9cea-1624125f2f23', 'lkasdladnaasdaksdjakasaabcde', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-05-31 13:53:16', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('556b17bf-0014-44f6-9ea2-1624125f2f23', 'efjkfbekefwefwe', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-05-31 14:16:31', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('556b1ded-cd6c-468c-84f2-1624125f2f23', 'dsjfhisdbfkds', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-05-31 14:42:53', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('556b1e9f-6084-42f4-8a71-1624125f2f23', 'amasfdhuwifikAJSD', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-05-31 14:45:51', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
 
 -- --------------------------------------------------------
 
