@@ -2,7 +2,7 @@
 <h1>Add new SubTopic</h1>
 <hr>
 <?php 
-    echo $this->Form->create('SubTopic',array('controller'=>'subtopics','action'=>'insert'));
+    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','action'=>'insert'));
    
     echo "<br/>";
     echo $this->Form->input('topic_id',array(

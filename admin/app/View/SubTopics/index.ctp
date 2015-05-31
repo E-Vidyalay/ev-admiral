@@ -20,14 +20,14 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>SubTopic</th><th>Level</th><th>Action</th>
+                            <th>SubTopic</th><th>Topics</th><th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($subtopics as $subtopic){ ?>
 						<tr>
 							<td> <?php  echo $subtopic['SubTopic']['name']; ?> </td>
 							<td><?php echo $subtopic['Topic']['name']; ?></td>
-							<td> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'subtopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
+							<td> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 								echo $this->Html->link('Delete SubTopic',array('controller'=>'SubTopics','action'=>'delete',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
 							?>
