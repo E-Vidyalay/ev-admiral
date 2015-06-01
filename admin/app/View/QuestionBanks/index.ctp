@@ -21,7 +21,7 @@
                         <thead>
                             <tr>
                                 <th>Question</th>
-								<th>Subject</th>
+								<th>Subject/Topic</th>
 								<th>Actions</th>
                             </tr>
                         </thead>
@@ -29,7 +29,7 @@
                         	<?php foreach ($questions as $question){ ?>
                            	<tr>
 								<td> <?php  echo $question['QuestionBank']['question']; ?> </td>
-								<td> <?php  echo $question['Subject']['display_name']; ?> </td>
+								<td> <?php  echo $question['Topic']['display_name']; ?> </td>
 								<td> <?php echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 									echo $this->Html->link('Delete question',array('controller'=>'QuestionBanks','action'=>'delete',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary'));

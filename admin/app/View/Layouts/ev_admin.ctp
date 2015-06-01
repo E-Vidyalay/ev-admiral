@@ -15,8 +15,10 @@
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
+        <script type="text/javascript">var baseUrl = '<?php echo $this->base; ?>';</script>
 	</head>
 	<body>
+        <?php echo $this->Js->set('url', $this->request->base); ?>
 		<div id="wrapper">
 
         <!-- Navigation -->

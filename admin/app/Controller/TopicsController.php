@@ -19,7 +19,10 @@ class TopicsController extends AppController{
         if($this->request->is('post'))
         {
             $data = $this->data;
-           
+            $level_name=$this->Level->findById($data['Topic']['level_id']);
+            $subject_name=$this->Subject->findById($data['Topic']['subject_id']);
+            $display_name=$level_name['Level']['level_name']." - ".$subject_name['Subject']['name']." - ".$data['Topic']['name'];
+            $data['Topic']['display_name']=$display_name;
             if($this->Topic->save($data))
             {
                 $this->Session->setFlash('Topic added successfully','default',array('class'=>'alert alert-success'),'success');
@@ -50,7 +53,10 @@ class TopicsController extends AppController{
         else
         {
             $data=$this->data;
-           
+            $level_name=$this->Level->findById($data['Topic']['level_id']);
+            $subject_name=$this->Subject->findById($data['Topic']['subject_id']);
+            $display_name=$level_name['Level']['level_name']." - ".$subject_name['Subject']['name']." - ".$data['Topic']['name'];
+            $data['Topic']['display_name']=$display_name;
             if($this->Topic->save($data))
             {
                 $this->Session->setFlash('Topic has been successfully edited','default',array('class'=>'alert alert-success'),'success');

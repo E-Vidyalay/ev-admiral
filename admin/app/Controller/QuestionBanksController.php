@@ -1,7 +1,7 @@
 <?php
 class QuestionBanksController extends AppController{
 
-public $uses=array('QuestionBank','Standard','Subject');
+	public $uses=array('QuestionBank','Topic','SubTopic');
 	public function index(){
 		$a=$this->QuestionBank->find('all');
 		$this->set('questions', $a);
@@ -10,8 +10,8 @@ public $uses=array('QuestionBank','Standard','Subject');
 
 	public function insert(){
 		$this->layout='ev_question';
-		$a=$this->Subject->find('list',array('fields'=>array('id','display_name')));
-		$this->set('subjects',$a);
+		$a=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+		$this->set('topics',$a);
 		$this->set('user_id',$this->Auth->user('id'));
 		if($this->request->is('post')){
 			$data=$this->data;
@@ -27,11 +27,22 @@ public $uses=array('QuestionBank','Standard','Subject');
 			}
 			else{
 				$this->Session->setFlash('Sorry..system was not able to add question, please try again.!','default',array('class'=>'alert alert-danger'),'error');
-				$this->redirect(array('controller'=>'question_banks','action'=>'add_question'));
+				$this->redirect(array('controller'=>'question_banks','action'=>'insert'));
 			}
 			
 		}
 		
+	}
+	public function get_sub_topic($id=null){
+		$this->layout='ajax';
+		if(isset($id)){
+			$this->set('if_data',true);
+			$sub_topic=$this->SubTopic->find('list',array('fields'=>array('id','name'),'conditions'=>array('topic_id'=>$id)));
+			$this->set('sub_topics',$sub_topic);
+		}
+		else{
+			$this->set('if_data',false);
+		}
 	}
 
 	public function delete($id=null){
@@ -44,8 +55,8 @@ public $uses=array('QuestionBank','Standard','Subject');
 
 	public function update($id=null){
 				$this->layout='ev_question';
-				$subjects=$this->Subject->find('list',array('fields' => array('id','display_name')));
-				$this->set('subjects',$subjects);
+				$tp=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+				$this->set('topics',$tp);
 				$this->set('user_id',$this->Auth->user('id'));
 				if(empty($this->data)){
 	                $q=$this->QuestionBank->findById($id);				
@@ -53,16 +64,22 @@ public $uses=array('QuestionBank','Standard','Subject');
 					$f=1;
 					$m=array();
 					foreach($ans1 as $a){
-						$m['option'.$f]=$a;
+						$m[$f]=$a;
 						$f++;
 					}
 					$ans['ans']=$m;
 					$final_data['QuestionBank']=array_merge($q['QuestionBank'],$ans);				
 					$finalQ_bank=$final_data;
-					$finalSubject['Subject']=$q['Subject'];
-					$final_array=array_merge($finalQ_bank,$finalSubject);
-					$this->data=$final_array;
-					$this->set('ans',$final_array);
+					pr($finalQ_bank);
+					if(isset($q['QuestionBank']['sub_topic_id']) || $q['QuestionBank']['SubTopic']!=null){
+						$this->set('has_sbt',true);
+						$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$q['QuestionBank']['topic_id']),'fields'=>array('id','name'))));
+					}
+					else{
+						$this->set('has_sbt',false);
+					}
+					$this->data=$finalQ_bank;
+					//$this->set('ans',$finalQ_bank['QuestionBank']['ans']);
 					
 	            }
 				else if(!$id){
