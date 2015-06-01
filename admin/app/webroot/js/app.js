@@ -3,8 +3,8 @@ $(document).ready(function(){
 		$('.alert').fadeOut(800);
 	},2000);
 });
-$("#topic").on('change',function(){
-    var u="http://"+document.domain + baseUrl+'/QuestionBanks/get_sub_topic/'+$(this).val();
+$("#topic").on('change',function(event){
+    var u=baseUrl+"/QuestionBanks/get_sub_topic/"+$(this).val();
     console.log(u);
     $.ajax({
     	url:u,
