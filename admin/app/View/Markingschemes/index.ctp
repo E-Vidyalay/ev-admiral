@@ -35,7 +35,7 @@
 								echo "<td>";
 					            echo $this->Html->link('Update Marking Scheme',array('controller'=>'Markingschemes','action'=>'update_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Marking Scheme',array('controller'=>'Markingschemes','action'=>'delete_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo $this->Html->link('Delete Marking Scheme',array('controller'=>'Markingschemes','action'=>'delete_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-danger btn-sm'));
 								echo "</td>";
 								echo "</tr>";
 								$count++;
