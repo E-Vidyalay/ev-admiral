@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 01, 2015 at 10:48 AM
+-- Generation Time: Jun 02, 2015 at 04:41 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.20
 
@@ -98,13 +98,6 @@ CREATE TABLE IF NOT EXISTS `axi_links` (
   `tags` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `axi_links`
---
-
-INSERT INTO `axi_links` (`id`, `topic_id`, `link_title`, `link_url`, `tags`) VALUES
-('556aa850-7de0-46e5-a066-101d125f2f23', '556aa68d-0198-462b-9ddb-101e125f2f23', 'Circle', 'geometry.com', 'asfsdfds');
-
 -- --------------------------------------------------------
 
 --
@@ -188,7 +181,19 @@ CREATE TABLE IF NOT EXISTS `axi_question_banks` (
 --
 
 INSERT INTO `axi_question_banks` (`id`, `question`, `option1`, `option2`, `option3`, `option4`, `option5`, `correct_ans`, `path`, `path_dir`, `topic_id`, `updated_at`, `sub_topic_id`, `description`) VALUES
-('556c1734-e718-4f62-ae81-02de125f2f23', '<p>What is this?</p>', '<p>sdfasd</p>', '<p>sadfas</p>', '<p>sdfasd</p>', '<p>asdfas</p>', '<p>asdfasd</p>', '0,0,option3,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 08:26:28', '', 'this is by prof X');
+('556c1734-e718-4f62-ae81-02de125f2f23', '<p>What is this?</p>', '<p>sdfasd</p>', '<p>sadfas</p>', '<p>sdfasd</p>', '<p>asdfas</p>', '<p>asdfasd</p>', '0,0,option3,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 08:26:28', '', 'this is by prof X'),
+('556c77f3-e5a8-45d5-8d89-05cc125f2f23', '<p>hey this is just for test-algebra!</p>', '<p>sdfas</p>', '<p>sdfas</p>', '<p>asdfas</p>', '<p>sdfasd</p>', '<p>sdfasd</p>', 'option1,0,0,0,0', NULL, NULL, '556c0340-6248-427e-83f8-0360125f2f23', '2015-06-01 15:19:15', '', 'By x'),
+('556c9d4f-4e94-40d6-9ac5-0360125f2f23', '<p>Helloo this just for test?</p>', '<p>ok</p>', '<p>by</p>', '<p>cya</p>', '<p>fine</p>', '<p>np</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 17:58:39', NULL, 'XYZ'),
+('556c9db5-b87c-4639-b4a8-0656125f2f23', '<p>Circle 1 test case?</p>', '<p>perimeter</p>', '<p>radius</p>', '<p>circumference</p>', '<p>height</p>', '<p>semi circle</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:00:21', NULL, 'this is by prof X'),
+('556c9ddc-bcd0-452f-a1f9-035d125f2f23', '<p>what is area</p>', '<p>2pir</p>', '<p>2p2</p>', '<p>2x2</p>', '<p>2rs</p>', '<p>2fc</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:01:00', NULL, 'Circle Test case 2'),
+('556c9e77-2e9c-4dee-abac-02d9125f2f23', '<p>Circle circumference</p>', '<p>2pir</p>', '<p>2pir2</p>', '<p>2x</p>', '<p>29</p>', '<p>26</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:03:35', NULL, 'geo'),
+('556ca0b9-5854-429a-91f4-02d9125f2f23', '<p>Hey gemoetry circle</p>', '<p>sdfas</p>', '<p>asdfas</p>', '<p>asdfas</p>', '<p>sdfasd</p>', '<p>sdfasd</p>', '0,option2,option3,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:13:13', NULL, 'this is by prof X'),
+('556ca11a-b244-4cda-9ef4-02df125f2f23', '<p>Tired of adding circle quest</p>', '<p>sdfasd</p>', '<p>asdfas</p>', '<p>sdfasd</p>', '<p>sadfas</p>', '<p>sdfasd</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:14:50', NULL, 'this is by prof X'),
+('556ca196-a2a4-4854-9ae0-0704125f2f23', '<p>asdasd</p>', '<p>asdasd</p>', '<p>adasd</p>', '<p>adas</p>', '<p>asda</p>', '<p>asda</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:16:54', '556bd05e-859c-4ca1-ba72-02d9125f2f23', 'asda'),
+('556ca1ab-cc70-401c-8682-0656125f2f23', '<p>sadasd</p>', '<p>asdsadfas</p>', '<p>sdfasd</p>', '<p>dfasdfa</p>', '<p>sadfasd</p>', '<p>sdfas</p>', '0,option2,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:17:15', NULL, 'asdas'),
+('556ca1be-d480-4088-9c51-035d125f2f23', '<p>sdfas</p>', '<p>sdfas</p>', '<p>sdfasd</p>', '<p>sdfsd</p>', '<p>kjsdfak</p>', '<p>kjsdfas</p>', 'option1,option2,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:17:34', NULL, 'asdf'),
+('556ca1da-5304-47ed-aa5b-02df125f2f23', '<p>dsfasdf</p>', '<p>sdfasdfa</p>', '<p>lkjlkjlj</p>', '<p>lkjlkj</p>', '<p>lkjlkj</p>', '<p>lkjlkj</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:18:02', NULL, 'this is by prof X'),
+('556ca5bc-0484-4dee-8da1-012c125f2f23', '<p>hey sub-test</p>', '<p>sdfas</p>', '<p>asdfasd</p>', '<p>sdfas</p>', '<p>sdfasd</p>', '<p>sdfas</p>', 'option1,0,0,0,0', NULL, NULL, '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:34:36', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -287,8 +292,17 @@ CREATE TABLE IF NOT EXISTS `axi_test_applications` (
   `id` char(36) NOT NULL,
   `student_id` char(36) NOT NULL,
   `topic_id` char(36) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `sub_topic_id` char(36) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_test_applications`
+--
+
+INSERT INTO `axi_test_applications` (`id`, `student_id`, `topic_id`, `date`, `sub_topic_id`) VALUES
+('556ca23c-859c-47d5-b29e-0704125f2f23', '5561c76e-ee1c-44bf-af4e-01bf125f2f23', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-01 18:19:40', '556bd05e-859c-4ca1-ba72-02d9125f2f23'),
+('556d2fb0-88fc-4168-82d6-035d125f2f23', '5561c76e-ee1c-44bf-af4e-01bf125f2f23', '556aa68d-0198-462b-9ddb-101e125f2f23', '2015-06-02 04:23:12', '');
 
 -- --------------------------------------------------------
 
@@ -302,6 +316,32 @@ CREATE TABLE IF NOT EXISTS `axi_test_results` (
   `question_id` char(36) NOT NULL,
   `result` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_test_results`
+--
+
+INSERT INTO `axi_test_results` (`id`, `test_id`, `question_id`, `result`) VALUES
+('556ca268-3b38-445e-ae72-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556c9db5-b87c-4639-b4a8-0656125f2f23', 1),
+('556ca268-5338-41d4-b6a8-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca1be-d480-4088-9c51-035d125f2f23', -1),
+('556ca268-57c4-42d4-a1b8-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556c1734-e718-4f62-ae81-02de125f2f23', -1),
+('556ca268-57e0-4321-bdee-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca1ab-cc70-401c-8682-0656125f2f23', -1),
+('556ca268-b374-4821-bf5a-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556c9e77-2e9c-4dee-abac-02d9125f2f23', 1),
+('556ca268-b7d4-409b-aa8a-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556c9d4f-4e94-40d6-9ac5-0360125f2f23', -1),
+('556ca268-cab8-4028-b5e8-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca0b9-5854-429a-91f4-02d9125f2f23', -1),
+('556ca268-dcd4-4556-8e04-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca11a-b244-4cda-9ef4-02df125f2f23', 1),
+('556ca268-e408-40e0-82e7-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca196-a2a4-4854-9ae0-0704125f2f23', 1),
+('556ca268-ec98-4f10-8fc9-0360125f2f23', '556ca23c-859c-47d5-b29e-0704125f2f23', '556ca1da-5304-47ed-aa5b-02df125f2f23', -1),
+('556d3176-5650-49fc-b959-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca1da-5304-47ed-aa5b-02df125f2f23', -1),
+('556d3176-675c-474f-903a-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556c9e77-2e9c-4dee-abac-02d9125f2f23', 1),
+('556d3176-6ce0-437c-8e06-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca196-a2a4-4854-9ae0-0704125f2f23', -1),
+('556d3176-7024-471b-bd04-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca1be-d480-4088-9c51-035d125f2f23', -1),
+('556d3176-b408-4070-baea-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca5bc-0484-4dee-8da1-012c125f2f23', 0),
+('556d3176-cb9c-4290-a3ef-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca11a-b244-4cda-9ef4-02df125f2f23', 0),
+('556d3176-e5e4-4cf0-9d19-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556c9d4f-4e94-40d6-9ac5-0360125f2f23', -1),
+('556d3176-f1dc-4446-87cb-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556ca0b9-5854-429a-91f4-02d9125f2f23', -1),
+('556d3176-fbcc-4ab0-99b2-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556c9db5-b87c-4639-b4a8-0656125f2f23', 1),
+('556d3176-ff00-43b6-bbc5-012c125f2f23', '556d2fb0-88fc-4168-82d6-035d125f2f23', '556c1734-e718-4f62-ae81-02de125f2f23', -1);
 
 -- --------------------------------------------------------
 
@@ -474,7 +514,8 @@ ALTER TABLE `axi_teachers`
 ALTER TABLE `axi_test_applications`
   ADD PRIMARY KEY (`id`),
   ADD KEY `student_id` (`student_id`),
-  ADD KEY `subject_id` (`topic_id`);
+  ADD KEY `subject_id` (`topic_id`),
+  ADD KEY `sub_topic_id` (`sub_topic_id`);
 
 --
 -- Indexes for table `axi_test_results`

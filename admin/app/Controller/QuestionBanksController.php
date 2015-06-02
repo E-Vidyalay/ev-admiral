@@ -21,6 +21,7 @@ class QuestionBanksController extends AppController{
 			}
 			$ans_string=implode(",", $correct_ans);
 			$data['QuestionBank']['correct_ans']=$ans_string;
+			pr($data);die();
 			if($this->QuestionBank->save($data)){
 				$this->Session->setFlash('Question added Successfully.!','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('controller'=>'question_banks','action'=>'index'));
@@ -70,13 +71,13 @@ class QuestionBanksController extends AppController{
 					$ans['ans']=$m;
 					$final_data['QuestionBank']=array_merge($q['QuestionBank'],$ans);				
 					$finalQ_bank=$final_data;
-					pr($finalQ_bank);
-					if(isset($q['QuestionBank']['sub_topic_id']) || $q['QuestionBank']['SubTopic']!=null){
+					if(isset($q['QuestionBank']['sub_topic_id']) || $q['QuestionBank']['sub_topic_id']!=null){
 						$this->set('has_sbt',true);
 						$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$q['QuestionBank']['topic_id']),'fields'=>array('id','name'))));
 					}
 					else{
 						$this->set('has_sbt',false);
+						$this->set('sbt',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$q['QuestionBank']['topic_id']),'fields'=>array('id','name'))));
 					}
 					$this->data=$finalQ_bank;
 					//$this->set('ans',$finalQ_bank['QuestionBank']['ans']);
