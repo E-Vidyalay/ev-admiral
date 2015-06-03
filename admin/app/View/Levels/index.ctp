@@ -1,10 +1,10 @@
 <br/>
 <div class="row">
 	<div class="col-lg-5">
-		<h2>SubTopics</h2>
+		<h2>Levels</h2>
 	</div>
 	<div class="col-lg-7" style="text-align: right">
-			<p style="margin-top: 20px"><?php echo $this->Html->link('Add New SubTopic',array('controller'=>'SubTopics','action'=>'insert'),array('class'=>'btn btn-primary'));?></p>
+			<p style="margin-top: 20px"><?php echo $this->Html->link('Add New Level',array('controller'=>'levels','action'=>'insert'),array('class'=>'btn btn-primary'));?></p>
 	</div>
 </div>
 <hr/>
@@ -20,16 +20,15 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>SubTopic</th><th>Topics</th><th>Action</th>
+                           <th>Level</th><th>Action</th>
                     </thead>
                     <tbody>
-                    <?php foreach ($subtopics as $subtopic){ ?>
+                    <?php foreach ($levels as $level){ ?>
 						<tr>
-							<td> <?php  echo $subtopic['SubTopic']['name']; ?> </td>
-							<td><?php echo $subtopic['Topic']['name']; ?></td>
-							<td> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
+							<td> <?php  echo $level['Level']['level_name']; ?> </td>			
+							<td> <?php echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete SubTopic',array('controller'=>'SubTopics','action'=>'delete',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo $this->Html->link('Delete Level',array('controller'=>'levels','action'=>'delete',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
 							?>
 							</td> 
 						</tr> 	

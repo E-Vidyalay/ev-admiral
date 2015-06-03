@@ -2,29 +2,9 @@
 
 class LinksController extends AppController{
 
-<<<<<<< HEAD
-	var $uses = array('Link','SubTopic','Subject','SubjectTopic','Standard');
 
-	public function index(){
-		$this->layout="ev_admin";
-		//$t=$this->SubTopic->find('all');
-		//$this->set('subtopics',$t);
-		$l=$this->Link->find('all');
-		$this->set('linkID',$l);
-		//pr($l);
-		
-		}
+	var $uses = array('Link','Topic','SubTopic');
 
-	public function insert($id=NULL,$subtopic_name=NULL){
-		$this->layout="ev_admin";
-		$sb=$this->SubTopic->findById($id);
-		$this->set('sub_topic',$sb);
-		$this->set('sname',$subtopic_name);
-		if($this->request->is('post')){
-			$data=$this->data;
-			//$data['Link']['tags']=$data['Link']['display_name']." -> ".$data['Link']['topic_name']." -> ".$data['Link']['subtopic_name'];
-=======
-	var $uses = array('Link','Subject','Standard');
 
 	public function index(){
 		$this->layout="ev_admin";
@@ -34,11 +14,11 @@ class LinksController extends AppController{
 
 	public function insert(){
 		$this->layout="ev_admin";
-		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
-		$this->set('sb',$sb);
+		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+		$this->set('topic',$sb);
 		if($this->request->is('post')){
 			$data=$this->data;
->>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
+
 			if($this->Link->save($data))
 			{	
 				$this->Session->setFlash('Link has been successfully added','default',array('class'=>'alert alert-success'),'success');
@@ -46,13 +26,23 @@ class LinksController extends AppController{
 
 			}
 			else{
-				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-error'),'error');
+				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-danger'),'error');
 				$this->redirect(array('action'=>'index'));
 			}
 		}
 
 	}
-
+	public function get_sub_topic($id=null){
+		$this->layout='ajax';
+		if(isset($id)){
+			$this->set('if_data',true);
+			$sub_topic=$this->SubTopic->find('list',array('fields'=>array('id','name'),'conditions'=>array('topic_id'=>$id)));
+			$this->set('sub_topics',$sub_topic);
+		}
+		else{
+			$this->set('if_data',false);
+		}
+	}
 	public function delete($id = NULL){
 			pr($id);
 			$this->Link->delete($id);
@@ -62,7 +52,7 @@ class LinksController extends AppController{
 
 	public function update($id=NULL){
 		$this->layout="ev_admin";
-<<<<<<< HEAD
+
 		
 		//$this->set('sname',$subtopic_name);
 		$data=$this->data;
@@ -76,24 +66,35 @@ class LinksController extends AppController{
 					$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
 					$this->redirect(array('action'=>'update'));
 				}
-=======
+
 		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
 		$this->set('sb',$sb);
+
+		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+		$this->set('topic',$sb);
+
 		if(empty($this->data)){
 			$this->data=$this->Link->findById($id);
+			if(isset($this->data['Link']['sub_topic_id']) || $this->data['Link']['sub_topic_id']!=null){
+						$this->set('has_sbt',true);
+						$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$this->data['Link']['topic_id']),'fields'=>array('id','name'))));
+					}
+					else{
+						$this->set('has_sbt',false);
+					}
 		}
 		else{
-			if($this->Link->save($data))
+			if($this->Link->save($this->data))
 			{
-				$this->Session->setFlash('Link has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+				$this->Session->setFlash('Link has been successfully updated','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('action'=>'index'));
 			}
 			else{
-				$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
-				$this->redirect(array('action'=>'update'));
+				$this->Session->setFlash('Link has not been updated','default',array('class'=>'alert alert-danger'),'error');
+				$this->redirect(array('action'=>'index'));
 			}
 		}
 		
->>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
+
 	}
 }

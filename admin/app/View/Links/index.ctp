@@ -1,30 +1,6 @@
 <br/>
 <div class="row">
 	<div class="col-lg-5">
-<<<<<<< HEAD
-		<h2>Links</h2>
-	</div>
-	
-</div>
-<hr/>
-<table width="100%" class="table table-striped table-bordered">
-	<tr>
-		<th>SubTopics</th><th>Action</th>
-	</tr>
-	<?php foreach ($linkID as $l){ ?>
-	<tr>
-		<td> <?php  echo $l['SubTopic']['subtopic_name']; ?> </td>			
-		<td> <?php echo $this->Html->link('Add Link',array('controller'=>'links','action'=>'insert',$l['SubTopic']['id'],$l['SubTopic']['subtopic_name']),array('class'=>'btn btn-primary'));
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary'));
-			echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-			echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-primary'));
-		?>
-		</td> 
-	</tr> 	
-	<?php } ?>
-</table>
-=======
 		<h2>External Links</h2>
 	</div>
 	<div class="col-lg-7" style="text-align: right">
@@ -44,7 +20,8 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           	<th>Subject</th>
+                            <th>Link Title</th>
+                           	<th>Subject/Topic</th>
                            	<th>Description</th>
                            	<th>Action</th>
                         </tr>
@@ -52,12 +29,13 @@
                     <tbody>
                     	<?php foreach ($linkID as $l){ ?>
 							<tr>
-								<td> <?php  echo $l['Subject']['display_name']; ?> </td>
+								<td> <?php  echo $l['Link']['link_title']; ?> </td>
+                                <td> <?php echo $l['Topic']['display_name']?></td>
 								<td> <?php  echo $l['Link']['tags']; ?> </td>		
 								<td> <?php 
 									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
+									echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-danger btn-sm'));
 								?>
 								</td> 
 							</tr> 	
@@ -73,4 +51,4 @@
 </div>
 <!-- /.col-lg-12 -->
 </div>
->>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
+

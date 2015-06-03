@@ -1,17 +1,21 @@
 <br/>
-
-<h1>Update SubTopic</h1>
-
+<h1>Update topic</h1>
 <hr>
 <?php 
-    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','action'=>'update'));
+    echo $this->Form->create('Topic',array('controller'=>'topics','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-
-    echo $this->Form->input('topic_id',array(
+    echo $this->Form->input('level_id',array(
         'class'=>'form-control',
         'type'=> 'select',
-        'options' => $topic,
-        'label' => 'Topic'
+        'options' => $level,
+        'label' => 'Level'
+    ));
+    echo "<br/>";
+    echo $this->Form->input('subject_id',array(
+        'class'=>'form-control',
+        'type'=> 'select',
+        'options' => $subject,
+        'label' => 'Subject'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(
@@ -20,13 +24,12 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'SubTopic'
+     'label'=>'Topic'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
     
-    echo $this->Form->input('Update SubTopic',array(
-
+    echo $this->Form->input('update subject',array(
      'type'=>'submit',
      'div'=>false,
      'label'=>false,

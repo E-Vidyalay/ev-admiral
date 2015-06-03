@@ -2,19 +2,17 @@
 <h1>Add new subject</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'insert'));
-	echo $this->Form->input('name',array(
+	echo $this->Form->create('Level',array('controller'=>'levels','action'=>'insert'));
+	echo $this->Form->input('level_name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',
 	 'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Subject'
+     'label'=>'Level'
       ));
-    echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
-    
-    echo $this->Form->input('Add subject',array(
+    echo $this->Form->input('Add Level',array(
      'type'=>'submit',
      'div'=>false,
      'label'=>false,

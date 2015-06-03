@@ -86,6 +86,7 @@ languagelist:[
             ul li.tipsmall {background-position: 0 0px; padding-left:20px; margin:0px; font-size:xx-small;}
             ul li.tip {height:20px; margin:0px; padding-left:20px;background:transparent url('tiny_mce/plugins/pramukhime/img/pramukhime-icon.png') 0px -260px no-repeat;}
         </style>
+        <script type="text/javascript">var baseUrl = '<?php echo $this->base; ?>';</script>
 	</head>
 	<body>
 		<div id="wrapper">

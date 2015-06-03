@@ -3,6 +3,7 @@ $(document).ready(function(){
 		$('.alert').fadeOut(800);
 	},2000);
 });
+<<<<<<< HEAD
 $(':file').filestyle({
 	buttonName: "btn-primary"
 });
@@ -97,3 +98,31 @@ $(document).on('change','.topic-ls',function(event){
 //         return false;
 //       });
 // })();
+=======
+$("#topic").on('change',function(event){
+    var u=baseUrl+"/QuestionBanks/get_sub_topic/"+$(this).val();
+    console.log(u);
+    $.ajax({
+    	url:u,
+    	success:function(data){
+    		$("#sbt_div").html(data);
+    	},
+    	error:function(e){
+    		alert("Sorry there was error");
+    	}
+    })
+});
+$("#topics").on('change',function(event){
+    var u=baseUrl+"/Links/get_sub_topic/"+$(this).val();
+    console.log(u);
+    $.ajax({
+        url:u,
+        success:function(data){
+            $("#sb_div").html(data);
+        },
+        error:function(e){
+            alert("Sorry there was error"+u);
+        }
+    })
+});
+>>>>>>> 06aaf9d080e18b4da2aca721a2d2e4f44551a480

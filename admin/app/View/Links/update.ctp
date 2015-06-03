@@ -1,47 +1,36 @@
 <br/>
-<<<<<<< HEAD
+
 <h1>Update Link</h1>
 <hr>
 <?php 
+   
     echo $this->Form->create('Link',array('controller'=>'Links','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    echo "<br/>";
 
-        echo $this->Form->input('subtopic_name',array(
-        'class'=>'form-control',
-        'type'=>'text',
-        'value' => $sname,
-        'label'=>'Sub Topic',
-        'readonly'
-        ));
-         
-        echo $this->Form->input('subtopic_id',array(
-        'class'=>'form-control',
-        'value' => $sub_topic['SubTopic']['id'],
-        'type'=>'hidden'
-        )); 
-
-        echo "<br/>";
-        
-        echo $this->Form->input('Update link',array(
-        'type'=>'submit',
-        'div'=>false,
-        'label'=>false,
-        'class'=>'btn btn-lg btn-success btn-block'
-        ));                                  
-=======
-<h1>Update link</h1>
-<hr>
-<?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
-    echo $this->Form->input('id',array('type'=>'hidden'));
-
-    echo $this->Form->input('subject_id',array(
+    echo $this->Form->input('topic_id',array(
             'class'=>'form-control',
-            'options'=>$sb,
+            'options'=>$topic,
             'required',
             'empty'=>'Select Subject',
-            'label'=>'Subject'
+            'label'=>'Subject',
+            'id'=>'topics'
+        ));
+    echo "<br/>";
+    echo "<div id='sb_div'>";
+                    if($has_sbt){
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control','options'=>$sub_topics));
+                    }
+                    else{
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control'));
+                    }
+                    echo "</div>";
+    echo "<br/>";
+    echo $this->Form->input('link_title',array(
+            'class'=>'form-control',
+            'type'=>'text',
+            'required',
+            'placeholder'=>'Title',
+            'label'=>'Link Title'
         ));
     
      echo "<br/>";
@@ -70,6 +59,7 @@
      'label'=>false,
      'class'=>'btn btn-lg btn-success btn-block'
      ));                               
->>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
 
+    echo "<br/>";
+    echo "<br/>";
 ?>
