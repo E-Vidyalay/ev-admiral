@@ -21,7 +21,6 @@ class QuestionBanksController extends AppController{
 			}
 			$ans_string=implode(",", $correct_ans);
 			$data['QuestionBank']['correct_ans']=$ans_string;
-			pr($data);die();
 			if($this->QuestionBank->save($data)){
 				$this->Session->setFlash('Question added Successfully.!','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('controller'=>'question_banks','action'=>'index'));
