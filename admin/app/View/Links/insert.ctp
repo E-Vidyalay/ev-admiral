@@ -7,10 +7,14 @@
             'class'=>'form-control',
             'options'=>$topic,
             'required',
-            'empty'=>'Select topic',
-            'label'=>'Topic'
+            'empty'=>'Select Topic',
+            'label'=>'Topic',
+            'id'=>'topics'
         ));
-    
+    echo "<br/>";
+    echo "<div id='sb_div'>";
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control'));
+    echo "</div>";
      echo "<br/>";
      echo $this->Form->input('link_title',array(
             'class'=>'form-control',
@@ -48,6 +52,8 @@
      'div'=>false,
      'label'=>false,
      'class'=>'btn btn-lg btn-success btn-block'
-     ));                               
+     ));      
+     echo "<br/>";
+     echo "<br/>";                         
 
 ?>

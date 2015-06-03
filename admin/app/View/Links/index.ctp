@@ -20,7 +20,8 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           	<th>Subject</th>
+                            <th>Link Title</th>
+                           	<th>Subject/Topic</th>
                            	<th>Description</th>
                            	<th>Action</th>
                         </tr>
@@ -29,11 +30,12 @@
                     	<?php foreach ($linkID as $l){ ?>
 							<tr>
 								<td> <?php  echo $l['Link']['link_title']; ?> </td>
+                                <td> <?php echo $l['Topic']['display_name']?></td>
 								<td> <?php  echo $l['Link']['tags']; ?> </td>		
 								<td> <?php 
 									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
+									echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-danger btn-sm'));
 								?>
 								</td> 
 							</tr> 	

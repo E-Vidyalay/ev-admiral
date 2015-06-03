@@ -10,11 +10,20 @@
             'options'=>$topic,
             'required',
             'empty'=>'Select Subject',
-            'label'=>'Subject'
+            'label'=>'Subject',
+            'id'=>'topics'
         ));
-    
-     echo "<br/>";
-     echo $this->Form->input('link_title',array(
+    echo "<br/>";
+    echo "<div id='sb_div'>";
+                    if($has_sbt){
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control','options'=>$sub_topics));
+                    }
+                    else{
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control'));
+                    }
+                    echo "</div>";
+    echo "<br/>";
+    echo $this->Form->input('link_title',array(
             'class'=>'form-control',
             'type'=>'text',
             'required',
@@ -48,5 +57,6 @@
      'label'=>false,
      'class'=>'btn btn-lg btn-success btn-block'
      ));                               
-
+    echo "<br/>";
+    echo "<br/>";
 ?>
