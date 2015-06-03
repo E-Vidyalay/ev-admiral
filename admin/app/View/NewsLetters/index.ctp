@@ -3,7 +3,7 @@
 <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-            Pages
+            News Letters
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
@@ -11,20 +11,21 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           	<th>Page Title</th>
-							<th>Alias</th>
+                           	<th>News Title</th>
+                            <th>Date</th>
 							<th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     	<?php
-							foreach ($articles as $a) {
+							foreach ($news as $n) {
 								echo "<tr>";
-								echo "<td>".$a['Article']['title']."</td>";
-								echo "<td>".$a['Article']['alias']."</td>";
+								echo "<td>".$n['NewsLetter']['title']."</td>";
+                                echo "<td>".$n['NewsLetter']['date']."</td>";
 								echo "<td>";
-									echo $this->Html->link('Update',array('controller'=>'articles','action'=>'update',$a['Article']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete',array('controller'=>'articles','action'=>'delete',$a['Article']['id']),array('class'=>'btn btn-danger btn-sm'));
+									echo $this->Html->link('Update',array('controller'=>'NewsLetters','action'=>'update',$n['NewsLetter']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+									echo $this->Html->link('Delete',array('controller'=>'NewsLetters','action'=>'delete',$n['NewsLetter']['id']),array('class'=>'btn btn-danger btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    echo $this->Html->link('View',array('controller'=>'NewsLetters','action'=>'view_news',$n['NewsLetter']['id']),array('class'=>'btn btn-info btn-sm'));
 								echo "</td>";
 								echo "</tr>";
 							}

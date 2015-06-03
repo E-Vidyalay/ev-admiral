@@ -9,6 +9,8 @@
 			echo $this->Html->css('sb-admin-2');
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
+            echo $this->Html->css('dataTables.bootstrap.css');
+            echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->css('app');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
@@ -105,6 +107,18 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage external links<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View links",array('controller'=>'Links','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add links",array('controller'=>'Links','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                          <li>
                             <a href="#"><i class="fa fa-pencil fa-fw"></i> Manage Question Bank<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
@@ -128,6 +142,18 @@
                                 </li>
                             </ul>
                             
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Manage News letters<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View news",array('controller'=>'NewsLetters','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Post news",array('controller'=>'NewsLetters','action'=>'add'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -157,8 +183,20 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
+<<<<<<< HEAD
             echo $this->Html->script('bootstrap-filestyle');
 
+=======
+            echo $this->Html->script('jquery.dataTables.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
+>>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
 		?>
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-example').DataTable({
+                        responsive: true
+                });
+            });
+        </script>
 	</body>
 </html>

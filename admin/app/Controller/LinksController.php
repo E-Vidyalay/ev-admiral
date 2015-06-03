@@ -2,6 +2,7 @@
 
 class LinksController extends AppController{
 
+<<<<<<< HEAD
 	var $uses = array('Link','SubTopic','Subject','SubjectTopic','Standard');
 
 	public function index(){
@@ -22,6 +23,22 @@ class LinksController extends AppController{
 		if($this->request->is('post')){
 			$data=$this->data;
 			//$data['Link']['tags']=$data['Link']['display_name']." -> ".$data['Link']['topic_name']." -> ".$data['Link']['subtopic_name'];
+=======
+	var $uses = array('Link','Subject','Standard');
+
+	public function index(){
+		$this->layout="ev_admin";
+		$l=$this->Link->find('all');
+		$this->set('linkID',$l);
+		}
+
+	public function insert(){
+		$this->layout="ev_admin";
+		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
+		$this->set('sb',$sb);
+		if($this->request->is('post')){
+			$data=$this->data;
+>>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
 			if($this->Link->save($data))
 			{	
 				$this->Session->setFlash('Link has been successfully added','default',array('class'=>'alert alert-success'),'success');
@@ -45,6 +62,7 @@ class LinksController extends AppController{
 
 	public function update($id=NULL){
 		$this->layout="ev_admin";
+<<<<<<< HEAD
 		
 		//$this->set('sname',$subtopic_name);
 		$data=$this->data;
@@ -58,5 +76,24 @@ class LinksController extends AppController{
 					$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
 					$this->redirect(array('action'=>'update'));
 				}
+=======
+		$sb=$this->Subject->find('list',array('fields'=>array('id','display_name')));
+		$this->set('sb',$sb);
+		if(empty($this->data)){
+			$this->data=$this->Link->findById($id);
+		}
+		else{
+			if($this->Link->save($data))
+			{
+				$this->Session->setFlash('Link has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+				$this->redirect(array('action'=>'index'));
+			}
+			else{
+				$this->Session->setFlash('Link has not been edited','default',array('class'=>'alert alert-error'),'error');
+				$this->redirect(array('action'=>'update'));
+			}
+		}
+		
+>>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
 	}
 }
