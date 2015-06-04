@@ -29,6 +29,30 @@ class LinksController extends AppController{
 		}
 
 	}
+        
+
+	public function multiple_insert(){
+		$this->layout="ev_admin";
+                $this->loadModel('File');
+		$t=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+                
+		$this->set('topic',$t);
+		$this->set('user_id',$this->Auth->user('id'));
+		
+                        
+                        if($this->request->is('post')){
+                                $data=$this->data;
+                                $topic_id = $this->request->data['Link']['topic_id'];
+                                $sub_topic_id = $this->request->data['Link']['sub_topic_id'];
+                                $file=$this->data['Link']['file'];
+                                //pr($data);die;
+                                move_uploaded_file($this->data['Link']['file']['tmp_name'], TMP.'uploads'.DS.'Link'.DS.$this->data['Link']['file']['name']);
+                                $c = $this->Link->import($this->request->data['Link']['file']['name'],$topic_id,$sub_topic_id);
+
+		}
+       }
+	
+
 	public function get_sub_topic($id=null){
 		$this->layout='ajax';
 		if(isset($id)){
