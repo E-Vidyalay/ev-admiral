@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jun 03, 2015 at 10:34 AM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Host: 127.0.0.1
+-- Generation Time: Jun 10, 2015 at 03:43 AM
+-- Server version: 5.5.34
+-- PHP Version: 5.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -32,7 +32,8 @@ CREATE TABLE IF NOT EXISTS `axi_admins` (
   `username` varchar(30) NOT NULL,
   `password` varchar(70) NOT NULL,
   `email` varchar(120) NOT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,7 +55,8 @@ CREATE TABLE IF NOT EXISTS `axi_articles` (
   `alias` text NOT NULL,
   `keywords` text NOT NULL,
   `meta_description` text NOT NULL,
-  `content` text NOT NULL
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -69,12 +71,26 @@ INSERT INTO `axi_articles` (`id`, `title`, `alias`, `keywords`, `meta_descriptio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `axi_images`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_images` (
+  `id` char(36) NOT NULL,
+  `path` varchar(200) NOT NULL,
+  `path_dir` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `axi_levels`
 --
 
 CREATE TABLE IF NOT EXISTS `axi_levels` (
   `id` char(36) NOT NULL,
-  `level_name` varchar(100) NOT NULL
+  `level_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -96,7 +112,9 @@ CREATE TABLE IF NOT EXISTS `axi_links` (
   `sub_topic_id` char(36) DEFAULT NULL,
   `link_title` varchar(100) NOT NULL,
   `link_url` varchar(500) NOT NULL,
-  `tags` text NOT NULL
+  `tags` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `subtopic_id` (`topic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -118,7 +136,9 @@ CREATE TABLE IF NOT EXISTS `axi_markingschemes` (
   `negative_marks` double NOT NULL,
   `display_name` varchar(20) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_by` char(36) NOT NULL
+  `updated_by` char(36) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `updated_by` (`updated_by`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -140,7 +160,9 @@ CREATE TABLE IF NOT EXISTS `axi_news_letters` (
   `title` varchar(200) NOT NULL,
   `content` text NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `user_id` char(36) NOT NULL
+  `user_id` char(36) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -158,7 +180,8 @@ INSERT INTO `axi_news_letters` (`id`, `title`, `content`, `date`, `user_id`) VAL
 
 CREATE TABLE IF NOT EXISTS `axi_parents` (
   `id` char(36) NOT NULL,
-  `parent_data` text NOT NULL
+  `parent_data` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -181,7 +204,10 @@ CREATE TABLE IF NOT EXISTS `axi_question_banks` (
   `topic_id` char(36) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `sub_topic_id` char(36) DEFAULT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `subject_id` (`topic_id`),
+  KEY `sub_topic_id` (`sub_topic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -212,7 +238,10 @@ INSERT INTO `axi_question_banks` (`id`, `question`, `option1`, `option2`, `optio
 CREATE TABLE IF NOT EXISTS `axi_students` (
   `id` char(36) NOT NULL,
   `school` varchar(100) DEFAULT NULL,
-  `user_id` char(36) NOT NULL
+  `user_id` char(36) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id_2` (`user_id`),
+  KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -235,7 +264,11 @@ CREATE TABLE IF NOT EXISTS `axi_student_subject_mappings` (
   `student_id` char(36) NOT NULL,
   `topic_id` char(36) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_by` char(36) NOT NULL
+  `updated_by` char(36) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `updated_by` (`updated_by`),
+  KEY `subject_id` (`topic_id`),
+  KEY `student_id` (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -248,7 +281,8 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
   `id` char(36) NOT NULL,
   `name` varchar(100) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_by` char(36) NOT NULL
+  `updated_by` char(36) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -269,7 +303,9 @@ CREATE TABLE IF NOT EXISTS `axi_sub_topics` (
   `id` char(36) NOT NULL,
   `name` varchar(100) NOT NULL,
   `topic_id` char(36) NOT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `topic_id` (`topic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -287,7 +323,8 @@ INSERT INTO `axi_sub_topics` (`id`, `name`, `topic_id`, `updated_at`) VALUES
 
 CREATE TABLE IF NOT EXISTS `axi_teachers` (
   `id` char(36) NOT NULL,
-  `teacher_data` text NOT NULL
+  `teacher_data` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -301,7 +338,11 @@ CREATE TABLE IF NOT EXISTS `axi_test_applications` (
   `student_id` char(36) NOT NULL,
   `topic_id` char(36) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `sub_topic_id` char(36) DEFAULT NULL
+  `sub_topic_id` char(36) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `student_id` (`student_id`),
+  KEY `subject_id` (`topic_id`),
+  KEY `sub_topic_id` (`sub_topic_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -322,7 +363,10 @@ CREATE TABLE IF NOT EXISTS `axi_test_results` (
   `id` char(36) NOT NULL,
   `test_id` char(36) NOT NULL,
   `question_id` char(36) NOT NULL,
-  `result` int(1) DEFAULT NULL
+  `result` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `test_id` (`test_id`),
+  KEY `question_id` (`question_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -364,7 +408,11 @@ CREATE TABLE IF NOT EXISTS `axi_topics` (
   `updated_by` char(36) NOT NULL,
   `subject_id` char(36) NOT NULL,
   `level_id` char(36) NOT NULL,
-  `display_name` text NOT NULL
+  `display_name` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `updated_by` (`updated_by`),
+  KEY `subject_id` (`subject_id`),
+  KEY `level_id` (`level_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -391,7 +439,11 @@ CREATE TABLE IF NOT EXISTS `axi_users` (
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_type` char(36) DEFAULT NULL,
   `path` text,
-  `path_dir` text
+  `path_dir` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `google_token` (`google_token`),
+  KEY `user_type` (`user_type`),
+  KEY `user_type_2` (`user_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -411,7 +463,8 @@ INSERT INTO `axi_users` (`id`, `name`, `username`, `password`, `fb_token`, `goog
 
 CREATE TABLE IF NOT EXISTS `axi_user_types` (
   `id` char(36) NOT NULL,
-  `name` varchar(50) NOT NULL
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -424,118 +477,6 @@ INSERT INTO `axi_user_types` (`id`, `name`) VALUES
 ('d0cf96fc-fbbc-11e4-b148-01f8d649e9b6', 'parent');
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `axi_admins`
---
-ALTER TABLE `axi_admins`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_articles`
---
-ALTER TABLE `axi_articles`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_levels`
---
-ALTER TABLE `axi_levels`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_links`
---
-ALTER TABLE `axi_links`
- ADD PRIMARY KEY (`id`), ADD KEY `subtopic_id` (`topic_id`);
-
---
--- Indexes for table `axi_markingschemes`
---
-ALTER TABLE `axi_markingschemes`
- ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`);
-
---
--- Indexes for table `axi_news_letters`
---
-ALTER TABLE `axi_news_letters`
- ADD PRIMARY KEY (`id`), ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `axi_parents`
---
-ALTER TABLE `axi_parents`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_question_banks`
---
-ALTER TABLE `axi_question_banks`
- ADD PRIMARY KEY (`id`), ADD KEY `subject_id` (`topic_id`), ADD KEY `sub_topic_id` (`sub_topic_id`);
-
---
--- Indexes for table `axi_students`
---
-ALTER TABLE `axi_students`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `user_id_2` (`user_id`), ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `axi_student_subject_mappings`
---
-ALTER TABLE `axi_student_subject_mappings`
- ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `subject_id` (`topic_id`), ADD KEY `student_id` (`student_id`);
-
---
--- Indexes for table `axi_subjects`
---
-ALTER TABLE `axi_subjects`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_sub_topics`
---
-ALTER TABLE `axi_sub_topics`
- ADD PRIMARY KEY (`id`), ADD KEY `topic_id` (`topic_id`);
-
---
--- Indexes for table `axi_teachers`
---
-ALTER TABLE `axi_teachers`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `axi_test_applications`
---
-ALTER TABLE `axi_test_applications`
- ADD PRIMARY KEY (`id`), ADD KEY `student_id` (`student_id`), ADD KEY `subject_id` (`topic_id`), ADD KEY `sub_topic_id` (`sub_topic_id`);
-
---
--- Indexes for table `axi_test_results`
---
-ALTER TABLE `axi_test_results`
- ADD PRIMARY KEY (`id`), ADD KEY `test_id` (`test_id`), ADD KEY `question_id` (`question_id`);
-
---
--- Indexes for table `axi_topics`
---
-ALTER TABLE `axi_topics`
- ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `subject_id` (`subject_id`), ADD KEY `level_id` (`level_id`);
-
---
--- Indexes for table `axi_users`
---
-ALTER TABLE `axi_users`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `google_token` (`google_token`), ADD KEY `user_type` (`user_type`), ADD KEY `user_type_2` (`user_type`);
-
---
--- Indexes for table `axi_user_types`
---
-ALTER TABLE `axi_user_types`
- ADD PRIMARY KEY (`id`);
-
---
 -- Constraints for dumped tables
 --
 
@@ -543,66 +484,66 @@ ALTER TABLE `axi_user_types`
 -- Constraints for table `axi_links`
 --
 ALTER TABLE `axi_links`
-ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_markingschemes`
 --
 ALTER TABLE `axi_markingschemes`
-ADD CONSTRAINT `axi_markingschemes_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_markingschemes_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_news_letters`
 --
 ALTER TABLE `axi_news_letters`
-ADD CONSTRAINT `axi_news_letters_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_admins` (`id`);
+  ADD CONSTRAINT `axi_news_letters_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_admins` (`id`);
 
 --
 -- Constraints for table `axi_question_banks`
 --
 ALTER TABLE `axi_question_banks`
-ADD CONSTRAINT `axi_question_banks_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_question_banks_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_students`
 --
 ALTER TABLE `axi_students`
-ADD CONSTRAINT `axi_students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_student_subject_mappings`
 --
 ALTER TABLE `axi_student_subject_mappings`
-ADD CONSTRAINT `axi_student_subject_mappings_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_student_subject_mappings_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_sub_topics`
 --
 ALTER TABLE `axi_sub_topics`
-ADD CONSTRAINT `axi_sub_topics_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
+  ADD CONSTRAINT `axi_sub_topics_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
 
 --
 -- Constraints for table `axi_test_applications`
 --
 ALTER TABLE `axi_test_applications`
-ADD CONSTRAINT `axi_test_applications_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_test_applications_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
+  ADD CONSTRAINT `axi_test_applications_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `axi_test_applications_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
 
 --
 -- Constraints for table `axi_topics`
 --
 ALTER TABLE `axi_topics`
-ADD CONSTRAINT `axi_topics_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_topics_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `axi_topics_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `axi_levels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_topics_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `axi_topics_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `axi_topics_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `axi_levels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_users`
 --
 ALTER TABLE `axi_users`
-ADD CONSTRAINT `axi_users_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `axi_user_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `axi_users_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `axi_user_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
