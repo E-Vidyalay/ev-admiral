@@ -215,13 +215,13 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
-<<<<<<< HEAD
+
             echo $this->Html->script('bootstrap-filestyle');
 
-=======
+
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
->>>>>>> 2296378b767aa1f55eff290c3322e6c29638eef2
+
 		?>
         <script>
             $(document).ready(function() {
