@@ -1,7 +1,7 @@
 <?php
 
 class SubTopicsController extends AppController{
-    public $uses=array('User','SubTopic','Topic','SubTopic');
+    public $uses=array('User','SubTopic','Topic');
     public function index()
     {
         $this->layout='ev_admin';

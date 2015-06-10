@@ -12,6 +12,7 @@
             echo $this->Html->css('dataTables.bootstrap.css');
             echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->css('app');
+            echo $this->Html->css('colpick');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
@@ -168,6 +169,30 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                            </li>
+                        <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Literatures<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View literature",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add literature",array('controller'=>'Literatures','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                            </li>
+                        <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Sub Literatures<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub category",array('controller'=>'SubLiteratures','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub category",array('controller'=>'SubLiteratures','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Images<span class="fa arrow"></span></a>
@@ -206,10 +231,13 @@
 			echo $this->Html->script('jquery');
             echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
-			echo $this->Html->script('metisMenu');
+            echo $this->Html->script('colpick');
+            echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
+            
 		?>
         <script>
             $(document).ready(function() {
