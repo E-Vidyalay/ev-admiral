@@ -219,7 +219,6 @@
 			echo $this->Html->script('jquery');
             echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
-			echo $this->Html->script('jquery-1.7.2');
             echo $this->Html->script('colpick');
             echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
