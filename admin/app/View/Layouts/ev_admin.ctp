@@ -12,6 +12,7 @@
             echo $this->Html->css('dataTables.bootstrap.css');
             echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->css('app');
+            echo $this->Html->css('colpick');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
@@ -218,10 +219,14 @@
 			echo $this->Html->script('jquery');
             echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
-			echo $this->Html->script('metisMenu');
+			echo $this->Html->script('jquery-1.7.2');
+            echo $this->Html->script('colpick');
+            echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
+            echo $this->Html->script('dataTables.bootstrap.min.js');
+            
 		?>
         <script>
             $(document).ready(function() {

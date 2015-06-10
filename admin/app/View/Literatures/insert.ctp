@@ -20,6 +20,17 @@
      'autofocus',
      'label'=>'Literature'
       ));
+
+    echo '<br/>';
+
+    echo $this->Form->input('color_code',array(
+     'class'=>'form-control',
+     'type'=>'text',
+     'required',
+     'autofocus',
+     'label'=>'Color Code',
+     'id'=>'picker'
+      ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
     
