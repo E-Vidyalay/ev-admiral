@@ -13,7 +13,7 @@
         ));
     echo "<br/>";
     echo "<div id='sb_div'>";
-                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','required','class'=>'form-control'));
+                        echo $this->Form->input('Link.sub_topic_id',array('type'=>'select','empty'=>'Select Sub topic','div'=>false,'label'=>'Sub Topic','class'=>'form-control'));
     echo "</div>";
      echo "<br/>";
      echo $this->Form->input('link_title',array(
