@@ -65,10 +65,9 @@ class LinksController extends AppController{
 		}
 	}
 	public function delete($id = NULL){
-			pr($id);
 			$this->Link->delete($id);
 			$this->Session->setFlash('Link has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('controller'=>'links','action' => 'index'));
 		}
 
 	public function update($id=NULL){
