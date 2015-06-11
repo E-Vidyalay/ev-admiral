@@ -1,5 +1,5 @@
 <br/>
-<h1>Add new Sub Category</h1>
+<h1>Add new : literature sub category</h1>
 <hr>
 <?php 
     echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','action'=>'insert'));
@@ -9,7 +9,7 @@
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $literature,
-        'label' => 'Literature'
+        'label' => 'Literature category'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(
@@ -18,7 +18,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Sub Literature'
+     'label'=>'Literature sub category'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";

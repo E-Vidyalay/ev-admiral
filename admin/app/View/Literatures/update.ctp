@@ -1,5 +1,5 @@
 <br/>
-<h1>Update Literature</h1>
+<h1>Update Literature Category</h1>
 <hr>
 <?php 
     echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'update'));
@@ -17,7 +17,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Literature'
+     'label'=>'Literature Category'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";

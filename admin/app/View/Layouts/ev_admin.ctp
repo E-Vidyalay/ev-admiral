@@ -171,7 +171,7 @@
                             <!-- /.nav-second-level -->
                             </li>
                         <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Literatures<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Literature Category<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View literature",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
@@ -183,7 +183,7 @@
                             <!-- /.nav-second-level -->
                             </li>
                         <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Sub Literatures<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage literature sub category<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub category",array('controller'=>'SubLiteratures','action'=>'index'),array('escape' => false)); ?>
@@ -243,6 +243,18 @@
             $(document).ready(function() {
                 $('#dataTables-example').DataTable({
                         responsive: true
+                });
+                $('#picker').colpick({
+                    layout:'hex',
+                    submit:0,
+                    colorScheme:'dark',
+                    onChange:function(hsb,hex,rgb,el,bySetColor) {
+                        $(el).css('border-color','#'+hex);
+                        // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+                        if(!bySetColor) $(el).val(hex);
+                    }
+                    }).keyup(function(){
+                    $(this).colpickSetColor(this.value);
                 });
             });
         </script>

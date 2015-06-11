@@ -1,5 +1,5 @@
 <br/>
-<h1>Add new Literature</h1>
+<h1>Add new Literature category</h1>
 <hr>
 <?php 
     echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'insert'));
@@ -18,7 +18,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Literature'
+     'label'=>'Literature Category'
       ));
 
     echo '<br/>';
