@@ -62,18 +62,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav in" id="side-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Marking Schemes<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Marking Schemes",array('controller'=>'markingschemes','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Marking Scheme",array('controller'=>'markingschemes','action'=>'add_marks'),array('escape' => false)); ?>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+                       
                         <li>
                             <a href="#"><i class="fa fa-signal fa-fw"></i> Manage Levels<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
@@ -174,10 +163,10 @@
                             <a href="#"><i class="fa fa-book fa-fw"></i> Manage Literature Category<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View literature",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View category",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add literature",array('controller'=>'Literatures','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add category",array('controller'=>'Literatures','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -190,6 +179,18 @@
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub category",array('controller'=>'SubLiteratures','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage ebooks<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View ebook",array('controller'=>'ebooks','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add ebook",array('controller'=>'ebooks','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

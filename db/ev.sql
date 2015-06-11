@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 11, 2015 at 06:26 AM
+-- Generation Time: Jun 11, 2015 at 08:49 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.20
 
@@ -70,6 +70,31 @@ INSERT INTO `axi_articles` (`id`, `title`, `alias`, `keywords`, `meta_descriptio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `axi_ebooks`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_ebooks` (
+  `id` char(36) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `level_id` char(36) NOT NULL,
+  `category_id` char(36) NOT NULL,
+  `sub_category_id` char(36) NOT NULL,
+  `path` varchar(500) NOT NULL,
+  `path_dir` varchar(100) DEFAULT NULL,
+  `description` text,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_ebooks`
+--
+
+INSERT INTO `axi_ebooks` (`id`, `name`, `level_id`, `category_id`, `sub_category_id`, `path`, `path_dir`, `description`, `updated_at`) VALUES
+('55794768-0d68-44e3-a6ab-0e42125f2f23', 'Test Book', '5568340b-2a04-474b-9568-326f125f2f23', '55792ea2-4584-400d-a2af-0e3e125f2f23', '55793081-e578-496f-aa04-0e3d125f2f23', 'https___www.irctc.co.in_eticketing_printTicket.pdf', '55794768-0d68-44e3-a6ab-0e42125f2f23', 'This is just for testing', '2015-06-11 08:31:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `axi_levels`
 --
 
@@ -120,7 +145,6 @@ INSERT INTO `axi_links` (`id`, `topic_id`, `sub_topic_id`, `link_title`, `link_u
 CREATE TABLE IF NOT EXISTS `axi_literatures` (
   `id` char(36) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `level_id` char(36) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` char(36) NOT NULL,
   `color_code` varchar(10) NOT NULL
@@ -130,8 +154,8 @@ CREATE TABLE IF NOT EXISTS `axi_literatures` (
 -- Dumping data for table `axi_literatures`
 --
 
-INSERT INTO `axi_literatures` (`id`, `name`, `level_id`, `updated_at`, `updated_by`, `color_code`) VALUES
-('557921d8-37fc-418f-9f81-0e3d125f2f23', 'Novels', '5568340b-2a04-474b-9568-326f125f2f23', '2015-06-11 05:51:20', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '1079c4');
+INSERT INTO `axi_literatures` (`id`, `name`, `updated_at`, `updated_by`, `color_code`) VALUES
+('55792ea2-4584-400d-a2af-0e3e125f2f23', 'Novel', '2015-06-11 06:49:40', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '40610e');
 
 -- --------------------------------------------------------
 
@@ -299,6 +323,13 @@ CREATE TABLE IF NOT EXISTS `axi_sub_literatures` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` char(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_sub_literatures`
+--
+
+INSERT INTO `axi_sub_literatures` (`id`, `name`, `literature_id`, `updated_at`, `updated_by`) VALUES
+('55793081-e578-496f-aa04-0e3d125f2f23', 'Education', '55792ea2-4584-400d-a2af-0e3e125f2f23', '2015-06-11 06:56:10', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
 
 -- --------------------------------------------------------
 
@@ -493,6 +524,13 @@ ALTER TABLE `axi_articles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `axi_ebooks`
+--
+ALTER TABLE `axi_ebooks`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `level_id` (`level_id`);
+
+--
 -- Indexes for table `axi_levels`
 --
 ALTER TABLE `axi_levels`
@@ -509,8 +547,7 @@ ALTER TABLE `axi_links`
 -- Indexes for table `axi_literatures`
 --
 ALTER TABLE `axi_literatures`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `level_id` (`level_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_markingschemes`
@@ -632,12 +669,6 @@ ALTER TABLE `axi_user_types`
 --
 ALTER TABLE `axi_links`
   ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `axi_literatures`
---
-ALTER TABLE `axi_literatures`
-  ADD CONSTRAINT `axi_literatures_ibfk_1` FOREIGN KEY (`level_id`) REFERENCES `axi_levels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_markingschemes`

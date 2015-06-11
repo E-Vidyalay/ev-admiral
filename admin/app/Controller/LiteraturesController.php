@@ -10,8 +10,6 @@ class LiteraturesController extends AppController{
    public function insert()
     {
         $this->layout='ev_admin';
-        $data = $this->Level->find('list',  array('fields'=>array('id','level_name')));
-        $this->set('level', $data);
         $userId = $this->Auth->user('id');
         $this->set('user', $userId);
         if($this->request->is('post'))
@@ -35,8 +33,6 @@ class LiteraturesController extends AppController{
     }
     function update($id=NULL){
         $this->layout='ev_admin';
-        $data = $this->Level->find('list',array('fields'=>array('id','level_name')));
-        $this->set('level',$data);
         $userId = $this->Auth->user('id');
         $this->set('user',$userId);
         if(empty($this->data))

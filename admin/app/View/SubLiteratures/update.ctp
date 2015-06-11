@@ -1,5 +1,8 @@
 <br/>
-<h1>Update Sub Category</h1>
+<br/>
+<div class="row">
+<div class="col-lg-6 panel panel-default">
+<h4>Update Sub Category</h4>
 <hr>
 <?php 
     echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','action'=>'update'));
@@ -26,7 +29,10 @@
      'type'=>'submit',
      'div'=>false,
      'label'=>false,
-     'class'=>'btn btn-lg btn-success btn-block'
+     'class'=>'btn btn-sm btn-success'
      ));                               
 
 ?>
+<br/>
+</div>
+</div>

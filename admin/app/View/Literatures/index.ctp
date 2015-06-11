@@ -20,13 +20,12 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>Category</th><th>Level</th><th>Action</th>
+                            <th>Category</th><th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($literatures as $literature){ ?>
 						<tr>
 							<td> <?php  echo $literature['Literature']['name']; ?> </td>
-							<td><?php echo $literature['Level']['level_name']; ?></td>
 							<td> <?php echo $this->Html->link('Update Literature',array('controller'=>'Literatures','action'=>'update',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
 								echo $this->Html->link('Delete Literature',array('controller'=>'Literatures','action'=>'delete',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary'));

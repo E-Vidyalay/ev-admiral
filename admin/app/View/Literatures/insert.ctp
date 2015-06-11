@@ -1,16 +1,12 @@
 <br/>
-<h1>Add new Literature category</h1>
+<div class="row">
+<div class="col-lg-6 panel panel-default">
+
+<h4>Add new Literature category</h4>
 <hr>
 <?php 
     echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'insert'));
    
-    echo "<br/>";
-    echo $this->Form->input('level_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $level,
-        'label' => 'Level'
-    ));
     echo "<br/>";
     echo $this->Form->input('name',array(
      'class'=>'form-control',
@@ -28,7 +24,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Color Code',
+     'label'=>'Select color for box in front-end',
      'id'=>'picker'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
@@ -38,7 +34,10 @@
      'type'=>'submit',
      'div'=>false,
      'label'=>false,
-     'class'=>'btn btn-lg btn-success btn-block'
+     'class'=>'btn btn-sm btn-success'
      ));                               
 
 ?>
+<br/>
+</div>
+</div>

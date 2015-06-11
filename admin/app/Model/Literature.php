@@ -1,12 +1,6 @@
 <?php
 
 class Literature extends AppModel{
-	public $belongsTo=array(
-			'Level'=>array(
-				'className'=>'Level',
-				'foreignKey'=>'level_id',
-				'dependent'=>true
-			));	
 
 	 public $validate = array(
         'name' => array(

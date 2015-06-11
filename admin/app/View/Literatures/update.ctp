@@ -1,15 +1,12 @@
 <br/>
-<h1>Update Literature Category</h1>
+<div class="row">
+<div class="col-lg-6 panel panel-default">
+<br/>
+<h4>Update Literature category</h4>
 <hr>
 <?php 
     echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-    echo $this->Form->input('level_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $level,
-        'label' => 'Level'
-    ));
     echo "<br/>";
     echo $this->Form->input('name',array(
      'class'=>'form-control',
@@ -19,6 +16,17 @@
      'autofocus',
      'label'=>'Literature Category'
       ));
+
+    echo '<br/>';
+
+    echo $this->Form->input('color_code',array(
+     'class'=>'form-control',
+     'type'=>'text',
+     'required',
+     'autofocus',
+     'label'=>'Select color for box in front-end',
+     'id'=>'picker'
+      ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";
     
@@ -26,7 +34,10 @@
      'type'=>'submit',
      'div'=>false,
      'label'=>false,
-     'class'=>'btn btn-lg btn-success btn-block'
+     'class'=>'btn btn-sm btn-success'
      ));                               
 
 ?>
+<br/>
+</div>
+</div>
