@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 03, 2015 at 10:34 AM
+-- Generation Time: Jun 11, 2015 at 04:11 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -105,6 +105,30 @@ CREATE TABLE IF NOT EXISTS `axi_links` (
 
 INSERT INTO `axi_links` (`id`, `topic_id`, `sub_topic_id`, `link_title`, `link_url`, `tags`) VALUES
 ('556e9f8f-4fa0-4cde-88c7-17f0125f2f23', '556aa68d-0198-462b-9ddb-101e125f2f23', '556bd05e-859c-4ca1-ba72-02d9125f2f23', 'Angle', 'https://www.youtube.com/embed/8YRdEPvAQWA', 'sdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_literatures`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_literatures` (
+  `id` char(36) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `level_id` char(36) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `color_code` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_literatures`
+--
+
+INSERT INTO `axi_literatures` (`id`, `name`, `level_id`, `updated_at`, `updated_by`, `color_code`) VALUES
+('55782963-a46c-4266-92a2-0c7c125f2f23', 'Magazines', '5568340b-2a04-474b-9568-326f125f2f23', '2015-06-10 12:11:15', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '301594'),
+('55782994-82c0-4e32-a7bc-0e9d125f2f23', 'Novels', '5568340b-2a04-474b-9568-326f125f2f23', '2015-06-10 12:12:04', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '80086c'),
+('5578340b-33b8-4d10-8902-1014125f2f23', 'kasdfksndkfsdf', '5568340b-2a04-474b-9568-326f125f2f23', '2015-06-10 12:56:43', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '7ea6c2');
 
 -- --------------------------------------------------------
 
@@ -222,7 +246,8 @@ CREATE TABLE IF NOT EXISTS `axi_students` (
 INSERT INTO `axi_students` (`id`, `school`, `user_id`) VALUES
 ('5561c76e-ee1c-44bf-af4e-01bf125f2f23', NULL, '5561c5af-8890-4d1d-b708-01be125f2f23'),
 ('556348ba-c124-4fb2-b7c8-01f6125f2f23', NULL, '556348ba-76c4-488b-a3e8-01f6125f2f23'),
-('5568802f-2e80-4ebb-a026-326d125f2f23', NULL, '5568802f-cd70-4325-b47a-326d125f2f23');
+('5568802f-2e80-4ebb-a026-326d125f2f23', NULL, '5568802f-cd70-4325-b47a-326d125f2f23'),
+('5576c8c1-0c94-49ff-a22e-0cf4125f2f23', NULL, '5576c8c1-9a04-4f94-9755-0cf4125f2f23');
 
 -- --------------------------------------------------------
 
@@ -258,6 +283,20 @@ CREATE TABLE IF NOT EXISTS `axi_subjects` (
 INSERT INTO `axi_subjects` (`id`, `name`, `updated_at`, `updated_by`) VALUES
 ('55682636-b5d4-4804-adc4-326d125f2f23', 'Mathematics', '2015-05-31 06:29:24', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
 ('556aaa3b-8de4-4597-9181-0f2a125f2f23', 'English', '2015-05-31 06:29:15', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_sub_literatures`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_sub_literatures` (
+  `id` char(36) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `literature_id` char(36) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -401,7 +440,8 @@ CREATE TABLE IF NOT EXISTS `axi_users` (
 INSERT INTO `axi_users` (`id`, `name`, `username`, `password`, `fb_token`, `google_token`, `created`, `user_type`, `path`, `path_dir`) VALUES
 ('5561c5af-8890-4d1d-b708-01be125f2f23', 'Lakhan Samani', 'lakhan.m.samani@gmail.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-24 07:05:59', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', 'p_2.jpg', '5561c5af-8890-4d1d-b708-01be125f2f23'),
 ('556348ba-76c4-488b-a3e8-01f6125f2f23', 'Lakhan Samani', 'lakhan.samani@actonate.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-25 10:37:22', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', NULL, NULL),
-('5568802f-cd70-4325-b47a-326d125f2f23', 'Kashyap', 'kashyap@gmail.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-05-29 09:35:19', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', NULL, NULL);
+('5568802f-cd70-4325-b47a-326d125f2f23', 'Kashyap', 'kashyap@gmail.com', '537896567a1884a3e5df41c521d487d6b45c23ea', NULL, NULL, '2015-05-29 09:35:19', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', '11220136_603291139774485_3469284680742867100_n.jpg', NULL),
+('5576c8c1-9a04-4f94-9755-0cf4125f2f23', 'krishna', 'jiaa022@gmail.com', '39dea93b8f5e606c5fa3a62859d5af337561905d', NULL, NULL, '2015-06-09 05:36:41', 'cb6f8154-fbbc-11e4-b148-01f8d649e9b6', 'IMG-20150403-WA0009.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -452,6 +492,12 @@ ALTER TABLE `axi_links`
  ADD PRIMARY KEY (`id`), ADD KEY `subtopic_id` (`topic_id`);
 
 --
+-- Indexes for table `axi_literatures`
+--
+ALTER TABLE `axi_literatures`
+ ADD PRIMARY KEY (`id`), ADD KEY `level_id` (`level_id`);
+
+--
 -- Indexes for table `axi_markingschemes`
 --
 ALTER TABLE `axi_markingschemes`
@@ -492,6 +538,12 @@ ALTER TABLE `axi_student_subject_mappings`
 --
 ALTER TABLE `axi_subjects`
  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `axi_sub_literatures`
+--
+ALTER TABLE `axi_sub_literatures`
+ ADD PRIMARY KEY (`id`), ADD KEY `literature_id` (`literature_id`);
 
 --
 -- Indexes for table `axi_sub_topics`
