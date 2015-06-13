@@ -28,7 +28,7 @@
 							<td> <?php  echo $level['Level']['level_name']; ?> </td>			
 							<td> <?php echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Level',array('controller'=>'levels','action'=>'delete',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
+                                echo '<a id="'.$level['Level']['id'].'" class="btn btn-danger btn-sm delete">Delete Level</a>';
 							?>
 							</td> 
 						</tr> 	

@@ -24,7 +24,7 @@
                                 echo "<td>".$n['NewsLetter']['date']."</td>";
 								echo "<td>";
 									echo $this->Html->link('Update',array('controller'=>'NewsLetters','action'=>'update',$n['NewsLetter']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete',array('controller'=>'NewsLetters','action'=>'delete',$n['NewsLetter']['id']),array('class'=>'btn btn-danger btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+									echo '<a id="'.$n['NewsLetter']['id'].'" class="btn btn-danger btn-sm delete">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';
                                     echo $this->Html->link('View',array('controller'=>'NewsLetters','action'=>'view_news',$n['NewsLetter']['id']),array('class'=>'btn btn-info btn-sm'));
 								echo "</td>";
 								echo "</tr>";

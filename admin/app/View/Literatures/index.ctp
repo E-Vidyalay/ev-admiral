@@ -28,7 +28,7 @@
 							<td> <?php  echo $literature['Literature']['name']; ?> </td>
 							<td> <?php echo $this->Html->link('Update Literature',array('controller'=>'Literatures','action'=>'update',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Literature',array('controller'=>'Literatures','action'=>'delete',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary'));
+                                echo '<a id="'.$literature['Literature']['id'].'" class="btn btn-danger btn-sm delete">Delete Literature</a>';
 							?>
 							</td> 
 						</tr> 	

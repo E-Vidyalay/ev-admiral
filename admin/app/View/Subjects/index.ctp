@@ -28,7 +28,7 @@
 							<td> <?php  echo $subject['Subject']['name']; ?> </td>			
 							<td> <?php echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Subject',array('controller'=>'subjects','action'=>'delete',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo '<a id="'.$subject['Subject']['id'].'" class="btn btn-danger btn-sm delete">Delete Subject</a>';
 							?>
 							</td> 
 						</tr> 	

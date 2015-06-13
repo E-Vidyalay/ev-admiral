@@ -30,7 +30,7 @@
 				}
 			}
 
-		public function delete_marks($id=null){
+		public function delete($id=null){
 				$this->layout='ev_admin';
 				$this->Markingscheme->delete($id);      
 				$this->Session->setFlash("Deleted successfully.",'default',array('class'=>'alert alert-success'),'success');     				

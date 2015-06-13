@@ -24,7 +24,7 @@
 								echo "<td>".$a['Article']['alias']."</td>";
 								echo "<td>";
 									echo $this->Html->link('Update',array('controller'=>'articles','action'=>'update',$a['Article']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete',array('controller'=>'articles','action'=>'delete',$a['Article']['id']),array('class'=>'btn btn-danger btn-sm'));
+									echo '<a id="'.$a['Article']['id'].'" class="btn btn-danger btn-sm delete">Delete</a>';
 								echo "</td>";
 								echo "</tr>";
 							}

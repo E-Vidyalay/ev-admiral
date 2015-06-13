@@ -29,7 +29,7 @@
 							<td><?php echo $subtopic['Topic']['name']; ?></td>
 							<td> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete SubTopic',array('controller'=>'SubTopics','action'=>'delete',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo '<a id="'.$subtopic['SubTopic']['id'].'" class="btn btn-danger btn-sm delete">Delete SubTopic</a>';
 							?>
 							</td> 
 						</tr> 	

@@ -29,7 +29,7 @@
 							<td><?php echo $subliterature['Literature']['name']; ?></td>
 							<td> <?php echo $this->Html->link('Update Sub Literature',array('controller'=>'SubLiteratures','action'=>'update',$subliterature['SubLiterature']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Sub Literature',array('controller'=>'SubLiteratures','action'=>'delete',$subliterature['SubLiterature']['id']),array('class'=>'btn btn-sm btn-primary'));
+                                echo '<a id="'.$subliterature['SubLiterature']['id'].'" class="btn btn-danger btn-sm delete">Delete Sub Literature</a>';
 							?>
 							</td> 
 						</tr> 	

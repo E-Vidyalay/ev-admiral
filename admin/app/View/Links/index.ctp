@@ -35,7 +35,7 @@
 								<td> <?php 
 									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo $this->Html->link('Delete Link',array('controller'=>'Links','action'=>'delete',$l['Link']['id']),array('class'=>'btn btn-danger btn-sm'));
+                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete">Delete Link</a>';
 								?>
 								</td> 
 							</tr> 	

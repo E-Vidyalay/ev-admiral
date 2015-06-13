@@ -13,6 +13,7 @@
             echo $this->Html->css('dataTables.responsive.css');
             echo $this->Html->css('app');
             echo $this->Html->css('colpick');
+            echo $this->Html->css('bootstrap-dialog');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 		?>
@@ -213,6 +214,23 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+        <div class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                
+              </div>
+              <div class="modal-body">
+                
+              </div>
+              <div class="modal-footer">
+                
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        
         <div class="ev-alert">
              <?php
                 echo $this->Session->flash('success');
@@ -232,6 +250,7 @@
 			echo $this->Html->script('jquery');
             echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
+            echo $this->Html->script('bootstrap-dialog');
             echo $this->Html->script('colpick');
             echo $this->Html->script('metisMenu');
 			echo $this->Html->script('sb-admin-2');

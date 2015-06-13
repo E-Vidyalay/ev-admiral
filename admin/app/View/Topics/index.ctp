@@ -30,7 +30,7 @@
                             <td><?php echo $topic['Level']['level_name']; ?></td>
 							<td> <?php echo $this->Html->link('Update Topic',array('controller'=>'topics','action'=>'update',$topic['Topic']['id']),array('class'=>'btn btn-sm btn-primary'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo $this->Html->link('Delete Topic',array('controller'=>'Topics','action'=>'delete',$topic['Topic']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo '<a id="'.$topic['Topic']['id'].'" class="btn btn-danger btn-sm delete">Delete Topic</a>';
 							?>
 							</td> 
 						</tr> 	
