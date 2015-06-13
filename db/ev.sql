@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 11, 2015 at 08:49 AM
+-- Generation Time: Jun 11, 2015 at 07:57 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.20
 
@@ -91,6 +91,26 @@ CREATE TABLE IF NOT EXISTS `axi_ebooks` (
 
 INSERT INTO `axi_ebooks` (`id`, `name`, `level_id`, `category_id`, `sub_category_id`, `path`, `path_dir`, `description`, `updated_at`) VALUES
 ('55794768-0d68-44e3-a6ab-0e42125f2f23', 'Test Book', '5568340b-2a04-474b-9568-326f125f2f23', '55792ea2-4584-400d-a2af-0e3e125f2f23', '55793081-e578-496f-aa04-0e3d125f2f23', 'https___www.irctc.co.in_eticketing_printTicket.pdf', '55794768-0d68-44e3-a6ab-0e42125f2f23', 'This is just for testing', '2015-06-11 08:31:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_images`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_images` (
+  `id` char(36) NOT NULL,
+  `path` varchar(300) NOT NULL,
+  `path_dir` varchar(500) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_images`
+--
+
+INSERT INTO `axi_images` (`id`, `path`, `path_dir`, `updated_at`) VALUES
+('5579e7e9-a5b0-40ac-9bdf-0e3e125f2f23', 'user_avatar.png', '5579e7e9-a5b0-40ac-9bdf-0e3e125f2f23', '2015-06-11 19:56:25');
 
 -- --------------------------------------------------------
 
@@ -529,6 +549,12 @@ ALTER TABLE `axi_articles`
 ALTER TABLE `axi_ebooks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `level_id` (`level_id`);
+
+--
+-- Indexes for table `axi_images`
+--
+ALTER TABLE `axi_images`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_levels`
