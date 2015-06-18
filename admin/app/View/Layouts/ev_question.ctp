@@ -63,7 +63,7 @@ languagelist:[
         </script>
         
         <style type="text/css">
-            body, * {font-family:verdana, arial, helvetica, sans-serif; font-size:12px;}
+            body, * {font-family:helvetica, sans-serif; font-size:12px;}
             img {border:0px;}
             .page { width:100%; margin:0 auto;}
             #fblogo a,#gplogo a, #twtlogo a {height:20px; width:20px; padding-left:15px; text-decoration:none;}
@@ -264,6 +264,43 @@ languagelist:[
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Hobby Category<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View category",array('controller'=>'Hobbies','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add category",array('controller'=>'Hobbies','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                            </li>
+                        <li>
+                         <li>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage Hobby Sub Category<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub category",array('controller'=>'SubHobbies','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub category",array('controller'=>'SubHobbies','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Hobby Lobby Post<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Posts",array('controller'=>'HobbylobbyPosts','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Post",array('controller'=>'HobbylobbyPosts','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Images<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
@@ -300,7 +337,9 @@ languagelist:[
 			echo $this->Html->script('jquery');
             echo $this->Html->script('app');
 			echo $this->Html->script('bootstrap');
+            echo $this->Html->script('bootstrap-dialog');
 			echo $this->Html->script('metisMenu');
+            echo $this->Html->script('colpick');
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
