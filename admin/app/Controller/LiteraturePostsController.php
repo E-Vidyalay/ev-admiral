@@ -1,55 +1,80 @@
 <?php
+    class LiteraturePostsController extends AppController{
+        public $uses=array('Literature','LiteraturePost','SubLiterature');
+        public function index(){
+            $this->layout="ev_admin";
+            $l=$this->LiteraturePost->find('all');
+            $this->set('lpost',$l);
+        }
 
-class LiteraturesController extends AppController{
-    public $uses=array('User','LiteraturePost','Literature');
-    public function index()
-    {
-        $this->layout='ev_admin';
-        $this->set('literaturePosts',$this->LiteraturePost->find('all'));
-    }
-   public function insert()
-    {
-        $this->layout='ev_admin';
-        $userId = $this->Auth->user('id');
-        $this->set('user', $userId);
-        if($this->request->is('post'))
-        {
-            $data = $this->data;
-           
-            if($this->LiteraturePost->save($data))
+       public function insert(){
+            $this->layout="ev_question";
+            $userId = $this->Auth->user('id');
+            $this->set('user', $userId);
+            $lp=$this->SubLiterature->find('all');
+            $a=array();
+            foreach ($lp as $key => $value) {
+                $a[$value['SubLiterature']['id']]=$value['Literature']['name']." - ".$value['SubLiterature']['name'];
+            }
+            $this->set('lp',$a);
+            $this->set('lt',$this->Literature->find('list',array('fields'=>array('id','name'))));
+            
+            if($this->request->is('post')){
+                $data=$this->data;
+                $s=$this->SubLiterature->findById($data['LiteraturePost']['sub_literature_id']);
+                $data['LiteraturePost']['literature_id']=$s['SubLiterature']['literature_id'];
+                if($this->LiteraturePost->save($data))
+                {   
+                    $this->Session->setFlash('Article has been successfully added','default',array('class'=>'alert alert-success'),'success');
+                    $this->redirect(array('controller'=>'LiteraturePosts','action'=>'index'));
+
+                }
+                else{
+                    $this->Session->setFlash('Article has not been added','default',array('class'=>'alert alert-danger'),'error');
+                    $this->redirect(array('action'=>'index'));
+                }
+            }
+
+        }
+
+
+        public function delete($id=null){
+                $this->layout='ev_admin';
+                $this->LiteraturePost->delete($id);      
+                $this->Session->setFlash("Article deleted successfully.",'default',array('class'=>'alert alert-success'),'success');                   
+                $this->redirect(array('controller'=>'LiteraturePosts','action'=>'index'));
+        }
+
+        function update($id=NULL){
+            $this->layout='ev_admin';
+            $userId = $this->Auth->user('id');
+            $this->set('user',$userId);
+
+            $sb=$this->SubLiterature->find('all');
+            foreach ($sb as $key => $value) {
+                $sl[$value['SubLiterature']['id']]=$value['Literature']['name']." - ".$value['SubLiterature']['name'];
+            }
+            $this->set('sl',$sl);
+
+            if(empty($this->data))
             {
-                $this->Session->setFlash('Literature articel added successfully','default',array('class'=>'alert alert-success'),'success');
-		        $this->redirect(array('controller'=>'LiteraturePosts','action'=>'index'));
+                $this->data=$this->LiteraturePost->findById($id);
+            }
+            else
+            {
+                $data=$this->data;
+               
+                if($this->LiteraturePost->save($data))
+                {
+                    $this->Session->setFlash('Article has been successfully edited','default',array('class'=>'alert alert-success'),'success');
+                    $this->redirect(array('action'=>'index'));
+                }
             }
         }
-    }
-    
-    
-   /* function delete($id=NULL)
-    {
-        $this->Literature->delete($id);
-        $this->Session->setFlash('Literature has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
-        $this->redirect(array('action' => 'index'));
-    }
-    function update($id=NULL){
-        $this->layout='ev_admin';
-        $userId = $this->Auth->user('id');
-        $this->set('user',$userId);
-        if(empty($this->data))
-        {
-            $this->data=$this->Literature->findById($id);
+         public function view_posts($id){
+            $this->layout="ev_admin";
+            $this->set('posts',$this->LiteraturePost->findById($id));
         }
-        else
-        {
-            $data=$this->data;
-           
-            if($this->Literature->save($data))
-            {
-                $this->Session->setFlash('Literature has been successfully edited','default',array('class'=>'alert alert-success'),'success');
-                $this->redirect(array('action'=>'index'));
-            }
-        }
-    }*/
-    
-}
-
+   
+    }
+?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.7
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jun 11, 2015 at 07:57 PM
--- Server version: 5.6.24
--- PHP Version: 5.5.20
+-- Host: 127.0.0.1
+-- Generation Time: Jun 18, 2015 at 01:35 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `axi_articles` (
 --
 
 INSERT INTO `axi_articles` (`id`, `title`, `alias`, `keywords`, `meta_description`, `content`) VALUES
-('5554f5c6-16bc-41e9-9af5-5995125f2f23', 'â€œàªœà«‡ àªªà«àª°àª•àª¾àª°àª¨à«àª‚ àª†àªšàª°àª£ àª¶à«àª°à«‡àª·à«àª  (àª…àª¹à«€àª‚ â€™àª­àª£à«‡àª²àª¾â€™)àª²à«‹àª•à«‹ àª•àª°à«‡ àª›à«‡ àª¤à«‡ àªªà«àª°àª•àª¾àª°àª¨à«àª‚ àª†àªšàª°àª£ àª¬àª¾àª•à«€àª¨àª¾ àª…àª¨à«àª¸àª°à«‡ àª›à«‡â€', 'home', 'home', 'home', '<div class="row">\r\n<div class="columns large-7">\r\n<p>àªœà«‡àª® àªœà«‡àª® àª†àªªàª£à«‡ &lsquo;àªˆ&rsquo;- àª¯à«àª—àª®àª¾àª‚ àª†àª—àª³ àª§àªªàª¤àª¾ àªœàªˆàª àª›à«€àª; àª¤à«‡àª® àª¤à«‡àª® àª–àª°à«€àª¦à«€, àª¸àª‚àª¦à«‡àª¶àª¾ àªµà«àª¯àªµàª¹àª¾àª°, àªŸàª¿àª•à«€àªŸà«‹ àª–àª°à«€àª¦àªµà«€, àªàªµàª¾àª‚ àª˜àª£àª¾àª‚ àª°à«‹àªœàª¿àª‚àª¦àª¾ àª•àª¾àª®à«‹àª®àª¾àª‚ àª†àªªàª£à«‡ àª‡àª¨à«àªŸàª°àª¨à«‡àªŸ àªªàª° àªµàª§àª¾àª°à«‡ àª¨à«‡ àªµàª§àª¾àª°à«‡ àª†àª§àª¾àª° àª°àª¾àª–àª¤àª¾ àª¥àªµàª¾ àª²àª¾àª—à«àª¯àª¾ àª›à«€àª. àª†àª¨à«‡ àª•àª¾àª°àª£à«‡ àª¶à«€àª–àªµàª¾àª¨à«€ àª†àªªàª£à«€ àªªàª§à«àª§àª¤àª¿àª®àª¾àª‚ àªªàª£ àª¬àª¦àª²àª¾àªµ àª†àªµàªµàª¾ àª²àª¾àª—à«àª¯à«‹ àª›à«‡.àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯ àª†àªµàª¾ àªœ àªàª• àª¬àª¦àª²àª¾àªµ àª¤àª°àª«àª¨à«‹ àªªà«àª°àª¾àª®àª¾àª£àª¿àª• àªªà«àª°àª¯àª¤à«àª¨ àª›à«‡ - àª¶à«€àª–àªµàª¾àª¨à«€ àª°à«€àª¤àª®àª¾àª‚ àªªàª°àª¿àªµàª°à«àª¤àª¨ àª†àªµà«‡, àª¤à«‡ àª®àª¾àªŸà«‡àª¨à«‹ àªªà«àª°àª¯àª¾àª¸. àª†àª¶àª¯ àª àª›à«‡ àª•à«‡, àª¨àªµà«àª‚ àªœà«àªžàª¾àª¨ àª¸àª®àªœàªµàª¾àª¨à«€ àªªà«àª°àª•à«àª°àª¿àª¯àª¾ àª¸àª°àª³ àª¬àª¨à«€ àªœàª¾àª¯; àª¤à«‡ àªµàª¿àª¦à«àª¯àª¾àª°à«àª¥à«€àª¨à«‡ àª®àª¾àªŸà«‡ àª–à«àª¬ àª¸àª°àª³ àª¹à«‹àª¯ àª…àª¨à«‡ àª°àª¸ àªªàª¡à«‡ àª¤à«‡àªµà«€ àªªàª£ àª¹à«‹àª¯ àª…àª¨à«‡ àª›àª¤àª¾àª‚ àª¤à«‡àª®àª¾àª‚ àª¸àª®àª¯ àª…àª¨à«‡ àªœàª—à«àª¯àª¾àª¨à«àª‚ àª¬àª‚àª§àª¨ àª¨ àª°àª¹à«‡.</p>\r\n<p>àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª®àª¾àª‚ àª¹àª¾àª² àªªà«àª°àª¾àª¥àª®àª¿àª• àª…àª¨à«‡ àª®àª¾àª§à«àª¯àª®àª¿àª• àª¶àª¿àª•à«àª·àª£ àª®àª¾àªŸà«‡àª¨à«€ àªàª• àª“àª¨ àª²àª¾àªˆàª¨ àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€ àª›à«‡.àª¤à«‡àª®àª¾àª‚ àª¹àª¾àª² àª—àª£àª¿àª¤, àªàª¡àªªà«€ àª—àª£àª¤àª°à«€ àª…àª¨à«‡ àª—à«àªœàª°àª¾àª¤à«€àª¨àª¾ àªªà«àª°àª¾àª°àª‚àª­àª¿àª• àª¶àª¿àª•à«àª·àª£àª¨à«‡ àª²àª—àª¤àª¾ àªµàª¿àª¡àª¿àª¯à«‹ àª®à«‹àªœà«‚àª¦ àª›à«‡.àª¤àª®àª¾àª°àª¾ àª¤àª°àª«àª¥à«€ àª®àª³àª¤àª¾ àª«à«€àª¡àª¬à«‡àª• ( àªªà«àª°àª¤àª¿àª­àª¾àªµà«‹ àª…àª¨à«‡ àª¸à«‚àªšàª¨à«‹) àª§à«àª¯àª¾àª¨àª®àª¾àª‚ àª°àª¾àª–à«€àª¨à«‡ àª† àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€àª®àª¾àª‚ àª¸àª¤àª¤ àª¸àª‚àªµàª°à«àª§àª¨ àª…àª¨à«‡ àª«à«‡àª°àª«àª¾àª° àªªàª£ àª¥àªˆ àª°àª¹à«àª¯àª¾ àª›à«‡.</p>\r\n<p>àª àª¨à«‹àª‚àª§àªµàª¾ àª²àª¾àª¯àª• àª›à«‡ àª•à«‡,<a href="http://evidyalay.net/evidyalayyoutubeedu/">àª¯à«-àªŸà«àª¯à«àª¬ àª¸àª‚àª¸à«àª¥àª¾àª¨àª¾ àª¶àª¿àª•à«àª·àª£àª¾àª¤à«àª®àª• àªµàª¿àª­àª¾àª—</a>&nbsp;àª¤àª°àª«àª¥à«€ àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª¨à«‡ àª®àª¾àª¨à«àª¯àª¤àª¾ àª®àª³à«‡àª²à«€ àª›à«‡.</p>\r\n</div>\r\n<div class="columns large-5"><iframe src="https://www.youtube.com/embed/R7nk2emAVG0?list=PLB4CEAC5DC720AAB9" frameborder="0" width="100%" height="270"></iframe></div>\r\n</div>'),
+('5554f5c6-16bc-41e9-9af5-5995125f2f23', 'â€œàªœà«‡ àªªà«àª°àª•àª¾àª°àª¨à«àª‚ àª†àªšàª°àª£ àª¶à«àª°à«‡àª·à«àª  (àª…àª¹à«€àª‚ â€™àª­àª£à«‡àª²àª¾â€™)àª²à«‹àª•à«‹ àª•àª°à«‡ àª›à«‡ àª¤à«‡ àªªà«àª°àª•àª¾àª°àª¨à«àª‚ àª†àªšàª°àª£ àª¬àª¾àª•à«€àª¨àª¾ àª…àª¨à«àª¸àª°à«‡ àª›à«‡â€', 'home', 'home', 'home', '<div class="row">\r\n<div class="columns large-7">\r\n<p>àªœà«‡àª® àªœà«‡àª® àª†àªªàª£à«‡ &lsquo;àªˆ&rsquo;- àª¯à«àª—àª®àª¾àª‚ àª†àª—àª³ àª§àªªàª¤àª¾ àªœàªˆàª àª›à«€àª; àª¤à«‡àª® àª¤à«‡àª® àª–àª°à«€àª¦à«€, àª¸àª‚àª¦à«‡àª¶àª¾ àªµà«àª¯àªµàª¹àª¾àª°, àªŸàª¿àª•à«€àªŸà«‹ àª–àª°à«€àª¦àªµà«€, àªàªµàª¾àª‚ àª˜àª£àª¾àª‚ àª°à«‹àªœàª¿àª‚àª¦àª¾ àª•àª¾àª®à«‹àª®àª¾àª‚ àª†àªªàª£à«‡ àª‡àª¨à«àªŸàª°àª¨à«‡àªŸ àªªàª° àªµàª§àª¾àª°à«‡ àª¨à«‡ àªµàª§àª¾àª°à«‡ àª†àª§àª¾àª° àª°àª¾àª–àª¤àª¾ àª¥àªµàª¾ àª²àª¾àª—à«àª¯àª¾ àª›à«€àª. àª†àª¨à«‡ àª•àª¾àª°àª£à«‡ àª¶à«€àª–àªµàª¾àª¨à«€ àª†àªªàª£à«€ àªªàª§à«àª§àª¤àª¿àª®àª¾àª‚ àªªàª£ àª¬àª¦àª²àª¾àªµ àª†àªµàªµàª¾ àª²àª¾àª—à«àª¯à«‹ àª›à«‡.àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯ àª†àªµàª¾ àªœ àªàª• àª¬àª¦àª²àª¾àªµ àª¤àª°àª«àª¨à«‹ àªªà«àª°àª¾àª®àª¾àª£àª¿àª• àªªà«àª°àª¯àª¤à«àª¨ àª›à«‡ - àª¶à«€àª–àªµàª¾àª¨à«€ àª°à«€àª¤àª®àª¾àª‚ àªªàª°àª¿àªµàª°à«àª¤àª¨ àª†àªµà«‡, àª¤à«‡ àª®àª¾àªŸà«‡àª¨à«‹ àªªà«àª°àª¯àª¾àª¸. àª†àª¶àª¯ àª àª›à«‡ àª•à«‡, àª¨àªµà«àª‚ àªœà«àªžàª¾àª¨ àª¸àª®àªœàªµàª¾àª¨à«€ àªªà«àª°àª•à«àª°àª¿àª¯àª¾ àª¸àª°àª³ àª¬àª¨à«€ àªœàª¾àª¯; àª¤à«‡ àªµàª¿àª¦à«àª¯àª¾àª°à«àª¥à«€àª¨à«‡ àª®àª¾àªŸà«‡ àª–à«àª¬ àª¸àª°àª³ àª¹à«‹àª¯ àª…àª¨à«‡ àª°àª¸ àªªàª¡à«‡ àª¤à«‡àªµà«€ àªªàª£ àª¹à«‹àª¯ àª…àª¨à«‡ àª›àª¤àª¾àª‚ àª¤à«‡àª®àª¾àª‚ àª¸àª®àª¯ àª…àª¨à«‡ àªœàª—à«àª¯àª¾àª¨à«àª‚ àª¬àª‚àª§àª¨ àª¨ àª°àª¹à«‡. </p>\r\n<p>àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª®àª¾àª‚ àª¹àª¾àª² àªªà«àª°àª¾àª¥àª®àª¿àª• àª…àª¨à«‡ àª®àª¾àª§à«àª¯àª®àª¿àª• àª¶àª¿àª•à«àª·àª£ àª®àª¾àªŸà«‡àª¨à«€ àªàª• àª“àª¨ àª²àª¾àªˆàª¨ àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€ àª›à«‡.àª¤à«‡àª®àª¾àª‚ àª¹àª¾àª² àª—àª£àª¿àª¤, àªàª¡àªªà«€ àª—àª£àª¤àª°à«€ àª…àª¨à«‡ àª—à«àªœàª°àª¾àª¤à«€àª¨àª¾ àªªà«àª°àª¾àª°àª‚àª­àª¿àª• àª¶àª¿àª•à«àª·àª£àª¨à«‡ àª²àª—àª¤àª¾ àªµàª¿àª¡àª¿àª¯à«‹ àª®à«‹àªœà«‚àª¦ àª›à«‡.àª¤àª®àª¾àª°àª¾ àª¤àª°àª«àª¥à«€ àª®àª³àª¤àª¾ àª«à«€àª¡àª¬à«‡àª• ( àªªà«àª°àª¤àª¿àª­àª¾àªµà«‹ àª…àª¨à«‡ àª¸à«‚àªšàª¨à«‹) àª§à«àª¯àª¾àª¨àª®àª¾àª‚ àª°àª¾àª–à«€àª¨à«‡ àª† àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€àª®àª¾àª‚ àª¸àª¤àª¤ àª¸àª‚àªµàª°à«àª§àª¨ àª…àª¨à«‡ àª«à«‡àª°àª«àª¾àª° àªªàª£ àª¥àªˆ àª°àª¹à«àª¯àª¾ àª›à«‡.</p>\r\n<p>àª àª¨à«‹àª‚àª§àªµàª¾ àª²àª¾àª¯àª• àª›à«‡ àª•à«‡,<a href="http://evidyalay.net/evidyalayyoutubeedu/">àª¯à«-àªŸà«àª¯à«àª¬ àª¸àª‚àª¸à«àª¥àª¾àª¨àª¾ àª¶àª¿àª•à«àª·àª£àª¾àª¤à«àª®àª• àªµàª¿àª­àª¾àª—</a>&nbsp;àª¤àª°àª«àª¥à«€ àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª¨à«‡ àª®àª¾àª¨à«àª¯àª¤àª¾ àª®àª³à«‡àª²à«€ àª›à«‡.</p>\r\n</div>\r\n<div class="columns large-5"><iframe src="https://www.youtube.com/embed/R7nk2emAVG0?list=PLB4CEAC5DC720AAB9" frameborder="0" width="100%" height="270"></iframe></div>\r\n</div>'),
 ('5555090f-5788-48f9-8844-5c79125f2f23', 'About EVidyalay', 'about_us', 'about_us', 'about_us', '<p>As we all move in the new era of &ldquo;e&rdquo;, where internet is the key enabler for majority of the day to day things, right from shopping, communicating, tickets, so on and so forth.<br />This has initiated a change in the way of learning as well.<br />EVidyalay is one more sincere attempt to drive the change in the way of learning so that the learning becomes simple, more users friendly and interesting.<br />EVidyalay is an online video library of Mathematics, Vedic Maths and Early learning Gujarati. The video library is under continuous development taking into consideration your feedbacks. EVidyalay&rsquo;s vision is to make education accessible to all children, which is repeatable as well as independent of time and location. Children should be able to learn anytime, anywhere at their own pace.</p>\r\n<p>EVidyalay also hosts 3 interesting features. 1. &lsquo;JIVAN CHARITRA (Biography)&rsquo;, a collection of inspiring stories of Legendary lives. This will help build value system and overall development of children, 2. &lsquo;Hobby Lobby&rsquo;, to ignite Creativity, an essential skill for effective learning. 3) &lsquo;Mahiti Mitra&rsquo;, to give friendly educational information.</p>\r\n<p>Evidyalay has got acceptance from&nbsp;<span><a href="http://evidyalay.net/evidyalayyoutubeedu/">YouTube EDU(The Global Classroom).</a></span></p>'),
 ('555509e0-8924-4337-b2eb-5b46125f2f23', 'Vision', 'vision', 'vision', 'vision', '<p>&nbsp;&lsquo;Education is a key to progress.&rsquo; &ndash; is a very well known saying; though there are other dimensions too. It is education and pursuant zeal and inquisitiveness to know and explore the unknown that open the door to knowledge and awakening.</p>\r\n<p>With the advent of human mind into fathomless depths of knowledge, the human societies have evolved into more and more complex structures and directions; and they are still evolving at a much greater pace. What quality and dimension the human societies will shape into &ndash; say after 50 or 100 years &ndash; is mind boggling. We feel awed at the achievements of human mind in multifarious directions.</p>\r\n<p>We also feel awfully sorry for the immense harm the same human mind has done to the environment, the biomes, animal and vegetation species and last but not the least, the human societies themselves.</p>\r\n<p>Schools are abodes for learning processes, right from the dawn of civilization; and are the cradles of this development of human mind. The task of a teacher &ndash; to prepare a child to come up to a measurable standard tto acquire at least a part existing knowledge base and be armed to venture into the unknown &ndash; is becoming more and more onerous.</p>\r\n<p>At the same time, we feel ashamed at the degeneration of the education system; which aims only at preparing students for a race to acquire prosperity and recognition. Development of rudimentary scholastic qualities unfortunately gets a secondary importance.</p>\r\n<p>It is in this light that the spirit of &lsquo;E-Vidyalay&rsquo; may be interpreted. It aims at nurturing the qualities of fresh thought, creativity, honest inquisitiveness and last but not the least, the fundamentally built in human and moral values. The following video aptly focuses our attention on this spirit.</p>\r\n<div>&lt;iframe style="height:800px;width:100%" src="https://www.youtube.com/embed/hi0dWqK00Nw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</div>\r\n<p>Hiral&rsquo;s output of&nbsp;<span><span>2 years (280+ quality&nbsp;educational videos)</span></span>&nbsp;is no doubt a commendable effort. How far she has succeeded can only be judged, if the approach is implemented by students, teachers and parents; and whether it is effective. But more noticeable fact , is her urge to evolve a new approach in the method of imparting knowledge. It is an initiative in the right direction. It is also possible that new avenues of education system may evolve by the interactions; E-Vidyalay is going to generate amongst its audience. The theatre here is open for a creative and refreshing play.</p>\r\n<p>Let it generate fun, quest, creativity and fresh thought. Let thousand blooms blossom and door to a<span><span>&nbsp;new way of &lsquo;How to live life?&rsquo;</span></span>&nbsp;open up.</p>');
 
@@ -90,7 +90,85 @@ CREATE TABLE IF NOT EXISTS `axi_ebooks` (
 --
 
 INSERT INTO `axi_ebooks` (`id`, `name`, `level_id`, `category_id`, `sub_category_id`, `path`, `path_dir`, `description`, `updated_at`) VALUES
-('55794768-0d68-44e3-a6ab-0e42125f2f23', 'Test Book', '5568340b-2a04-474b-9568-326f125f2f23', '55792ea2-4584-400d-a2af-0e3e125f2f23', '55793081-e578-496f-aa04-0e3d125f2f23', 'https___www.irctc.co.in_eticketing_printTicket.pdf', '55794768-0d68-44e3-a6ab-0e42125f2f23', 'This is just for testing', '2015-06-11 08:31:36');
+('55794768-0d68-44e3-a6ab-0e42125f2f23', 'Test Book', '5568340b-2a04-474b-9568-326f125f2f23', '55792ea2-4584-400d-a2af-0e3e125f2f23', '55793081-e578-496f-aa04-0e3d125f2f23', 'https___www.irctc.co.in_eticketing_printTicket.pdf', '55794768-0d68-44e3-a6ab-0e42125f2f23', 'This is just for testing', '2015-06-01 08:31:36'),
+('557c19fd-17e0-42e8-a404-15b3125f2f23', 'Test Book2', '5568340b-2a04-474b-9568-326f125f2f23', '55792ea2-4584-400d-a2af-0e3e125f2f23', '557bfba2-8210-44bc-bdf5-16e9125f2f23', 'GSOC proposal.pdf', '557c19fd-17e0-42e8-a404-15b3125f2f23', 'this is testing for book 2', '2015-06-13 11:54:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_hobbies`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_hobbies` (
+  `id` char(36) NOT NULL,
+  `level_id` char(36) DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_hobbies`
+--
+
+INSERT INTO `axi_hobbies` (`id`, `level_id`, `name`, `updated_at`, `updated_by`) VALUES
+('557f3afa-17f8-4762-9365-07e0125f2f23', '5568340b-2a04-474b-9568-326f125f2f23', 'fdsfas', '2015-06-15 20:52:50', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_hobbylobby_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_hobbylobby_comments` (
+  `id` char(36) NOT NULL,
+  `post_id` char(36) NOT NULL,
+  `text` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `name` text NOT NULL,
+  `email` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_hobbylobby_posts`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_hobbylobby_posts` (
+  `id` char(36) NOT NULL,
+  `title` text NOT NULL,
+  `meta_description` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `hobby_id` char(36) NOT NULL,
+  `sub_hobby_id` char(36) NOT NULL,
+  `level_id` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_hobbylobby_posts`
+--
+
+INSERT INTO `axi_hobbylobby_posts` (`id`, `title`, `meta_description`, `updated_at`, `updated_by`, `hobby_id`, `sub_hobby_id`, `level_id`) VALUES
+('5582a114-c764-4852-ba2e-09fc125f2f23', 'Hello', '<p>àª•à«‡àª® àª›à«‹? àª®àªœàª¾àª®àª¾?</p>', '2015-06-18 11:07:15', '53196213-e8c0-4b42-a3e3-19ecf1301e8a', '557f3afa-17f8-4762-9365-07e0125f2f23', '557f3f7e-1ebc-4e03-a78d-07e0125f2f23', '5568340b-2a04-474b-9568-326f125f2f23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_hobbylobby_replies`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_hobbylobby_replies` (
+  `id` char(36) NOT NULL,
+  `comment_id` char(36) NOT NULL,
+  `text` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `name` text NOT NULL,
+  `email` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -120,15 +198,20 @@ INSERT INTO `axi_images` (`id`, `path`, `path_dir`, `updated_at`) VALUES
 
 CREATE TABLE IF NOT EXISTS `axi_levels` (
   `id` char(36) NOT NULL,
-  `level_name` varchar(100) NOT NULL
+  `level_name` varchar(100) NOT NULL,
+  `color` varchar(10) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `axi_levels`
 --
 
-INSERT INTO `axi_levels` (`id`, `level_name`) VALUES
-('5568340b-2a04-474b-9568-326f125f2f23', 'Primary');
+INSERT INTO `axi_levels` (`id`, `level_name`, `color`, `updated_at`) VALUES
+('1308da82-1275-11e5-84c6-418bf323d4bd', 'àª®àª¾àª§à«àª¯àª®àª¿àª•', '#dc6800;', '2015-06-03 09:33:26'),
+('1308ef4a-1275-11e5-84c6-418bf323d4bd', 'àªªà«àª°àª¾àª¥àª®àª¿àª•', '#008BBB;', '2015-06-02 09:33:26'),
+('5568340b-2a04-474b-9568-326f125f2f23', 'àª¬àª¾àª²àª®àª‚àª¦àª¿àª°', '#619919;', '2015-06-01 09:33:26'),
+('557d45e1-c154-48a1-91cb-01b9125f2f23', 'àª‰àªšà«àªš àª®àª¾àª§à«àª¯àª®àª¿àª•', '#FBA714;', '2015-06-04 09:33:26');
 
 -- --------------------------------------------------------
 
@@ -180,6 +263,54 @@ INSERT INTO `axi_literatures` (`id`, `name`, `updated_at`, `updated_by`, `color_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `axi_literature_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_literature_comments` (
+  `id` char(36) NOT NULL,
+  `post_id` char(36) NOT NULL,
+  `text` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `name` text NOT NULL,
+  `email` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_literature_posts`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_literature_posts` (
+  `id` char(36) NOT NULL,
+  `title` text NOT NULL,
+  `meta_description` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `literature_id` char(36) NOT NULL,
+  `sub_literature_id` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_literature_replies`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_literature_replies` (
+  `id` char(36) NOT NULL,
+  `comment_id` char(36) NOT NULL,
+  `text` text NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL,
+  `name` text NOT NULL,
+  `email` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `axi_markingschemes`
 --
 
@@ -220,6 +351,35 @@ CREATE TABLE IF NOT EXISTS `axi_news_letters` (
 
 INSERT INTO `axi_news_letters` (`id`, `title`, `content`, `date`, `user_id`) VALUES
 ('556430fa-9b0c-4ed5-8c3f-0460125f2f23', 'EV latest update-1', '<p>àªœà«‡àª® àªœà«‡àª® àª†àªªàª£à«‡ &lsquo;àªˆ&rsquo;- àª¯à«àª—àª®àª¾àª‚ àª†àª—àª³ àª§àªªàª¤àª¾ àªœàªˆàª àª›à«€àª; àª¤à«‡àª® àª¤à«‡àª® àª–àª°à«€àª¦à«€, àª¸àª‚àª¦à«‡àª¶àª¾ àªµà«àª¯àªµàª¹àª¾àª°, àªŸàª¿àª•à«€àªŸà«‹ àª–àª°à«€àª¦àªµà«€, àªàªµàª¾àª‚ àª˜àª£àª¾àª‚ àª°à«‹àªœàª¿àª‚àª¦àª¾ àª•àª¾àª®à«‹àª®àª¾àª‚ àª†àªªàª£à«‡ àª‡àª¨à«àªŸàª°àª¨à«‡àªŸ àªªàª° àªµàª§àª¾àª°à«‡ àª¨à«‡ àªµàª§àª¾àª°à«‡ àª†àª§àª¾àª° àª°àª¾àª–àª¤àª¾ àª¥àªµàª¾ àª²àª¾àª—à«àª¯àª¾ àª›à«€àª. àª†àª¨à«‡ àª•àª¾àª°àª£à«‡ àª¶à«€àª–àªµàª¾àª¨à«€ àª†àªªàª£à«€ àªªàª§à«àª§àª¤àª¿àª®àª¾àª‚ àªªàª£ àª¬àª¦àª²àª¾àªµ àª†àªµàªµàª¾ àª²àª¾àª—à«àª¯à«‹ àª›à«‡. <br /> àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯ àª†àªµàª¾ àªœ àªàª• àª¬àª¦àª²àª¾àªµ àª¤àª°àª«àª¨à«‹ àªªà«àª°àª¾àª®àª¾àª£àª¿àª• àªªà«àª°àª¯àª¤à«àª¨ àª›à«‡ - àª¶à«€àª–àªµàª¾àª¨à«€ àª°à«€àª¤àª®àª¾àª‚ àªªàª°àª¿àªµàª°à«àª¤àª¨ àª†àªµà«‡, àª¤à«‡ àª®àª¾àªŸà«‡àª¨à«‹ àªªà«àª°àª¯àª¾àª¸. àª†àª¶àª¯ àª àª›à«‡ àª•à«‡, àª¨àªµà«àª‚ àªœà«àªžàª¾àª¨ àª¸àª®àªœàªµàª¾àª¨à«€ àªªà«àª°àª•à«àª°àª¿àª¯àª¾ àª¸àª°àª³ àª¬àª¨à«€ àªœàª¾àª¯; àª¤à«‡ àªµàª¿àª¦à«àª¯àª¾àª°à«àª¥à«€àª¨à«‡ àª®àª¾àªŸà«‡ àª–à«àª¬ àª¸àª°àª³ àª¹à«‹àª¯ àª…àª¨à«‡ àª°àª¸ àªªàª¡à«‡ àª¤à«‡àªµà«€ àªªàª£ àª¹à«‹àª¯ àª…àª¨à«‡ àª›àª¤àª¾àª‚ àª¤à«‡àª®àª¾àª‚ àª¸àª®àª¯ àª…àª¨à«‡ àªœàª—à«àª¯àª¾àª¨à«àª‚ àª¬àª‚àª§àª¨ àª¨ àª°àª¹à«‡. <br /> àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª®àª¾àª‚ àª¹àª¾àª² àªªà«àª°àª¾àª¥àª®àª¿àª• àª…àª¨à«‡ àª®àª¾àª§à«àª¯àª®àª¿àª• àª¶àª¿àª•à«àª·àª£ àª®àª¾àªŸà«‡àª¨à«€ àªàª• àª“àª¨ àª²àª¾àªˆàª¨ àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€ àª›à«‡.àª¤à«‡àª®àª¾àª‚ àª¹àª¾àª² àª—àª£àª¿àª¤, àªàª¡àªªà«€ àª—àª£àª¤àª°à«€ àª…àª¨à«‡ àª—à«àªœàª°àª¾àª¤à«€àª¨àª¾ àªªà«àª°àª¾àª°àª‚àª­àª¿àª• àª¶àª¿àª•à«àª·àª£àª¨à«‡ àª²àª—àª¤àª¾ àªµàª¿àª¡àª¿àª¯à«‹ àª®à«‹àªœà«‚àª¦ àª›à«‡.àª¤àª®àª¾àª°àª¾ àª¤àª°àª«àª¥à«€ àª®àª³àª¤àª¾ àª«à«€àª¡àª¬à«‡àª• ( àªªà«àª°àª¤àª¿àª­àª¾àªµà«‹ àª…àª¨à«‡ àª¸à«‚àªšàª¨à«‹) àª§à«àª¯àª¾àª¨àª®àª¾àª‚ àª°àª¾àª–à«€àª¨à«‡ àª† àªµàª¿àª¡àª¿àª¯à«‹ àª²àª¾àª¯àª¬à«àª°à«‡àª°à«€àª®àª¾àª‚ àª¸àª¤àª¤ àª¸àª‚àªµàª°à«àª§àª¨ àª…àª¨à«‡ àª«à«‡àª°àª«àª¾àª° àªªàª£ àª¥àªˆ àª°àª¹à«àª¯àª¾ àª›à«‡. <br /> <strong>àª àª¨à«‹àª‚àª§àªµàª¾ àª²àª¾àª¯àª• àª›à«‡ àª•à«‡,<a href="http://evidyalay.net/evidyalayyoutubeedu/">àª¯à«-àªŸà«àª¯à«àª¬ àª¸àª‚àª¸à«àª¥àª¾àª¨àª¾ àª¶àª¿àª•à«àª·àª£àª¾àª¤à«àª®àª• àªµàª¿àª­àª¾àª—</a> àª¤àª°àª«àª¥à«€ àªˆ-àªµàª¿àª¦à«àª¯àª¾àª²àª¯àª¨à«‡ àª®àª¾àª¨à«àª¯àª¤àª¾ àª®àª³à«‡àª²à«€ àª›à«‡.</strong></p>', '2015-05-26 08:38:18', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `axi_ngos`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_ngos` (
+  `id` char(36) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `address` varchar(500) NOT NULL,
+  `contact_number` bigint(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `site_url` varchar(100) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `path_dir` text,
+  `path` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_ngos`
+--
+
+INSERT INTO `axi_ngos` (`id`, `name`, `description`, `address`, `contact_number`, `email`, `site_url`, `active`, `path_dir`, `path`) VALUES
+('557d9b31-aef4-4ca8-9742-1414125f2f23', 'scsdc', 'sdgsvd', 'dgvs', 9638527410, 'shailn@mg.com', 'http://svd.com', 0, '557d9b31-aef4-4ca8-9742-1414125f2f23', '750_wildcraft-backpack-scoot-ld-400x400-imaduvhhvbe3jggj.jpeg'),
+('557d9cf6-c1cc-4c2f-a81c-1414125f2f23', 'scsdc', 'sdvdfvdf', 'dgvs', 9638527410, 'shailn@mg.com', 'http://svd.com', 0, '557d9cf6-c1cc-4c2f-a81c-1414125f2f23', '800_wiki-by-wildcraft-backpack-wiki-junior-cyano-400x400-imae5fkycuh6uer8.jpeg'),
+('557d9d13-bf18-475e-8bcd-1414125f2f23', 'scsdc', 'sdvdfvdf', 'dgvs', 9638527410, 'shailn@mg.com', 'http://svd.com', 0, '557d9d13-bf18-475e-8bcd-1414125f2f23', '800_wiki-by-wildcraft-backpack-wiki-junior-cyano-400x400-imae5fkycuh6uer8.jpeg'),
+('557d9d9a-e238-4ab2-b024-1414125f2f23', 'sdjk bs', 'sfbn s', 'dgvs', 9638527410, 'shailn@mg.com', 'http://svd.com', 0, '557d9d9a-e238-4ab2-b024-1414125f2f23', '800_digiflip-nano.jpeg');
 
 -- --------------------------------------------------------
 
@@ -333,6 +493,27 @@ INSERT INTO `axi_subjects` (`id`, `name`, `updated_at`, `updated_by`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `axi_sub_hobbies`
+--
+
+CREATE TABLE IF NOT EXISTS `axi_sub_hobbies` (
+  `id` char(36) NOT NULL,
+  `hobby_id` char(36) DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_by` char(36) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `axi_sub_hobbies`
+--
+
+INSERT INTO `axi_sub_hobbies` (`id`, `hobby_id`, `name`, `updated_at`, `updated_by`) VALUES
+('557f3f7e-1ebc-4e03-a78d-07e0125f2f23', '557f3afa-17f8-4762-9365-07e0125f2f23', 'abcd', '2015-06-15 21:11:26', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `axi_sub_literatures`
 --
 
@@ -349,7 +530,8 @@ CREATE TABLE IF NOT EXISTS `axi_sub_literatures` (
 --
 
 INSERT INTO `axi_sub_literatures` (`id`, `name`, `literature_id`, `updated_at`, `updated_by`) VALUES
-('55793081-e578-496f-aa04-0e3d125f2f23', 'Education', '55792ea2-4584-400d-a2af-0e3e125f2f23', '2015-06-11 06:56:10', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
+('55793081-e578-496f-aa04-0e3d125f2f23', 'fiction', '55792ea2-4584-400d-a2af-0e3e125f2f23', '2015-06-13 06:08:26', '53196213-e8c0-4b42-a3e3-19ecf1301e8a'),
+('557bfba2-8210-44bc-bdf5-16e9125f2f23', 'Biography', '55792ea2-4584-400d-a2af-0e3e125f2f23', '2015-06-13 09:45:06', '53196213-e8c0-4b42-a3e3-19ecf1301e8a');
 
 -- --------------------------------------------------------
 
@@ -535,156 +717,169 @@ INSERT INTO `axi_user_types` (`id`, `name`) VALUES
 -- Indexes for table `axi_admins`
 --
 ALTER TABLE `axi_admins`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_articles`
 --
 ALTER TABLE `axi_articles`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_ebooks`
 --
 ALTER TABLE `axi_ebooks`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `level_id` (`level_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `level_id` (`level_id`);
+
+--
+-- Indexes for table `axi_hobbies`
+--
+ALTER TABLE `axi_hobbies`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_images`
 --
 ALTER TABLE `axi_images`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_levels`
 --
 ALTER TABLE `axi_levels`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_links`
 --
 ALTER TABLE `axi_links`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `subtopic_id` (`topic_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `subtopic_id` (`topic_id`);
 
 --
 -- Indexes for table `axi_literatures`
 --
 ALTER TABLE `axi_literatures`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `axi_literature_comments`
+--
+ALTER TABLE `axi_literature_comments`
+ ADD PRIMARY KEY (`id`), ADD KEY `post_id` (`post_id`);
+
+--
+-- Indexes for table `axi_literature_posts`
+--
+ALTER TABLE `axi_literature_posts`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `axi_literature_replies`
+--
+ALTER TABLE `axi_literature_replies`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `comment_id` (`comment_id`);
 
 --
 -- Indexes for table `axi_markingschemes`
 --
 ALTER TABLE `axi_markingschemes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `updated_by` (`updated_by`);
+ ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`);
 
 --
 -- Indexes for table `axi_news_letters`
 --
 ALTER TABLE `axi_news_letters`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `axi_ngos`
+--
+ALTER TABLE `axi_ngos`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_parents`
 --
 ALTER TABLE `axi_parents`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_question_banks`
 --
 ALTER TABLE `axi_question_banks`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `subject_id` (`topic_id`),
-  ADD KEY `sub_topic_id` (`sub_topic_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `subject_id` (`topic_id`), ADD KEY `sub_topic_id` (`sub_topic_id`);
 
 --
 -- Indexes for table `axi_students`
 --
 ALTER TABLE `axi_students`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_id_2` (`user_id`),
-  ADD KEY `user_id` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `user_id_2` (`user_id`), ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `axi_student_subject_mappings`
 --
 ALTER TABLE `axi_student_subject_mappings`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `updated_by` (`updated_by`),
-  ADD KEY `subject_id` (`topic_id`),
-  ADD KEY `student_id` (`student_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `updated_by` (`updated_by`), ADD KEY `subject_id` (`topic_id`), ADD KEY `student_id` (`student_id`);
 
 --
 -- Indexes for table `axi_subjects`
 --
 ALTER TABLE `axi_subjects`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `axi_sub_hobbies`
+--
+ALTER TABLE `axi_sub_hobbies`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_sub_literatures`
 --
 ALTER TABLE `axi_sub_literatures`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `literature_id` (`literature_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `literature_id` (`literature_id`);
 
 --
 -- Indexes for table `axi_sub_topics`
 --
 ALTER TABLE `axi_sub_topics`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `topic_id` (`topic_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `topic_id` (`topic_id`);
 
 --
 -- Indexes for table `axi_teachers`
 --
 ALTER TABLE `axi_teachers`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `axi_test_applications`
 --
 ALTER TABLE `axi_test_applications`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `student_id` (`student_id`),
-  ADD KEY `subject_id` (`topic_id`),
-  ADD KEY `sub_topic_id` (`sub_topic_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `student_id` (`student_id`), ADD KEY `subject_id` (`topic_id`), ADD KEY `sub_topic_id` (`sub_topic_id`);
 
 --
 -- Indexes for table `axi_test_results`
 --
 ALTER TABLE `axi_test_results`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `test_id` (`test_id`),
-  ADD KEY `question_id` (`question_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `test_id` (`test_id`), ADD KEY `question_id` (`question_id`);
 
 --
 -- Indexes for table `axi_topics`
 --
 ALTER TABLE `axi_topics`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `subject_id` (`subject_id`),
-  ADD KEY `level_id` (`level_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `subject_id` (`subject_id`), ADD KEY `level_id` (`level_id`);
 
 --
 -- Indexes for table `axi_users`
 --
 ALTER TABLE `axi_users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `google_token` (`google_token`),
-  ADD KEY `user_type` (`user_type`),
-  ADD KEY `user_type_2` (`user_type`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `google_token` (`google_token`), ADD KEY `user_type` (`user_type`), ADD KEY `user_type_2` (`user_type`);
 
 --
 -- Indexes for table `axi_user_types`
 --
 ALTER TABLE `axi_user_types`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Constraints for dumped tables
@@ -694,71 +889,71 @@ ALTER TABLE `axi_user_types`
 -- Constraints for table `axi_links`
 --
 ALTER TABLE `axi_links`
-  ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_links_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_markingschemes`
 --
 ALTER TABLE `axi_markingschemes`
-  ADD CONSTRAINT `axi_markingschemes_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_markingschemes_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_news_letters`
 --
 ALTER TABLE `axi_news_letters`
-  ADD CONSTRAINT `axi_news_letters_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_admins` (`id`);
+ADD CONSTRAINT `axi_news_letters_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_admins` (`id`);
 
 --
 -- Constraints for table `axi_question_banks`
 --
 ALTER TABLE `axi_question_banks`
-  ADD CONSTRAINT `axi_question_banks_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_question_banks_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_students`
 --
 ALTER TABLE `axi_students`
-  ADD CONSTRAINT `axi_students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `axi_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_student_subject_mappings`
 --
 ALTER TABLE `axi_student_subject_mappings`
-  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_student_subject_mappings_ibfk_1` FOREIGN KEY (`updated_by`) REFERENCES `axi_admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `axi_student_subject_mappings_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `axi_student_subject_mappings_ibfk_3` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_sub_literatures`
 --
 ALTER TABLE `axi_sub_literatures`
-  ADD CONSTRAINT `axi_sub_literatures_ibfk_1` FOREIGN KEY (`literature_id`) REFERENCES `axi_literatures` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_sub_literatures_ibfk_1` FOREIGN KEY (`literature_id`) REFERENCES `axi_literatures` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_sub_topics`
 --
 ALTER TABLE `axi_sub_topics`
-  ADD CONSTRAINT `axi_sub_topics_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
+ADD CONSTRAINT `axi_sub_topics_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
 
 --
 -- Constraints for table `axi_test_applications`
 --
 ALTER TABLE `axi_test_applications`
-  ADD CONSTRAINT `axi_test_applications_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `axi_test_applications_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
+ADD CONSTRAINT `axi_test_applications_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `axi_students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `axi_test_applications_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `axi_topics` (`id`);
 
 --
 -- Constraints for table `axi_topics`
 --
 ALTER TABLE `axi_topics`
-  ADD CONSTRAINT `axi_topics_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `axi_topics_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `axi_levels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_topics_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `axi_subjects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `axi_topics_ibfk_3` FOREIGN KEY (`level_id`) REFERENCES `axi_levels` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `axi_users`
 --
 ALTER TABLE `axi_users`
-  ADD CONSTRAINT `axi_users_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `axi_user_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `axi_users_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `axi_user_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
