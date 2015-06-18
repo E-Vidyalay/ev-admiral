@@ -297,21 +297,19 @@ languagelist:[
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Post",array('controller'=>'HobbylobbyPosts','action'=>'insert'),array('escape' => false)); ?>
-                        </li>
-                    </ul>
-                        <li>
-                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Article<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Article",array('controller'=>'LiteraturePosts','action'=>'index'),array('escape' => false)); ?>
-                                </li>
-                                <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Article",array('controller'=>'LiteraturePosts','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
-                            <!-- /.nav-second-level -->
                         </li>
-                    </ul>
+                        <li>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Literature Post<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Posts",array('controller'=>'LiteraturePosts','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Post",array('controller'=>'LiteraturePosts','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>

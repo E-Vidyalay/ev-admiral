@@ -17,11 +17,11 @@
 
 		echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
 		    echo "<br/>";
-		echo $this->Form->input('Add article',array(
+		echo $this->Form->input('Add Literature Post',array(
 		     'type'=>'submit',
 		     'div'=>false,
 		     'label'=>false,
-		     'class'=>'btn btn-md btn-info'
+		     'class'=>'btn btn-success'
 		     ));  
 	?>
 </div>
