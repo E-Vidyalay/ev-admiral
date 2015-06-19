@@ -1,6 +1,6 @@
 <?php
     class LiteraturePostsController extends AppController{
-        public $uses=array('Literature','LiteraturePost','SubLiterature');
+        public $uses=array('Literature','LiteraturePost','SubLiterature','Level');
         public function index(){
             $this->layout="ev_admin";
             $l=$this->LiteraturePost->find('all');
@@ -12,6 +12,7 @@
             $userId = $this->Auth->user('id');
             $this->set('user', $userId);
             $lp=$this->SubLiterature->find('all');
+            $this->set('levels',$this->Level->find('list',array('fields'=>array('id','level_name'))));
             $a=array();
             foreach ($lp as $key => $value) {
                 $a[$value['SubLiterature']['id']]=$value['Literature']['name']." - ".$value['SubLiterature']['name'];
@@ -46,10 +47,11 @@
         }
 
         function update($id=NULL){
-            $this->layout='ev_admin';
+            $this->layout='ev_question';
             $userId = $this->Auth->user('id');
             $this->set('user',$userId);
-
+            $level=$this->Level->find('list',array('fields'=>array('id','level_name')));
+            $this->set('levels',$level);
             $sb=$this->SubLiterature->find('all');
             foreach ($sb as $key => $value) {
                 $sl[$value['SubLiterature']['id']]=$value['Literature']['name']." - ".$value['SubLiterature']['name'];
@@ -63,7 +65,8 @@
             else
             {
                 $data=$this->data;
-               
+                $s=$this->SubLiterature->findById($data['LiteraturePost']['sub_literature_id']);
+                $data['LiteraturePost']['literature_id']=$s['SubLiterature']['literature_id'];
                 if($this->LiteraturePost->save($data))
                 {
                     $this->Session->setFlash('Article has been successfully edited','default',array('class'=>'alert alert-success'),'success');
