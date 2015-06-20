@@ -2,6 +2,11 @@
 	class LiteraturePost extends AppModel{
 	
 		public $belongsTo=array(
+				'Level'=>array(
+				'className'=>'Level',
+				'foreignKey'=>'level_id',
+				'dependent'=>true
+				),
 				'SubLiterature'=>array(
 					'className'=>'SubLiterature',
 					'foreignKey'=>'sub_literature_id',
