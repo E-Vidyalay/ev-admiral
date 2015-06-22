@@ -365,6 +365,7 @@ languagelist:[
 			echo $this->Html->script('metisMenu');
             echo $this->Html->script('colpick');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('zclip');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>

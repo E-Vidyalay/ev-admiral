@@ -46,6 +46,31 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h5> Choose Images</h5>
+			</div>
+			<div class="panel-body" style="height:300px;overflow-y:scroll">
+			<div class="row">
+			<?php foreach ($images as $image) {
+			?>
+			<div class="col-lg-6 thumb" align="center">
+			<?php echo '<img id="img_'.$image['Image']['id'].'" src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img img-responsive" style="height:100px;width:100px"/>';
+			echo '<br/>';
+			echo '<a id="'.$image['Image']['id'].'" class="btn btn-info btn-sm copy">Copy Image Url</a>';
+			?>
+			<br/>
+			<br/>
+			</div>
+			
+			<?php
+			}
+			?>
+			</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="panel panel-default">
 	<div class="panel-heading">

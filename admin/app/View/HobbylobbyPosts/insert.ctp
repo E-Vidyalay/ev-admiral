@@ -1,5 +1,5 @@
 <br/>
-<h3>Hobby Lobby Post</h3>
+<h3>Add Hobby Lobby Post</h3>
 <div class="row">
 	<div class="col-lg-8">
 		<?php echo $this->Form->create('HobbylobbyPost',array('controller'=>'HobbylobbyPosts','action'=>'insert')); ?>
@@ -41,6 +41,31 @@
 			?>
 			</div>
 
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h5> Choose Images</h5>
+			</div>
+			<div class="panel-body" style="height:257px;overflow-y:scroll">
+			<div class="row">
+			<?php foreach ($images as $image) {
+			?>
+			<div class="col-lg-6 thumb" align="center">
+			<?php echo '<img id="img_'.$image['Image']['id'].'" src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img img-responsive" style="height:100px;width:100px"/>';
+			echo '<br/>';
+			echo '<a id="'.$image['Image']['id'].'" class="btn btn-info btn-sm copy">Copy Image Url</a>';
+			?>
+			<br/>
+			<br/>
+			</div>
+			
+			<?php
+			}
+			?>
+			</div>
+			</div>
 		</div>
 	</div>
 </div>
