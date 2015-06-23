@@ -32,6 +32,9 @@ This is project is build using Cakephp, server side scripting language. To deplo
         );
 
     ```
-Now you are ready to go, to run it locally, type following url in your addressbar of the browser
-```http://localhost/ev-admiral/admin```
+* Now you are ready to go, to run it locally, type following url in your addressbar of the browser
+
+```
+http://localhost/ev-admiral/admin
+```
 
