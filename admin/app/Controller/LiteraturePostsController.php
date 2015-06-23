@@ -1,6 +1,6 @@
 <?php
     class LiteraturePostsController extends AppController{
-        public $uses=array('Literature','LiteraturePost','SubLiterature','Level');
+        public $uses=array('Literature','LiteraturePost','SubLiterature','Level','Image');
         public function index(){
             $this->layout="ev_admin";
             $l=$this->LiteraturePost->find('all');
@@ -19,7 +19,7 @@
             }
             $this->set('lp',$a);
             $this->set('lt',$this->Literature->find('list',array('fields'=>array('id','name'))));
-            
+            $this->set('images',$this->Image->find('all'));
             if($this->request->is('post')){
                 $data=$this->data;
                 $s=$this->SubLiterature->findById($data['LiteraturePost']['sub_literature_id']);
@@ -57,7 +57,7 @@
                 $sl[$value['SubLiterature']['id']]=$value['Literature']['name']." - ".$value['SubLiterature']['name'];
             }
             $this->set('sl',$sl);
-
+            $this->set('images',$this->Image->find('all'));
             if(empty($this->data))
             {
                 $this->data=$this->LiteraturePost->findById($id);

@@ -2,7 +2,9 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$('.alert').fadeOut(800);
 	},2000);
-
+        
+        // alert($('#img_'+$(this).attr('id')).attr('src'));
+    
 });
 $("#topic").on('change',function(event){
     var u=baseUrl+"/QuestionBanks/get_sub_topic/"+$(this).val();
@@ -59,5 +61,14 @@ $(".delete").on('click',function(event){
                     dialog.close();
                 }
             }]
+    });
+});
+$('.copy').on('click',function(){
+    $(".copy").zclip({
+        path: baseUrl+'/ZeroClipboard.swf',
+        copy: $('#img_'+$(this).attr('id')).attr('src'),
+        afterCopy:function(){
+            alert('Copied');
+        }
     });
 });

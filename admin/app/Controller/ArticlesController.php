@@ -1,6 +1,6 @@
 <?php
 	class ArticlesController extends AppController{
-		public $uses=array('Article');
+		public $uses=array('Article','Image');
 		public function index() {
 	        $articles = $this -> Article-> find('all',array('order'=>array('Article.title')));
 	        $this -> set('articles', $articles);
@@ -8,6 +8,7 @@
 	    }
 	    public function add(){
 	    	$this->layout='ev_question';
+	    	$this->set('images',$this->Image->find('all'));
 	    	if($this->request->is('post')){
 	    		$article=$this->data;
 	    		$article['Article']['alias'] = str_replace(" ","_",strtolower($article['Article']['alias']));
@@ -30,6 +31,7 @@
 	    }
 	    public function update($id = NULL){
 			$this->layout='ev_question';
+			$this->set('images',$this->Image->find('all'));
 			if(empty($this->data)){
 				$this->data= $this->Article->findById($id);
 			}

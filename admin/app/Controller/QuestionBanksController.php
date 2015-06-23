@@ -1,7 +1,7 @@
 <?php
 class QuestionBanksController extends AppController{
 
-	public $uses=array('QuestionBank','Topic','SubTopic');
+	public $uses=array('QuestionBank','Topic','SubTopic','Image');
 	public function index(){
 		$a=$this->QuestionBank->find('all');
 		$this->set('questions', $a);
@@ -13,6 +13,7 @@ class QuestionBanksController extends AppController{
 		$a=$this->Topic->find('list',array('fields'=>array('id','display_name')));
 		$this->set('topics',$a);
 		$this->set('user_id',$this->Auth->user('id'));
+		$this->set('images',$this->Image->find('all'));
 		if($this->request->is('post')){
 			$data=$this->data;
 			$correct_ans=array();
@@ -58,6 +59,7 @@ class QuestionBanksController extends AppController{
 				$tp=$this->Topic->find('list',array('fields'=>array('id','display_name')));
 				$this->set('topics',$tp);
 				$this->set('user_id',$this->Auth->user('id'));
+				$this->set('images',$this->Image->find('all'));
 				if(empty($this->data)){
 	                $q=$this->QuestionBank->findById($id);				
 					$ans1=explode(",", $q['QuestionBank']['correct_ans']);

@@ -1,7 +1,7 @@
 <?php
 
 class HobbylobbyPostsController extends AppController{
-    public $uses=array('User','Hobby','Level','SubHobby','HobbylobbyPost');
+    public $uses=array('User','Hobby','Level','SubHobby','HobbylobbyPost','Image');
     public function index()
     {
         $this->layout='ev_admin';
@@ -17,6 +17,7 @@ class HobbylobbyPostsController extends AppController{
             $sl[$value['SubHobby']['id']]=$value['Hobby']['name']." - ".$value['SubHobby']['name'];
         }
         $this->set('sl',$sl);
+        $this->set('images',$this->Image->find('all'));
         $this->set('level',$this->Level->find('list',array('fields'=>array('id','level_name'))));
         if($this->request->is('post')){
             $data=$this->data;
@@ -52,6 +53,7 @@ class HobbylobbyPostsController extends AppController{
                 $sl[$value['SubHobby']['id']]=$value['Hobby']['name']." - ".$value['SubHobby']['name'];
             }
             $this->set('sl',$sl);
+            $this->set('images',$this->Image->find('all'));
             if(empty($this->data)){
                 $this->data=$this->HobbylobbyPost->findById($id);
             }

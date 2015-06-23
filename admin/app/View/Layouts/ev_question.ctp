@@ -313,6 +313,18 @@ languagelist:[
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Manage Information Post<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Posts",array('controller'=>'InformationPosts','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Post",array('controller'=>'InformationPosts','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Images<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
@@ -353,6 +365,7 @@ languagelist:[
 			echo $this->Html->script('metisMenu');
             echo $this->Html->script('colpick');
 			echo $this->Html->script('sb-admin-2');
+            echo $this->Html->script('zclip');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>
