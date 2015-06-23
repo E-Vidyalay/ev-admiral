@@ -32,6 +32,7 @@
                 theme_advanced_toolbar_align : "left",
                 theme_advanced_statusbar_location : "bottom",
                 theme_advanced_resizing: true,
+                convert_urls : false,
                 theme_advanced_resizing_use_cookie : false,
                 content_css : "/ev-admiral/admin/css/ptparea.css",
                 pramukhime_language: [
@@ -366,6 +367,7 @@ languagelist:[
             echo $this->Html->script('colpick');
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('zclip');
+            echo $this->Html->script('ZeroClipboard.js');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
 		?>
@@ -393,6 +395,19 @@ languagelist:[
                         responsive: true
                 });
             });
+           var client = new ZeroClipboard( $(".copy-button"), {
+              moviePath: "http://olymp/ZeroClipboard.swf",
+              debug: false
+            } );
+            client.on( "ready", function( readyEvent ) {
+              // alert( "ZeroClipboard SWF is ready!" );
+
+              client.on( "aftercopy", function( event ) {
+                // `this` === `client`
+                // `event.target` === the element that was clicked
+                alert("Copied text to clipboard: " + event.data["text/plain"] );
+              } );
+            } );
         </script>
 	</body>
 </html>
