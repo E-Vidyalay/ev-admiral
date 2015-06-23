@@ -14,6 +14,7 @@ This is project is build using Cakephp, server side scripting language. To deplo
 #### Mac users
 * You need to configure apache2 on your machine and start it. [XAMPP](https://www.apachefriends.org/index.html) is also available for mac users.
 
+#### Deployment
 * Next you need to clone the repository in your htdocs or www folder of XAMPP.
 * Import the database file available in the db folder into your mysql database.
 * Configure the database crenditials in admin/app/config/database.php
