@@ -1,7 +1,7 @@
 <?php
 	App::uses('CakeEmail', 'Network/Email');
 	class NewsLettersController extends AppController{
-		public $uses=array('User','NewsLetter','Admin');
+		public $uses=array('User','NewsLetter','Admin','Image');
 		public function index(){
 			$this->layout='ev_admin';
 			$this->set('news',$this->NewsLetter->find('all'));
@@ -9,6 +9,7 @@
 		public function add(){
 			$this->layout='ev_question';
 			$this->set('user_id',$this->Auth->user('id'));
+			$this->set('images',$this->Image->find('all'));
 			if($this->request->is('post')){
 				if($this->NewsLetter->save($this->data)){
 				$writer=$this->Admin->findById($this->data['NewsLetter']['user_id']);
@@ -57,6 +58,7 @@
 		public function update($id="NULL"){
 			$this->layout='ev_question';
 			$this->set('user_id',$this->Auth->user('id'));
+			$this->set('images',$this->Image->find('all'));
 			if(empty($this->data)){
 				$this->data= $this->NewsLetter->findById($id);
 			}

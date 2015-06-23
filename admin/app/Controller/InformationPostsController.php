@@ -1,6 +1,6 @@
 <?php
     class InformationPostsController extends AppController{
-        public $uses=array('InformationPost');
+        public $uses=array('InformationPost','Image');
         public function index(){
             $this->layout="ev_admin";
             $i=$this->InformationPost->find('all');
@@ -12,7 +12,7 @@
             $userId = $this->Auth->user('id');
             $this->set('user', $userId);
             //$this->set('info',$this->Information->find('list',array('fields'=>array('id','name'))));
-            
+            $this->set('images',$this->Image->find('all'));
             if($this->request->is('post')){
                 $data=$this->data;
                 
@@ -42,6 +42,7 @@
             $this->layout='ev_question';
             $userId = $this->Auth->user('id');
             $this->set('user',$userId);
+            $this->set('images',$this->Image->find('all'));
             if(empty($this->data))
             {
                 $this->data=$this->InformationPost->findById($id);
