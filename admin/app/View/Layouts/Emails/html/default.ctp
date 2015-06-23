@@ -19,9 +19,18 @@
 <head>
 	<title><?php echo $this->fetch('title'); ?></title>
 </head>
-<body>
-	<?php echo $this->fetch('content'); ?>
-
-	<p>This email was sent using the <a href="http://cakephp.org">CakePHP Framework</a></p>
+<body style="background: #f0f0f0;" align="center">
+	<div class="header" style="background: #054b9a;
+		height: 70px;
+		width: 100%;
+		color: #fff;
+		text-align: center;">
+		<img src='http://ev.learnlabs.in/img/ev-logo2.png' style="loat: inherit;max-height: 57px;margin-left: 37%;padding-top: 5px;">
+        <span class="brand-name" style="float: right;margin-right: 34%;font-size: 32px;padding-top:12px;">ઈ-વિદ્યાલય</span>
+	</div>
+	<div class="content" style="background-color: #fff;
+  		padding: 10px;height:100%;width:80%;" align="left">
+		<?php echo $this->fetch('content'); ?>
+	</div>
 </body>
 </html>
