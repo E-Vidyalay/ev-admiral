@@ -25,7 +25,7 @@
                                 echo "<td>";
                                     echo $this->Html->link('Update',array('controller'=>'ebooks','action'=>'update',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
                                     echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';
-                                    echo "<a target='_blank' href='".$this->webroot."/files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info'>View book</a>";
+                                    echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info'>View book</a>";
                                 echo "</td>";
                                 echo "</tr>";
                             }
