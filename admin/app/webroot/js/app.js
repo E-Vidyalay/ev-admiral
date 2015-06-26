@@ -46,7 +46,6 @@ $(".delete").on('click',function(event){
                     $.ajax({
                         url:u,
                         success:function(data){
-                            BootstrapDialog.alert("Sorry there was error"+u);
                             window.location.replace(location);
                         }
                     })
