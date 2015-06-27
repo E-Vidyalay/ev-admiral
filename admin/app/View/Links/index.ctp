@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -29,13 +29,15 @@
                     <tbody>
                     	<?php foreach ($linkID as $l){ ?>
 							<tr>
-								<td> <?php  echo $l['Link']['link_title']; ?> </td>
-                                <td> <?php echo $l['Topic']['display_name']?></td>
-								<td> <?php  echo $l['Link']['tags']; ?> </td>		
-								<td> <?php 
-									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm'));
+								<td data-title="Link Title"> <?php  echo $l['Link']['link_title']; ?> </td>
+                                <td data-title="Subject/Topic"> <?php echo $l['Topic']['display_name']?></td>
+								<td data-title="Description"> <?php  echo $l['Link']['tags']; ?> </td>		
+								<td data-title="Action"> <?php 
+									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
+                                    echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete">Delete Link</a>';
+                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Link</a>';
+                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Link</a>';
 								?>
 								</td> 
 							</tr> 	

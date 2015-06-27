@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -25,11 +25,13 @@
                     <tbody>
                     <?php foreach ($subtopics as $subtopic){ ?>
 						<tr>
-							<td> <?php  echo $subtopic['SubTopic']['name']; ?> </td>
-							<td><?php echo $subtopic['Topic']['name']; ?></td>
-							<td> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary'));
+							<td data-title="SubTopic"> <?php  echo $subtopic['SubTopic']['name']; ?> </td>
+							<td data-title="Topics"><?php echo $subtopic['Topic']['name']; ?></td>
+							<td data-title="Action"> <?php echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+                                echo $this->Html->link('Update SubTopic',array('controller'=>'SubTopics','action'=>'update',$subtopic['SubTopic']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo '<a id="'.$subtopic['SubTopic']['id'].'" class="btn btn-danger btn-sm delete">Delete SubTopic</a>';
+								echo '<a id="'.$subtopic['SubTopic']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete SubTopic</a>';
+                                echo '<a id="'.$subtopic['SubTopic']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete SubTopic</a>';
 							?>
 							</td> 
 						</tr> 	

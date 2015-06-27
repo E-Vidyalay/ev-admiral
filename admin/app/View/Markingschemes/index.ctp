@@ -16,13 +16,13 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
                            	<th>Sr no. </th>
 							<th>Marking Scheme</th>
-							<th>Actions</th>
+							<th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,12 +30,14 @@
 						$count=1;
 						foreach($markings as $marking){
 							echo "<tr>";
-								echo "<td>".$count."</td>";
-								echo "<td>".$marking['Markingscheme']['display_name']."</td>";
-								echo "<td>";
-					            echo $this->Html->link('Update Marking Scheme',array('controller'=>'Markingschemes','action'=>'update_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-sm btn-primary'));
+								echo "<td data-title='Sr no.'>".$count."</td>";
+								echo "<td data-title='Marking Scheme'>".$marking['Markingscheme']['display_name']."</td>";
+								echo "<td data-title='Action'>";
+					            echo $this->Html->link('Update Marking Scheme',array('controller'=>'Markingschemes','action'=>'update_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+					            echo $this->Html->link('Update Marking Scheme',array('controller'=>'Markingschemes','action'=>'update_marks',$marking['Markingscheme']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo '<a id="'.$marking['Markingscheme']['id'].'" class="btn btn-danger btn-sm delete">Delete Marking Scheme</a>';
+								echo '<a id="'.$marking['Markingscheme']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Marking Scheme</a>';
+								echo '<a id="'.$marking['Markingscheme']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Marking Scheme</a>';
 								echo "</td>";
 								echo "</tr>";
 								$count++;

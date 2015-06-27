@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -28,11 +28,12 @@
                         ?>
                     
 						<tr>
-                                                    <td><?php echo '<img src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img" style="height:100px;width:100px"/ > ';?>
-  </td>
-							<td> <?php //echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
+                            <td data-title="Image"><?php echo '<img src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img" style="height:100px;width:100px"/ > ';?></td>
+							<td data-title="Action"> 
+                            <?php 
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                                echo '<a id="'.$image['Image']['id'].'" class="btn btn-danger btn-sm delete">Delete Image</a>';
+                                echo '<a id="'.$image['Image']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Image</a>';
+                                echo '<a id="'.$image['Image']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Image</a>';
 							?>
 							</td> 
 						</tr> 	

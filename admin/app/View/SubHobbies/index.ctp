@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -25,11 +25,13 @@
                     <tbody>
                     <?php foreach ($subhobbies as $subhobby){ ?>
 						<tr>
-							<td> <?php  echo $subhobby['SubHobby']['name']; ?> </td>
-							<td><?php echo $subhobby['Hobby']['name']; ?></td>
-							<td> <?php echo $this->Html->link('Update Sub Hobby',array('controller'=>'SubHobbies','action'=>'update',$subhobby['SubHobby']['id']),array('class'=>'btn btn-sm btn-primary'));
-								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                                echo '<a id="'.$subhobby['SubHobby']['id'].'" class="btn btn-danger btn-sm delete">Delete Sub Hobby</a>';
+							<td data-title="Sub category"> <?php  echo $subhobby['SubHobby']['name']; ?> </td>
+							<td data-title="Category"><?php echo $subhobby['Hobby']['name']; ?></td>
+							<td data-title="Action"> <?php echo $this->Html->link('Update Sub Hobby',array('controller'=>'SubHobbies','action'=>'update',$subhobby['SubHobby']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+								echo $this->Html->link('Update Sub Hobby',array('controller'=>'SubHobbies','action'=>'update',$subhobby['SubHobby']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
+                                echo "&nbsp;&nbsp;&nbsp;&nbsp;";
+                                echo '<a id="'.$subhobby['SubHobby']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Sub Hobby</a>';
+                                echo '<a id="'.$subhobby['SubHobby']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Sub Hobby</a>';
 							?>
 							</td> 
 						</tr> 	

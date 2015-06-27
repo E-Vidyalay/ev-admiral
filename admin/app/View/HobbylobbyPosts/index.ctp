@@ -16,11 +16,11 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           	<th>News Title</th>
+                           	<th>Post Title</th>
                             <th>Date</th>
 							<th>Action</th>
                         </tr>
@@ -29,13 +29,16 @@
                     	<?php
 							foreach ($hobbylobbypost as $hl) {
 								echo "<tr>";
-								echo "<td>".$hl['HobbylobbyPost']['title']."</td>";
-                                echo "<td>".$hl['HobbylobbyPost']['updated_at']."</td>";
-								echo "<td>";
-									echo $this->Html->link('Update',array('controller'=>'HobbylobbyPosts','action'=>'update',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo '<a id="'.$hl['HobbylobbyPost']['id'].'" class="btn btn-danger btn-sm delete">Delete</a>
+								echo "<td data-title='Post Title'>".$hl['HobbylobbyPost']['title']."</td>";
+                                echo "<td data-title='Date'>".$hl['HobbylobbyPost']['updated_at']."</td>";
+								echo "<td data-title='Action'>";
+                                echo $this->Html->link('Update',array('controller'=>'HobbylobbyPosts','action'=>'update',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
+									echo $this->Html->link('Update',array('controller'=>'HobbylobbyPosts','action'=>'update',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    echo '<a id="'.$hl['HobbylobbyPost']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>';
+									echo '<a id="'.$hl['HobbylobbyPost']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete</a>
                                     &nbsp;&nbsp;&nbsp;&nbsp;';
-                                    echo $this->Html->link('View',array('controller'=>'HobbylobbyPosts','action'=>'view_posts',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-info btn-sm'));
+                                    echo $this->Html->link('View',array('controller'=>'HobbylobbyPosts','action'=>'view_posts',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-info btn-sm visible-xs'));
+                                    echo $this->Html->link('View',array('controller'=>'HobbylobbyPosts','action'=>'view_posts',$hl['HobbylobbyPost']['id']),array('class'=>'btn btn-info btn-sm hidden-xs'));
 								echo "</td>";
 								echo "</tr>";
 							}

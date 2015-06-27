@@ -16,11 +16,11 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>Title</th>
+                            <th>Post Title</th>
                             <th>Category</th>
                             <th>Action</th>
                         </tr>
@@ -29,15 +29,16 @@
                         <?php
                             foreach ($lpost as $a) {
                                 echo "<tr>";
-                                echo "<td>".$a['LiteraturePost']['title']."</td>";
-                                echo "<td>".$a['Literature']['name']." - ".$a['SubLiterature']['name']."</td>";
-                                echo "<td>";
-                                    echo $this->Html->link('Update',array('controller'=>'LiteraturePosts','action'=>'update',$a['LiteraturePost']['id']),array('class'=>'btn btn-primary btn-sm'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-
-                                    echo '<a id="'.$a['LiteraturePost']['id'].'" class="btn btn-danger btn-sm delete">Delete</a>
+                                echo "<td data-title='Post Title'>".$a['LiteraturePost']['title']."</td>";
+                                echo "<td data-title='Category'>".$a['Literature']['name']." - ".$a['SubLiterature']['name']."</td>";
+                                echo "<td data-title='Action'>";
+                                    echo $this->Html->link('Update',array('controller'=>'LiteraturePosts','action'=>'update',$a['LiteraturePost']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
+                                    echo $this->Html->link('Update',array('controller'=>'LiteraturePosts','action'=>'update',$a['LiteraturePost']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    echo '<a id="'.$a['LiteraturePost']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete</a>';
+                                    echo '<a id="'.$a['LiteraturePost']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>
                                     &nbsp;&nbsp;&nbsp;&nbsp;';
-
-                                     echo $this->Html->link('View',array('controller'=>'LiteraturePosts','action'=>'view_posts',$a['LiteraturePost']['id']),array('class'=>'btn btn-info btn-sm'));
+                                    echo $this->Html->link('View',array('controller'=>'LiteraturePosts','action'=>'view_posts',$a['LiteraturePost']['id']),array('class'=>'btn btn-info btn-sm hidden-xs'));
+                                     echo $this->Html->link('View',array('controller'=>'LiteraturePosts','action'=>'view_posts',$a['LiteraturePost']['id']),array('class'=>'btn btn-info btn-sm visible-xs'));
                                 echo "</td>";
                                 echo "</tr>";
                             }

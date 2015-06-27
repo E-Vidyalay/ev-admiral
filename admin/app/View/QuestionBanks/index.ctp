@@ -16,23 +16,25 @@
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-                <div class="dataTable_wrapper">
+                <div class="dataTable_wrapper" id="no-more-tables">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
                                 <th>Question</th>
 								<th>Subject/Topic</th>
-								<th>Actions</th>
+								<th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                         	<?php foreach ($questions as $question){ ?>
                            	<tr>
-								<td> <?php  echo $question['QuestionBank']['question']; ?> </td>
-								<td> <?php  echo $question['Topic']['display_name']; ?> </td>
-								<td> <?php echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary'));
+								<td data-title="Question"> <?php  echo $question['QuestionBank']['question']; ?> </td>
+								<td data-title="Subject/Topic"> <?php  echo $question['Topic']['display_name']; ?> </td>
+								<td data-title="Action"> <?php echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+                                    echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-									echo '<a id="'.$question['QuestionBank']['id'].'" class="btn btn-danger btn-sm delete">Delete question</a>';
+									echo '<a id="'.$question['QuestionBank']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete question</a>';
+                                    echo '<a id="'.$question['QuestionBank']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete question</a>';
 								?>
 								</td> 
 							</tr> 	

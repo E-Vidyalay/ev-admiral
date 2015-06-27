@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -25,10 +25,12 @@
                     <tbody>
                     <?php foreach ($subjects as $subject){ ?>
 						<tr>
-							<td> <?php  echo $subject['Subject']['name']; ?> </td>			
-							<td> <?php echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary'));
+							<td data-title="Subject"> <?php  echo $subject['Subject']['name']; ?> </td>			
+							<td data-title="Action"> <?php echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+                                echo $this->Html->link('Update Subject',array('controller'=>'subjects','action'=>'update',$subject['Subject']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-								echo '<a id="'.$subject['Subject']['id'].'" class="btn btn-danger btn-sm delete">Delete Subject</a>';
+								echo '<a id="'.$subject['Subject']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Subject</a>';
+                                echo '<a id="'.$subject['Subject']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Subject</a>';
 							?>
 							</td> 
 						</tr> 	

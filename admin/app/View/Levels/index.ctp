@@ -16,7 +16,7 @@
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
-            <div class="dataTable_wrapper">
+            <div class="dataTable_wrapper" id="no-more-tables">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
@@ -25,10 +25,12 @@
                     <tbody>
                     <?php foreach ($levels as $level){ ?>
 						<tr>
-							<td> <?php  echo $level['Level']['level_name']; ?> </td>			
-							<td> <?php echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary'));
+							<td data-title="Level"> <?php  echo $level['Level']['level_name']; ?> </td>			
+							<td data-title="Action"> <?php echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
+                                echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 								echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                                echo '<a id="'.$level['Level']['id'].'" class="btn btn-danger btn-sm delete">Delete Level</a>';
+                                echo '<a id="'.$level['Level']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Level</a>';
+                                echo '<a id="'.$level['Level']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Level</a>';
 							?>
 							</td> 
 						</tr> 	
