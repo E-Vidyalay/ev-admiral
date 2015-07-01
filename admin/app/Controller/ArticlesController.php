@@ -2,12 +2,13 @@
 	class ArticlesController extends AppController{
 		public $uses=array('Article','Image');
 		public function index() {
-	        $articles = $this -> Article-> find('all',array('order'=>array('Article.title')));
-	        $this -> set('articles', $articles);
-	        $this -> layout = 'ev_admin';
+	        $articles = $this->Article->find('all',array('conditions'=>array('allow'=>1)),array('order'=>array('Article.title')));
+	        $this->set('articles', $articles);
+	        $this->layout = 'ev_admin';
 	    }
 	    public function add(){
 	    	$this->layout='ev_question';
+	    	$this->set('user_id',$this->Auth->user('id'));
 	    	$this->set('images',$this->Image->find('all'));
 	    	if($this->request->is('post')){
 	    		$article=$this->data;

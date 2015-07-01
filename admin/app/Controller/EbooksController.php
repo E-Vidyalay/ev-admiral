@@ -3,12 +3,13 @@
 		public $uses=array('Literature','Level','SubLiterature','Ebook');
 		public function index(){
 			$this->layout="ev_admin";
-			$l=$this->Ebook->find('all');
+			$l=$this->Ebook->find('all',array('conditions'=>array('allow'=>1)));
 			$this->set('books',$l);
 		}
 
 		public function insert(){
 			$this->layout="ev_admin";
+			$this->set('user_id',$this->Auth->user('id'));
 			$sb=$this->SubLiterature->find('all');
 			$sl=array();
 			foreach ($sb as $key => $value) {
@@ -21,7 +22,7 @@
 				$s=$this->SubLiterature->findById($data['Ebook']['sub_category_id']);
 				$data['Ebook']['category_id']=$s['SubLiterature']['literature_id'];
 				if($this->Ebook->save($data))
-				{	
+				{
 					$this->Session->setFlash('Ebook has been successfully added','default',array('class'=>'alert alert-success'),'success');
 					$this->redirect(array('controller'=>'ebooks','action'=>'index'));
 
@@ -33,9 +34,9 @@
 			}
 
 		}
-	        
 
-		
+
+
 		public function delete($id = NULL){
 				$this->Ebook->delete($id);
 				$this->Session->setFlash('Ebook has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
@@ -68,7 +69,7 @@
 					$this->redirect(array('action'=>'index'));
 				}
 			}
-			
+
 		}
 	}
 ?>

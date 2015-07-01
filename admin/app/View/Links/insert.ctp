@@ -2,7 +2,9 @@
 <h1>Add link</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert')); 
+    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'insert'));
+    echo $this->Form->input('uploaded_by',array('type'=>'hidden','value'=>$user_id));
+    echo $this->Form->input('allow',array('type'=>'hidden','value'=>1)); 
     echo $this->Form->input('topic_id',array(
             'class'=>'form-control',
             'options'=>$topic,

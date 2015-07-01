@@ -6,12 +6,13 @@ class LinksController extends AppController{
 
 	public function index(){
 		$this->layout="ev_admin";
-		$l=$this->Link->find('all');
+		$l=$this->Link->find('all',array('conditions'=>array('allow'=>1)));
 		$this->set('linkID',$l);
 		}
 
 	public function insert(){
 		$this->layout="ev_admin";
+		$this->set('user_id',$this->Auth->user('id'));
 		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
 		$this->set('topic',$sb);
 		if($this->request->is('post')){
@@ -33,7 +34,7 @@ class LinksController extends AppController{
 
 	public function multiple_insert(){
 		$this->layout="ev_admin";
-                $this->loadModel('File');
+        $this->loadModel('File');
 		$t=$this->Topic->find('list',array('fields'=>array('id','display_name')));
                 
 		$this->set('topic',$t);
