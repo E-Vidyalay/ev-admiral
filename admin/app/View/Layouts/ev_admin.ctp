@@ -64,7 +64,10 @@
                 <!-- /.dropdown -->
             </ul>
             <ul class="nav navbar-top-links hidden-lg hidden-md" style="float:right;">
-                
+                <li>
+                <?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute'),array('escape' => false));?>
+                </li>
                 <!-- dropdown-user -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">

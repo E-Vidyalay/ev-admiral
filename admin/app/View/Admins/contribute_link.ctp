@@ -32,11 +32,8 @@
                                 <td data-title="Subject/Topic"> <?php echo $l['Topic']['display_name']?></td>
 								<td data-title="Description"> <?php  echo $l['Link']['tags']; ?> </td>		
 								<td data-title="Action"> <?php 
-									echo $this->Html->link('Approve',array('controller'=>'Admins','action'=>'allow_link',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
-                                    echo $this->Html->link('Approve',array('controller'=>'Admins','action'=>'allow_link',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
-									echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete Link</a>';
-                                    echo '<a id="'.$l['Link']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete Link</a>';
+									echo $this->Html->link('View for Approval',array('controller'=>'Admins','action'=>'approval_link',$l['Link']['id'],$l['Link']['uploaded_by']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
+                                    echo $this->Html->link('View for Approval',array('controller'=>'Admins','action'=>'approval_link',$l['Link']['id'],$l['Link']['uploaded_by']),array('class'=>'btn btn-primary btn-sm visible-xs'));
 								?>
 								</td> 
 							</tr> 	

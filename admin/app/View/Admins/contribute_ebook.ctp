@@ -31,12 +31,8 @@
                                 echo "<td data-title='Title'>".$a['Ebook']['name']."</td>";
                                 echo "<td data-title='Category'>".$a['Literature']['name']." - ".$a['SubLiterature']['name']."</td>";
                                 echo "<td data-title='ACtion'>";
-                                    echo $this->Html->link('Approve',array('controller'=>'Admins','action'=>'allow_ebook',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
-                                    echo $this->Html->link('Approve',array('controller'=>'Admins','action'=>'allow_ebook',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-                                    echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>';
-                                    echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';
-                                    echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info visible-xs'>View book</a>";
-                                    echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";
+                                    echo $this->Html->link('View for Approval',array('controller'=>'Admins','action'=>'approval_ebook',$a['Ebook']['id'],$a['Ebook']['uploaded_by']),array('class'=>'btn btn-primary btn-sm visible-xs'));
+                                    echo $this->Html->link('View for Approval',array('controller'=>'Admins','action'=>'approval_ebook',$a['Ebook']['id'],$a['Ebook']['uploaded_by']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
                                 echo "</td>";
                                 echo "</tr>";
                             }

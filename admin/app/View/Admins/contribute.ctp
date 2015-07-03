@@ -31,10 +31,8 @@
 								echo "<td data-title='Page Title'>".$a['Article']['title']."</td>";
 								echo "<td data-title='Alias'>".$a['Article']['alias']."</td>";
 								echo "<td data-title='Action'>";
-                                    echo $this->Html->link('Approve',array('controller'=>'admins','action'=>'allow_page',$a['Article']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
-									echo $this->Html->link('Allow',array('controller'=>'admins','action'=>'allow_page',$a['Article']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-                                    echo '<a id="'.$a['Article']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete</a>';
-									echo '<a id="'.$a['Article']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>';
+                                    echo $this->Html->link('View for Approval',array('controller'=>'admins','action'=>'approval_page',$a['Article']['id'],$a['Article']['uploaded_by']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
+                                    echo $this->Html->link('View for Approval',array('controller'=>'admins','action'=>'approval_page',$a['Article']['id'],$a['Article']['uploaded_by']),array('class'=>'btn btn-primary btn-sm visible-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
 								echo "</td>";
 								echo "</tr>";
 							}

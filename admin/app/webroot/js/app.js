@@ -58,3 +58,23 @@ $(".delete").on('click',function(event){
             }]
     });
 });
+// $('form.approvalform').submit(function(event){
+//     BootstrapDialog.show({
+//         type:BootstrapDialog.TYPE_PRIMARY,
+//         title: '<i class="fa fa-exclamation-circle fa-2x"></i> Confirmation',
+//         cssClass: 'btn-primary',
+//         message: 'Are you sure you want to Confirm?',
+//         buttons:[{
+//             label: 'Yes',
+//             cssClass: 'btn-success',
+//             action: function(dialog){
+//                 form.submit();
+//             }
+//         },{
+//             label: 'No',
+//             action: function(dialog){
+//                 dialog.close();
+//             }
+//         }]
+//     })
+// })

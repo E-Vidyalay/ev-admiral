@@ -1,6 +1,6 @@
 <?php
 	class AdminsController extends AppController{
-		public $uses=array('Article','Ebook','Link');
+		public $uses=array('Article','Ebook','Link','User','Topic','SubTopic');
 		public function index(){
 			$this->layout='ev_admin';
 		}
@@ -45,40 +45,261 @@
 			$l=$this->Link->find('all',array('conditions'=>array('allow'=>0)));
 			$this->set('linkID',$l);
 		}
-		public function allow_page($id=NULL){
+		public function approval_page($id=NULL,$cid=NULL){
+			$this->layout="ev_question";
 			$data=$this->Article->findById($id);
-			$data['Article']['allow']=1;
-			if($this->Article->save($data)){
-				$this->Session->setFlash('Page is Approved','default',array('class'=>'alert alert-success'),'success');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
-			}
-			else{
-				$this->Session->setFlash('Sorry some problem occur','default',array('class'=>'alert alert-danger'),'error');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
+			$user=$this->User->findById($cid);
+			$this->set('page',$data);
+			$this->set('user',$user);
+			if($this->request->is('post')){
+				if($this->data['approval']=='Approve'){
+					$pdata=$this->Article->findById($this->data['Admin']['page_id']);
+					$pdata['Article']['allow']=1;
+					if($this->Article->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Article']['title'].'</h3>
+						// 			<hr/>
+						// 			'.$pdata['Article']['content'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Article Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Page is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
+					}
+				}
+				else if($this->data['approval']=='Deny'){
+					$pdata=$this->Article->findById($this->data['Admin']['page_id']);
+					$pdata['Article']['allow']=2;
+					if($this->Article->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Article']['title'].'</h3>
+						// 			<hr/>
+						// 			'.$pdata['Article']['content'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Article Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Page is Not Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-danger'),'error');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
+					}
+				}
 			}
 		}
-		public function allow_ebook($id=NULL){
+		public function approval_ebook($id=NULL,$cid=NULL){
+			$this->layout="ev_question";
 			$data=$this->Ebook->findById($id);
-			$data['Ebook']['allow']=1;
-			if($this->Ebook->save($data)){
-				$this->Session->setFlash('Ebook is Approved','default',array('class'=>'alert alert-success'),'success');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
-			}
-			else{
-				$this->Session->setFlash('Sorry some problem occur','default',array('class'=>'alert alert-danger'),'error');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
+			$this->set('book',$data);
+			$user=$this->User->findById($cid);
+			$this->set('user',$user);
+			if($this->request->is('post')){
+				if($this->data['approval']=='Approve'){
+					$pdata=$this->Ebook->findById($this->data['Admin']['book_id']);
+					$pdata['Ebook']['allow']=1;
+					if($this->Ebook->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Ebook']['title'].'</h3>
+						// 			<hr/>
+						// 			'.$pdata['Ebook']['description'].'
+						//			Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
+						// 			<br/>
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Ebook Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Ebook is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
+					}
+				}
+				else if($this->data['approval']=='Deny'){
+					$pdata=$this->Ebook->findById($this->data['Admin']['book_id']);
+					$pdata['Ebook']['allow']=2;
+					if($this->Ebook->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Ebook']['title'].'</h3>
+						// 			<hr/>
+						// 			'.$pdata['Ebook']['description'].'
+						//			Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Ebook Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Ebook is Not Approved and mail is sent to the Conributor','default',array('class'=>'alert alert-danger'),'error');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
+					}
+				}	
 			}
 		}
-		public function allow_link($id=NULL){
+		public function approval_link($id=NULL,$cid=NULL){
+			$this->layout="ev_question";
 			$data=$this->Link->findById($id);
-			$data['Link']['allow']=1;
-			if($this->Link->save($data)){
-				$this->Session->setFlash('Link is Approved','default',array('class'=>'alert alert-success'),'success');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
-			}
-			else{
-				$this->Session->setFlash('Sorry some problem occur','default',array('class'=>'alert alert-danger'),'error');
-				$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
+			$this->set('link',$data);
+			$top=$this->Topic->find('all');
+			$this->set('topics',$top);
+			$sub=$this->SubTopic->find('all');
+			$this->set('subtop',$sub);
+			$user=$this->User->findById($cid);
+			$this->set('user',$user);
+			//pr($top);die();
+			if($this->request->is('post')){
+
+				if($this->data['approval']=='Approve'){
+					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
+					$pdata['Link']['allow']=1;
+					//pr($this->data);die();
+					if($this->Link->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Link']['link_title'].'</h3>
+						// 			<hr/>
+						// 			Link URL: '.$pdata['Link']['link_url'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Link Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Link is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
+					}
+				}
+				else if($this->data['approval']=='Deny'){
+					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
+					$pdata['Link']['allow']=2;
+					//pr($this->data);die();
+					if($this->Link->save($pdata)){
+						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>'.$pdata['Link']['link_title'].'</h3>
+						// 			<hr/>
+						// 			Link URL: '.$pdata['Link']['link_url'].'
+						// 			<hr/>
+						// 			<h3>Response</h3>
+						// 			<hr/>
+						// 			'.$this->data['Admin']['comment'].'
+						// 			<br/>
+						// 			<hr/>
+						// 			<h5>By-'.$contributor['User']['username'].'</h5>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($contributor['User']['username'])
+						//     ->subject('EV Link Contributor')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Link is Not Approved and mail is sent to the Conributor','default',array('class'=>'alert alert-danger'),'error');
+						$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
+					}
+				}	
 			}
 		}
 	}
