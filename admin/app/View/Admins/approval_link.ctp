@@ -2,7 +2,7 @@
 <?php
 echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-left fa-fw')) . " Back",array('controller' => 'admins', 'action' => 'contribute_link'),array('escape' => false,'class'=>'btn btn-default btn-md'));
 ?>
-<h3>Contributed Article</h3>
+<h3>Contributed Video link</h3>
 <br/>
 <div class="row">
 	<div class="col-lg-10"><?php
