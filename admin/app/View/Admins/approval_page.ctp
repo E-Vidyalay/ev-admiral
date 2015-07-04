@@ -5,7 +5,7 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 <h3>Contributed Article</h3>
 <br/>
 <div class="row">
-	<div class="col-lg-10"><?php
+	<div class="col-lg-12"><?php
 	echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'approval_page','class'=>'approvalform'));?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -15,20 +15,20 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 			<?php echo $page['Article']['content'];?>
 			</div>
 			<div class="panel-heading">
-			<h5> <?php 
+			<h5> <?php
 			if($user!=NULL){
 				echo "By-".$user['User']['username'].", 	At-".$page['Article']['updated_at'];
 			}
 			else
 			{
-				echo "At-".$page['Article']['updated_at'];	
-			}	
+				echo "At-".$page['Article']['updated_at'];
+			}
 			 ?></h5>
-			
+
 			</div>
 			<div class="panel-heading">
 			<?php
-			 
+
 			echo $this->Form->input('page_id',array('type'=>'hidden','value'=>$page['Article']['id']));
 			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$user['User']['id']));
 			echo $this->Form->input('comment',array(

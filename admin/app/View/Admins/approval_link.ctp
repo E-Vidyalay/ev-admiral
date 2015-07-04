@@ -5,7 +5,7 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 <h3>Contributed Video link</h3>
 <br/>
 <div class="row">
-	<div class="col-lg-10"><?php
+	<div class="col-lg-12"><?php
 	echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'approval_link','class'=>'approvalform'));?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -31,20 +31,20 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 			echo '<iframe width="100%" height="415" src="'.$link['Link']['link_url'].'" frameborder="0" allowfullscreen style="padding:15px;border:1px solid #dfdfdf;"></iframe>';?>
 			</div>
 			<div class="panel-heading">
-			<h5> <?php 
+			<h5> <?php
 			if($user!=NULL){
 				echo "By-".$user['User']['username'].", 	At-".$link['Link']['updated_at'];
 			}
 			else
 			{
-				echo "At-".$link['Link']['updated_at'];	
-			}	
+				echo "At-".$link['Link']['updated_at'];
+			}
 			 ?></h5>
-			
+
 			</div>
 			<div class="panel-heading">
 			<?php
-			 
+
 			echo $this->Form->input('link_id',array('type'=>'hidden','value'=>$link['Link']['id']));
 			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$user['User']['id']));
 			echo $this->Form->input('comment',array(
