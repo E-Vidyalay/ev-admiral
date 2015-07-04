@@ -5,14 +5,14 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 <h3>Contributed Ebook</h3>
 <br/>
 <div class="row">
-	<div class="col-lg-10"><?php
+	<div class="col-lg-12"><?php
 	echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'approval_ebook'));?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 			<h5> <?php echo $book['Ebook']['name']; ?></h5>
 			</div>
 			<div class="panel-body">
-			<?php 
+			<?php
 			echo '<h4><b>Ebook name:</b> '.$book['Ebook']['path'].'</h4>';
 			echo '<br/>';
 			echo '<h4><b>Ebook descriptopn:</b> '.$book['Ebook']['description'].'</h4>';
@@ -21,20 +21,20 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 			?>
 			</div>
 			<div class="panel-heading">
-			<h5> <?php 
+			<h5> <?php
 			if($user!=NULL){
 				echo "By-".$user['User']['username'].", 	At-".$book['Ebook']['updated_at'];
 			}
 			else
 			{
-				echo "At-".$book['Ebook']['updated_at'];	
-			}	
+				echo "At-".$book['Ebook']['updated_at'];
+			}
 			 ?></h5>
-			
+
 			</div>
 			<div class="panel-heading">
 			<?php
-			 
+
 			echo $this->Form->input('book_id',array('type'=>'hidden','value'=>$book['Ebook']['id']));
 			echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$user['User']['id']));
 			echo $this->Form->input('comment',array(
