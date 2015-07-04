@@ -27,8 +27,14 @@
                                     echo $this->Html->link('Update',array('controller'=>'ebooks','action'=>'update',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
                                     echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>';
                                     echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete hidden-xs">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';
-                                    echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info visible-xs'>View book</a>";
-                                    echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";
+                                    if($a['Ebook']['contributed']==0){
+                                        echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info visible-xs'>View book</a>";
+                                        echo "<a target='_blank' href='".$this->webroot."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";    
+                                    }
+                                    else{
+                                        echo "<a target='_blank' href='".$evsite_url."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info visible-xs'>View book</a>";
+                                        echo "<a target='_blank' href='".$evsite_url."files/ebook/path/".$a['Ebook']['id']."/".$a['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";
+                                    }
                                 echo "</td>";
                                 echo "</tr>";
                             }
