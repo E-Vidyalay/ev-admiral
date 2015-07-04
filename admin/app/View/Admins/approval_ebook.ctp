@@ -17,7 +17,7 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 			echo '<br/>';
 			echo '<h4><b>Ebook descriptopn:</b> '.$book['Ebook']['description'].'</h4>';
 			echo '<br/>';
-			echo "Click here to view book: <a target='_blank' href='".$this->webroot."files/ebook/path/".$book['Ebook']['id']."/".$book['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";
+			echo "Click here to view book: <a target='_blank' href='".$evsite_url."files/ebook/path/".$book['Ebook']['id']."/".$book['Ebook']['path']."' class='btn-sm btn btn-info hidden-xs'>View book</a>";
 			?>
 			</div>
 			<div class="panel-heading">
