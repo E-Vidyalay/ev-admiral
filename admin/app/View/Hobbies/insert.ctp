@@ -9,13 +9,6 @@
     echo $this->Form->create('Hobby',array('controller'=>'Hobbies','action'=>'insert'));
    
     echo "<br/>";
-    echo $this->Form->input('level_id',array(
-        'class'=>'form-control',
-        'type'=> 'select',
-        'options' => $level,
-        'label' => 'Level'
-    ));
-    echo "<br/>";
     echo $this->Form->input('name',array(
      'class'=>'form-control',
      'placeholder'=>'Name',
