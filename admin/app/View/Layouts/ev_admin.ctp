@@ -42,7 +42,7 @@
             <ul class="nav navbar-top-links navbar-right hidden-sm hidden-xs">
                 <li>
                 <?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute'),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?>
                 </li>
                 <!-- dropdown-user -->
                 <li class="dropdown">
