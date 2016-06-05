@@ -3,7 +3,7 @@
 		public $uses=array('Literature','Level','SubLiterature','Ebook');
 		public function index(){
 			$this->layout="ev_admin";
-			$l=$this->Ebook->find('all',array('conditions'=>array('allow'=>1)));
+			$l=$this->Ebook->find('all');
 			$this->set('books',$l);
 		}
 
@@ -21,6 +21,7 @@
 				$data=$this->data;
 				$s=$this->SubLiterature->findById($data['Ebook']['sub_category_id']);
 				$data['Ebook']['category_id']=$s['SubLiterature']['literature_id'];
+				$data['Ebook']['contributed']=0;
 				if($this->Ebook->save($data))
 				{
 					$this->Session->setFlash('Ebook has been successfully added','default',array('class'=>'alert alert-success'),'success');
@@ -42,7 +43,7 @@
 				$this->Session->setFlash('Ebook has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('controller'=>'ebooks','action' => 'index'));
 			}
-
+			
 		public function update($id=NULL){
 			$this->layout="ev_admin";
 			$sb=$this->SubLiterature->find('all');

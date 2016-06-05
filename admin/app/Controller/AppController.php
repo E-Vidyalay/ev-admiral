@@ -61,7 +61,7 @@ class AppController extends Controller {
         $this->Auth->authenticate = array(
             'Form' => array('userModel' => 'Admin')
         );
-        $this->Auth->allow('login','forgot_password','update_password');
+        $this->Auth->allow('login','forgot_password');
         $this->activeUser = $this->Session->read('Auth');
         $this->isLoggedIn = $this->Auth->loggedIn();
         $this->set('evsite_url','/www/ev-frontend/');

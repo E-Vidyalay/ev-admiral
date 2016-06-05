@@ -1,5 +1,5 @@
 <br/>
-<h3>Contribution</h3>
+<h3>Pending Contribution</h3>
 <ul class="nav nav-tabs">
   <li role="presentation" id="ebook_contri" class="active"><a href="#" >Ebooks</a></li>
   <li role="presentation" id="link_contri"><?php

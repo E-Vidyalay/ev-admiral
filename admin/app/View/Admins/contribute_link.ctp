@@ -1,5 +1,5 @@
 <br/>
-<h3>Contribution</h3>
+<h3>Pending Contribution</h3>
 <ul class="nav nav-tabs">
   <li role="presentation" id="ebook_contri"><?php
                         echo $this->Html->link("Ebooks",array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?></li>

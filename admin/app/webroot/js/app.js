@@ -58,6 +58,34 @@ $(".delete").on('click',function(event){
             }]
     });
 });
+$(".admindelete").on('click',function(event){
+    var u=baseUrl+"/admins/delete/"+$(this).attr('id');
+    alert(u);
+    BootstrapDialog.show({
+        type: BootstrapDialog.TYPE_DANGER,
+        title: '<i class="fa fa-warning fa-2x"></i> Warning',
+        cssClass: 'btn-primary',
+        message:'Are you sure you want to delete?',
+        buttons: [{
+                label: 'Yes',
+                cssClass: 'btn-success',
+                action: function(dialog) {
+                    console.log(u);
+                    $.ajax({
+                        url:u,
+                        success:function(data){
+                            window.location.replace(location);
+                        }
+                    })
+                }
+            }, {
+                label: 'No',
+                action: function(dialog) {
+                    dialog.close();
+                }
+            }]
+    });
+});
 // $('form.approvalform').submit(function(event){
 //     BootstrapDialog.show({
 //         type:BootstrapDialog.TYPE_PRIMARY,

@@ -1,9 +1,75 @@
 <?php
 	class AdminsController extends AppController{
-		public $uses=array('Article','Ebook','Link','User','Topic','SubTopic');
+		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic');
 		public function index(){
 			$this->layout='ev_admin';
 		}
+		public function users(){
+			$this->layout='ev_admin';
+			$users=$this->Admin->find('all');
+			$this->set('users',$users);
+			// pr($users);
+		}
+		public function add(){
+			$this->layout='ev_admin';
+		}
+		public function delete($id = NULL){
+			$this->Admin->delete($id);
+			$this->Session->setFlash('Admin has been removed successfully','default',array('class'=>'alert alert-success'),'success');
+			$this->redirect(array('controller'=>'admins','action' => 'users'));
+		}
+		public function profile($id=NULL){
+			$this->layout='ev_admin';
+			$this->set('Uid',$id);
+			if(empty($this->data)){
+				$this->data=$this->Admin->findById($id);
+			}
+			else{
+				$data=$this->data;
+				if($this->Admin->save($data))
+				{
+					if($this->data['Admin']['id']==AuthComponent::User('id')){
+						$this->Session->write('Auth.User.name', $this->data['Admin']['name']);
+						$this->Session->write('Auth.User.email', $this->data['Admin']['email']);
+						$this->Session->setFlash('User Details has been successfully updated','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+					}
+				}
+				else{
+					$this->Session->setFlash('User Details has not been updated','default',array('class'=>'alert alert-danger'),'error');
+					$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+				}
+			}
+		}
+		public function changepassword($id=NULL){
+			$this->layout='ev_admin';
+			if($this->request->is('post')){
+				$useradmin=$this->Admin->findById($id);
+				$stored=$useradmin['Admin']['password'];
+				$oldHash = AuthComponent::password($this->data['Admin']['oldpassword']);
+				$correct = $stored == $oldHash;
+				$data=array();
+				$data['Admin']['id']=$this->data['Admin']['id'];
+				$data['Admin']['password']=$this->data['Admin']['newpassword'];
+				if($correct){
+					if($this->Admin->save($data))
+					{
+						$this->Session->setFlash('Password has been successfully updated','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+					}
+					else{
+						$this->Session->setFlash('Password has not been updated','default',array('class'=>'alert alert-danger'),'error');
+						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+					}	
+				}
+				else{
+					$this->Session->setFlash('Wrong Old Password','default',array('class'=>'alert alert-danger'),'error');
+					$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+				}
+				
+			}
+		}
+		
 		public function login(){
 			$this->layout='login';
 			if($this->Session->check('Auth.User')){

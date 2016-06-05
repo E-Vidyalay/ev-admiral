@@ -13,7 +13,7 @@ echo $this->Html->link('Back',array('controller'=>'NewsLetters','action'=>'index
 			<?php echo $news['NewsLetter']['content'];?>
 			</div>
 			<div class="panel-heading">
-			<h5> <?php echo "By-".$news['Admin']['username'].", at-".$news['NewsLetter']['date']; ?></h5>
+			<h5> <?php echo "By-".$news['Admin']['firstname']." ".$news['Admin']['lastname'].", at-".$news['NewsLetter']['date']; ?></h5>
 			</div>
 		</div>
 	</div>

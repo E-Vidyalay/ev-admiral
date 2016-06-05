@@ -13,7 +13,7 @@ echo $this->Html->link('Back',array('controller'=>'HobbylobbyPosts','action'=>'i
 			<?php echo $posts['HobbylobbyPost']['meta_description'];?>
 			</div>
 			<div class="panel-heading">
-			<h5> <?php echo "By-".$posts['Admin']['username'].", at-".$posts['HobbylobbyPost']['updated_at']; ?></h5>
+			<h5> <?php echo "By-".$posts['Admin']['firstname']." ".$posts['Admin']['lastname'].", at-".$posts['HobbylobbyPost']['updated_at']; ?></h5>
 			</div>
 		</div>
 	</div>
