@@ -16,6 +16,7 @@
             echo $this->Html->css('bootstrap-dialog');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
+            echo $this->Html->meta('favicon.ico','/favicon.ico',array('type'=>'icon'));
 		?>
         <script type="text/javascript">var baseUrl = '<?php echo $this->base; ?>';
         </script>
@@ -54,7 +55,7 @@
                         <li><?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
                         </li>
                         <li class="divider"></li>
                         <li><?php
@@ -76,12 +77,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a><h4><?php echo $activeUser['User']['name'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
+                        <li><a><h4><?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
                         <li><?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li> -->
                         <li class="divider"></li>
                         <li><?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
@@ -300,7 +301,7 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                                                <li>
+                        <li>
                             <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>

@@ -16,6 +16,7 @@
             echo $this->Html->script('tiny_mce/tiny_mce.js');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
+            echo $this->Html->meta('favicon.ico','/favicon.ico',array('type'=>'icon'));
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <script type="text/javascript">
@@ -102,8 +103,8 @@ languagelist:[
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php //echo $this->Html->image('logo.png',array('style'=>'height:50px')); ?>
-                <a class="navbar-brand" href="">ઈ-વિદ્યાલય</a>
+                <?php echo $this->Html->image('ev-logo2.png',array('class'=>'brand-logo')); ?>
+                <span class="navbar-brand">ઈ-વિદ્યાલય</span>
             </div>
             <!-- /.navbar-header -->
 
@@ -115,12 +116,14 @@ languagelist:[
                 <!-- dropdown-user -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> Welcome, <?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?>   <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a><h4><?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
+                        <li><?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
                         </li>
                         <li class="divider"></li>
                         <li><?php
@@ -142,10 +145,12 @@ languagelist:[
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a><h4><?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
+                        <li><?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li> -->
                         <li class="divider"></li>
                         <li><?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
@@ -360,6 +365,18 @@ languagelist:[
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Images",array('controller'=>'images','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " All Admin Users",array('controller'=>'admins','action'=>'users'),array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Admin User",array('controller'=>'admins','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

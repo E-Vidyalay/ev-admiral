@@ -12,6 +12,25 @@
 		}
 		public function add(){
 			$this->layout='ev_admin';
+			$utypes=$this->AdminType->find('list',array('fields'=>array('id','name')));
+			$this->set('utypes',$utypes);
+			if($this->request->is('post')){
+				$user = $this->request->data;
+				$findUser = $this->Admin->findByusername($user['Admin']['username']);
+				$findEmail = $this->Admin->findByEmail($user['Admin']['email']);
+				if($findUser != null){
+                    $this->Session->setFlash('Looks like username is already taken.', 'default', array('class' => 'alert alert-danger') , 'error');
+                }
+                else if($findEmail != null){
+                	$this->Session->setFlash('Looks like email is already registerd.', 'default', array('class' => 'alert alert-danger') , 'error');
+                }
+                else{
+                	if($this->Admin->save($user)){
+                		$this->Session->setFlash('Admin has been Added successfully','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'admins','action' => 'users'));
+                	}
+                }
+			}	
 		}
 		public function delete($id = NULL){
 			$this->Admin->delete($id);

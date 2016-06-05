@@ -11,6 +11,7 @@
 			echo $this->Html->css('timeline');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
+			echo $this->Html->meta('favicon.ico','/favicon.ico',array('type'=>'icon'));
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>

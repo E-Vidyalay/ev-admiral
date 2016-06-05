@@ -11,7 +11,9 @@
 			    	<?php echo $this->Form->input('username',array(
                                         'class'=>'form-control',
                                         'type'=>'text',
-                                        'label'=>false
+                                        'label'=>false,
+                                        'placeholder'=>'Username',
+                                        'required'
                                     ));
                     ?>
 			    </div>
@@ -22,45 +24,56 @@
 			    	<?php echo $this->Form->input('email',array(
                                         'class'=>'form-control',
                                         'type'=>'email',
-                                        'label'=>false
+                                        'label'=>false,
+                                        'placeholder'=>'Email',
+                                        'required'
                                     ));
                     ?>
 			    </div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-4 control-label">Name</label>
+				<label for="firstname" class="col-sm-4 control-label">First Name</label>
 			    <div class="col-sm-6">
-			    	<?php echo $this->Form->input('name',array(
+			    	<?php echo $this->Form->input('firstname',array(
                                         'class'=>'form-control',
                                         'type'=>'text',
-                                        'label'=>false
+                                        'label'=>false,
+                                        'placeholder'=>'First Name'
                                     ));
                     ?>
 			    </div>
 			</div>
+			<div class="form-group">
+				<label for="lastname" class="col-sm-4 control-label">Last Name</label>
+			    <div class="col-sm-6">
+			    	<?php echo $this->Form->input('lastname',array(
+                                        'class'=>'form-control',
+                                        'type'=>'text',
+                                        'label'=>false,
+                                        'placeholder'=>'Last Name'
+                                    ));
+                    ?>
+			    </div>
+			</div>
+			<div class="form-group">
+				<label for="lastname" class="col-sm-4 control-label">Role <i>(required)</i></label>
+			    <div class="col-sm-6">
+			    	<?php echo $this->Form->input('admin_type',array('type'=>'select','class'=>'form-control','required','options'=>$utypes,'empty'=>'-Select Admin Role-','label'=>false));
+                    ?>
+			    </div>
+			</div>
+			<div class="form-group">
+				<label for="lastname" class="col-sm-4 control-label"></label>
+			    <div class="col-sm-6">
+			    	<?php echo $this->Form->input('Add User',array(
+						     'type'=>'submit',
+						     'div'=>false,
+						     'label'=>false,
+						     'class'=>'btn btn-md btn-info'
+						     ));
+                    ?>
+			    </div>
+			</div>
 		</div>
-<?php
-echo "<br>";
-echo $this->Form->input('sub_category_id',array('type'=>'select','class'=>'form-control','required','options'=>$sl,'empty'=>'Select book type','label'=>'Select book type'));
-echo "<br>";
-echo $this->Form->input('path',array(
-	'type'=>'file',
-	'class'=>'btn btn-sm btn-default',
-	'label'=>'Please select Ebook file'
-));
-echo "<br>";
-echo $this->Form->input('description',array(
-	'type'=>'textarea',
-	'class'=>'form-control'
-));
-echo "<br>";
-echo $this->Form->input('Add ebook',array(
-     'type'=>'submit',
-     'div'=>false,
-     'label'=>false,
-     'class'=>'btn btn-md btn-info'
-     ));  
-?>
-<br/>
 </div>
 </div>
