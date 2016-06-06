@@ -60,6 +60,9 @@
 				}
 			}
 		}
+		public function update(){
+
+		}
 		public function changepassword($id=NULL){
 			$this->layout='ev_admin';
 			if($this->request->is('post')){

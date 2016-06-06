@@ -20,16 +20,19 @@
                     </thead>
                     <tbody>
                         <?php
+                        // pr($activeUser);
                             foreach ($users as $a) {
                                 echo "<tr>";
                                 echo "<td data-title='Username'>".$a['Admin']['username']."</td>";
                                 echo "<td data-title='Name'>".$a['Admin']['firstname']." ".$a['Admin']['lastname']."</td>";
-                                echo "<td data-title='Email'>".$a['Admin']['email']."</td>";
+                                echo "<td data-title='Email'><a href='mailto:".$a['Admin']['email']."'>".$a['Admin']['email']."</a></td>";
                                 echo "<td data-title='Site Role'>".$a['AdminType']['name']."</td>";
                                 echo "<td data-title='Action'>";
-                                    echo $this->Html->link('Update',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
-                                    echo $this->Html->link('Update',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
-                                    if($activeUser['User']['id']!=$a['Admin']['id']){
+                                    if($activeUser['User']['AdminType']['name']=='Administrator'){
+                                    echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
+                                    echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    }
+                                    if($activeUser['User']['id']!=$a['Admin']['id'] && $activeUser['User']['AdminType']['name']=='Administrator'){
                                         echo '<a id="'.$a['Admin']['id'].'" class="btn btn-danger btn-sm admindelete visible-xs">Delete</a>';
                                         echo '<a id="'.$a['Admin']['id'].'" class="btn btn-danger btn-sm admindelete hidden-xs">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';    
                                     }

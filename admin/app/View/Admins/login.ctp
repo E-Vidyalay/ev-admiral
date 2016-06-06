@@ -12,7 +12,7 @@
                                     <?php echo $this->Form->input('username',array(
                                             'class'=>'form-control',
                                             'placeholder'=>'ઈ-મેલ',
-                                            'type'=>'email',
+                                            'type'=>'text',
                                             'required',
                                             'autofocus',
                                             'label'=>false

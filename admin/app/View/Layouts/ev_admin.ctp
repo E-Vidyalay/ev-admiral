@@ -307,9 +307,11 @@
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " All Admin Users",array('controller'=>'admins','action'=>'users'),array('escape' => false)); ?>
                                 </li>
+                                <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Admin User",array('controller'=>'admins','action'=>'add'),array('escape' => false)); ?>
                                 </li>
+                                <?php }?>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
