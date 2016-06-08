@@ -1,8 +1,27 @@
 <?php
 	class AdminsController extends AppController{
-		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic');
+		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment');
 		public function index(){
 			$this->layout='ev_admin';
+			$totalinfopost=$this->InformationPost->find('count');
+			$totallitpost=$this->LiteraturePost->find('count');
+			$totalhbpost=$this->HobbylobbyPost->find('count');
+			$totalposts=$totalinfopost+$totallitpost+$totalhbpost;
+			$this->set('totalposts',$totalposts);
+			$totalhbcomment=$this->HobbylobbyComment->find('count');
+			$totalinfocomment=$this->InformationComment->find('count');
+			$totallitcomment=$this->LiteratureComment->find('count');
+			$totalcomments=$totalhbcomment+$totalinfocomment+$totallitcomment;
+			$this->set('totalcomments',$totalcomments);
+			// pr($totalhbcomment);
+			// pr($totalinfocomment);
+			// pr($totallitcomment);
+			// pr($totalcomments);
+
+			// $totallitpost=$this->LiteraturePost->find('count');
+			// $totalhbpost=$this->HobbylobbyPost->find('count');
+			// $totalposts=$totalinfopost+$totallitpost+$totalhbpost;
+			// $this->set('totalposts',$totalposts);
 		}
 		public function users(){
 			$this->layout='ev_admin';

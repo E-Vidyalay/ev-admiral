@@ -3,6 +3,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
+                        <?php echo $this->Html->image('ev-logo.png',array('style'=>'display: block;margin-left: auto;margin-right: auto;')); ?>
                         <h4 style="text-align:center">ઈ-વિદ્યાલય | એડમીન લોગીન</h4>
                     </div>
                     <div class="panel-body">
@@ -40,6 +41,18 @@
                                 ?>
                             </fieldset>
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                <?php
+                        echo $this->Html->link('Lost your Password?',array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="http://evidyalay.net"><i class="fa fa-arrow-left fa-fw"></i> Back to evidyalay</a>
                     </div>
                 </div>
                 <?php 
