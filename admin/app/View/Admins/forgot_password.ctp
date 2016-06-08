@@ -7,7 +7,10 @@
                         <h4 style="text-align:center">ઈ-વિદ્યાલય | એડમીન લોગીન</h4>
                     </div>
                     <div class="panel-body">
-                        <?php echo $this->Form->create('Admin',array('controller'=>'admins','action'=>'login')) ?>
+                        <blockquote>
+                            <p>Please enter your username or email address. You will receive a new password to your registered Email address.</p>
+                        </blockquote>
+                        <?php echo $this->Form->create('Admin',array('controller'=>'admins','action'=>'forgot_password')) ?>
                             <fieldset>
                                 <div class="form-group">
                                     <?php echo $this->Form->input('username',array(
@@ -16,23 +19,12 @@
                                             'type'=>'text',
                                             'required',
                                             'autofocus',
-                                            'label'=>false
-                                        ));
-                                    ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo $this->Form->input('password',array(
-                                            'class'=>'form-control',
-                                            'placeholder'=>'પાસવર્ડ',
-                                            'type'=>'password',
-                                            'required',
-                                            'autofocus',
-                                            'label'=>false
+                                            'label'=>'ઈ-મેલ Or યુઝરનેમ'
                                         ));
                                     ?>
                                 </div>
                                 <?php
-                                    echo $this->Form->input('લોગીન',array(
+                                    echo $this->Form->input('નવો પાસવર્ડ મેળવવા',array(
                                             'type'=>'submit',
                                             'div'=>false,
                                             'label'=>false,
@@ -46,13 +38,13 @@
                 <div class="row">
                     <div class="col-md-12">
                 <?php
-                        echo $this->Html->link('તમારો પાસવર્ડ ભૂલી ગયા?',array('controller' => 'admins', 'action' => 'forgot_password'),array('escape' => false));?>
+                        echo $this->Html->link('લોગીન',array('controller' => 'admins', 'action' => 'login'),array('escape' => false));?>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="http://evidyalay.net"><i class="fa fa-arrow-left fa-fw"></i> Back to Evidyalay</a>
+                        <a href="http://evidyalay.net"><i class="fa fa-arrow-left fa-fw"></i> Back to evidyalay</a>
                     </div>
                 </div>
                 <?php 

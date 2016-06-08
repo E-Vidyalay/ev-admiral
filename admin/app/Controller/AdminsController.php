@@ -13,21 +13,94 @@
 			$totallitcomment=$this->LiteratureComment->find('count');
 			$totalcomments=$totalhbcomment+$totalinfocomment+$totallitcomment;
 			$this->set('totalcomments',$totalcomments);
-			// pr($totalhbcomment);
-			// pr($totalinfocomment);
-			// pr($totallitcomment);
-			// pr($totalcomments);
-
-			// $totallitpost=$this->LiteraturePost->find('count');
-			// $totalhbpost=$this->HobbylobbyPost->find('count');
-			// $totalposts=$totalinfopost+$totallitpost+$totalhbpost;
-			// $this->set('totalposts',$totalposts);
 		}
 		public function users(){
 			$this->layout='ev_admin';
 			$users=$this->Admin->find('all');
 			$this->set('users',$users);
-			// pr($users);
+		}
+		function generate_password( $length = 8 ) {
+	       $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	       $password = substr( str_shuffle( $chars ), 0, $length );
+	       return $password;
+	    }
+		public function forgot_password(){
+			$this->layout='login';
+			if($this->request->is('post')){
+				$data=$this->request->data;
+				$findUser = $this->Admin->findByusername($data['Admin']['username']);
+				$findEmail= $this->Admin->findByEmail($data['Admin']['username']);
+				if($findUser!=NULL){
+					$autopassword=$this->generate_password(8);
+					pr($autopassword);
+					$findUser['Admin']['password']=$autopassword;
+					pr($findUser);
+					if($this->Admin->save($findUser)){
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>Your new Password</h3>
+						// 			<hr/>
+						// 			Username: '.$findUser['Admin']['username'].'
+						// 			<br/>
+						// 			New Password: '.$autopassword.'
+						// 			<br/>
+						// 			Login with your new Password and Change it.
+						// 			<hr/>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($findUser['Admin']['email'])
+						//     ->subject('Request of New Password')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Password is sent to your registered email address.','default',array('class'=>'alert alert-success'),'success');
+					}
+				}
+				else if($findEmail!=NULL){
+					$autopassword=$this->generate_password(8);
+					pr($autopassword);
+					$findEmail['Admin']['password']=$autopassword;
+					pr($findEmail);
+					if($this->Admin->save($findEmail)){
+						// $body='<br/>
+						// <div class="row">
+						// 	<div class="col-lg-8">
+						// 		<div class="panel panel-default">
+						// 			<div class="panel-heading">
+						// 			<h3>Your new Password</h3>
+						// 			<hr/>
+						// 			Username: '.$findEmail['Admin']['username'].'
+						// 			<br/>
+						// 			New Password: '.$autopassword.'
+						// 			<br/>
+						// 			Login with your new Password and Change it.
+						// 			<hr/>
+						// 			</div>
+						// 			<br/>
+						// 		</div>
+						// 	</div>
+						// </div>';
+						// $Email = new CakeEmail();
+						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
+						//     ->to($findEmail['Admin']['email'])
+						//     ->subject('Request of New Password')
+						//     ->template('default')
+						//     ->emailFormat('html')
+						//     ->send($body);
+						$this->Session->setFlash('Password is sent to your registered email address.','default',array('class'=>'alert alert-success'),'success');
+				}
+				else{
+					$this->Session->setFlash('Username or Email not registerd on our Portal.', 'default', array('class' => 'alert alert-danger') , 'error');
+				}
+			}
 		}
 		public function add(){
 			$this->layout='ev_admin';
@@ -78,9 +151,6 @@
 					$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
 				}
 			}
-		}
-		public function update(){
-
 		}
 		public function changepassword($id=NULL){
 			$this->layout='ev_admin';
@@ -329,13 +399,11 @@
 			$this->set('subtop',$sub);
 			$user=$this->User->findById($cid);
 			$this->set('user',$user);
-			//pr($top);die();
 			if($this->request->is('post')){
 
 				if($this->data['approval']=='Approve'){
 					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
 					$pdata['Link']['allow']=1;
-					//pr($this->data);die();
 					if($this->Link->save($pdata)){
 						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
 						// $body='<br/>
@@ -373,7 +441,6 @@
 				else if($this->data['approval']=='Deny'){
 					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
 					$pdata['Link']['allow']=2;
-					//pr($this->data);die();
 					if($this->Link->save($pdata)){
 						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
 						// $body='<br/>
