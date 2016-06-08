@@ -34,7 +34,7 @@
 					$autopassword=$this->generate_password(8);
 					pr($autopassword);
 					$findUser['Admin']['password']=$autopassword;
-					pr($findUser);
+					// pr($findUser);
 					if($this->Admin->save($findUser)){
 						// $body='<br/>
 						// <div class="row">
@@ -68,7 +68,7 @@
 					$autopassword=$this->generate_password(8);
 					pr($autopassword);
 					$findEmail['Admin']['password']=$autopassword;
-					pr($findEmail);
+					// pr($findEmail);
 					if($this->Admin->save($findEmail)){
 						// $body='<br/>
 						// <div class="row">
@@ -96,7 +96,9 @@
 						//     ->emailFormat('html')
 						//     ->send($body);
 						$this->Session->setFlash('Password is sent to your registered email address.','default',array('class'=>'alert alert-success'),'success');
+					}
 				}
+
 				else{
 					$this->Session->setFlash('Username or Email not registerd on our Portal.', 'default', array('class' => 'alert alert-danger') , 'error');
 				}
