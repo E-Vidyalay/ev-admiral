@@ -15,7 +15,9 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Site Role</th>
+                            <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
                             <th>Action</th>
+                            <?php }?>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,16 +29,24 @@
                                 echo "<td data-title='Name'>".$a['Admin']['firstname']." ".$a['Admin']['lastname']."</td>";
                                 echo "<td data-title='Email'><a href='mailto:".$a['Admin']['email']."'>".$a['Admin']['email']."</a></td>";
                                 echo "<td data-title='Site Role'>".$a['AdminType']['name']."</td>";
+                                if($activeUser['User']['AdminType']['name']=='Administrator'){
                                 echo "<td data-title='Action'>";
                                     if($activeUser['User']['AdminType']['name']=='Administrator'){
-                                    echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
-                                    echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                        if($activeUser['User']['id']!=$a['Admin']['id']){
+                                            echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
+                                            echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'update',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                        }
+                                        else{
+                                            echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'profile',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
+                                            echo $this->Html->link('Edit',array('controller'=>'admins','action'=>'profile',$a['Admin']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
+                                        }
                                     }
                                     if($activeUser['User']['id']!=$a['Admin']['id'] && $activeUser['User']['AdminType']['name']=='Administrator'){
                                         echo '<a id="'.$a['Admin']['id'].'" class="btn btn-danger btn-sm admindelete visible-xs">Delete</a>';
                                         echo '<a id="'.$a['Admin']['id'].'" class="btn btn-danger btn-sm admindelete hidden-xs">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;';    
                                     }
                                 echo "</td>";
+                                }
                                 echo "</tr>";
                             }
                         ?>

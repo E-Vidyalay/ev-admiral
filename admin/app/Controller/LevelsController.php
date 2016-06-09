@@ -11,14 +11,20 @@
 		public function insert()
 		{
 			$this->layout='ev_admin';
-			if($this->request->is('post'))
-			{
-				$data=$this->data;
-				if($this->Level->save($data))
+			if($this->Auth->user('AdminType.name')=='Administrator'){
+				if($this->request->is('post'))
 				{
-					$this->Session->setFlash('Level added successfully','default',array('class'=>'alert alert-success'),'success');
-					$this->redirect(array('controller'=>'levels','action'=>'index'));
+					$data=$this->data;
+					if($this->Level->save($data))
+					{
+						$this->Session->setFlash('Level added successfully','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'levels','action'=>'index'));
+					}
 				}
+			}
+			else{
+				$this->Session->setFlash('You are not Allow to access this Location.', 'default', array('class' => 'alert alert-danger') , 'error');
+				$this->redirect(array('controller'=>'levels','action'=>'index'));
 			}
 		}
 

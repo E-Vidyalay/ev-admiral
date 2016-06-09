@@ -1,6 +1,6 @@
 <?php
 	class AdminsController extends AppController{
-		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment');
+		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment','Counter');
 		public function index(){
 			$this->layout='ev_admin';
 			$totalinfopost=$this->InformationPost->find('count');
@@ -13,11 +13,43 @@
 			$totallitcomment=$this->LiteratureComment->find('count');
 			$totalcomments=$totalhbcomment+$totalinfocomment+$totallitcomment;
 			$this->set('totalcomments',$totalcomments);
+			$contributebook=$this->Ebook->find('count',array('conditions'=>array('contributed'=>1,'allow'=>1)));
+			$contributelink=$this->Link->find('count',array('conditions'=>array('contributed'=>1,'allow'=>1)));
+			$totalcontributionAppr=$contributebook+$contributelink;
+			$this->set('totalcontributionAppr',$totalcontributionAppr);
+			$contribook=$this->Ebook->find('count',array('conditions'=>array('contributed'=>1,'allow'=>0)));
+			$contrilink=$this->Link->find('count',array('conditions'=>array('contributed'=>1,'allow'=>0)));
+			$totalcontributionDen=$contribook+$contrilink;
+			$this->set('totalcontributionDen',$totalcontributionDen);
+			$totalusers=$this->User->find('count');
+			$this->set('totalUsers',$totalusers);
+			$totalviewer=$this->Counter->find('count');
+			$this->set('totalViews',$totalviewer);
 		}
 		public function users(){
 			$this->layout='ev_admin';
 			$users=$this->Admin->find('all');
 			$this->set('users',$users);
+		}
+		public function update($id=NULL){
+			$this->layout='ev_admin';
+			$utypes=$this->AdminType->find('list',array('fields'=>array('id','name')));
+			$this->set('utypes',$utypes);
+			if(empty($this->data)){
+				$this->data=$this->Admin->findById($id);
+			}
+			else{
+				$data=$this->data;
+				if($this->Admin->save($data))
+				{
+						$this->Session->setFlash('User Details has been successfully updated','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'admins','action'=>'users'));
+				}
+				else{
+					$this->Session->setFlash('User Details has not been updated','default',array('class'=>'alert alert-danger'),'error');
+					$this->redirect(array('controller'=>'admins','action'=>'users'));
+				}
+			}
 		}
 		function generate_password( $length = 8 ) {
 	       $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -216,12 +248,12 @@
 		}
 		public function contribute_ebook(){
 			$this->layout="ev_admin";
-			$l=$this->Ebook->find('all',array('conditions'=>array('allow'=>0)));
+			$l=$this->Ebook->find('all',array('conditions'=>array('allow'=>0,'contributed'=>1)));
 			$this->set('books',$l);
 		}
 		public function contribute_link(){
 			$this->layout="ev_admin";
-			$l=$this->Link->find('all',array('conditions'=>array('allow'=>0)));
+			$l=$this->Link->find('all',array('conditions'=>array('allow'=>0,'contributed'=>1)));
 			$this->set('linkID',$l);
 		}
 		public function approval_page($id=NULL,$cid=NULL){

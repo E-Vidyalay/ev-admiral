@@ -11,16 +11,22 @@
 		public function insert()
 		{
 			$this->layout='ev_admin';
-			$userId = $this->Auth->user('id');
-			$this->set('user',$userId);
-			if($this->request->is('post'))
-			{
-				$data=$this->data;
-				if($this->Subject->save($data))
+			if($this->Auth->user('AdminType.name')=='Administrator'){
+				$userId = $this->Auth->user('id');
+				$this->set('user',$userId);
+				if($this->request->is('post'))
 				{
-					$this->Session->setFlash('Subject added successfully','default',array('class'=>'alert alert-success'),'success');
-					$this->redirect(array('controller'=>'subjects','action'=>'index'));
+					$data=$this->data;
+					if($this->Subject->save($data))
+					{
+						$this->Session->setFlash('Subject added successfully','default',array('class'=>'alert alert-success'),'success');
+						$this->redirect(array('controller'=>'subjects','action'=>'index'));
+					}
 				}
+			}
+			else{
+				$this->Session->setFlash('You are not Allow to access this Location.', 'default', array('class' => 'alert alert-danger') , 'error');
+				$this->redirect(array('controller'=>'subjects','action'=>'index'));
 			}
 		}
 
