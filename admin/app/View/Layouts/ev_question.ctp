@@ -121,7 +121,7 @@ languagelist:[
                     <ul class="dropdown-menu dropdown-user">
                         <li><a><h4><?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile'),array('escape' => false));?>
                         </li>
                         <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
                         </li>
@@ -147,7 +147,7 @@ languagelist:[
                     <ul class="dropdown-menu dropdown-user">
                         <li><a><h4><?php echo $activeUser['User']['firstname'].' '.$activeUser['User']['lastname'];?></h4><?php echo $activeUser['User']['username'];?></a></li> 
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile',$activeUser['User']['id']),array('escape' => false));?>
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile'),array('escape' => false));?>
                         </li>
                         <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li> -->

@@ -74,7 +74,6 @@ $(".delete").on('click',function(event){
 });
 $(".admindelete").on('click',function(event){
     var u=baseUrl+"/admins/delete/"+$(this).attr('id');
-    alert(u);
     BootstrapDialog.show({
         type: BootstrapDialog.TYPE_DANGER,
         title: '<i class="fa fa-warning fa-2x"></i> Warning',

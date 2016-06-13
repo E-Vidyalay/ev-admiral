@@ -1,6 +1,6 @@
 <?php
 	class NewsLetter extends AppModel{
-		public $belongsTo=array(
+		public $hasMany=array(
 				'Admin'=>array(
 					'className'=>'Admin',
 					'foreignKey'=>'user_id',

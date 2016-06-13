@@ -1,4 +1,5 @@
 <?php
+App::uses('CakeEmail', 'Network/Email');
 	class AdminsController extends AppController{
 		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment','Counter');
 		public function index(){
@@ -64,69 +65,69 @@
 				$findEmail= $this->Admin->findByEmail($data['Admin']['username']);
 				if($findUser!=NULL){
 					$autopassword=$this->generate_password(8);
-					pr($autopassword);
+					// pr($autopassword);
 					$findUser['Admin']['password']=$autopassword;
 					// pr($findUser);
 					if($this->Admin->save($findUser)){
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>Your new Password</h3>
-						// 			<hr/>
-						// 			Username: '.$findUser['Admin']['username'].'
-						// 			<br/>
-						// 			New Password: '.$autopassword.'
-						// 			<br/>
-						// 			Login with your new Password and Change it.
-						// 			<hr/>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($findUser['Admin']['email'])
-						//     ->subject('Request of New Password')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>Your new Password</h3>
+									<hr/>
+									Username: '.$findUser['Admin']['username'].'
+									<br/>
+									New Password: '.$autopassword.'
+									<br/>
+									Login with your new Password and Change it.
+									<hr/>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($findUser['Admin']['email'])
+						    ->subject('Request of New Password')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Password is sent to your registered email address.','default',array('class'=>'alert alert-success'),'success');
 					}
 				}
 				else if($findEmail!=NULL){
 					$autopassword=$this->generate_password(8);
-					pr($autopassword);
+					// pr($autopassword);
 					$findEmail['Admin']['password']=$autopassword;
 					// pr($findEmail);
 					if($this->Admin->save($findEmail)){
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>Your new Password</h3>
-						// 			<hr/>
-						// 			Username: '.$findEmail['Admin']['username'].'
-						// 			<br/>
-						// 			New Password: '.$autopassword.'
-						// 			<br/>
-						// 			Login with your new Password and Change it.
-						// 			<hr/>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($findEmail['Admin']['email'])
-						//     ->subject('Request of New Password')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>Your new Password</h3>
+									<hr/>
+									Username: '.$findEmail['Admin']['username'].'
+									<br/>
+									New Password: '.$autopassword.'
+									<br/>
+									Login with your new Password and Change it.
+									<hr/>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($findEmail['Admin']['email'])
+						    ->subject('Request of New Password')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Password is sent to your registered email address.','default',array('class'=>'alert alert-success'),'success');
 					}
 				}
@@ -152,7 +153,35 @@
                 }
                 else{
                 	if($this->Admin->save($user)){
-                		$this->Session->setFlash('Admin has been Added successfully','default',array('class'=>'alert alert-success'),'success');
+                		$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>Welcome to Evidyalay Admin Portal</h3>
+									<p>Hi,'.$user['Admin']['firstname'].'</p>
+									<br/>
+									<p>Below are your Login Credentials for Evidyalay Admin Portal. After Login please change you password. </p>
+									<hr/>
+									Username: '.$user['Admin']['username'].'
+									<br/>
+									New Password: '.$user['Admin']['password'].'
+									<br/>
+									<a href="http://evidyalay.net/kashyap1ev/admin/">Click here</a> to visit Evidyalay Admin Portal login page.
+									<hr/>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($user['Admin']['email'])
+						    ->subject('Welcome to Evidyalay Admin Portal')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
+                		$this->Session->setFlash('Admin has been Added successfully and Mail is sent to New Admin','default',array('class'=>'alert alert-success'),'success');
 						$this->redirect(array('controller'=>'admins','action' => 'users'));
                 	}
                 }
@@ -163,21 +192,41 @@
 			$this->Session->setFlash('Admin has been removed successfully','default',array('class'=>'alert alert-success'),'success');
 			$this->redirect(array('controller'=>'admins','action' => 'users'));
 		}
-		public function profile($id=NULL){
+		public function profile(){
 			$this->layout='ev_admin';
-			$this->set('Uid',$id);
 			if(empty($this->data)){
-				$this->data=$this->Admin->findById($id);
+				$this->data=$this->Admin->findById($this->Auth->user('id'));
 			}
 			else{
 				$data=$this->data;
-				if($this->Admin->save($data))
+				$old=$this->Admin->findById($this->Auth->user('id'));
+				$findEmail = $this->Admin->findByEmail($data['Admin']['email']);
+				if($findEmail != null){
+					if($findEmail['Admin']['email'] == $old['Admin']['email']){
+						if($this->Admin->save($data))
+						{
+							if($this->data['Admin']['id']==AuthComponent::User('id')){
+								$this->Session->write('Auth.User.firstname', $this->data['Admin']['firstname']);
+								$this->Session->write('Auth.User.lastname', $this->data['Admin']['lastname']);
+								$this->Session->write('Auth.User.email', $this->data['Admin']['email']);
+								$this->Session->setFlash('User Details has been successfully updated','default',array('class'=>'alert alert-success'),'success');
+								$this->redirect(array('controller'=>'admins','action'=>'profile'));
+							}
+						}
+					}
+					else{
+	                	$this->Session->setFlash('Looks like email is already registerd.', 'default', array('class' => 'alert alert-danger') , 'error');
+	                	$this->redirect(array('controller'=>'admins','action'=>'profile'));
+                	}
+                }
+				else if($this->Admin->save($data))
 				{
 					if($this->data['Admin']['id']==AuthComponent::User('id')){
-						$this->Session->write('Auth.User.name', $this->data['Admin']['name']);
+						$this->Session->write('Auth.User.firstname', $this->data['Admin']['firstname']);
+						$this->Session->write('Auth.User.lastname', $this->data['Admin']['lastname']);
 						$this->Session->write('Auth.User.email', $this->data['Admin']['email']);
 						$this->Session->setFlash('User Details has been successfully updated','default',array('class'=>'alert alert-success'),'success');
-						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+						$this->redirect(array('controller'=>'admins','action'=>'profile'));
 					}
 				}
 				else{
@@ -186,10 +235,10 @@
 				}
 			}
 		}
-		public function changepassword($id=NULL){
+		public function changepassword(){
 			$this->layout='ev_admin';
 			if($this->request->is('post')){
-				$useradmin=$this->Admin->findById($id);
+				$useradmin=$this->Admin->findById($this->Auth->user('id'));
 				$stored=$useradmin['Admin']['password'];
 				$oldHash = AuthComponent::password($this->data['Admin']['oldpassword']);
 				$correct = $stored == $oldHash;
@@ -200,16 +249,16 @@
 					if($this->Admin->save($data))
 					{
 						$this->Session->setFlash('Password has been successfully updated','default',array('class'=>'alert alert-success'),'success');
-						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+						$this->redirect(array('controller'=>'admins','action'=>'profile'));
 					}
 					else{
 						$this->Session->setFlash('Password has not been updated','default',array('class'=>'alert alert-danger'),'error');
-						$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+						$this->redirect(array('controller'=>'admins','action'=>'profile'));
 					}	
 				}
 				else{
 					$this->Session->setFlash('Wrong Old Password','default',array('class'=>'alert alert-danger'),'error');
-					$this->redirect(array('controller'=>'admins','action'=>'profile',$id));
+					$this->redirect(array('controller'=>'admins','action'=>'profile'));
 				}
 				
 			}
@@ -267,35 +316,35 @@
 					$pdata=$this->Article->findById($this->data['Admin']['page_id']);
 					$pdata['Article']['allow']=1;
 					if($this->Article->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Article']['title'].'</h3>
-						// 			<hr/>
-						// 			'.$pdata['Article']['content'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Article Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Article']['title'].'</h3>
+									<hr/>
+									'.$pdata['Article']['content'].'
+									<br/>
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Article Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Page is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
 					}
@@ -304,35 +353,35 @@
 					$pdata=$this->Article->findById($this->data['Admin']['page_id']);
 					$pdata['Article']['allow']=2;
 					if($this->Article->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Article']['title'].'</h3>
-						// 			<hr/>
-						// 			'.$pdata['Article']['content'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Article Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Article']['title'].'</h3>
+									<hr/>
+									'.$pdata['Article']['content'].'
+									<br/>
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Article Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Page is Not Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-danger'),'error');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute'));
 					}
@@ -350,36 +399,36 @@
 					$pdata=$this->Ebook->findById($this->data['Admin']['book_id']);
 					$pdata['Ebook']['allow']=1;
 					if($this->Ebook->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Ebook']['title'].'</h3>
-						// 			<hr/>
-						// 			'.$pdata['Ebook']['description'].'
-						//			Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
-						// 			<br/>
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Ebook Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Ebook']['title'].'</h3>
+									<hr/>
+									'.$pdata['Ebook']['description'].'
+									Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
+									<br/>
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Ebook Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Ebook is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
 					}
@@ -388,35 +437,35 @@
 					$pdata=$this->Ebook->findById($this->data['Admin']['book_id']);
 					$pdata['Ebook']['allow']=2;
 					if($this->Ebook->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Ebook']['title'].'</h3>
-						// 			<hr/>
-						// 			'.$pdata['Ebook']['description'].'
-						//			Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Ebook Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Ebook']['title'].'</h3>
+									<hr/>
+									'.$pdata['Ebook']['description'].'
+									Click here to view book: <a target="_blank" href="'.$this->webroot.'files/ebook/path/'.$pdata['Ebook']['id'].'/'.$pdata['Ebook']['path'].'" class="btn-sm btn btn-info hidden-xs">View book</a>
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Ebook Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Ebook is Not Approved and mail is sent to the Conributor','default',array('class'=>'alert alert-danger'),'error');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute_ebook'));
 					}
@@ -439,35 +488,35 @@
 					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
 					$pdata['Link']['allow']=1;
 					if($this->Link->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Link']['link_title'].'</h3>
-						// 			<hr/>
-						// 			Link URL: '.$pdata['Link']['link_url'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Link Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Link']['link_title'].'</h3>
+									<hr/>
+									Link URL: '.$pdata['Link']['link_url'].'
+									<br/>
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Link Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Link is Approved and mail is sent to the Contributor','default',array('class'=>'alert alert-success'),'success');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
 					}
@@ -476,34 +525,34 @@
 					$pdata=$this->Link->findById($this->data['Admin']['link_id']);
 					$pdata['Link']['allow']=2;
 					if($this->Link->save($pdata)){
-						// $contributor=$this->User->findById($this->data['Admin']['user_id']);
-						// $body='<br/>
-						// <div class="row">
-						// 	<div class="col-lg-8">
-						// 		<div class="panel panel-default">
-						// 			<div class="panel-heading">
-						// 			<h3>'.$pdata['Link']['link_title'].'</h3>
-						// 			<hr/>
-						// 			Link URL: '.$pdata['Link']['link_url'].'
-						// 			<hr/>
-						// 			<h3>Response</h3>
-						// 			<hr/>
-						// 			'.$this->data['Admin']['comment'].'
-						// 			<br/>
-						// 			<hr/>
-						// 			<h5>By-'.$contributor['User']['username'].'</h5>
-						// 			</div>
-						// 			<br/>
-						// 		</div>
-						// 	</div>
-						// </div>';
-						// $Email = new CakeEmail();
-						// $Email->from(array('noreply@ev.learnlabs.in' => 'ઈ-વિદ્યાલય Team'))
-						//     ->to($contributor['User']['username'])
-						//     ->subject('EV Link Contributor')
-						//     ->template('default')
-						//     ->emailFormat('html')
-						//     ->send($body);
+						$contributor=$this->User->findById($this->data['Admin']['user_id']);
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+									<h3>'.$pdata['Link']['link_title'].'</h3>
+									<hr/>
+									Link URL: '.$pdata['Link']['link_url'].'
+									<hr/>
+									<h3>Response</h3>
+									<hr/>
+									'.$this->data['Admin']['comment'].'
+									<br/>
+									<hr/>
+									<h5>By-'.$contributor['User']['username'].'</h5>
+									</div>
+									<br/>
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to($contributor['User']['username'])
+						    ->subject('EV Link Contributor')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
 						$this->Session->setFlash('Link is Not Approved and mail is sent to the Conributor','default',array('class'=>'alert alert-danger'),'error');
 						$this->redirect(array('controller'=>'Admins','action' => 'contribute_link'));
 					}

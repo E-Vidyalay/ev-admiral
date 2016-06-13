@@ -68,7 +68,7 @@
 				<h4><i class="fa fa-lock fa-fw"></i> Security</h4>
 				<?php echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'changepassword')) ?>
         		<div class="form-horizontal">
-        			<?php echo $this->Form->input('id',array('type'=>'hidden','value'=>$Uid));?>
+        			<?php echo $this->Form->input('id',array('type'=>'hidden','value'=>$activeUser['User']['id']));?>
         			<div class="form-group">
 				    <label for="oldpassword" class="col-sm-2 control-label">Old Password</label>
 				    <div class="col-sm-6">
