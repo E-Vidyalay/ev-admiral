@@ -220,13 +220,29 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-pencil fa-fw"></i> Manage Question Bank<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-pencil fa-fw"></i> Manage Quizes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Questions",array('controller'=>'QuestionBanks','action'=>'index'),array('escape' => false)); ?>
+                                    <a href="#"><i class="fa fa-pencil fa-fw"></i> Manage Question Bank<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level collapse">
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Questions",array('controller'=>'QuestionBanks','action'=>'index'),array('escape' => false)); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Questions",array('controller'=>'QuestionBanks','action'=>'insert'),array('escape' => false)); ?>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Questions",array('controller'=>'QuestionBanks','action'=>'insert'),array('escape' => false)); ?>
+                                    <a href="#"><i class="fa fa-book fa-fw"></i> Manage Marking Scheme<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level collapse">
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Marking Scheme",array('controller'=>'Markingschemes','action'=>'index'),array('escape' => false)); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Marking Scheme",array('controller'=>'Markingschemes','action'=>'add_marks'),array('escape' => false)); ?>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>

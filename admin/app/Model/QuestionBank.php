@@ -11,6 +11,11 @@
 				'foreignKey'=>'sub_topic_id',
 				'dependent'=>false
 			),
+			'Markingscheme'=>array(
+				'className'=>'Markingscheme',
+				'foreignKey'=>'markingscheme_id',
+				'dependent'=>false
+			)
 			);	
 	}
 ?>

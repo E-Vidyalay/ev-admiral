@@ -22,6 +22,7 @@
                             <tr>
                                 <th>Question</th>
 								<th>Subject/Topic</th>
+                                <th>Marking</th>
 								<th>Action</th>
                             </tr>
                         </thead>
@@ -30,6 +31,11 @@
                            	<tr>
 								<td data-title="Question"> <?php  echo $question['QuestionBank']['question']; ?> </td>
 								<td data-title="Subject/Topic"> <?php  echo $question['Topic']['display_name']; ?> </td>
+                                <td data-title="Marking"> 
+                                    <?php  if($question['Markingscheme']['display_name']==null){
+                                        echo 'Not set Yet';
+                                    }
+                                    else{echo $question['Markingscheme']['display_name'];} ?> </td>
 								<td data-title="Action"> <?php echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
                                     echo $this->Html->link('Update question',array('controller'=>'QuestionBanks','action'=>'update',$question['QuestionBank']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
 									echo "&nbsp;&nbsp;&nbsp;&nbsp;";

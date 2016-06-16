@@ -1,7 +1,7 @@
 <?php
 class QuestionBanksController extends AppController{
 
-	public $uses=array('QuestionBank','Topic','SubTopic','Image');
+	public $uses=array('QuestionBank','Topic','SubTopic','Image','Markingscheme');
 	public function index(){
 		$a=$this->QuestionBank->find('all');
 		$this->set('questions', $a);
@@ -14,6 +14,7 @@ class QuestionBanksController extends AppController{
 		$this->set('topics',$a);
 		$this->set('user_id',$this->Auth->user('id'));
 		$this->set('images',$this->Image->find('all'));
+		$this->set('marking',$this->Markingscheme->find('list',array('fields'=>array('id','display_name'))));
 		if($this->request->is('post')){
 			$data=$this->data;
 			$correct_ans=array();
@@ -61,7 +62,7 @@ class QuestionBanksController extends AppController{
 				$this->set('user_id',$this->Auth->user('id'));
 				$this->set('images',$this->Image->find('all'));
 				if(empty($this->data)){
-	                $q=$this->QuestionBank->findById($id);				
+	                $q=$this->QuestionBank->findById($id);		
 					$ans1=explode(",", $q['QuestionBank']['correct_ans']);
 					$f=1;
 					$m=array();
@@ -80,6 +81,14 @@ class QuestionBanksController extends AppController{
 						$this->set('has_sbt',false);
 						$this->set('sbt',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$q['QuestionBank']['topic_id']),'fields'=>array('id','name'))));
 					}
+					if(isset($q['QuestionBank']['markingscheme_id']) || $q['QuestionBank']['markingscheme_id']!=null){
+						$this->set('markingscheme_id',$q['QuestionBank']['markingscheme_id']);
+						$this->set('marking',$this->Markingscheme->find('list',array('fields'=>array('id','display_name'))));
+					}
+					else{
+						$this->set('marking',$this->Markingscheme->find('list',array('fields'=>array('id','display_name'))));
+					}
+					
 					$this->data=$finalQ_bank;
 					//$this->set('ans',$finalQ_bank['QuestionBank']['ans']);
 					

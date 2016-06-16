@@ -20,7 +20,11 @@
                     }
                     echo "</div>";
                     echo "<br/>";
-                    echo $this->Form->input('description',array('type'=>'text','class'=>'form-control','placeholder'=>'Eg. This question is given by Prof. M'))
+                    echo $this->Form->input('description',array('type'=>'text','class'=>'form-control','placeholder'=>'Eg. This question is given by Prof. M'));
+                    echo "<br/>";
+                    
+                        echo $this->Form->input('markingscheme_id',array('type'=>'select','empty'=>'Select Marking','div'=>false,'label'=>'Choose marking scheme for this question','class'=>'form-control','options'=>$marking));    
+                    // echo $this->Form->input('marckingscheme_id',array('type'=>'select','empty'=>'Select Marking','div'=>false,'label'=>'Choose marking scheme for this question','class'=>'form-control','options'=>$marking));
                 ?>
             </div>
         </div>
