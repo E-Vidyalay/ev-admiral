@@ -56,7 +56,7 @@
                                         <i class="fa fa-desktop fa-fw fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge"><a href="http://evidyalay.net" style="color:#337AB7;">Preview</a> </div>
+                                        <div class="huge"><a href="http://evidyalay.net" target="_blank" style="color:#337AB7;">Preview</a> </div>
                                         <div>Click to View your Site</div>
                                     </div>
                             </div>
