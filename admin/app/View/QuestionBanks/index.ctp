@@ -21,7 +21,9 @@
                         <thead>
                             <tr>
                                 <th>Question</th>
-								<th>Subject/Topic</th>
+								<th>Standard</th>
+                                <th>Subject/Topic</th>
+                                <th>Sub Topic</th>
                                 <th>Marking</th>
 								<th>Action</th>
                             </tr>
@@ -30,7 +32,21 @@
                         	<?php foreach ($questions as $question){ ?>
                            	<tr>
 								<td data-title="Question"> <?php  echo $question['QuestionBank']['question']; ?> </td>
-								<td data-title="Subject/Topic"> <?php  echo $question['Topic']['display_name']; ?> </td>
+								<td data-title="Standard"> <?php  
+                                    if($question['Standard']['name']==null){
+                                        echo 'Not set Yet';
+                                    }
+                                    else{
+                                        echo $question['Standard']['name']; 
+                                    }?> 
+                                </td>
+                                <td data-title="Subject/Topic"> <?php  echo $question['Topic']['display_name']; ?> </td>
+                                <td data-title="Sub Topic"> <?php 
+                                if($question['SubTopic']['name']==null){
+                                        echo 'Not set Yet';
+                                    }
+                                    else{
+                                     echo $question['SubTopic']['name']; }?> </td>
                                 <td data-title="Marking"> 
                                     <?php  if($question['Markingscheme']['display_name']==null){
                                         echo 'Not set Yet';

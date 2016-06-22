@@ -9,9 +9,18 @@
                 <?php
                     echo $this->Form->create('QuestionBank',array('contoroller'=>'QuestionBanks','action'=>'update'));
                     echo $this->Form->input('id',array('type'=>'hidden'));
-                    echo $this->Form->input('topic_id',array('type'=>'select','options'=>$topics,'label'=>'This question belongs to which topic?','class'=>'form-control','div'=>false,'empty'=>'Select topic','required','default','id'=>'topic'));
+                    echo $this->Form->input('standard_id',array('type'=>'select','options'=>$standards,'label'=>'Select Standard for this Question.','class'=>'form-control','div'=>false,'empty'=>'Select Standard','required','default','id'=>'standard'));
                     echo "<br/>";
-                    echo "<div id='sbt_div'>";
+                    echo "<div id='st_div'>";
+                    if($has_st==true && $topics!=null){
+                    echo $this->Form->input('topic_id',array('type'=>'select','options'=>$topics,'label'=>'This question belongs to which topic?','class'=>'form-control','div'=>false,'empty'=>'Select topic','required','default','id'=>'topic'));
+                    }
+                    else{
+                    echo $this->Form->input('topic_id',array('type'=>'select','label'=>'This question belongs to which topic?','class'=>'form-control','div'=>false,'empty'=>'Select topic','required','default','id'=>'topic'));
+                    }
+                    echo '</div>';
+                    echo "<br/>";
+                    echo "<div id='subt_div'>";
                     if($has_sbt==true){
                         echo $this->Form->input('sub_topic_id',array('type'=>'select','empty'=>'Select sub topic','div'=>false,'label'=>'Does this question belong to any of the following sub topic?','class'=>'form-control','options'=>$sub_topics));
                     }

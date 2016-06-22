@@ -23,13 +23,26 @@ $("#topic").on('change',function(event){
     var u=baseUrl+"/QuestionBanks/get_sub_topic/"+$(this).val();
     console.log(u);
     $.ajax({
-    	url:u,
-    	success:function(data){
-    		$("#sbt_div").html(data);
-    	},
-    	error:function(e){
-    		alert("Sorry there was error");
-    	}
+        url:u,
+        success:function(data){
+            $("#subt_div").html(data);
+        },
+        error:function(e){
+            alert("Sorry there was error");
+        }
+    })
+});
+$("#standard").on('change',function(event){
+    var u=baseUrl+"/QuestionBanks/get_topic/"+$(this).val();
+    console.log(u);
+    $.ajax({
+        url:u,
+        success:function(data){
+            $("#st_div").html(data);
+        },
+        error:function(e){
+            alert("Sorry there was error");
+        }
     })
 });
 $("#topics").on('change',function(event){

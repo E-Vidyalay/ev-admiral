@@ -1,6 +1,11 @@
 <?php 
 	class QuestionBank extends AppModel{
 		public $belongsTo=array(
+			'Standard'=>array(
+				'className'=>'Standard',
+				'foreignKey'=>'standard_id',
+				'dependent'=>true
+			),
 			'Topic'=>array(
 				'className'=>'Topic',
 				'foreignKey'=>'topic_id',
@@ -14,7 +19,7 @@
 			'Markingscheme'=>array(
 				'className'=>'Markingscheme',
 				'foreignKey'=>'markingscheme_id',
-				'dependent'=>false
+				'dependent'=>true
 			)
 			);	
 	}

@@ -113,6 +113,20 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-signal fa-fw"></i> Manage Standards<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Standards",array('controller'=>'standards','action'=>'index'),array('escape' => false)); ?>
+                                </li>
+                                <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>                          
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Standard",array('controller'=>'standards','action'=>'insert'),array('escape' => false)); ?>
+                                </li>
+                                <?php }?>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-book fa-fw"></i> Manage Subjects<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
