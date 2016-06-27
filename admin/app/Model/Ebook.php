@@ -1,6 +1,12 @@
 <?php
 	class Ebook extends AppModel{
-		public $actsAs = array('Upload.Upload'=>array('path'=>array('fields'=>array('dir'=>'path_dir'))));
+		public $actsAs = array('Upload.Upload'=>array(
+			'path'=>array(
+				'fields'=>array('dir'=>'path_dir'),
+				'mimetypes' => array('application/pdf','application/pdf','application/pdf')
+				)
+			)
+		);
 		public $belongsTo=array(
 			'Level'=>array(
 				'className'=>'Level',

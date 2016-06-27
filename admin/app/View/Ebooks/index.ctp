@@ -13,6 +13,9 @@
                         <tr>
                             <th>Title</th>
                             <th>Category</th>
+                            <th>Level</th>
+                            <th>Author</th>
+                            <th>Compilated by(સંકલન)</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -22,7 +25,20 @@
                                 echo "<tr>";
                                 echo "<td data-title='Title'>".$a['Ebook']['name']."</td>";
                                 echo "<td data-title='Category'>".$a['Literature']['name']." - ".$a['SubLiterature']['name']."</td>";
-                                echo "<td data-title='ACtion'>";
+                                echo "<td data-title='Level'>".$a['Level']['level_name']."</td>";
+                                if($a['Ebook']['author']!=null){
+                                    echo "<td data-title='Author'>".$a['Ebook']['author']."</td>";
+                                }
+                                else{
+                                    echo "<td data-title='Author'>No Author added</td>";
+                                }
+                                if($a['Ebook']['compiler']!=null){
+                                    echo "<td data-title='Compilated by'>".$a['Ebook']['compiler']."</td>";
+                                }
+                                else{
+                                    echo "<td data-title='Compilated by'>No Compiler(સંકલન) added</td>";   
+                                }
+                                echo "<td data-title='Action'>";
                                     echo $this->Html->link('Update',array('controller'=>'ebooks','action'=>'update',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));
                                     echo $this->Html->link('Update',array('controller'=>'ebooks','action'=>'update',$a['Ebook']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
                                     echo '<a id="'.$a['Ebook']['id'].'" class="btn btn-danger btn-sm delete visible-xs">Delete</a>';

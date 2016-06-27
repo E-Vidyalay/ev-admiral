@@ -8,7 +8,7 @@
 		}
 
 		public function insert(){
-			$this->layout="ev_admin";
+			$this->layout="ev_question";
 			$this->set('user_id',$this->Auth->user('id'));
 			$sb=$this->SubLiterature->find('all');
 			$sl=array();
@@ -45,7 +45,7 @@
 			}
 			
 		public function update($id=NULL){
-			$this->layout="ev_admin";
+			$this->layout="ev_question";
 			$sb=$this->SubLiterature->find('all');
 			$sl=array();
 			$this->set('level',$this->Level->find('list',array('fields'=>array('id','level_name'))));

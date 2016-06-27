@@ -2633,6 +2633,7 @@ input[type="search"] {
 }
 .radio label,
 .checkbox label {
+  display: block;
   min-height: 20px;
   padding-left: 20px;
   margin-bottom: 0;
