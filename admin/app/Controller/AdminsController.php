@@ -167,7 +167,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<br/>
 									New Password: '.$user['Admin']['password'].'
 									<br/>
-									<a href="http://evidyalay.net/kashyap1ev/admin/">Click here</a> to visit Evidyalay Admin Portal login page.
+									<a href="http://admin.evidyalay.net/">Click here</a> to visit Evidyalay Admin Portal login page.
 									<hr/>
 									</div>
 									<br/>
