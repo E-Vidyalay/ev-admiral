@@ -13,11 +13,7 @@ class SubHobby extends AppModel{
             'rule1'=>array(
                 'rule' => 'isUnique',
                 'message' => 'This sub category already exists.'
-             ),
-            'rule2'=>array(
-                'rule'=>'alphaNumeric',
-                 'message'=>'Sub category name should contains alphabets only'
-            )
+             )
         )
     );
 

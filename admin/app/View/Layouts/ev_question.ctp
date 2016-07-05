@@ -103,12 +103,18 @@ languagelist:[
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php echo $this->Html->image('ev-logo2.png',array('class'=>'brand-logo')); ?>
-                <span class="navbar-brand">ઈ-વિદ્યાલય</span>
+                <?php echo $this->Html->link($this->Html->image('ev-logo2.png',array('class'=>'brand-logo')).''._('<span class="navbar-brand">ઈ-વિદ્યાલય</span>'),array('controller'=>'admins','action'=>'index'),array('escape' => false));
+                    ?>
+                <?php
+                    echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right hidden-sm hidden-xs">
+                <li>
+                <?php
+                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-home fa-fw fa-1x')) . "",array('controller' => 'admins', 'action' => 'index'),array('escape' => false));?>
+                </li>
                 <li>
                 <?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?>

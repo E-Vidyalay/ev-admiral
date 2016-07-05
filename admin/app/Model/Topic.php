@@ -23,11 +23,7 @@ class Topic extends AppModel{
             'rule1'=>array(
                 'rule' => 'isUnique',
                 'message' => 'This topic already exists.'
-             ),
-            'rule2'=>array(
-                'rule'=>'alphaNumeric',
-                 'message'=>'Topic name should contains alphabets and numbers only'
-            )
+             )
         )
     );
        

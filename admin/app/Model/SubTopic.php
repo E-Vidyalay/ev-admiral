@@ -13,11 +13,7 @@ class SubTopic extends AppModel{
             'rule1'=>array(
                 'rule' => 'isUnique',
                 'message' => 'This subtopic already exists.'
-             ),
-            'rule2'=>array(
-                'rule'=>'alphaNumeric',
-                 'message'=>'SubTopic name should contains alphabets and numbers only'
-            )
+             )
         )
     );
 
