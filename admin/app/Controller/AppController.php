@@ -65,6 +65,7 @@ class AppController extends Controller {
         $this->activeUser = $this->Session->read('Auth');
         $this->isLoggedIn = $this->Auth->loggedIn();
         $this->set('evsite_url','http://frontend.evidyalay.net/');
+        $this->set('evadmin_url','http://admin.evidyalay.net/');
     }
 	public function isAuthorized($user) {
 		// Here is where we should verify the role and give access based on role

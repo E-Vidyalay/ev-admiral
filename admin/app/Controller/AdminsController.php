@@ -73,7 +73,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>Your new Password</h3>
 									<hr/>
 									Username: '.$findUser['Admin']['username'].'
@@ -84,6 +84,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<hr/>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -107,7 +108,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>Your new Password</h3>
 									<hr/>
 									Username: '.$findEmail['Admin']['username'].'
@@ -118,6 +119,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<hr/>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -153,11 +155,12 @@ App::uses('CakeEmail', 'Network/Email');
                 }
                 else{
                 	if($this->Admin->save($user)){
+                		//New Admin Email
                 		$body='<br/>
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>Welcome to Evidyalay Admin Portal</h3>
 									<p>Hi,'.$user['Admin']['firstname'].'</p>
 									<br/>
@@ -165,18 +168,53 @@ App::uses('CakeEmail', 'Network/Email');
 									<hr/>
 									Username: '.$user['Admin']['username'].'
 									<br/>
-									New Password: '.$user['Admin']['password'].'
+									Password: '.$user['Admin']['password'].'
 									<br/>
 									<a href="http://admin.evidyalay.net/">Click here</a> to visit Evidyalay Admin Portal login page.
 									<hr/>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
 						$Email = new CakeEmail();
 						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
 						    ->to($user['Admin']['email'])
+						    ->subject('Welcome to Evidyalay Admin Portal')
+						    ->template('default')
+						    ->emailFormat('html')
+						    ->send($body);
+
+						//Admin email set    
+						$body='<br/>
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="panel panel-default">
+									<div class="panel-body">
+									<h3>Welcome to Evidyalay Admin Portal</h3>
+									<p>Hi Admin,</p>
+									<br/>
+									<p>Below are new added Admin Login Credentials for Evidyalay Admin Portal. </p>
+									<hr/>
+									Name: '.$user['Admin']['firstname'].' '.$user['Admin']['lastname'].'
+									<br/>
+									Username: '.$user['Admin']['username'].'
+									<br/>
+									Password: '.$user['Admin']['password'].'
+									<br/>
+									Email: '.$user['Admin']['email'].'
+									<br/>
+									<hr/>
+									</div>
+									<br/>
+									Please do not reply to this mail. This is a system generated email.
+								</div>
+							</div>
+						</div>';
+						$Email = new CakeEmail();
+						$Email->from(array('noreply@evidyalay.net' => 'ઈ-વિદ્યાલય Team'))
+						    ->to('evidyalay@gmail.com')
 						    ->subject('Welcome to Evidyalay Admin Portal')
 						    ->template('default')
 						    ->emailFormat('html')
@@ -321,7 +359,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Article']['title'].'</h3>
 									<hr/>
 									'.$pdata['Article']['content'].'
@@ -335,6 +373,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -358,7 +397,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Article']['title'].'</h3>
 									<hr/>
 									'.$pdata['Article']['content'].'
@@ -372,6 +411,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -404,7 +444,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Ebook']['title'].'</h3>
 									<hr/>
 									'.$pdata['Ebook']['description'].'
@@ -419,6 +459,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -442,7 +483,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Ebook']['title'].'</h3>
 									<hr/>
 									'.$pdata['Ebook']['description'].'
@@ -456,6 +497,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -493,7 +535,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Link']['link_title'].'</h3>
 									<hr/>
 									Link URL: '.$pdata['Link']['link_url'].'
@@ -507,6 +549,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';
@@ -530,7 +573,7 @@ App::uses('CakeEmail', 'Network/Email');
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="panel panel-default">
-									<div class="panel-heading">
+									<div class="panel-body">
 									<h3>'.$pdata['Link']['link_title'].'</h3>
 									<hr/>
 									Link URL: '.$pdata['Link']['link_url'].'
@@ -543,6 +586,7 @@ App::uses('CakeEmail', 'Network/Email');
 									<h5>By-'.$contributor['User']['username'].'</h5>
 									</div>
 									<br/>
+									Please do not reply to this mail. This is a system generated email.
 								</div>
 							</div>
 						</div>';

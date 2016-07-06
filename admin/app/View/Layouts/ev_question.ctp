@@ -105,8 +105,6 @@ languagelist:[
                 </button>
                 <?php echo $this->Html->link($this->Html->image('ev-logo2.png',array('class'=>'brand-logo')).''._('<span class="navbar-brand">ઈ-વિદ્યાલય</span>'),array('controller'=>'admins','action'=>'index'),array('escape' => false));
                     ?>
-                <?php
-                    echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-bell fa-fw')) . "",array('controller' => 'admins', 'action' => 'contribute_ebook'),array('escape' => false));?>
             </div>
             <!-- /.navbar-header -->
 

@@ -55,7 +55,7 @@
 			<div class="col-lg-6 thumb" align="center">
 			<?php echo '<img id="img_'.$image['Image']['id'].'" src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img img-responsive" style="height:100px;width:100px"/>';
 			echo '<br/>';
-			echo '<a class=" btn btn-sm btn-success copy-button" data-clipboard-text="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" title="Click to copy me.">Copy to Clipboard</a>';
+			echo '<a class=" btn btn-sm btn-success copy-button" data-clipboard-text="'.$evadmin_url.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" title="Click to copy me.">Copy to Clipboard</a>';
 			?>
 			<br/>
 			<br/>
