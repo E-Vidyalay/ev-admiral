@@ -34,7 +34,7 @@
     'class'=>'form-control',
     'placeholder'=>'Enter url',
     'type'=>'text',
-    'required',
+    'required'=>false,
     'autofocus',
     'label'=>'Link'
       ));
@@ -44,7 +44,7 @@
      'class'=>'form-control',
      'placeholder'=>'Description',
      'type'=>'textarea',
-     'required',
+     'required'=>false,
      'autofocus',
      'label'=>'Meta description about link'
       ));

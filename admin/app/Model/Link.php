@@ -16,8 +16,17 @@ class Link extends AppModel{
 		);	
     public $validate = array(
         'link_url'=>array(
-            'rule'=>array('url',true),
-            'message'=>'Please enter a valid website address'
+            'url'=>array(
+                'rule'=>array('url',true),
+                'required' => true,
+                'allowEmpty' => false,
+                'message'=>'Please enter a valid Video Url'
+        )),
+        'tags'=>array(
+            'rule'=>array('tagRequires'),
+            'message'=>"Description can't be empty",
+            'required' => true,
+            'allowEmpty' => false
         )
     );
     public $actsAs = array(
@@ -131,6 +140,16 @@ class Link extends AppModel{
         return $return;
          
     }
- 
+    public function tagRequires($check) {
+        // $check will have value: array('promotion_code' => 'some-value')
+        // $limit will have value: 25
+        $texttostrip = strip_tags($check);
+        if($texttostrip != ""){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }
 ?>

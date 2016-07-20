@@ -36,7 +36,7 @@
      'class'=>'form-control',
      'placeholder'=>'Enter url',
      'type'=>'text',
-     'required',
+     'required'=>false,
      'autofocus',
      'label'=>'Link'
       ));
@@ -44,10 +44,8 @@
     echo "<br/>";
     echo $this->Form->input('tags',array(
      'class'=>'form-control',
-     'placeholder'=>'description',
      'type'=>'textarea',
-     'required',
-     'autofocus',
+     'required'=>false,
      'label'=>'Meta description about link'
       ));
     echo "<br/>";

@@ -11,7 +11,7 @@ class LinksController extends AppController{
 		}
 
 	public function insert(){
-		$this->layout="ev_admin";
+		$this->layout="ev_question";
 		$this->set('user_id',$this->Auth->user('id'));
 		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
 		$this->set('topic',$sb);
@@ -23,17 +23,17 @@ class LinksController extends AppController{
 				$this->redirect(array('controller'=>'Links','action'=>'index'));
 
 			}
-			else{
-				$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-danger'),'error');
-				$this->redirect(array('action'=>'index'));
-			}
+			// else{
+			// 	$this->Session->setFlash('Link has not been added','default',array('class'=>'alert alert-danger'),'error');
+			// 	$this->redirect(array('action'=>'index'));
+			// }
 		}
 
 	}
         
 
 	public function multiple_insert(){
-		$this->layout="ev_admin";
+		$this->layout="ev_question";
         $this->loadModel('File');
 		$t=$this->Topic->find('list',array('fields'=>array('id','display_name')));
                 
@@ -72,7 +72,7 @@ class LinksController extends AppController{
 		}
 
 	public function update($id=NULL){
-		$this->layout="ev_admin";
+		$this->layout="ev_question";
 		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
 		$this->set('topic',$sb);
 		if(empty($this->data)){
@@ -85,14 +85,17 @@ class LinksController extends AppController{
 						$this->set('has_sbt',false);
 					}
 		}
-		else{
+		if($this->request->is('post')){
+			if(isset($this->data['Link']['sub_topic_id']) || $this->data['Link']['sub_topic_id']!=null){
+				$this->set('has_sbt',true);
+				$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$this->data['Link']['topic_id']),'fields'=>array('id','name'))));
+			}
+			else{
+				$this->set('has_sbt',false);
+			}
 			if($this->Link->save($this->data))
 			{
 				$this->Session->setFlash('Link has been successfully updated','default',array('class'=>'alert alert-success'),'success');
-				$this->redirect(array('action'=>'index'));
-			}
-			else{
-				$this->Session->setFlash('Link has not been updated','default',array('class'=>'alert alert-danger'),'error');
 				$this->redirect(array('action'=>'index'));
 			}
 		}

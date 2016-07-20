@@ -39,17 +39,16 @@
                 content_css : "/ev-admiral/admin/css/ptparea.css",
                 pramukhime_language: [
                     {
-jsfile:'pramukhindic.js',
-kbclassname:'PramukhIndic',
-kbtitle:'Pramukh Indic',
-languagelist:[
+                        jsfile:'pramukhindic.js',
+                        kbclassname:'PramukhIndic',
+                        kbtitle:'Pramukh Indic',
+                        languagelist:[
 
-{language: 'gujarati', title:'Gujarati'},
-{language: 'hindi', title:'Hindi'},
+                        {language: 'gujarati', title:'Gujarati'},
+                        {language: 'hindi', title:'Hindi'},
 
-]
-}
-,
+                        ]
+                        },
                     { 
                         kbtitle:'', 
                         title:'English' 

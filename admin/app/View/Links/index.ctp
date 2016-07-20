@@ -22,7 +22,8 @@
                         <tr>
                             <th>Link Title</th>
                            	<th>Subject/Topic</th>
-                           	<th>Description</th>
+                            <th>Sub Topic</th>
+                           	<th>Updated on</th>
                            	<th>Action</th>
                         </tr>
                     </thead>
@@ -31,7 +32,10 @@
 							<tr>
 								<td data-title="Link Title"> <?php  echo $l['Link']['link_title']; ?> </td>
                                 <td data-title="Subject/Topic"> <?php echo $l['Topic']['display_name']?></td>
-								<td data-title="Description"> <?php  echo $l['Link']['tags']; ?> </td>		
+                                <td data-title="Sub Topic"> <?php echo $l['SubTopic']['name']?></td>
+								<td data-title="Updated on"> <?php  
+                                    $date=date_create($l['Link']['updated_at']);
+                                    echo date_format($date,"jS F Y h:i:s A"); ?> </td>
 								<td data-title="Action"> <?php 
 									echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'));
                                     echo $this->Html->link('Update link',array('controller'=>'Links','action'=>'update',$l['Link']['id']),array('class'=>'btn btn-primary btn-sm visible-xs'));

@@ -1,3 +1,8 @@
+.error-message {
+color:#a90329;
+font-weight: bold;
+}
+
 .brand-logo{
 	height: 50px;
 	float: left;
