@@ -2,6 +2,10 @@
 color:#a90329;
 font-weight: bold;
 }
+small.error{
+	color: #a90329;
+    font-weight: bold;
+}
 
 .brand-logo{
 	height: 50px;

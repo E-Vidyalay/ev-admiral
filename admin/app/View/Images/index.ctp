@@ -20,7 +20,9 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           <th>Image</th><th>Action</th>
+                           <th>id</th>
+                           <th>Image</th>
+                           <th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($Images as $image){ 
@@ -28,6 +30,7 @@
                         ?>
                     
 						<tr>
+                            <td data-title="id"><?php echo $image['Image']['id']; ?></td>
                             <td data-title="Image"><?php echo '<img src="'.$this->webroot.'files/image/path/'.$image['Image']['id'].'/'.$image['Image']['path'].'" class="usr-img" style="height:100px;width:100px"/ > ';?></td>
 							<td data-title="Action"> 
                             <?php 
@@ -40,6 +43,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

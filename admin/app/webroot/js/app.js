@@ -2,7 +2,6 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$('.alert').fadeOut(800);
 	},2000);
-    
 });
 function randomPassword(length) {
         var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
@@ -74,6 +73,22 @@ $(".delete").on('click',function(event){
                         url:u,
                         success:function(data){
                             window.location.replace(location);
+                        },
+                        error:function(e){
+                            BootstrapDialog.show({
+                                type: BootstrapDialog.TYPE_WARNING,
+                                title: '<i class="fa fa-warning fa-2x"></i> Warning',
+                                cssClass: 'btn-primary',
+                                message:'!! There is some link remain to this data please remove that link before deleting the element. !!',
+                                buttons: [{
+                                    label: 'OK',
+                                    cssClass: 'btn-default',
+                                    action: function(d) {
+                                        d.close();
+                                        dialog.close();
+                                    }
+                                }]
+                            });
                         }
                     })
                 }

@@ -20,6 +20,7 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
+                                <th>id</th>
                                 <th>Question</th>
 								<th>Standard</th>
                                 <th>Subject/Topic</th>
@@ -31,6 +32,7 @@
                         <tbody>
                         	<?php foreach ($questions as $question){ ?>
                            	<tr>
+                                <td data-title="id"> <?php  echo $question['QuestionBank']['id']; ?> </td>
 								<td data-title="Question"> <?php  echo $question['QuestionBank']['question']; ?> </td>
 								<td data-title="Standard"> <?php  
                                     if($question['Standard']['name']==null){
@@ -63,6 +65,8 @@
 							<?php } ?>
                         </tbody>
                     </table>
+                    <br>
+                    <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
                 </div>
                 <!-- /.table-responsive -->
             </div>

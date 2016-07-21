@@ -22,8 +22,9 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           <th>Standard</th>
-                           <th>Level</th>
+                            <th>id</th>
+                            <th>Standard</th>
+                            <th>Level</th>
                             <?php
                             if($activeUser['User']['AdminType']['name']=='Administrator'){?>
                            <th>Action</th>
@@ -32,6 +33,7 @@
                     <tbody>
                     <?php foreach ($standards as $standard){ ?>
 						<tr>
+                            <td data-title="id"> <?php echo $standard['Standard']['id']; ?> </td>
 							<td data-title="Standard"> <?php echo $standard['Standard']['name']; ?> </td>			
                             <td data-title="Level"> <?php  echo $standard['Level']['level_name']; ?> </td>
                             <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
@@ -48,6 +50,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

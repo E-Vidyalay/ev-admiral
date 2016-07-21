@@ -20,7 +20,8 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                           	<th>Sr no. </th>
+                        	<th>id</th>
+                           	<th>Sr no.</th>
 							<th>Marking Scheme</th>
 							<th>Action</th>
                         </tr>
@@ -30,6 +31,7 @@
 						$count=1;
 						foreach($markings as $marking){
 							echo "<tr>";
+								echo "<td data-title='id'>".$marking['Markingscheme']['id']."</td>";
 								echo "<td data-title='Sr no.'>".$count."</td>";
 								echo "<td data-title='Marking Scheme'>".$marking['Markingscheme']['display_name']."</td>";
 								echo "<td data-title='Action'>";
@@ -45,6 +47,8 @@
 					?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

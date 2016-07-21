@@ -20,11 +20,15 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>Sub category</th><th>Category</th><th>Action</th>
+                            <th>id</th>
+                            <th>Sub category</th>
+                            <th>Category</th>
+                            <th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($subhobbies as $subhobby){ ?>
 						<tr>
+                            <td data-title="id"> <?php  echo $subhobby['SubHobby']['id']; ?> </td>
 							<td data-title="Sub category"> <?php  echo $subhobby['SubHobby']['name']; ?> </td>
 							<td data-title="Category"><?php echo $subhobby['Hobby']['name']; ?></td>
 							<td data-title="Action"> <?php echo $this->Html->link('Update Sub Hobby',array('controller'=>'SubHobbies','action'=>'update',$subhobby['SubHobby']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
@@ -38,6 +42,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

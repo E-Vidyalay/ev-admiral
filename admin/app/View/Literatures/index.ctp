@@ -20,11 +20,14 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>Category</th><th>Action</th>
+                            <th>id</th>
+                            <th>Category</th>
+                            <th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($literatures as $literature){ ?>
 						<tr>
+                            <td data-title="id"> <?php  echo $literature['Literature']['id']; ?> </td>
 							<td data-title="Category"> <?php  echo $literature['Literature']['name']; ?> </td>
 							<td data-title="Action"> <?php echo $this->Html->link('Update Literature',array('controller'=>'Literatures','action'=>'update',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
                                 echo $this->Html->link('Update Literature',array('controller'=>'Literatures','action'=>'update',$literature['Literature']['id']),array('class'=>'btn btn-sm btn-primary visible-xs'));
@@ -37,6 +40,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

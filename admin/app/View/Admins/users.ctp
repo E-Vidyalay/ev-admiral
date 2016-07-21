@@ -11,6 +11,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Username</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -25,6 +26,7 @@
                         // pr($activeUser);
                             foreach ($users as $a) {
                                 echo "<tr>";
+                                echo "<td data-title='id'>".$a['Admin']['id']."</td>";
                                 echo "<td data-title='Username'>".$a['Admin']['username']."</td>";
                                 echo "<td data-title='Name'>".$a['Admin']['firstname']." ".$a['Admin']['lastname']."</td>";
                                 echo "<td data-title='Email'><a href='mailto:".$a['Admin']['email']."'>".$a['Admin']['email']."</a></td>";
@@ -52,6 +54,8 @@
                         ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

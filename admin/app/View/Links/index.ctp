@@ -20,6 +20,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Link Title</th>
                            	<th>Subject/Topic</th>
                             <th>Sub Topic</th>
@@ -30,6 +31,7 @@
                     <tbody>
                     	<?php foreach ($linkID as $l){ ?>
 							<tr>
+                                <td data-title="id"> <?php  echo $l['Link']['id']; ?> </td>
 								<td data-title="Link Title"> <?php  echo $l['Link']['link_title']; ?> </td>
                                 <td data-title="Subject/Topic"> <?php echo $l['Topic']['display_name']?></td>
                                 <td data-title="Sub Topic"> <?php echo $l['SubTopic']['name']?></td>
@@ -48,6 +50,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

@@ -20,11 +20,16 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
-                            <th>Topic</th><th>Subject</th><th>Level</th><th>Action</th>
+                            <th>id</th>
+                            <th>Topic</th>
+                            <th>Subject</th>
+                            <th>Level</th>
+                            <th>Action</th>
                     </thead>
                     <tbody>
                     <?php foreach ($topics as $topic){ ?>
 						<tr>
+                            <td data-title="id"> <?php  echo $topic['Topic']['id']; ?> </td>
 							<td data-title="Topic"> <?php  echo $topic['Topic']['name']; ?> </td>
 							<td data-title="Subject"><?php echo $topic['Subject']['name']; ?></td>
                             <td data-title="Level"><?php echo $topic['Level']['level_name']; ?></td>
@@ -39,6 +44,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

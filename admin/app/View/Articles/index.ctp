@@ -11,6 +11,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
+                            <th>id</th>
                            	<th>Page Title</th>
 							<th>Alias</th>
 							<th>Action</th>
@@ -20,6 +21,7 @@
                     	<?php
 							foreach ($articles as $a) {
 								echo "<tr>";
+                                echo "<td data-title='id'>".$a['Article']['id']."</td>";
 								echo "<td data-title='Page Title'>".$a['Article']['title']."</td>";
 								echo "<td data-title='Alias'>".$a['Article']['alias']."</td>";
 								echo "<td data-title='Action'>";
@@ -33,6 +35,8 @@
 						?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

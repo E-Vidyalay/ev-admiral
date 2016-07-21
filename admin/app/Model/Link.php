@@ -143,12 +143,12 @@ class Link extends AppModel{
     public function tagRequires($check) {
         // $check will have value: array('promotion_code' => 'some-value')
         // $limit will have value: 25
-        $texttostrip = strip_tags($check);
+        $texttostrip = strip_tags($check['tags']);
         if($texttostrip != ""){
-            return false;
+            return true;
         }
         else{
-            return true;
+            return false;
         }
     }
 }

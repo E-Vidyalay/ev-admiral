@@ -10,8 +10,10 @@
 			echo $this->Html->css('font-awesome');
 			echo $this->Html->css('timeline');
             echo $this->Html->css('app');
-            echo $this->Html->css('dataTables.bootstrap.css');
-            echo $this->Html->css('dataTables.responsive.css');
+            echo $this->Html->css('dataTables.bootstrap.min.css');
+            echo $this->Html->css('responsive.bootstrap.min.css');
+            echo $this->Html->css('select.bootstrap.min.css');
+            echo $this->Html->css('buttons.bootstrap.min.css');
             echo $this->Html->css('colpick');
             echo $this->Html->css('bootstrap-dialog');
 			echo $this->fetch('css');
@@ -400,12 +402,73 @@
 			echo $this->Html->script('sb-admin-2');
             echo $this->Html->script('jquery.dataTables.min.js');
             echo $this->Html->script('dataTables.bootstrap.min.js');
+            echo $this->Html->script('dataTables.responsive.min.js');
+            echo $this->Html->script('responsive.bootstrap.min.js');
+            echo $this->Html->script('dataTables.select.min.js');
+            echo $this->Html->script('dataTables.buttons.min.js');
+            echo $this->Html->script('buttons.bootstrap.min.js');
             
 		?>
         <script>
             $(document).ready(function() {
-                $('#dataTables-example').DataTable({
-                        responsive: true
+               var table= $('#dataTables-example').DataTable({
+                        "columnDefs": [{ 
+                                "visible": false, "targets": 0, "searchable": false 
+                            }],
+                        dom: 'BflrtipB',
+                        responsive: true,
+                        select: 'multi',
+                        buttons: [
+                            'selectAll',
+                            'selectNone'
+                        ],
+                        language: {
+                            buttons: {
+                                selectAll: "Select All",
+                                selectNone: "Deselect All"
+                            }
+                        }
+                });
+               $('#getdbutton').attr("disabled",true);
+               table.on( 'select', function ( e, dt, type, indexes ) {
+                    if( table.rows('.selected').data().length > 0 ){
+                        $('#getdbutton').attr("disabled",false);
+                    }
+                });
+               table.on( 'deselect', function ( e, dt, type, indexes ) {
+                    if( table.rows('.selected').data().length === 0 ){
+                        $('#getdbutton').attr("disabled",true);
+                    }
+                });
+               
+               $('#getdbutton').click( function () {
+                    alert( table.rows('.selected').data().length +' row(s) selected' );
+                    console.log(table.rows('.selected').data());
+                    // var u=location+"/delete_all/"+$(this).attr('id');
+                    BootstrapDialog.show({
+                        type: BootstrapDialog.TYPE_DANGER,
+                        title: '<i class="fa fa-warning fa-2x"></i> Warning',
+                        cssClass: 'btn-primary',
+                        message:'Are you sure you want to delete All Entry?',
+                        buttons: [{
+                                label: 'Yes',
+                                cssClass: 'btn-success',
+                                action: function(dialog) {
+                                    console.log(u);
+                                    // $.ajax({
+                                    //     url:u,
+                                    //     success:function(data){
+                                    //         window.location.replace(location);
+                                    //     }
+                                    // })
+                                }
+                            }, {
+                                label: 'No',
+                                action: function(dialog) {
+                                    dialog.close();
+                                }
+                            }]
+                    });
                 });
                 $('#picker').colpick({
                     layout:'hex',

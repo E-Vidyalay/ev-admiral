@@ -20,6 +20,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Title</th>
                             <th>Action</th>
                         </tr>
@@ -28,6 +29,7 @@
                         <?php
                             foreach ($Ipost as $a) {
                                 echo "<tr>";
+                                echo "<td data-title='id'>".$a['InformationPost']['id']."</td>";
                                 echo "<td data-title='Title'>".$a['InformationPost']['title']."</td>";
                                 echo "<td data-title='Action'>";
                                     echo $this->Html->link('Update',array('controller'=>'InformationPosts','action'=>'update',$a['InformationPost']['id']),array('class'=>'btn btn-primary btn-sm hidden-xs'))."&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -46,6 +48,8 @@
                         ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>

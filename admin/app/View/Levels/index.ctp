@@ -22,6 +22,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr>
+                            <th>id</th>
                            <th>Level</th>
                             <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
                            <th>Action</th>
@@ -30,6 +31,7 @@
                     <tbody>
                     <?php foreach ($levels as $level){ ?>
 						<tr>
+                            <td data-title="id"><?php  echo $level['Level']['id']; ?></td>
 							<td data-title="Level"> <?php  echo $level['Level']['level_name']; ?> </td>			<?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
 							<td data-title="Action"> <?php 
                                 echo $this->Html->link('Update Level',array('controller'=>'levels','action'=>'update',$level['Level']['id']),array('class'=>'btn btn-sm btn-primary hidden-xs'));
@@ -44,6 +46,8 @@
 						<?php } ?>
                     </tbody>
                 </table>
+                <br>
+                <button class="btn btn-danger" id="getdbutton"><i class="fa fa-trash fa-fw"></i>Delete Selection</button>
             </div>
             <!-- /.table-responsive -->
         </div>
