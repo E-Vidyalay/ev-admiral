@@ -137,10 +137,17 @@ class QuestionBanksController extends AppController{
 	                }
 	                else{
 	                    $this->Session->setFlash("Question not Updated",'default',array('class'=>'alert alert-danger'),'error');
-	                 
 	                }
 	            }
 	        }
+	function delete_all($array=NULL){
+        $dataArray=json_decode($array,true);
+        foreach($dataArray as $key => $value)
+        {
+            // pr($value);
+            $this->QuestionBank->delete($value);
+        }
+    }
 
 }
 ?>

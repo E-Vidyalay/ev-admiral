@@ -27,7 +27,17 @@ class Link extends AppModel{
             'message'=>"Description can't be empty",
             'required' => true,
             'allowEmpty' => false
-        )
+        ),
+        'link_title'=>array(
+            'unique'=>array(
+                'rule'=>'isUnique',
+                "message" => "Link Title is already exist."
+        )),
+        'link_url'=>array(
+            'unique'=>array(
+                'rule'=>'isUnique',
+                "message" => "Link is already exist"
+        ))
     );
     public $actsAs = array(
         'Upload.Upload' => array(

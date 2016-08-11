@@ -29,5 +29,13 @@
 	        $this->Session->setFlash('Image has been deleted successfully','default',array('class'=>'alert alert-success'),'success');
 	        $this->redirect(array('action' => 'index'));
 	    }
+	    function delete_all($array=NULL){
+	        $dataArray=json_decode($array,true);
+	        foreach($dataArray as $key => $value)
+	        {
+	            // pr($value);
+	            $this->Image->delete($value);
+	        }
+	    }
 	}
 ?>

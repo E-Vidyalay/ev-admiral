@@ -73,9 +73,18 @@ class HobbylobbyPostsController extends AppController{
             }
     }
     public function view_posts($id){
-            $this->layout="ev_admin";
-            $this->set('posts',$this->HobbylobbyPost->findById($id));
+        $this->layout="ev_admin";
+        $this->set('posts',$this->HobbylobbyPost->findById($id));
+    }
+        
+    function delete_all($array=NULL){
+        $dataArray=json_decode($array,true);
+        foreach($dataArray as $key => $value)
+        {
+            // pr($value);
+            $this->HobbylobbyPost->delete($value);
         }
+    }
     
 }
 

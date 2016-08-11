@@ -74,9 +74,17 @@
                 }
             }
         }
-         public function view_posts($id){
+        public function view_posts($id){
             $this->layout="ev_admin";
             $this->set('posts',$this->LiteraturePost->findById($id));
+        }
+        function delete_all($array=NULL){
+            $dataArray=json_decode($array,true);
+            foreach($dataArray as $key => $value)
+            {
+                // pr($value);
+                $this->LiteraturePost->delete($value);
+            }
         }
    
     }

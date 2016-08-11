@@ -50,6 +50,5 @@ class LiteraturesController extends AppController{
             }
         }
     }
-    
 }
 

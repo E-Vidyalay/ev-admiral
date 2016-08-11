@@ -442,9 +442,15 @@
                 });
                
                $('#getdbutton').click( function () {
-                    alert( table.rows('.selected').data().length +' row(s) selected' );
-                    console.log(table.rows('.selected').data());
-                    // var u=location+"/delete_all/"+$(this).attr('id');
+                    // alert( table.rows('.selected').data().length +' row(s) selected' );
+                    var data=table.rows('.selected').data();
+                    console.log(data);
+                    var dataArray=[];
+                    for(i=0;i<data.length;i++){
+                        dataArray.push(data[i][0]);
+                    }
+                    console.log(JSON.stringify(dataArray));
+                    var u=location+"/delete_all/"+JSON.stringify(dataArray);
                     BootstrapDialog.show({
                         type: BootstrapDialog.TYPE_DANGER,
                         title: '<i class="fa fa-warning fa-2x"></i> Warning',
@@ -454,13 +460,30 @@
                                 label: 'Yes',
                                 cssClass: 'btn-success',
                                 action: function(dialog) {
-                                    console.log(u);
-                                    // $.ajax({
-                                    //     url:u,
-                                    //     success:function(data){
-                                    //         window.location.replace(location);
-                                    //     }
-                                    // })
+                                    // console.log(u);
+                                    $.ajax({
+                                        url:u,
+                                        success:function(data){
+                                            window.location.replace(location);
+                                            alert('Selected Data Deleted successfully !!')
+                                        },
+                                        error:function(e){
+                                            BootstrapDialog.show({
+                                                type: BootstrapDialog.TYPE_WARNING,
+                                                title: '<i class="fa fa-warning fa-2x"></i> Warning',
+                                                cssClass: 'btn-primary',
+                                                message:'!! Sorry Delete for all selection is not allow in this part. !!',
+                                                buttons: [{
+                                                    label: 'OK',
+                                                    cssClass: 'btn-default',
+                                                    action: function(d) {
+                                                        d.close();
+                                                        dialog.close();
+                                                    }
+                                                }]
+                                            });
+                                        }
+                                    })
                                 }
                             }, {
                                 label: 'No',
