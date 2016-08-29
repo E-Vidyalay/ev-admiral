@@ -1,9 +1,9 @@
 <?php
 App::uses('CakeEmail', 'Network/Email');
 	class AdminsController extends AppController{
-		public $uses=array('Admin','AdminType','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment','Counter');
+		public $uses=array('Admin','AdminType','Thought','Article','Ebook','Link','User','Topic','SubTopic','InformationPost','LiteraturePost','HobbylobbyPost','InformationComment','HobbylobbyComment','LiteratureComment','Counter');
 		public function index(){
-			$this->layout='ev_admin';
+			$this->layout='ev_question';
 			$totalinfopost=$this->InformationPost->find('count');
 			$totallitpost=$this->LiteraturePost->find('count');
 			$totalhbpost=$this->HobbylobbyPost->find('count');
@@ -26,6 +26,17 @@ App::uses('CakeEmail', 'Network/Email');
 			$this->set('totalUsers',$totalusers);
 			$totalviewer=$this->Counter->find('count');
 			$this->set('totalViews',$totalviewer);
+			$thought=$this->Thought->find('first',array('order' => array('date' => 'DESC')));
+			if($thought!=null){
+				$time = strtotime($thought['Thought']['date']);
+                $thoughtdate=date("d/m/Y", $time);
+				if($thoughtdate==date("d/m/Y")){
+					$this->set('today_thought',$thought);		
+				}
+				else{
+					$this->set('today_thought',null);	
+				}
+			}
 		}
 		public function users(){
 			$this->layout='ev_admin';
@@ -136,6 +147,18 @@ App::uses('CakeEmail', 'Network/Email');
 
 				else{
 					$this->Session->setFlash('Username or Email not registerd on our Portal.', 'default', array('class' => 'alert alert-danger') , 'error');
+				}
+			}
+		}
+		public function add_thought(){
+			if($this->request->is('post')){
+				$thought = $this->request->data;
+				if($this->Thought->save($thought['Admin'])){
+					$this->Session->setFlash("Today's Thought is updated on the Site.",'default',array('class'=>'alert alert-success'),'success');
+					$this->redirect(array('action' => 'index'));
+				}
+				else{
+					$this->Session->setFlash("Some Problem Occured in updating Today's Thought !!", 'default', array('class' => 'alert alert-danger') , 'error');
 				}
 			}
 		}

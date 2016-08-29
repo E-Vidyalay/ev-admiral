@@ -11,9 +11,66 @@
         <!-- /.panel-heading -->
         <div class="jumbotron">
         <div class="panel-body">
-            <h2>Welcome to Evidyalay Admin portal</h2>
-            <p>Control all the content of Evidyalay website from here.</p>
+            <h2>Welcome to Evidyalay Admin portal
+                <br><small>Control all the content of Evidyalay website from here.</small></h2>
             <hr/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <div class="huge">સુવિચાર </div>
+                                    <div>(Thought of the Day)</div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-comment fa-fw fa-5x"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <?php 
+                            if($today_thought!=Null){
+                                echo '<blockquote>';
+                                echo '<p>'.$today_thought['Thought']['thought'].'</p>';
+                                echo '<small>'.$today_thought['Thought']['thinker'].'</small>';
+                                echo '</blockquote>';
+                            }
+                            else{
+                            echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'add_thought')); ?>
+                            <?php echo $this->Form->input('thought',array(
+                                    'type'=>'textarea',
+                                    'class'=>'form-control',
+                                    'id'=>'typingarea',
+                                    'rows'=>'10',
+                                    'label'=>false,
+                                    'style'=>'width:100%',
+                                ));
+                            ?>
+                            <br>
+                            <?php echo $this->Form->input('thinker',array(
+                                    'type'=>'text',
+                                    'class'=>'form-control',
+                                    'label'=>'Thought By (Name of the thinker)',
+                                    'style'=>'width:100%',
+                                ));
+                            ?>
+                        </div>
+                        <div class="panel-footer">
+                        <?php
+                            echo $this->Form->input("Add Today's Thought",array(
+                                    'type'=>'submit',
+                                    'div'=>false,
+                                    'label'=>false,
+                                    'class'=>'btn btn-success'
+                                ));
+                            echo $this->Form->end();
+                            }
+                        ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-primary">
