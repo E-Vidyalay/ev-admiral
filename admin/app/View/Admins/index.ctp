@@ -30,7 +30,7 @@
                         </div>
                         <div class="panel-body">
                             <?php 
-                            if($today_thought!=Null){
+                            if($today_thought!=null){
                                 echo '<blockquote>';
                                 echo '<p>'.$today_thought['Thought']['thought'].'</p>';
                                 echo '<small>'.$today_thought['Thought']['thinker'].'</small>';
