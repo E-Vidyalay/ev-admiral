@@ -37,6 +37,9 @@ App::uses('CakeEmail', 'Network/Email');
 					$this->set('today_thought',null);	
 				}
 			}
+			else{
+				$this->set('today_thought',null);
+			}
 		}
 		public function users(){
 			$this->layout='ev_admin';
