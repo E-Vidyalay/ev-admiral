@@ -213,6 +213,9 @@
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add links",array('controller'=>'Links','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
+                                <li>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Multiple links",array('controller'=>'Links','action'=>'multiple_insert'),array('escape' => false)); ?>
+                                </li>
                             </ul>
                         </li>
                         <li>
