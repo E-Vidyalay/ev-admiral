@@ -15,8 +15,8 @@
                         <li><b>Link Title</b>  in  <b>2nd Column</b></li>
                         <li><b>Link Description</b>  in  <b>3rd Column</b></li>
                         <li><b>Subject (વિષય)</b>  in  <b>4th Column</b></li>
-                        <li><b>Topic name (વિષય)</b>  in  <b>5th Column</b></li>
-                        <li><b>Sub Topic name (વિષય)</b>  in  <b>5th Column</b> (Optional)</li>
+                        <li><b>Topic name</b>  in  <b>5th Column</b></li>
+                        <li><b>Sub Topic name</b>  in  <b>5th Column</b> (Optional)</li>
                     </ol>
                     </p>
                     <p><u>Please Note:</u> Topic name is mandatory to be there in the record and Sub Topic name is optional. There is no need for Headers in the file. Also Topic name and Sub Topic name must be there in our database with its relation. If not then please add it first then do this process. For more info Click the Download link.</p>
