@@ -16,8 +16,8 @@ class LinksController extends AppController{
 		$this->set('topic',$sb);
 		if($this->request->is('post')){
 			$data=$this->data;
-			pr($data);
-			die();
+			// pr($data);
+			// die();
 			if($this->Link->save($data))
 			{	
 				$this->Session->setFlash('Link has been successfully added','default',array('class'=>'alert alert-success'),'success');

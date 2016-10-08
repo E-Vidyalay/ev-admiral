@@ -205,7 +205,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage external links<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage Video Links<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View links",array('controller'=>'Links','action'=>'index'),array('escape' => false)); ?>
