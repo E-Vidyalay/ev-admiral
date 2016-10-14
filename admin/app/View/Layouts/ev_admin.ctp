@@ -135,32 +135,32 @@
                             <a href="#"><i class="fa fa-book fa-fw"></i> Manage Subjects<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View subjects",array('controller'=>'subjects','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Subjects",array('controller'=>'subjects','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <?php if($activeUser['User']['AdminType']['name']=='Administrator'){?>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add subject",array('controller'=>'subjects','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Subject",array('controller'=>'subjects','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                                 <?php }?>
                                 <li>
                                     <a href="#"><i class="fa fa-book fa-fw"></i> Manage Topics<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View topics",array('controller'=>'topics','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Topics",array('controller'=>'topics','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add topic",array('controller'=>'topics','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Topic",array('controller'=>'topics','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-book fa-fw"></i> Manage SubTopics<span class="fa arrow"></span></a>
+                                    <a href="#"><i class="fa fa-book fa-fw"></i> Manage Sub Topics<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View topics",array('controller'=>'SubTopics','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Sub Topics",array('controller'=>'SubTopics','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add topic",array('controller'=>'SubTopics','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Topic",array('controller'=>'SubTopics','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>                        
@@ -173,21 +173,21 @@
                                     <a href="#"><i class="fa fa-book fa-fw"></i> Manage Literature Category<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View category",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Lit categories",array('controller'=>'Literatures','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add category",array('controller'=>'Literatures','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Lit category",array('controller'=>'Literatures','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                <a href="#"><i class="fa fa-book fa-fw"></i> Manage literature sub category<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-book fa-fw"></i> Manage Sub-Lit Category<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub category",array('controller'=>'SubLiteratures','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Sub Lit categories",array('controller'=>'SubLiteratures','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub category",array('controller'=>'SubLiteratures','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Sub Lit category",array('controller'=>'SubLiteratures','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>
@@ -208,13 +208,13 @@
                             <a href="#"><i class="fa fa-external-link fa-fw"></i> Manage Video Links<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View links",array('controller'=>'Links','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Links",array('controller'=>'Links','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add links",array('controller'=>'Links','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Links",array('controller'=>'Links','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Multiple links",array('controller'=>'Links','action'=>'multiple_insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Multiple Links",array('controller'=>'Links','action'=>'multiple_insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                         </li>
@@ -222,7 +222,7 @@
                             <a href="#"><i class="fa fa-file fa-fw"></i> Manage Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View pages",array('controller'=>'articles','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Pages",array('controller'=>'articles','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
                                     <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Page",array('controller'=>'articles','action'=>'add'),array('escape' => false)); ?>
@@ -230,13 +230,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage ebooks<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-book fa-fw"></i> Manage E-books<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View ebook",array('controller'=>'ebooks','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View E-books",array('controller'=>'ebooks','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add ebook",array('controller'=>'ebooks','action'=>'insert'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add E-book",array('controller'=>'ebooks','action'=>'insert'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -259,7 +259,7 @@
                                     <a href="#"><i class="fa fa-book fa-fw"></i> Manage Marking Scheme<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Marking Scheme",array('controller'=>'Markingschemes','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Marking Schemes",array('controller'=>'Markingschemes','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
                                             <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Marking Scheme",array('controller'=>'Markingschemes','action'=>'add_marks'),array('escape' => false)); ?>
@@ -269,13 +269,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Manage News letters<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Manage Newsletters<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View news",array('controller'=>'NewsLetters','action'=>'index'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Newsletters",array('controller'=>'NewsLetters','action'=>'index'),array('escape' => false)); ?>
                                 </li>
                                 <li>
-                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Post news",array('controller'=>'NewsLetters','action'=>'add'),array('escape' => false)); ?>
+                                    <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Post Newsletter",array('controller'=>'NewsLetters','action'=>'add'),array('escape' => false)); ?>
                                 </li>
                             </ul>
                         </li>
@@ -286,10 +286,10 @@
                                     <a href="#"><i class="fa fa-book fa-fw"></i> Manage Hobby Category<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View category",array('controller'=>'Hobbies','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Hobby categories",array('controller'=>'Hobbies','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add category",array('controller'=>'Hobbies','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Hobby category",array('controller'=>'Hobbies','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>
@@ -297,10 +297,10 @@
                                     <a href="#"><i class="fa fa-book fa-fw"></i> Manage Hobby Sub Category<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View sub category",array('controller'=>'SubHobbies','action'=>'index'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-eye fa-fw')) . " View Sub Hobby categories",array('controller'=>'SubHobbies','action'=>'index'),array('escape' => false)); ?>
                                         </li>
                                         <li>
-                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add sub category",array('controller'=>'SubHobbies','action'=>'insert'),array('escape' => false)); ?>
+                                            <?php echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-plus fa-fw')) . " Add Sub Hobby category",array('controller'=>'SubHobbies','action'=>'insert'),array('escape' => false)); ?>
                                         </li>
                                     </ul>
                                 </li>
