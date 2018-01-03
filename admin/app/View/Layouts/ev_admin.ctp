@@ -60,15 +60,16 @@
                         <li><?php
                         echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-user fa-fw')) . "User Profile",array('controller' => 'admins', 'action' => 'profile'),array('escape' => false));?>
                         </li>
-                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
-                        </li>
                         <li class="divider"></li>
                         <li><?php
-                        echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
+                                echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-sign-out fa-fw')) . " Logout",array('controller' => 'admins', 'action' => 'logout'),array('escape' => false));?>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
+                        <!-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
                 </li>
+                
+                    
+                    <!-- /.dropdown-user -->
                 <!-- /.dropdown -->
             </ul>
             <ul class="nav navbar-top-links hidden-lg hidden-md" style="float:right;">
