@@ -6,7 +6,7 @@
 <h4>Add new : literature sub category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','action'=>'insert'));
+    echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','url'=>'insert'));
    
     echo "<br/>";
     echo $this->Form->input('literature_id',array(

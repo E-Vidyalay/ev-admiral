@@ -2,7 +2,7 @@
 <h3>Update page</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('Article',array('controller'=>'articles','action'=>'update')); ?>
+		<?php echo $this->Form->create('Article',array('controller'=>'articles','url'=>'update')); ?>
 		<?php echo $this->Form->input('id',array('type'=>'hidden')); ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">

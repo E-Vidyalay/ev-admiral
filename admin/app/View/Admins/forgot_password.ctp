@@ -10,7 +10,7 @@
                         <blockquote>
                             <p>Please enter your username or email address. You will receive a new password to your registered Email address.</p>
                         </blockquote>
-                        <?php echo $this->Form->create('Admin',array('controller'=>'admins','action'=>'forgot_password')) ?>
+                        <?php echo $this->Form->create('Admin',array('controller'=>'admins','url'=>'forgot_password')) ?>
                             <fieldset>
                                 <div class="form-group">
                                     <?php echo $this->Form->input('username',array(

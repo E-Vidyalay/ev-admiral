@@ -2,7 +2,7 @@
 <h3>Update news</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('NewsLetter',array('controller'=>'NewsLetters','action'=>'update')); ?>
+		<?php echo $this->Form->create('NewsLetter',array('controller'=>'NewsLetters','url'=>'update')); ?>
 		<?php echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$user_id)); ?>
 		<?php echo $this->Form->input('id',array('type'=>'hidden')); ?>
 		<div class="panel panel-default">

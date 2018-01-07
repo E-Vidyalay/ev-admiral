@@ -2,7 +2,7 @@
 <h3>Add new page</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('Article',array('controller'=>'articles','action'=>'add')); 
+		<?php echo $this->Form->create('Article',array('controller'=>'articles','url'=>'add')); 
 		echo $this->Form->input('uploaded_by',array('type'=>'hidden','value'=>$user_id));
 		echo $this->Form->input('allow',array('type'=>'hidden','value'=>1));		
 		?>

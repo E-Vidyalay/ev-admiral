@@ -6,7 +6,7 @@ echo $this->Html->link($this->Html->tag('i', '', array('class' => 'fa fa-arrow-l
 <br/>
 <div class="row">
 	<div class="col-lg-12"><?php
-	echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'approval_ebook'));?>
+	echo $this->Form->create('Admin',array('controller'=>'Admins','url'=>'approval_ebook'));?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 			<h5> <?php echo $book['Ebook']['name']; ?></h5>

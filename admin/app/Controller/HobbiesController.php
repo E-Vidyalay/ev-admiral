@@ -12,7 +12,6 @@ class HobbiesController extends AppController{
         $this->layout='ev_admin';
         $userId = $this->Auth->user('id');
         $this->set('user', $userId);
-        $this->set('level', $data);
 
         if($this->request->is('post'))
         {
@@ -36,7 +35,7 @@ class HobbiesController extends AppController{
     }
     function update($id=NULL){
         $this->layout='ev_admin';
-        $this->set('level',$data);
+        
         $userId = $this->Auth->user('id');
         $this->set('user',$userId);
         if(empty($this->data))

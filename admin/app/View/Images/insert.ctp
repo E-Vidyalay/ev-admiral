@@ -7,7 +7,7 @@
 </div>
 <div class="panel-body">
 <?php
-echo $this->Form->create('Image',array('type'=>'file','multiple','controller'=>'Images','action'=>'insert'));
+echo $this->Form->create('Image',array('type'=>'file','multiple','controller'=>'Images','url'=>'insert'));
 echo $this->Form->input('path.',array(
 	'type'=>'file',
 	'multiple',

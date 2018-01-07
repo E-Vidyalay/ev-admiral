@@ -37,7 +37,7 @@
                                 echo '</blockquote>';
                             }
                             else{
-                            echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'add_thought')); ?>
+                            echo $this->Form->create('Admin',array('controller'=>'Admins','url'=>'add_thought')); ?>
                             <?php echo $this->Form->input('thought',array(
                                     'type'=>'textarea',
                                     'class'=>'form-control',

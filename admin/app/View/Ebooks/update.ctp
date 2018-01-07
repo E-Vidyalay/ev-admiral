@@ -4,7 +4,7 @@
 <h4>Update ebook</h4>
 <hr>
 <?php
-echo $this->Form->create('Ebook',array('type'=>'file','controller'=>'ebooks','action'=>'update'));
+echo $this->Form->create('Ebook',array('type'=>'file','controller'=>'ebooks','url'=>'update'));
 echo $this->Form->input('id',array('type'=>'hidden'));
 echo $this->Form->input('name',array('type'=>'text','class'=>'form-control','required','label'=>'Book Title','placeholder'=>'Book name'));
 echo "<br>";

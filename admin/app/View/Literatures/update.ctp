@@ -5,7 +5,7 @@
 <h4>Update Literature category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'update'));
+    echo $this->Form->create('Literature',array('controller'=>'Literatures','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo "<br/>";
     echo $this->Form->input('name',array(

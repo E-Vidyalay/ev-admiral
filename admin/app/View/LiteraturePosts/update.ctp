@@ -4,7 +4,7 @@
 <div class="col-lg-8">
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Primary Details</h5></div>
-    <?php echo $this->Form->create('LiteraturePost',array('type'=>'file','controller'=>'LiteraturePosts','action'=>'update'));
+    <?php echo $this->Form->create('LiteraturePost',array('type'=>'file','controller'=>'LiteraturePosts','url'=>'update'));
         echo $this->Form->input('id',array('type'=>'hidden'));
         echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));?>
     <div class="panel-body">

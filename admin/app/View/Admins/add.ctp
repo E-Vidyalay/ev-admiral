@@ -3,7 +3,7 @@
 	<div class="col-lg-12 panel panel-body panel-default">
 		<h4><i class="fa fa-user fa-fw"></i> Add New Admin User</h4>
 		<hr>
-		<?php echo $this->Form->create('Admin',array('controller'=>'admins','action'=>'add'));?>
+		<?php echo $this->Form->create('Admin',array('controller'=>'admins','url'=>'add'));?>
 		<div class="form-horizontal">
 			<div class="form-group">
 				<label for="username" class="col-sm-2 control-label">Username <i>(required)</i></label>

@@ -6,7 +6,7 @@
         <div class="panel-heading"><h5>Primary Details</h5></div>
     <div class="panel-body">
     <?php
-        echo $this->Form->create('InformationPost',array('type'=>'file','controller'=>'InformationPosts','action'=>'update'));
+        echo $this->Form->create('InformationPost',array('type'=>'file','controller'=>'InformationPosts','url'=>'update'));
         echo "<br>";
         echo $this->Form->input('title',array('type'=>'text','class'=>'form-control','required','label'=>'Title','placeholder'=>'Post title'));
         echo $this->Form->input('id',array('type'=>'hidden'));

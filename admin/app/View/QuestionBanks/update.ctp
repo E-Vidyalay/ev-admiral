@@ -7,7 +7,7 @@
             </div>
             <div class="panel-body">
                 <?php
-                    echo $this->Form->create('QuestionBank',array('contoroller'=>'QuestionBanks','action'=>'update'));
+                    echo $this->Form->create('QuestionBank',array('contoroller'=>'QuestionBanks','url'=>'update'));
                     echo $this->Form->input('id',array('type'=>'hidden'));
                     echo $this->Form->input('standard_id',array('type'=>'select','options'=>$standards,'label'=>'Select Standard for this Question.','class'=>'form-control','div'=>false,'empty'=>'Select Standard','required','default','id'=>'standard'));
                     echo "<br/>";

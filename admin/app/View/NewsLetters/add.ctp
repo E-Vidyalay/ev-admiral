@@ -2,7 +2,7 @@
 <h3>Post news</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('NewsLetter',array('controller'=>'NewsLetters','action'=>'add')); ?>
+		<?php echo $this->Form->create('NewsLetter',array('controller'=>'NewsLetters','url'=>'add')); ?>
 		<?php echo $this->Form->input('user_id',array('type'=>'hidden','value'=>$user_id)); ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">

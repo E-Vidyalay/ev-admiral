@@ -2,7 +2,7 @@
 <h1>Add new subject</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'insert'));
+	echo $this->Form->create('Subject',array('controller'=>'subjects','url'=>'insert'));
 	echo $this->Form->input('name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',

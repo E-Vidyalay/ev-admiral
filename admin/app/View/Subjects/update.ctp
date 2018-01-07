@@ -2,7 +2,7 @@
 <h1>Update subject</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Subject',array('controller'=>'subjects','action'=>'update'));
+    echo $this->Form->create('Subject',array('controller'=>'subjects','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo $this->Form->input('name',array(
      'class'=>'form-control',

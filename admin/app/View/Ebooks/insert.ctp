@@ -4,7 +4,7 @@
 <h4>Add new ebook</h4>
 <hr>
 <?php
-echo $this->Form->create('Ebook',array('type'=>'file','controller'=>'ebooks','action'=>'insert'));
+echo $this->Form->create('Ebook',array('type'=>'file','controller'=>'ebooks','url'=>'insert'));
 echo $this->Form->input('uploaded_by',array('type'=>'hidden','value'=>$user_id));
 echo $this->Form->input('allow',array('type'=>'hidden','value'=>1));
 echo $this->Form->input('name',array('type'=>'text','class'=>'form-control','required','label'=>'Book Title','placeholder'=>'Book name'));

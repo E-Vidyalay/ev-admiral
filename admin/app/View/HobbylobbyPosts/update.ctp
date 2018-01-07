@@ -2,7 +2,7 @@
 <h3>Update Hobby Lobby Post</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('HobbylobbyPost',array('controller'=>'HobbylobbyPosts','action'=>'update')); ?>
+		<?php echo $this->Form->create('HobbylobbyPost',array('controller'=>'HobbylobbyPosts','url'=>'update')); ?>
 		<?php echo $this->Form->input('updated_by',array('type'=>'hidden','value'=>$user_id)); ?>
 		<?php echo $this->Form->input('id',array('type'=>'hidden')); ?>
 		<div class="panel panel-default">

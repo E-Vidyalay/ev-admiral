@@ -2,14 +2,15 @@
 <h1>Add new SubTopic</h1>
 <hr>
 <?php 
-    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','action'=>'insert'));
+    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','url'=>'insert'));
    
     echo "<br/>";
     echo $this->Form->input('topic_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $topic,
-        'label' => 'Topic'
+        'label' => 'Topic',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(

@@ -2,10 +2,10 @@
 <br/>
 <div class="row">
 <div class="col-lg-6 panel panel-default">
-<h4>Update Sub Category</h4>
+<h4>Update Hobby Category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('Hobby',array('controller'=>'Hobbies','action'=>'update'));
+    echo $this->Form->create('Hobby',array('controller'=>'Hobbies','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo "<br/>";
     echo $this->Form->input('name',array(
@@ -14,7 +14,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Hobby'
+     'label'=>'Hobby Category'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";

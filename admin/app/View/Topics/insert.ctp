@@ -2,19 +2,21 @@
 <h1>Add new topic</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Topic',array('controller'=>'topics','action'=>'insert'));
+	echo $this->Form->create('Topic',array('controller'=>'topics','url'=>'insert'));
     echo $this->Form->input('level_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $level,
-        'label' => 'Level'
+        'label' => 'Level',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
     echo $this->Form->input('subject_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $subject,
-        'label' => 'Subject'
+        'label' => 'Subject',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
 	echo $this->Form->input('name',array(

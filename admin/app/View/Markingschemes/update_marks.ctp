@@ -3,7 +3,7 @@
 <hr/>
 <div class="well">
 	<?php
-		echo $this->Form->create('Markingscheme',array('action'=>'update_marks'));
+		echo $this->Form->create('Markingscheme',array('url'=>'update_marks'));
 		echo $this->Form->input('positive_marks',array(
 			'type'=>'text',
 			'label'=>'Positve Marks',

@@ -8,7 +8,7 @@
         	<div class="panel-body">
         		<h4><i class="fa fa-user fa-fw"></i> User Details</h4>
         		<?php //pr($activeUser);?>
-        		<?php echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'profile')) ?>
+        		<?php echo $this->Form->create('Admin',array('controller'=>'Admins','url'=>'profile')) ?>
         		<div class="form-horizontal">
         			<?php echo $this->Form->input('id',array('type'=>'hidden'));?>
 				  <div class="form-group">
@@ -66,7 +66,7 @@
 				</form>
 				<hr>
 				<h4><i class="fa fa-lock fa-fw"></i> Security</h4>
-				<?php echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'changepassword')) ?>
+				<?php echo $this->Form->create('Admin',array('controller'=>'Admins','url'=>'changepassword')) ?>
         		<div class="form-horizontal">
         			<?php echo $this->Form->input('id',array('type'=>'hidden','value'=>$activeUser['User']['id']));?>
         			<div class="form-group">

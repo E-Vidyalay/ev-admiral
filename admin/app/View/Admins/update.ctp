@@ -8,7 +8,7 @@
         	<div class="panel-body">
         		<h4><i class="fa fa-user fa-fw"></i> User Details</h4>
         		<?php //pr($activeUser);?>
-        		<?php echo $this->Form->create('Admin',array('controller'=>'Admins','action'=>'update')) ?>
+        		<?php echo $this->Form->create('Admin',array('controller'=>'Admins','url'=>'update')) ?>
         		<div class="form-horizontal">
         			<?php echo $this->Form->input('id',array('type'=>'hidden'));?>
 				  <div class="form-group">

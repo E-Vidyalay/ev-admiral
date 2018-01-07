@@ -5,7 +5,7 @@
 <h4>Add new Literature category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('Literature',array('controller'=>'Literatures','action'=>'insert'));
+    echo $this->Form->create('Literature',array('controller'=>'Literatures','url'=>'insert'));
    
     echo "<br/>";
     echo $this->Form->input('name',array(

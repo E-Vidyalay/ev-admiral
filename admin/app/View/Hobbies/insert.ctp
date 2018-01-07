@@ -3,10 +3,10 @@
 <div class="row">
 <div class="col-lg-6 panel panel-default">
 
-<h4>Add new : hobby category</h4>
+<h4>Add new : Hobby Category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('Hobby',array('controller'=>'Hobbies','action'=>'insert'));
+    echo $this->Form->create('Hobby',array('controller'=>'Hobbies','url'=>'insert'));
    
     echo "<br/>";
     echo $this->Form->input('name',array(
@@ -15,7 +15,7 @@
      'type'=>'text',
      'required',
      'autofocus',
-     'label'=>'Hobby category'
+     'label'=>'Hobby Category'
       ));
     echo $this->Form->input('updated_by',array('type'=>'hidden','value' => $user));
     echo "<br/>";

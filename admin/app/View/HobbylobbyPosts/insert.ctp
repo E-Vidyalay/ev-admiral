@@ -2,7 +2,7 @@
 <h3>Add Hobby Lobby Post</h3>
 <div class="row">
 	<div class="col-lg-8">
-		<?php echo $this->Form->create('HobbylobbyPost',array('controller'=>'HobbylobbyPosts','action'=>'insert')); ?>
+		<?php echo $this->Form->create('HobbylobbyPost',array('controller'=>'HobbylobbyPosts','url'=>'insert')); ?>
 		<?php echo $this->Form->input('updated_by',array('type'=>'hidden','value'=>$user_id)); ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">

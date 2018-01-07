@@ -2,7 +2,7 @@
 <h1>Update Level</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Level',array('controller'=>'levels','action'=>'update'));
+    echo $this->Form->create('Level',array('controller'=>'levels','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo $this->Form->input('level_name',array(
      'class'=>'form-control',

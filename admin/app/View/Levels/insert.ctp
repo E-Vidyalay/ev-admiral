@@ -2,7 +2,7 @@
 <h1>Add new subject</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Level',array('controller'=>'levels','action'=>'insert'));
+	echo $this->Form->create('Level',array('controller'=>'levels','url'=>'insert'));
 	echo $this->Form->input('level_name',array(
 	 'class'=>'form-control',
 	 'placeholder'=>'Name',

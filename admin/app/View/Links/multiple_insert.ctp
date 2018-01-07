@@ -25,7 +25,7 @@
                 </li>
                 <li class="list-group-item step-2-menu" data-for=".step-2">
                     <?php 
-                        echo $this->Form->create('Link',array('controller'=>'Links','action'=>'multiple_insert','type'=>'file'));
+                        echo $this->Form->create('Link',array('controller'=>'Links','url'=>'multiple_insert','type'=>'file'));
                          echo $this->Form->input('file',array(
                              'class'=>'form-error',
                              'error'=>array('attributes'=>array('wrap'=>'small','class'=>'error')),

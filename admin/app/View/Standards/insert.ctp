@@ -2,12 +2,13 @@
 <h1>Add New Standard</h1>
 <hr>
 <?php 
-	echo $this->Form->create('Standard',array('controller'=>'standards','action'=>'insert'));
+	echo $this->Form->create('Standard',array('controller'=>'standards','url'=>'insert'));
 	echo $this->Form->input('level_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $levels,
-        'label' => 'Level'
+        'label' => 'Level',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(

@@ -2,13 +2,14 @@
 <h1>Update SubTopic</h1>
 <hr>
 <?php 
-    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','action'=>'update'));
+    echo $this->Form->create('SubTopic',array('controller'=>'SubTopics','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo $this->Form->input('topic_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $topic,
-        'label' => 'Topic'
+        'label' => 'Topic',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(

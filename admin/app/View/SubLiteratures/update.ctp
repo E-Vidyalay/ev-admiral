@@ -5,7 +5,7 @@
 <h4>Update Sub Category</h4>
 <hr>
 <?php 
-    echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','action'=>'update'));
+    echo $this->Form->create('SubLiterature',array('controller'=>'SubLiteratures','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo $this->Form->input('literature_id',array(
         'class'=>'form-control',

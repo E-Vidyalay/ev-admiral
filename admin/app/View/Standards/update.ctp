@@ -2,13 +2,14 @@
 <h1>Update Level</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Standard',array('controller'=>'standards','action'=>'update'));
+    echo $this->Form->create('Standard',array('controller'=>'standards','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
     echo $this->Form->input('level_id',array(
         'class'=>'form-control',
         'type'=> 'select',
         'options' => $levels,
-        'label' => 'Level'
+        'label' => 'Level',
+        'empty'=>'-select-'
     ));
     echo "<br/>";
     echo $this->Form->input('name',array(
