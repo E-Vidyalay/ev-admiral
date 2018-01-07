@@ -52,7 +52,7 @@
                 <br>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="http://evidyalay.net"><i class="fa fa-arrow-left fa-fw"></i> Back to Evidyalay</a>
+                        <a href="http://demo.evidyalay.net"><i class="fa fa-arrow-left fa-fw"></i> Back to Evidyalay</a>
                     </div>
                 </div>
                 <?php 

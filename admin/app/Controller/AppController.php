@@ -64,7 +64,7 @@ class AppController extends Controller {
         $this->Auth->allow('login','forgot_password');
         $this->activeUser = $this->Session->read('Auth');
         $this->isLoggedIn = $this->Auth->loggedIn();
-        $this->set('evsite_url','http://frontend.evidyalay.net/');
+        $this->set('evsite_url','http://demo.evidyalay.net/');
         $this->set('evadmin_url','http://admin.evidyalay.net/');
     }
 	public function isAuthorized($user) {
