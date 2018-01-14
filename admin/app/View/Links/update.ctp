@@ -2,9 +2,9 @@
 <h1>Update link</h1>
 <hr>
 <?php 
-    echo $this->Form->create('Link',array('controller'=>'Links','action'=>'update'));
+    echo $this->Form->create('Link',array('controller'=>'Links','url'=>'update'));
     echo $this->Form->input('id',array('type'=>'hidden'));
-
+    echo $this->Form->input('uploaded_by',array('type'=>'hidden','value'=>$user_id));
     echo $this->Form->input('topic_id',array(
             'class'=>'form-control',
             'options'=>$topic,

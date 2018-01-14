@@ -128,9 +128,12 @@ class LinksController extends AppController{
 	public function update($id=NULL){
 		$this->layout="ev_question";
 		$sb=$this->Topic->find('list',array('fields'=>array('id','display_name')));
+		$this->set('user_id',$this->Auth->user('id'));
 		$this->set('topic',$sb);
 		if(empty($this->data)){
 			$this->data=$this->Link->findById($id);
+			// pr($this->data);
+			// die();
 			if(isset($this->data['Link']['sub_topic_id']) || $this->data['Link']['sub_topic_id']!=null){
 						$this->set('has_sbt',true);
 						$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$this->data['Link']['topic_id']),'fields'=>array('id','name'))));
@@ -139,18 +142,24 @@ class LinksController extends AppController{
 						$this->set('has_sbt',false);
 					}
 		}
-		if($this->request->is('post')){
-			if(isset($this->data['Link']['sub_topic_id']) || $this->data['Link']['sub_topic_id']!=null){
-				$this->set('has_sbt',true);
-				$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$this->data['Link']['topic_id']),'fields'=>array('id','name'))));
-			}
-			else{
-				$this->set('has_sbt',false);
-			}
+		else{
+			// pr($this->data);
+			// die();
+			// if(isset($this->data['Link']['sub_topic_id']) || $this->data['Link']['sub_topic_id']!=null){
+			// 	$this->set('has_sbt',true);
+			// 	$this->set('sub_topics',$this->SubTopic->find('list',array('conditions'=>array('topic_id'=>$this->data['Link']['topic_id']),'fields'=>array('id','name'))));
+			// }
+			// else{
+			// 	$this->set('has_sbt',false);
+			// }
 			if($this->Link->save($this->data))
 			{
 				$this->Session->setFlash('Link has been successfully updated','default',array('class'=>'alert alert-success'),'success');
 				$this->redirect(array('action'=>'index'));
+			}
+			else{
+				$this->Session->setFlash('Link has been successfully updated','default',array('class'=>'alert alert-danger'),'error');
+				$this->redirect(array('action'=>'index'));	
 			}
 		}
 	}
